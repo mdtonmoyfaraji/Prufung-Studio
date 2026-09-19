@@ -1,0 +1,50 @@
+{
+  "goethe": {
+    "A1": [
+      "Standard"
+    ],
+    "A2": [
+      "Standard"
+    ],
+    "B1": [
+      "Standard"
+    ],
+    "B2": [
+      "Standard"
+    ],
+    "C1": [
+      "Standard"
+    ],
+    "C2": [
+      "Standard"
+    ]
+  },
+  "telc": {
+    "A1": [
+      "Standard"
+    ],
+    "A2": [
+      "Standard"
+    ],
+    "B1": [
+      "Standard"
+    ],
+    "B2": [
+      "Standard"
+    ],
+    "C1": [
+      "Standard"
+    ]
+  },
+  "testdaf": {
+    "TDN3": [
+      "Standard"
+    ],
+    "TDN4": [
+      "Standard"
+    ],
+    "TDN5": [
+      "Standard"
+    ]
+  }
+}
