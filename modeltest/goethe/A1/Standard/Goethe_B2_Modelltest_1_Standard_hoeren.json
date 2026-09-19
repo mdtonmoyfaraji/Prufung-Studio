@@ -1,0 +1,389 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-18T13:01:38.142Z",
+  "exam": "goethe",
+  "level": "B2",
+  "module": "hoeren",
+  "name": "Goethe B2 — Modelltest 1 (Standard) — Listening",
+  "content": {
+    "H1": {
+      "title": "Fünf kurze Gespräche",
+      "instruction": "Sie hören fünf Gespräche und Äußerungen. Sie hören jeden Text einmal. Zu jedem Text lösen Sie zwei Aufgaben.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Text 1 — Am Telefon",
+            "text": "Praxis Dr. Ilgner, guten Tag. — Guten Tag, Berger hier, ich hatte morgen um halb elf einen Termin zur Kontrolle. Leider muss ich beruflich nach Hamburg. Ginge auch Donnerstag? — Donnerstag ist die Praxis nur vormittags besetzt, und da ist alles vergeben. Ich könnte Ihnen Freitag um 16 Uhr anbieten. — Freitag passt, danke. Muss ich wieder nüchtern kommen? — Nein, das war nur für die Blutabnahme letztes Mal. Bringen Sie einfach den Impfpass mit."
+          },
+          {
+            "speaker": "Text 2 — Durchsage im Kaufhaus",
+            "text": "Liebe Kundinnen und Kunden, wegen einer technischen Störung steht die Rolltreppe zwischen dem zweiten und dritten Obergeschoss vorübergehend still. Den Aufzug erreichen Sie hinter der Parfümerie. Die Bekleidungsabteilung im dritten Stock bleibt regulär bis 20 Uhr geöffnet. Unser Reparaturdienst arbeitet bereits an der Behebung."
+          },
+          {
+            "speaker": "Text 3 — Gespräch in der Kantine",
+            "text": "Und, wie war der Workshop? — Ehrlich? Der Referent war gut, aber drei Tage dafür sind zwei zu viel. Am ersten Tag haben wir nur Methoden wiederholt, die jeder kennt. — Hast du wenigstens Leute kennengelernt? — Das schon, zwei aus der Filiale Kassel. Wir wollen unsere Wochenberichte künftig zusammenlegen, das spart beiden Seiten Arbeit. Dafür hat sich die Fahrt gelohnt."
+          },
+          {
+            "speaker": "Text 4 — Radiohinweis",
+            "text": "Und nun zum Verkehr: Auf der A7 zwischen Hildesheim und dem Dreieck Salzgitter staut es sich auf zwölf Kilometern, ein Lastwagen hat Ladung verloren. Die Bergung dauert voraussichtlich bis in den späten Nachmittag. Umfahren Sie den Abschnitt großräumig über die B6. Im Stadtgebiet Hannover ist die Podbielskistraße wegen Bauarbeiten ab Montag für zwei Wochen nur einspurig befahrbar."
+          },
+          {
+            "speaker": "Text 5 — Anrufbeantworter",
+            "text": "Hallo Frau Nowak, hier ist Ferdinand Klein von der Hausverwaltung. Ihr Antrag auf den Stellplatz ist angekommen. Freigeworden ist allerdings nur Platz 14, der ist etwas schmaler als der, den Sie wollten. Wenn Ihnen das reicht, geben Sie mir bis Freitag Bescheid, sonst geht er an den Nächsten auf der Liste. Die Kaution bleibt gleich."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Warum ruft Herr Berger an?",
+          "options": [
+            "Er möchte einen Termin verschieben.",
+            "Er möchte ein Rezept abholen.",
+            "Er will eine Rechnung klären."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was soll Herr Berger mitbringen?",
+          "options": [
+            "Eine Überweisung.",
+            "Den Impfpass.",
+            "Nichts, er soll nüchtern kommen."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was ist im Kaufhaus passiert?",
+          "options": [
+            "Eine Etage wurde gesperrt.",
+            "Eine Rolltreppe ist defekt.",
+            "Der Aufzug fällt aus."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was gilt für die Bekleidungsabteilung?",
+          "options": [
+            "Sie schließt früher als sonst.",
+            "Sie ist heute nicht erreichbar.",
+            "Sie hat normal geöffnet."
+          ],
+          "answer": 2
+        },
+        {
+          "prompt": "Wie bewertet der Mann den Workshop insgesamt?",
+          "options": [
+            "Inhaltlich zu wenig für die Dauer.",
+            "Fachlich schwach, aber gut organisiert.",
+            "Vollständig verschwendete Zeit."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was ist für ihn das eigentliche Ergebnis?",
+          "options": [
+            "Eine Beförderung.",
+            "Eine künftige Zusammenarbeit mit Kassel.",
+            "Neue Methoden für sein Team."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was ist auf der A7 geschehen?",
+          "options": [
+            "Ein Lastwagen hat Ladung verloren.",
+            "Eine Baustelle wurde eingerichtet.",
+            "Es gab einen Unfall mit mehreren Autos."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was gilt ab Montag in Hannover?",
+          "options": [
+            "Die Podbielskistraße wird gesperrt.",
+            "Die Podbielskistraße ist nur einspurig befahrbar.",
+            "Der Verkehr wird über die B6 geleitet."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Welches Problem nennt Herr Klein?",
+          "options": [
+            "Der freie Stellplatz ist schmaler als gewünscht.",
+            "Die Kaution ist gestiegen.",
+            "Der Antrag ist unvollständig."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was passiert, wenn Frau Nowak sich nicht meldet?",
+          "options": [
+            "Der Antrag wird erneut geprüft.",
+            "Der Platz geht an eine andere Person.",
+            "Sie bekommt automatisch einen größeren Platz."
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    "H2": {
+      "title": "Interview: Lärm in der Stadt",
+      "instruction": "Sie hören im Radio ein Interview mit einer Akustikforscherin. Sie hören den Text zweimal.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Frau Dr. Ohrt, Sie erforschen seit fünfzehn Jahren, was Lärm mit uns macht. Wann wird Geräusch eigentlich zu Lärm?"
+          },
+          {
+            "speaker": "Dr. Ohrt",
+            "text": "Der Umschlagpunkt liegt erstaunlich selten bei der Lautstärke. Entscheidend ist die Kontrolle. Wer selbst die Musik aufdreht, empfindet neunzig Dezibel als angenehm; kommen dieselben neunzig Dezibel aus der Nachbarwohnung, steigt der Blutdruck messbar. Deshalb ist die klassische Grenzwertpolitik nur die halbe Miete."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Nun hört man oft, man gewöhne sich an Verkehrslärm."
+          },
+          {
+            "speaker": "Dr. Ohrt",
+            "text": "Man gewöhnt sich an das Bewusstsein davon, nicht an die Reaktion des Körpers. Das ist der wichtigste Befund der letzten Jahre. Menschen an vielbefahrenen Straßen sagen nach zwei Jahren, sie hörten den Verkehr gar nicht mehr — im Schlaflabor zeigt sich trotzdem bei jedem lauten Fahrzeug eine kurze Weckreaktion. Sie erinnern sich nur morgens nicht daran."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Was bedeutet das für die Stadtplanung?"
+          },
+          {
+            "speaker": "Dr. Ohrt",
+            "text": "Dass Fenster allein nicht genügen. Ein Schallschutzfenster hilft nur bei geschlossenem Zustand, und in warmen Nächten schließt kaum jemand freiwillig. Sinnvoller ist es, an der Quelle anzusetzen: leiser Asphalt, Tempo 30 in der Nacht, und vor allem eine ruhige Seite für jede Wohnung. Wenn das Schlafzimmer zum Hof zeigt, ist viel gewonnen."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Und was ist mit dem viel zitierten Vogelgezwitscher?"
+          },
+          {
+            "speaker": "Dr. Ohrt",
+            "text": "Das ist kein romantisches Beiwerk, sondern messbar wirksam. In unseren Versuchen erholten sich Probanden nach einer Stressaufgabe deutlich schneller, wenn sie natürliche Geräusche hörten, und zwar schneller als in völliger Stille. Absolute Stille empfinden viele sogar als bedrohlich. Es geht also nicht darum, die Stadt stumm zu machen, sondern darum, welche Geräusche wir hören."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wann wird ein Geräusch laut Dr. Ohrt zu Lärm?",
+          "options": [
+            "Ab einer bestimmten Lautstärke.",
+            "Wenn man keine Kontrolle darüber hat.",
+            "Wenn es länger als eine Stunde dauert."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was sagt sie über Gewöhnung?",
+          "options": [
+            "Der Körper reagiert weiterhin, auch wenn man es nicht bemerkt.",
+            "Nach zwei Jahren verschwindet die Reaktion.",
+            "Gewöhnung tritt nur bei jüngeren Menschen ein."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was zeigt sich im Schlaflabor?",
+          "options": [
+            "Die Betroffenen wachen vollständig auf.",
+            "Es kommt zu kurzen Weckreaktionen.",
+            "Der Schlaf ist unverändert."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Warum reichen Schallschutzfenster nicht aus?",
+          "options": [
+            "Sie sind zu teuer.",
+            "Sie wirken nur im geschlossenen Zustand.",
+            "Sie halten nur tiefe Töne ab."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was hält sie für besonders wirksam?",
+          "options": [
+            "Eine ruhige Seite für jede Wohnung.",
+            "Höhere Lärmschutzwände.",
+            "Eine Umverteilung des Verkehrs auf mehrere Straßen."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Was ergaben die Versuche zu Naturgeräuschen?",
+          "options": [
+            "Sie wirken genauso wie völlige Stille.",
+            "Sie beschleunigen die Erholung stärker als Stille.",
+            "Sie lenken von der Aufgabe ab."
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    "H3": {
+      "title": "Gespräch: Soll das Sitzenbleiben abgeschafft werden?",
+      "instruction": "Sie hören ein Gespräch mit mehreren Personen. Sie hören den Text einmal. Wer vertritt welche Meinung?",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "text": "Drei Gäste, ein Streitpunkt: Klassenwiederholung — sinnvolle Bremse oder teurer Irrweg? Frau Perl, Sie unterrichten seit zwanzig Jahren."
+          },
+          {
+            "speaker": "Frau Perl (Lehrerin)",
+            "text": "Ich habe zu oft erlebt, dass ein Schuljahr mehr genau nichts ändert. Wer im Februar den Anschluss verloren hat, braucht im Februar Hilfe, nicht im September. Wir wiederholen ein ganzes Jahr, um eine Lücke von sechs Wochen zu schließen — das ist, als würde man ein Buch von vorn lesen, weil eine Seite fehlt. Was wirklich hilft, sind Förderstunden im laufenden Betrieb."
+          },
+          {
+            "speaker": "Herr Sandmann (Elternvertreter)",
+            "text": "Für meinen Sohn war das Wiederholen die Rettung. Er war schlicht zu jung eingeschult, und das Jahr hat ihm Ruhe gegeben. Ich verstehe die Zahlen, aber Zahlen beschreiben Durchschnitte, keine Kinder. Man sollte die Möglichkeit nicht abschaffen, sondern gemeinsam mit den Eltern entscheiden, statt sie über ein Zeugnis zu verhängen."
+          },
+          {
+            "speaker": "Frau Dr. Ebner (Bildungsforscherin)",
+            "text": "Die Datenlage ist international ziemlich eindeutig: Wiederholende holen im ersten halben Jahr auf und fallen danach wieder zurück, und sie verlassen die Schule häufiger ohne Abschluss. Gleichzeitig kostet jedes Wiederholungsjahr ein Land rund einen Milliardenbetrag. Aber ich warne davor, nur zu streichen. Wenn man das Sitzenbleiben abschafft, ohne Förderprogramme aufzubauen, verschiebt man das Problem in die nächste Klasse."
+          },
+          {
+            "speaker": "Frau Perl",
+            "text": "Da sind wir uns einig. Streichen allein ist keine Reform."
+          },
+          {
+            "speaker": "Herr Sandmann",
+            "text": "Und trotzdem darf am Ende nicht die Behörde allein entscheiden. Familien wissen mehr über ihr Kind als jede Statistik."
+          }
+        ]
+      },
+      "bank": [
+        {
+          "key": "a",
+          "text": "Frau Perl"
+        },
+        {
+          "key": "b",
+          "text": "Herr Sandmann"
+        },
+        {
+          "key": "c",
+          "text": "Frau Dr. Ebner"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Eine Wiederholung kommt zeitlich zu spät, um die eigentliche Lücke zu schließen.",
+          "answer": "a"
+        },
+        {
+          "prompt": "Die Entscheidung sollte gemeinsam mit der Familie getroffen werden.",
+          "answer": "b"
+        },
+        {
+          "prompt": "Der Lerngewinn hält nur kurze Zeit an.",
+          "answer": "c"
+        },
+        {
+          "prompt": "Gezielte Förderung während des Schuljahres ist wirksamer.",
+          "answer": "a"
+        },
+        {
+          "prompt": "Ein einzelner Fall kann sich anders entwickeln als der Durchschnitt.",
+          "answer": "b"
+        },
+        {
+          "prompt": "Eine Abschaffung ohne Ersatzangebote verlagert das Problem nur.",
+          "answer": "c"
+        }
+      ]
+    },
+    "H4": {
+      "title": "Vortrag: Was Städte gegen Hitze tun können",
+      "instruction": "Sie hören einen Vortrag. Sie hören den Text einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Vortragende",
+            "text": "Guten Abend. Ich möchte heute über ein Phänomen sprechen, das jede von Ihnen im letzten Sommer gespürt hat, das aber erstaunlich selten genau benannt wird: die städtische Wärmeinsel.\n\nGemeint ist der Unterschied zwischen einer Innenstadt und ihrem Umland. In einer mitteleuropäischen Großstadt beträgt er in klaren Sommernächten regelmäßig vier bis sieben Grad. Entscheidend ist dabei nicht der Tag, sondern die Nacht: Beton und Asphalt geben die tagsüber gespeicherte Wärme langsam wieder ab, und der Körper bekommt keine Gelegenheit zur Erholung. Genau das, nicht die Mittagshitze, ist medizinisch das Problem.\n\nDrei Hebel stehen zur Verfügung. Der erste sind Bäume. Ein ausgewachsener Straßenbaum kühlt seine Umgebung an einem heißen Tag ungefähr so stark wie mehrere Klimageräte — allerdings nur, wenn er genug Wurzelraum und Wasser hat. Die meisten Neupflanzungen in deutschen Städten sterben in den ersten fünf Jahren, und zwar nicht wegen der Hitze, sondern weil die Baugrube zu klein ist.\n\nDer zweite Hebel ist Wasser. Hier hat sich das Bild in den letzten Jahren gedreht: Früher galt es als Fortschritt, Regen möglichst schnell in die Kanalisation zu leiten. Heute versucht man das Gegenteil — Wasser im Quartier zu halten, in Mulden, unter Pflaster, auf Dächern, damit es verdunsten und kühlen kann. Das ist der Gedanke hinter dem Begriff Schwammstadt.\n\nDer dritte Hebel ist die Oberfläche. Helle Dächer reflektieren einen erheblichen Teil der Strahlung. Das ist billig und wirkt sofort, hat aber einen Haken: Was im Sommer hilft, kostet im Winter Heizenergie. Die Bilanz fällt deshalb je nach Klimazone unterschiedlich aus, und in Norddeutschland ist sie deutlich weniger eindeutig als in Südeuropa.\n\nWas ich Ihnen mitgeben möchte: Keine dieser Maßnahmen wirkt allein. Und alle drei sind Fragen der Planung, nicht der Technik. Die Entscheidung über das Stadtklima von 2060 fällt nicht in einem Labor, sondern in Bebauungsplänen, die dieses Jahr beschlossen werden."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie groß ist der Temperaturunterschied laut Vortrag?",
+          "options": [
+            "Ein bis zwei Grad.",
+            "Vier bis sieben Grad.",
+            "Über zehn Grad."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Warum ist die Nacht medizinisch entscheidend?",
+          "options": [
+            "Weil dann die Luftverschmutzung steigt.",
+            "Weil der Körper sich nicht erholen kann.",
+            "Weil die meisten Menschen dann draußen sind."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Woran scheitern neue Straßenbäume meistens?",
+          "options": [
+            "An zu kleinen Baugruben.",
+            "An der Hitze selbst.",
+            "An Schädlingen."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Wie wurde Regenwasser früher behandelt?",
+          "options": [
+            "Es wurde in Zisternen gespeichert.",
+            "Es wurde möglichst schnell abgeleitet.",
+            "Es wurde zur Bewässerung genutzt."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Was bedeutet der Begriff Schwammstadt?",
+          "options": [
+            "Wasser im Quartier zurückzuhalten.",
+            "Poröse Baustoffe zu verwenden.",
+            "Die Kanalisation zu vergrößern."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Welchen Nachteil haben helle Dächer?",
+          "options": [
+            "Sie sind sehr teuer.",
+            "Sie erhöhen den Heizbedarf im Winter.",
+            "Sie halten nur wenige Jahre."
+          ],
+          "answer": 1
+        },
+        {
+          "prompt": "Wie bewertet die Vortragende die Wirkung der Maßnahmen?",
+          "options": [
+            "Nur die Kombination wirkt.",
+            "Bäume allein genügen.",
+            "Technische Lösungen sind am wichtigsten."
+          ],
+          "answer": 0
+        },
+        {
+          "prompt": "Wo fällt laut Schluss die Entscheidung über das Stadtklima?",
+          "options": [
+            "In der Forschung.",
+            "In Bebauungsplänen.",
+            "Im Verhalten der Bevölkerung."
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  }
+}

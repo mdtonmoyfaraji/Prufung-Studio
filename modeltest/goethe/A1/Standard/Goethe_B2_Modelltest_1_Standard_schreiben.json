@@ -1,0 +1,35 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-18T13:01:38.487Z",
+  "exam": "goethe",
+  "level": "B2",
+  "module": "schreiben",
+  "name": "Goethe B2 — Modelltest 1 (Standard) — Writing",
+  "content": {
+    "S1": {
+      "title": "Forumsbeitrag: Vier-Tage-Woche",
+      "prompt": "Im Online-Debattenportal „Arbeitswelten“ wird über die Einführung einer Vier-Tage-Woche bei vollem Lohnausgleich diskutiert. Schreiben Sie einen Diskussionsbeitrag, in dem Sie Stellung beziehen.",
+      "bullets": [
+        "Beschreiben Sie, warum das Thema gerade jetzt so intensiv diskutiert wird.",
+        "Begründen Sie Ihre eigene Position und veranschaulichen Sie sie an einem Beispiel.",
+        "Gehen Sie auf ein Gegenargument ein, das Kritiker vorbringen.",
+        "Formulieren Sie einen Vorschlag, wie sich das Modell praktisch umsetzen ließe."
+      ],
+      "words": 150,
+      "tips": "Einleitung, drei bis vier Absätze, Schluss. Verwenden Sie Konnektoren (zwar … aber, einerseits … andererseits, folglich) und vermeiden Sie reine Aufzählungen."
+    },
+    "S2": {
+      "title": "Formelle Nachricht an die Abteilungsleitung",
+      "prompt": "Sie arbeiten in einem mittelständischen Unternehmen. Ihre Abteilungsleiterin, Frau Dr. Kroll, hat alle Mitarbeitenden gebeten, Vorschläge für die Gestaltung der monatlichen Teambesprechung einzureichen. Schreiben Sie eine formelle Nachricht.",
+      "bullets": [
+        "Nehmen Sie Bezug auf die Anfrage.",
+        "Nennen Sie ein konkretes Problem der bisherigen Besprechungen.",
+        "Machen Sie einen Verbesserungsvorschlag und begründen Sie ihn.",
+        "Bieten Sie an, die Umsetzung zu unterstützen."
+      ],
+      "words": 100,
+      "tips": "Förmliche Anrede und Grußformel, Sie-Form durchgehend, sachlicher Ton, kein umgangssprachliches Vokabular."
+    }
+  }
+}
