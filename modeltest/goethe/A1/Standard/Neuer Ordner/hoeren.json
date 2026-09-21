@@ -1,0 +1,397 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T05:47:44.876Z",
+  "exam": "goethe",
+  "level": "B2",
+  "module": "hoeren",
+  "name": "Goethe B2 — Modelltest 1 — Listening",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1: Gespräche im Alltag und Beruf",
+      "instruction": "Sie hören fünf kurze Gespräche und Äußerungen. Zu jedem Text lösen Sie zwei Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Situation 1. Sie hören ein Gespräch zwischen zwei Kolleginnen im Büro über die Einführung einer neuen Bürosoftware. Frau Bauer: 'Frau Klein, haben Sie schon Zeit gefunden, sich das neue Ticketsystem anzuschauen? Die Geschäftsleitung möchte, dass wir ab nächsten Monat komplett darauf umsteigen.' Frau Klein: 'Ja, ich habe es gestern ausprobiert. Die Benutzeroberfläche ist zwar übersichtlich, aber ich finde es ehrlich gesagt viel zu umständlich für unsere täglichen kurzen Absprachen. Da war die alte Tabelle direkt im Intranet doch viel schneller.' Frau Bauer: 'Da gebe ich Ihnen recht, für Kleinigkeiten ist es zu komplex. Aber der Vorteil ist, dass die Kundenanfragen jetzt automatisch zugewiesen werden. So geht hoffentlich nichts mehr verloren.' Frau Klein: 'Das stimmt natürlich, vor allem in der Urlaubszeit war das früher oft ein Chaos. Trotzdem graut es mir vor der Schulung am Freitag, die dauert nämlich den ganzen Nachmittag.'"
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Situation 2. Sie hören eine Nachricht auf dem Anrufbeantworter von einem Handwerksbetrieb. Handwerker: 'Guten Tag, hier spricht Meister Schneider vom Sanitärbetrieb Schneider & Söhne. Ich rufe wegen Ihres Termins am kommenden Dienstag an. Leider hat sich mein Mitarbeiter kurzfristig krankgemeldet, weshalb wir die Wartung Ihrer Heizungsanlage an diesem Tag unmöglich durchführen können. Ich möchte mich dafür in aller Form entschuldigen. Als neuen Termin kann ich Ihnen entweder den darauffolgenden Donnerstag um zehn Uhr morgens oder Freitag nachmittag ab vier anbieten. Bitte geben Sie mir kurz per Mail oder telefonisch Bescheid, welche Alternative für Sie infrage kommt, damit wir das fest einplanen können. Vielen Dank für Ihr Verständnis.'"
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Situation 3. Sie hören ein kurzes Radiointerview mit einer Konsumforscherin zum Thema Secondhand-Kauf. Reporter: 'Immer mehr Menschen kaufen Kleidung und Möbel gebraucht statt neu. Frau Dr. Weber, ist das nur ein kurzer Trend oder ein nachhaltiger Wandel?' Frau Dr. Weber: 'Das ist weit mehr als eine modebedingte Phase. Unsere aktuellen Marktdaten zeigen, dass der Erwerb von Secondhand-Waren inzwischen in allen gesellschaftlichen Schichten fest verankert ist. Vor allem der Umweltgedanke und das Bewusstsein für Ressourcen stehen dabei im Vordergrund, nicht einmal mehr primär der finanzielle Aspekt. Die Menschen wollen bewusst gegen die Wegwerfkultur ansteuern, auch wenn der Einkauf im Vergleich zum Online-Neukauf manchmal etwas mehr Zeit und Geduld erfordert.'"
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Situation 4. Sie hören eine Durchsage in einer öffentlichen Bibliothek. Sprecherin: 'Liebe Bibliotheksbesucher, wir möchten Sie kurz vor unserer Mittagspause darauf hinweisen, dass der Lesesaal im ersten Obergeschoss heute ab 13 Uhr wegen technischer Wartungsarbeiten an der Beleuchtung vorübergehend geschlossen bleibt. Alle Lernenden werden gebeten, ihre Arbeitsplätze bis spätestens 12:45 Uhr zu räumen. Die Ausleihe im Erdgeschoss sowie die Rückgabeautomaten stehen Ihnen selbstverständlich wie gewohnt durchgehend zur Verfügung. Wir danken Ihnen für Ihre Kooperation und bitten die entstehenden Unannehmlichkeiten zu entschuldigen.'"
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Situation 5. Sie hören ein Gespräch zwischen zwei Freunden über die Nutzung von Online-Kursen. Jonas: 'Sag mal, hast du eigentlich diesen Programmierkurs online zu Ende gebracht, den du im Frühjahr angefangen hast?' Lukas: 'Um ehrlich zu sein: nein. Ich habe nach der dritten Lektion abgebrochen. Die Videos waren zwar didaktisch gut gemacht, aber mir fehlte einfach die verbindliche Gruppe und der direkte Austausch mit einem Dozenten. Man schiebt das Lernen dann doch zu leicht auf die lange Bank, wenn niemand nachfragt.' Jonas: 'Das kenne ich. Genau deshalb setze ich mittlerweile lieber auf Präsenzkurse an der Volkshochschule. Da zahlt man zwar etwas mehr, aber man geht halt hin.'"
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Frau Klein findet das neue Ticketsystem für kurze Absprachen zu kompliziert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Frau Klein sagt im Text: '...ich finde es ehrlich gesagt viel zu umständlich für unsere täglichen kurzen Absprachen.'"
+        },
+        {
+          "prompt": "Warum sieht Frau Klein auch positive Aspekte im neuen Ticketsystem?",
+          "options": [
+            "Weil es die Schulung am Freitag überflüssig macht.",
+            "Weil Kundenanfragen nun automatisch zugewiesen werden.",
+            "Weil die alte Intranet-Tabelle zu oft zu Fehlern führte."
+          ],
+          "answer": 1,
+          "why": "Frau Bauer nennt den Vorteil, dass 'die Kundenanfragen jetzt automatisch zugewiesen werden', dem Frau Klein zustimmt."
+        },
+        {
+          "prompt": "Der Handwerker ruft an, um den Termin für die Heizungswartung zu bestätigen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Der Handwerker ruft an, weil der Termin wegen Krankheit abgesagt werden muss ('...weshalb wir die Wartung Ihrer Heizungsanlage an diesem Tag unmöglich durchführen können')."
+        },
+        {
+          "prompt": "Welche neuen Terminoptionen bietet Meister Schneider an?",
+          "options": [
+            "Dienstag um zehn Uhr oder Freitag nachmittag",
+            "Donnerstag um zehn Uhr oder Freitag nachmittag",
+            "Mittwoch um zehn Uhr oder Donnerstag nachmittag"
+          ],
+          "answer": 1,
+          "why": "Der Handwerker bietet 'den darauffolgenden Donnerstag um zehn Uhr morgens oder Freitag nachmittag ab vier' an."
+        },
+        {
+          "prompt": "Laut Frau Dr. Weber kaufen die Menschen heute vor allem deshalb gebraucht, weil es finanziell günstiger ist.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Frau Dr. Weber betont, dass der Umweltgedanke im Vordergrund steht und 'nicht einmal mehr primär der finanzielle Aspekt'."
+        },
+        {
+          "prompt": "Welchen Nachteil hat der Kauf von Secondhand-Waren laut der Expertin?",
+          "options": [
+            "Er erfordert manchmal mehr Zeit und Geduld.",
+            "Er ist in bestimmten Schichten gesellschaftlich unerwünscht.",
+            "Er bietet keine ausreichende Auswahl an Möbeln."
+          ],
+          "answer": 0,
+          "why": "Sie erwähnt, dass der Einkauf 'im Vergleich zum Online-Neukauf manchmal etwas mehr Zeit und Geduld erfordert'."
+        },
+        {
+          "prompt": "Der Lesesaal der Bibliothek schließt heute wegen Wartungsarbeiten komplett den ganzen Tag.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Der Lesesaal schließt nur 'heute ab 13 Uhr wegen technischer Wartungsarbeiten', die Ausleihe bleibt geöffnet."
+        },
+        {
+          "prompt": "Bis zu welcher Uhrzeit müssen die Lernenden ihre Arbeitsplätze im Lesesaal räumen?",
+          "options": [
+            "Bis 12:30 Uhr",
+            "Bis 12:45 Uhr",
+            "Bis 13:00 Uhr"
+          ],
+          "answer": 1,
+          "why": "In der Durchsage heißt es: '...gebeten, ihre Arbeitsplätze bis spätestens 12:45 Uhr zu räumen.'"
+        },
+        {
+          "prompt": "Lukas hat den Online-Programmierkurs erfolgreich abgeschlossen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Lukas antwortet auf die Frage, ob er den Kurs beendet hat: 'Um ehrlich zu sein: nein. Ich habe nach der dritten Lektion abgebrochen.'"
+        },
+        {
+          "prompt": "Warum bevorzugt Jonas mittlerweile Kurse an der Volkshochschule?",
+          "options": [
+            "Weil dort die Kursgebühren wesentlich niedriger sind.",
+            "Weil die Videomaterialien dort professioneller aufbereitet sind.",
+            "Weil Präsenzkurse verbindlicher sind und man dort physisch hingeht."
+          ],
+          "answer": 2,
+          "why": "Jonas sagt, dass man bei Präsenzkursen zwar mehr zahlt, 'aber man geht halt hin' (mehr Verbindlichkeit)."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Interview zum Thema Schichtarbeit und innere Uhr",
+      "instruction": "Lesen Sie die Aufgaben 1 bis 6. Hören Sie nun das Interview. Dazu hören Sie den Text zweimal. Wählen Sie für die Aufgaben 1 bis 6 die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem Wissenschaftsmagazin. Heute sprechen wir über ein Thema, das Millionen von Menschen betrifft: die innere Uhr und die Folgen von Schichtarbeit. Bei mir im Studio ist Dr. Maria Bergmann, Chronobiologin an der Universität Freiburg. Frau Dr. Bergmann, warum fällt es manchen Menschen so schwer, nachts zu arbeiten?"
+          },
+          {
+            "speaker": "Dr. Maria Bergmann",
+            "text": "Guten Tag. Das liegt schlicht und einfach an unserer Biologie. Der menschliche Körper ist über Jahrtausende hinweg auf einen Tag-Nacht-Rhythmus programmiert. Unsere innere Uhr steuert nicht nur den Schlaf, sondern auch den Stoffwechsel, die Körpertemperatur und die Hormonausschüttung. Wenn wir nachts arbeiten, verlangen wir unserem Organismus ab, gegen seine biologische Grundprogrammierung zu handeln."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Gibt es denn Menschen, die von Natur aus besser mit Schichtdienst zurechtkommen als andere?"
+          },
+          {
+            "speaker": "Dr. Maria Bergmann",
+            "text": "Ja, absolut. Man unterscheidet grob zwischen dem Typ der Lerche, also dem Frühmenschen, und der Eule, dem Spättyp. Eulen haben es tendenziell etwas leichter, Spätschichten zu übernehmen. Aber die reine Nachtschicht bleibt für jeden Typ eine erhebliche Belastung. Langfristig führt das oft zu chronischer Müdigkeit, Magen-Darm-Beschwerden und einem erhöhten Risiko für Herz-Kreislauf-Erkrankungen."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Kann man seinen Körper denn nicht umtrainieren, sodass man sich an den Schichtdienst gewöhnt?"
+          },
+          {
+            "speaker": "Dr. Maria Bergmann",
+            "text": "Leider nein, oder sagen wir: nur sehr bedingt. Viele Betroffene glauben, sie hätten sich nach einigen Jahren an den Rhythmus gewöhnt, weil die akute Müdigkeit nachlässt. Medizinische Untersuchungen zeigen jedoch, dass die inneren Organe und der Hormonhaushalt dem künstlichen Rhythmus dauerhaft hinterherlaufen. Der Körper gewöhnt sich eben nicht wirklich um."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Was empfehlen Sie denn Unternehmen, die im Schichtbetrieb arbeiten müssen?"
+          },
+          {
+            "speaker": "Dr. Maria Bergmann",
+            "text": "Wichtig ist vor allem die Gestaltung der Dienstpläne. Studien zeigen, dass eine vorwärts drehende Schichtung — also erst Früh-, dann Spät-, dann Nachtschicht — deutlich besser verträglich ist als der umgekehrte Weg. Außerdem sollten die Blöcke kurz gehalten werden, maximal drei Nachtschichten am Stück, gefolgt von ausreichend freien Tagen zur Regeneration."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Gibt es auch technische Hilfsmittel, die helfen können?"
+          },
+          {
+            "speaker": "Dr. Maria Bergmann",
+            "text": "Ja, zum Beispiel eine gezielte Beleuchtung am Arbeitsplatz. Hellblaues Licht kann die Ausschüttung des Müdigkeitshormons Melatonin hemmen und so die Aufmerksamkeit in der Nacht erhöhen. Dennoch bleibt das nur eine Krücke, um die Symptome zu lindern, nicht aber das Grundproblem zu lösen."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Vielen Dank für diese interessanten Einblicke, Frau Dr. Bergmann."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Warum fällt Nachtarbeit dem Menschen laut Dr. Bergmann so schwer?",
+          "options": [
+            "Weil der Körper biologisch auf einen Tag-Nacht-Rhythmus eingestellt ist.",
+            "Weil nachts die Arbeitsbedingungen in den Betrieben meistens schlechter sind.",
+            "Weil die Ernährung während der Nachtstunden ungesünder ist."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass der Körper über Jahrtausende auf einen Tag-Nacht-Rhythmus programmiert ist."
+        },
+        {
+          "prompt": "Welche Personen kommen laut Expertin etwas besser mit Schichtdienst zurecht?",
+          "options": [
+            "Personen, die sehr viel Sport treiben",
+            "Menschen, die dem Typ der Eule entsprechen",
+            "Mitarbeiter, die bereits im Rentenalter sind"
+          ],
+          "answer": 1,
+          "why": "Dr. Bergmann erklärt, dass Eulen es tendenziell etwas leichter haben, Spätschichten zu übernehmen."
+        },
+        {
+          "prompt": "Was passiert nach Ansicht der Wissenschaftlerin langfristig bei Schichtarbeit?",
+          "options": [
+            "Der Körper gewöhnt sich vollständig an die neuen Arbeitszeiten.",
+            "Die innere Uhr passt sich nach einigen Jahren schrittweise an.",
+            "Die inneren Organe laufen dem künstlichen Rhythmus dauerhaft hinterher."
+          ],
+          "answer": 2,
+          "why": "Die Expertin sagt, dass die inneren Organe und der Hormonhaushalt dem künstlichen Rhythmus dauerhaft hinterherlaufen."
+        },
+        {
+          "prompt": "Welche Art von Dienstplänen empfiehlt die Chronobiologin besonders?",
+          "options": [
+            "Vorwärts drehende Schichten mit kurzen Blöcken",
+            "Langfristige Nachtschichten ohne ständigen Wechsel",
+            "Sehr lange Schichten mit anschließender Urlaubswoche"
+          ],
+          "answer": 0,
+          "why": "Dr. Bergmann empfiehlt eine vorwärts drehende Schichtung und maximal drei Nachtschichten am Stück."
+        },
+        {
+          "prompt": "Welche Wirkung hat hellblaues Licht am Arbeitsplatz in der Nacht?",
+          "options": [
+            "Es fördert die sofortige Entspannung nach der Arbeit.",
+            "Es hemmt das Müdigkeitshormon und steigert die Aufmerksamkeit.",
+            "Es sorgt für eine langfristige Umstellung der inneren Uhr."
+          ],
+          "answer": 1,
+          "why": "Im Interview wird erklärt, dass hellblaues Licht die Ausschüttung des Müdigkeitshormons Melatonin hemmen und die Aufmerksamkeit erhöhen kann."
+        },
+        {
+          "prompt": "Wie bewertet Dr. Bergmann den Einsatz von technischem Licht in der Nacht?",
+          "options": [
+            "Es löst das biologische Grundproblem vollständig.",
+            "Es ist eine nützliche Hilfe, lindert aber nur die Symptome.",
+            "Es ist für den menschlichen Körper völlig wirkungslos."
+          ],
+          "answer": 1,
+          "why": "Die Expertin bezeichnet hellblaues Licht als Krücke, um die Symptome zu lindern, aber nicht das Grundproblem zu lösen."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Hören Teil 3: Radiodiskussion über Künstliche Intelligenz am Arbeitsplatz",
+      "instruction": "Sie hören ein Gespräch im Radio zwischen drei Personen über den Einsatz von Künstlicher Intelligenz im Büro. Hören Sie das Gespräch einmal. Zu jeder Aussage passt genau eine Person. Wählen Sie: Person A, Person B oder Person C.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Moderatorin Claudia"
+        },
+        {
+          "key": "b",
+          "text": "Gast Thomas (Experte für Arbeitsmarkt)"
+        },
+        {
+          "key": "c",
+          "text": "Gast Sandra (Betriebsrätin)"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "begrüßt die Hörerinnen und Hörer zur Sendung und stellt das Hauptthema des heutigen Abends vor.",
+          "answer": "a",
+          "why": "Claudia eröffnet die Sendung mit den Worten: „Guten Abend liebe Hörerinnen und Hörer, heute sprechen wir über KI im Job.“"
+        },
+        {
+          "prompt": "argumentiert, dass vor allem repetitive Verwaltungsaufgaben durch intelligente Software effizienter erledigt werden können.",
+          "answer": "b",
+          "why": "Thomas erklärt im Gespräch, dass „vor allem monotone Routineaufgaben im Büro durch moderne Algorithmen deutlich schneller und fehlerfreier bearbeitet werden“."
+        },
+        {
+          "prompt": "fordert, dass die Beschäftigten unbedingt aktiv in die Planung von Digitalisierungsprozessen einbezogen werden müssen.",
+          "answer": "c",
+          "why": "Sandra betont als Betriebsrätin: „Wir müssen darauf bestehen, dass die Mitarbeiter bei der Einführung neuer Tools von Anfang an mitreden dürfen.“"
+        },
+        {
+          "prompt": "weist darauf hin, dass man trotz aller Begeisterung für neue Technologien den Datenschutz und die Rechte der Angestellten nicht vergessen darf.",
+          "answer": "c",
+          "why": "Sandra warnt im weiteren Verlauf: „Bei aller Effizienz dürfen wir den Schutz persönlicher Daten und die Mitbestimmung keinesfalls vernachlässigen.“"
+        },
+        {
+          "prompt": "stellt die provokante Frage, ob wir in naher Zukunft überhaupt noch menschliche Arbeitskräfte in der Verwaltung brauchen.",
+          "answer": "a",
+          "why": "Claudia wirft als Moderatorin die Frage ein: „Müssen wir uns eigentlich Sorgen machen, dass bald gar keine Menschen mehr im Büro sitzen?“"
+        },
+        {
+          "prompt": "verweist auf aktuelle Studien, die zeigen, dass durch Automatisierung zwar Jobs wegfallen, aber gleichzeitig völlig neue Berufsfelder entstehen.",
+          "answer": "b",
+          "why": "Thomas führt aus: „Untersuchungen belegen zwar den Wegfall klassischer Stellen, aber es entstehen parallel dazu spannende neue Aufgabenprofile.“"
+        }
+      ]
+    },
+    "H4": {
+      "title": "Die Zukunft des mobilen Arbeitens",
+      "instruction": "Hören Sie den Vortrag über das mobile Arbeiten. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c. Sie hören den Text zweimal.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Referent",
+            "text": "Guten Tag, meine Damen und Herren. Ich begrüße Sie zu unserem heutigen Themenabend über die Zukunft der Arbeitswelt. Im Zentrum unseres Interesses steht heute das sogenannte mobile Arbeiten – oft auch als Arbeiten im Homeoffice oder von unterwegs bezeichnet. Die Corona-Pandemie hat hierbei wie ein Katalysator gewirkt und Prozesse beschleunigt, die sonst vielleicht noch ein Jahrzehnt in Anspruch genommen hätten. Doch wie sieht die Realität abseits von Notlösungen und Krisenmodus aus? Die Mehrheit der Unternehmen hat erkannt, dass Präsenzpflicht nicht zwangsläufig mit Produktivität gleichzusetzen ist. Im Gegenteil: Viele Studien zeigen, dass Beschäftigte, die flexibel zwischen Büro und den eigenen vier Wänden wechseln können, oft eine höhere Motivation aufweisen. Ein wesentlicher Grund dafür ist der Wegfall des oft zeitraubenden Pendelns. Wer morgens nicht im Stau steht oder auf überfüllte Bahnen angewiesen ist, gewinnt wertvolle Lebenszeit. Diese Zeit fließt häufig direkt in die Arbeit ein oder kommt der Work-Life-Balance zugute, was wiederum die psychische Gesundheit stärkt. Dennoch dürfen wir die Schattenseiten dieser Entwicklung nicht ignorieren. Eine der größten Herausforderungen ist die zunehmende Entgrenzung von Arbeit und Freizeit. Wenn der Laptop auch abends noch auf dem Küchentisch steht, fällt es vielen Menschen schwer, mental abzuschalten. Die permanente Erreichbarkeit führt langfristig oft zu Erschöpfungszuständen, dem sogenannten Burnout-Syndrom. Ein weiteres Problem betrifft den sozialen Zusammenhalt im Team. Der kurze Plausch an der Kaffeemaschine, der oft kreative Ideen sprudeln lässt, lässt sich durch Videokonferenzen nur schwer ersetzen. Hier sind die Führungskräfte gefragt, neue Formen der digitalen Teamkultur zu entwickeln, die den Zusammenhalt stärken, ohne die Mitarbeitenden mit virtuellen Meetings zu überfordern. Zudem müssen klare Regeln für die Erreichbarkeit vereinbart werden, um den Schutz der Privatsphäre zu garantieren. Zusammenfassend lässt sich sagen: Mobiles Arbeiten ist kein vorübergehender Trend, sondern ein fester Bestandteil der modernen Arbeitswelt. Es bietet enorme Chancen für mehr Flexibilität, erfordert jedoch von Unternehmen und Beschäftigten gleichermaßen ein hohes Maß an Selbstdisziplin und die Bereitschaft, Arbeitsstrukturen kontinuierlich anzupassen. Ich danke Ihnen für Ihre Aufmerksamkeit und freue mich auf Ihre Fragen und die anstehende Diskussion."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Welche Wirkung hatte die Corona-Pandemie laut dem Referenten auf das mobile Arbeiten?",
+          "options": [
+            "Sie hat die Entwicklung und Einführung stark beschleunigt.",
+            "Sie hat zu einer kompletten Abschaffung der Büros geführt.",
+            "Sie hat die Unternehmen völlig unvorbereitet getroffen."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass die Pandemie wie ein Katalysator wirkte und Prozesse beschleunigte."
+        },
+        {
+          "prompt": "Was ist laut dem Vortrag ein positiver Effekt des mobilen Arbeitens für die Beschäftigten?",
+          "options": [
+            "Sie erhalten eine höhere finanzielle Entschädigung.",
+            "Sie gewinnen durch den Wegfall des Pendelns wertvolle Zeit.",
+            "Sie müssen sich weniger mit Kollegen abstimmen."
+          ],
+          "answer": 1,
+          "why": "Der Referent nennt als wesentlichen Grund für die Motivation den Wegfall des Pendelnd, wodurch wertvolle Lebenszeit gewonnen wird."
+        },
+        {
+          "prompt": "Welche Gefahr sieht der Referent in der Entgrenzung von Arbeit und Freizeit?",
+          "options": [
+            "Dass die technische Ausrüstung zu teuer wird.",
+            "Dass die Arbeitsqualität stark abnimmt.",
+            "Dass es schwerfällt abzuschalten und Erschöpfung droht."
+          ],
+          "answer": 2,
+          "why": "Es wird erwähnt, dass das Abschalten schwerfällt und die permanente Erschöpfungszustände beziehungsweise Burnout begünstigt."
+        },
+        {
+          "prompt": "Wie bewertet der Referent den Ersatz des Kaffeeklatschs durch Videokonferenzen?",
+          "options": [
+            "Er funktioniert problemlos und ersetzt den persönlichen Kontakt vollständig.",
+            "Er kann den spontanen Austausch und die soziale Nähe nur schwer ersetzen.",
+            "Er wird von den Mitarbeitenden komplett abgelehnt."
+          ],
+          "answer": 1,
+          "why": "Der Sprecher sagt, dass sich der kurze Plausch durch Videokonferenzen nur schwer ersetzen lässt."
+        },
+        {
+          "prompt": "Wer ist laut dem Vortrag besonders in der Pflicht, eine neue Teamkultur zu entwickeln?",
+          "options": [
+            "Die Führungskräfte",
+            "Die Gewerkschaften",
+            "Die IT-Abteilung"
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es ausdrücklich: 'Hier sind die Führungskräfte gefragt, neue Formen der digitalen Teamkultur zu entwickeln.'"
+        },
+        {
+          "prompt": "Was fordert der Referent im Hinblick auf die Erreichbarkeit?",
+          "options": [
+            "Eine absolute Erreichbarkeit rund um die Uhr",
+            "Klare Regeln zum Schutz der Privatsphäre",
+            "Das Verbot von Smartphones im Beruf"
+          ],
+          "answer": 1,
+          "why": "Der Referent betont, dass 'klare Regeln für die Erreichbarkeit vereinbart werden [müssen], um den Schutz der Privatsphäre zu garantieren'."
+        },
+        {
+          "prompt": "Wie schätzt der Referent die Zukunft des mobilen Arbeitens ein?",
+          "options": [
+            "Es ist ein temporärer Modus, der bald wieder verschwindet.",
+            "Es ist ein fester und bleibender Bestandteil der modernen Arbeitswelt.",
+            "Es wird das Arbeiten im Büro komplett ablösen."
+          ],
+          "answer": 1,
+          "why": "Im Fazit stellt der Referent fest: 'Mobiles Arbeiten ist kein vorübergehender Trend, sondern ein fester Bestandteil der modernen Arbeitswelt.'"
+        },
+        {
+          "prompt": "Was wird neben Disziplin noch von beiden Seiten für den Erfolg des mobilen Arbeitens benötigt?",
+          "options": [
+            "Die Bereitschaft zur kontinuierlichen Anpassung von Strukturen",
+            "Ständige staatliche Kontrollen und Vorschriften",
+            "Die Reduzierung der Arbeitszeit auf vier Tage"
+          ],
+          "answer": 0,
+          "why": "Der Text schließt mit der Aussage, dass es 'ein hohes Maß an Selbstdisziplin und die Bereitschaft, Arbeitsstrukturen kontinuierlich anzupassen' erfordert."
+        }
+      ]
+    }
+  }
+}

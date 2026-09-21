@@ -94,14 +94,17 @@ button,input,select,textarea{font:inherit; color:inherit}
 
 .main{min-width:0; display:flex; flex-direction:column}
 .topbar{
-  display:flex; align-items:center; gap:12px; padding:12px 24px;
+  display:flex; align-items:center; flex-wrap:wrap; gap:10px 12px; padding:12px 24px;
   border-bottom:1px solid var(--color-rule); background:var(--color-surface);
   position:sticky; top:0; z-index:40;
 }
 .topbar .ctx{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
 .topbar .spacer{flex:1}
+.libctx{flex-basis:100%; gap:6px; min-height:0}
+.libctx:empty{display:none}
+.libctx select{width:auto; max-width:180px}
 .page{padding:26px 24px 64px; max-width:1180px; width:100%}
-.page.wide{max-width:none}
+.page.wide{max-width:1560px; margin:0 auto}
 
 /* ---------- primitives ---------- */
 .card{
@@ -206,9 +209,9 @@ table.tbl tr:last-child td{border-bottom:0}
 
 /* ---------- split panes (stimulus | questions) ---------- */
 .split{display:grid; gap:18px; align-items:start}
-.split[data-ratio="50-50"]{grid-template-columns:1fr 1fr}
-.split[data-ratio="30-70"]{grid-template-columns:3fr 7fr}
-.split[data-ratio="70-30"]{grid-template-columns:7fr 3fr}
+.split[data-ratio="50-50"]{grid-template-columns: minmax(240px,1fr) minmax(240px,1fr)}
+.split[data-ratio="30-70"]{grid-template-columns: minmax(220px,3fr) minmax(260px,7fr)}
+.split[data-ratio="70-30"]{grid-template-columns: minmax(260px,7fr) minmax(220px,3fr)}
 .split[data-ratio="100"]{grid-template-columns:1fr}
 .split > .pane{min-width:0; display:flex; flex-direction:column; gap:12px}
 .split:not([data-ratio="100"]) > .pane{
@@ -353,10 +356,6 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
 .sparkrow i.pass{background:var(--color-good)}
 
 /* ---------- responsive ---------- */
-@media (max-width:1180px){
-  .split[data-ratio="30-70"]{grid-template-columns:2fr 3fr}
-  .split[data-ratio="70-30"]{grid-template-columns:3fr 2fr}
-}
 @media (max-width:1080px){ .runner{grid-template-columns:1fr} .side{position:static} }
 
 @media (max-width:900px){
@@ -475,6 +474,7 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
       <div class="spacer"></div>
       <span class="pill" id="passPill">—</span>
       <button class="btn sm" id="quickGenBtn">✦ <span data-i18n="btn.genall">Alle Module generieren</span></button>
+      <div class="ctx libctx" id="libRow"></div>
     </header>
 
     <main id="app"></main>
@@ -1043,6 +1043,8 @@ const DEFAULT_SETTINGS = {
   autoAdvance: false,
   showSolutionsAfter: true,
   directGapFill: false,
+  githubRepo: "",
+  githubBranch: "",
   splitRatio: "50-50",
   navHidden: false,
   speechRate: 0.95,
@@ -4306,29 +4308,33 @@ function handleFiles(fileList) {
 }
 
 /* =========================================================================
-   MODEL-TEST LIBRARY (folder structure)
-   A pre-uploaded collection of model tests, laid out as plain files next to
-   this HTML file so anyone opening the hosted page can see them without
-   uploading anything themselves:
+   MODEL-TEST LIBRARY (auto-detected folder structure, zero configuration)
+   Books live as plain files next to this HTML file — no manifest, no index
+   file, nothing to edit. Just upload the module files under this structure:
 
-     modeltest/
-       manifest.json
-       <exam>/<Niveau-Ordner>/<Buchname>/<Modul>.json
+     modeltest/<exam>/<Niveau-Ordner>/<Buchname>/lesen.json
+     modeltest/<exam>/<Niveau-Ordner>/<Buchname>/hoeren.json
+     modeltest/<exam>/<Niveau-Ordner>/<Buchname>/schreiben.json
+     modeltest/<exam>/<Niveau-Ordner>/<Buchname>/sprechen.json
+     modeltest/<exam>/<Niveau-Ordner>/<Buchname>/bausteine.json   (nur telc)
 
-   e.g. modeltest/goethe/B2/Standard/lesen.json. The module files are
-   exactly what "Einzelnes Modul" export produces (kind: "prepstudio.module").
-   manifest.json maps exam → level-folder → array of book-folder names, e.g.:
-     { "goethe": { "B2": ["Standard"] }, "telc": { "B1": ["Standard"] } }
-   Level-folder names are level keys with spaces removed (TestDaF's
-   "TDN 4" → "TDN4") to keep every path URL- and filesystem-safe.
+   e.g. modeltest/goethe/B2/Standard/lesen.json. <Buchname> can be anything,
+   and can itself contain further folders ("Buch/Teil 2/lesen.json") — the
+   library row in the top bar keeps drilling down, adding one dropdown per
+   level, until it reaches a folder that actually has module files in it.
+   Those files are exactly what "Einzelnes Modul" exports.
 
-   This needs the page to be served over http(s) — a real static host
-   (GitHub Pages, Netlify, `python3 -m http.server`, …), not opened as a
-   local file — because browsers block fetch() to file:// for security.
+   Auto-detection reads the live folder tree via GitHub's Contents API, so
+   it needs the site's source to be a public GitHub repository — which is
+   already true for a GitHub Pages site, and for a Vercel/Netlify deploy
+   that was imported from GitHub. On a *.github.io domain the repository is
+   detected automatically from the URL; anywhere else (a custom domain, a
+   *.vercel.app domain, etc.) it's set once under Import & Export →
+   Modellbibliothek ("Benutzername/Repo") — a one-time technical setup,
+   not something to
+   touch again afterward.
    ======================================================================= */
 const LIBRARY_MODULES = ["lesen", "hoeren", "schreiben", "sprechen", "bausteine"];
-let libraryBase = "modeltest/";
-let libraryManifest = null;
 
 function levelSlug(level) { return String(level).replace(/\s+/g, ""); }
 function levelFromSlug(exam, slug) {
@@ -4336,41 +4342,73 @@ function levelFromSlug(exam, slug) {
   return (ex && ex.levels.find(l => levelSlug(l) === slug)) || slug;
 }
 
-async function fetchJSON(url) {
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error("HTTP " + res.status + " — " + url);
-  return res.json();
-}
-
-async function loadLibraryManifest(base) {
-  libraryBase = (base || "modeltest/").trim();
-  if (!libraryBase.endsWith("/")) libraryBase += "/";
+/** On a *.github.io page, the owner (and, for project pages, the repo) can
+ *  be read straight from the URL — no configuration needed there at all. */
+function siteRepoGuess() {
   try {
-    libraryManifest = await fetchJSON(libraryBase + "manifest.json");
-    return { ok: true, manifest: libraryManifest };
-  } catch (e) {
-    libraryManifest = null;
-    return { ok: false, error: e.message };
+    const m = /^([^.]+)\.github\.io$/i.exec(location.hostname);
+    if (!m) return null;
+    const owner = m[1];
+    const segs = location.pathname.split("/").filter(Boolean);
+    const repo = segs.length ? segs[0] : (owner + ".github.io");
+    return { owner, repo };
+  } catch (e) { return null; }
+}
+function repoConfig() {
+  const manual = (S.settings.githubRepo || "").trim();
+  if (manual.includes("/")) {
+    const [owner, repo] = manual.split("/").map(s => s.trim());
+    if (owner && repo) return { owner, repo };
   }
+  return siteRepoGuess();
 }
 
-/** Fetches every module file present in one book folder and merges them
- *  into a model test (creating it, or updating it if this book was already
- *  loaded before). Missing module files (a book need not have every module)
- *  are skipped rather than failing the whole import. */
-async function importLibraryBook(exam, slug, book) {
-  const level = levelFromSlug(exam, slug);
-  const dir = libraryBase + exam + "/" + slug + "/" + book + "/";
-  const results = await Promise.allSettled(
-    LIBRARY_MODULES.map(mk => fetchJSON(dir + mk + ".json").then(payload => ({ mk, payload })))
-  );
-  const found = results.filter(r => r.status === "fulfilled");
-  if (!found.length) throw new Error("Keine Moduldateien gefunden unter " + dir);
+/** Lists one folder's direct contents via GitHub's Contents API. Reflects
+ *  exactly what is committed right now — nothing to keep in sync by hand. */
+async function ghListDir(path) {
+  const cfg = repoConfig();
+  if (!cfg) { const e = new Error("Kein GitHub-Repository erkannt."); e.code = "NO_REPO"; throw e; }
+  const branches = S.settings.githubBranch ? [S.settings.githubBranch] : ["main", "master"];
+  let lastErr = null;
+  for (const branch of branches) {
+    let res;
+    try {
+      const url = "https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + path + "?ref=" + encodeURIComponent(branch);
+      res = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+    } catch (e) { lastErr = new Error("Netzwerkfehler — ist diese Seite über http(s) erreichbar?"); continue; }
+    if (res.status === 404) { lastErr = new Error("Ordner nicht gefunden: " + path); continue; }
+    if (res.status === 403) { lastErr = new Error("GitHub-API-Limit erreicht (60 Anfragen/Stunde ohne Anmeldung) — bitte kurz warten."); continue; }
+    if (!res.ok) { lastErr = new Error("HTTP " + res.status); continue; }
+    const data = await res.json();
+    if (!S.settings.githubBranch) { S.settings.githubBranch = branch; saveSettings(); }
+    return Array.isArray(data) ? data : [];
+  }
+  throw lastErr || new Error("Ordner nicht gefunden: " + path);
+}
 
-  let test = S.tests.find(t => t.exam === exam && t.level === level && t.libraryPath === dir);
+/** Splits a folder listing into "this is a book" (has module files) vs
+ *  "keep drilling" (has subfolders). */
+function classifyListing(entries) {
+  const modFiles = entries.filter(e => e.type === "file" && LIBRARY_MODULES.includes(e.name.replace(/\.json$/i, "")) && /\.json$/i.test(e.name));
+  const dirs = entries.filter(e => e.type === "dir").map(e => e.name).sort((a, b) => a.localeCompare(b, "de"));
+  return { modFiles, dirs };
+}
+
+/** Fetches every module file in a resolved leaf folder and merges them into
+ *  a model test, creating it the first time and updating it on later visits
+ *  (so re-uploading a file and revisiting just refreshes the same test). */
+async function importFolderAsTest(exam, level, pathSegs, modFiles) {
+  const results = await Promise.allSettled(modFiles.map(f =>
+    fetch(f.download_url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(payload => ({ mk: f.name.replace(/\.json$/i, ""), payload }))
+  ));
+  const found = results.filter(r => r.status === "fulfilled");
+  if (!found.length) throw new Error("Keine lesbaren Moduldateien in diesem Ordner.");
+  const libraryPath = pathSegs.join("/");
+  let test = S.tests.find(t => t.exam === exam && t.level === level && t.libraryPath === libraryPath);
   if (!test) {
-    test = newTest(exam, level, examDef(exam).short + " " + level + " — " + book, "library");
-    test.libraryPath = dir;
+    test = newTest(exam, level, pathSegs[pathSegs.length - 1] || "Modelltest", "library");
+    test.libraryPath = libraryPath;
     S.tests.push(test);
   }
   for (const r of found) {
@@ -4379,85 +4417,123 @@ async function importLibraryBook(exam, slug, book) {
     test.content[r.value.mk] = clone(content);
   }
   saveTests();
-  return { test, found: found.length, total: LIBRARY_MODULES.length };
+  return { test, found: found.length };
 }
 
-function buildManifestSkeleton() {
-  const skeleton = {};
-  for (const exam of Object.keys(BLUEPRINTS)) {
-    skeleton[exam] = {};
-    for (const level of BLUEPRINTS[exam].levels) skeleton[exam][levelSlug(level)] = [];
+/* ---- the top-bar breadcrumb row: one dropdown per folder level ---- */
+let libPath = [];
+let libCache = new Map();
+let libImportedKey = null;
+let libRenderToken = 0;
+
+function resetLibPath() { libPath = []; libCache.clear(); libImportedKey = null; }
+
+async function libList(exam, slug, path) {
+  const key = exam + "/" + slug + "/" + path.join("/");
+  if (libCache.has(key)) return libCache.get(key);
+  const apiPath = "modeltest/" + exam + "/" + slug + (path.length ? "/" + path.map(encodeURIComponent).join("/") : "");
+  const result = classifyListing(await ghListDir(apiPath));
+  libCache.set(key, result);
+  return result;
+}
+
+async function renderLibRow() {
+  const row = $("#libRow");
+  if (!row) return;
+  const myToken = ++libRenderToken;
+  row.innerHTML = "";
+
+  if (!repoConfig()) {
+    row.append(el("span", { class: "xsmall muted" },
+      "Bibliothek: kein GitHub-Repository erkannt — einmalig unter Import & Export → Modellbibliothek eintragen."));
+    return;
   }
-  return skeleton;
-}
-function downloadManifestSkeleton() { download("manifest.json", buildManifestSkeleton()); }
 
-function libraryCard() {
-  const baseInput = el("input", { type: "text", value: libraryBase, placeholder: "modeltest/" });
-  const status = el("div", { class: "xsmall muted", style: "margin-top:8px", text: "Noch nicht geladen." });
-  const listBox = el("div", { class: "col", style: "gap:8px;margin-top:12px" });
+  const exam = S.settings.exam, level = S.settings.level, slug = levelSlug(level);
+  row.append(el("span", { class: "xsmall muted", text: "Bibliothek:" }));
+  const statusPill = el("span", { class: "pill xsmall" });
+  let path = [];
 
-  async function refreshList() {
-    status.textContent = "Lade manifest.json …";
-    listBox.innerHTML = "";
-    const r = await loadLibraryManifest(baseInput.value);
-    if (!r.ok) {
-      status.textContent = "Konnte " + libraryBase + "manifest.json nicht laden (" + r.error + "). " +
-        "Läuft diese Seite über einen echten Webserver? Lokale Dateien (file://) blockiert der Browser aus Sicherheitsgründen — nutzen Sie z. B. GitHub Pages, Netlify oder lokal „python3 -m http.server“.";
+  for (let depth = 0; ; depth++) {
+    let listing;
+    try {
+      listing = await libList(exam, slug, path);
+    } catch (e) {
+      if (myToken !== libRenderToken) return;
+      row.append(el("span", { class: "xsmall", style: "color:var(--color-danger)", text: e.code === "NO_REPO" ? "" : ("Bibliothek: " + e.message) }));
       return;
     }
-    const exams = Object.keys(libraryManifest || {});
-    if (!exams.length) { status.textContent = "manifest.json geladen, aber leer."; return; }
-    let rows = 0;
-    for (const exam of exams) {
-      const exDef = BLUEPRINTS[exam];
-      const levels = libraryManifest[exam] || {};
-      for (const slug of Object.keys(levels)) {
-        const books = levels[slug] || [];
-        const levelName = levelFromSlug(exam, slug);
-        for (const book of books) {
-          rows++;
-          const loadBtn = el("button", { class: "btn sm accent" }, "Laden");
-          loadBtn.addEventListener("click", async () => {
-            loadBtn.disabled = true; loadBtn.textContent = "Lädt …";
-            try {
-              const res = await importLibraryBook(exam, slug, book);
-              S.settings.exam = exam; S.settings.level = res.test.level; S.settings.testId = res.test.id;
-              saveSettings();
-              toast("Geladen: " + res.found + " von " + res.total + " Modulen.", "ok");
-              refresh();
-            } catch (err) {
-              toast("Fehler beim Laden: " + err.message, "err", 8000);
-              loadBtn.disabled = false; loadBtn.textContent = "Laden";
-            }
-          });
-          listBox.append(el("div", { class: "card tight", style: "display:flex;align-items:center;justify-content:space-between;gap:10px" },
-            el("div", {},
-              el("div", { class: "row" }, el("span", { class: "pill" }, exDef ? exDef.short : exam), el("b", { text: levelName }), el("span", { class: "muted", text: "— " + book })),
-              el("div", { class: "xsmall muted mono", text: libraryBase + exam + "/" + slug + "/" + book + "/" })),
-            loadBtn));
-        }
-      }
-    }
-    status.textContent = rows ? (rows + " Buch/Bücher gefunden.") : "manifest.json geladen, aber keine Bücher eingetragen.";
-  }
+    if (myToken !== libRenderToken) return;
 
+    if (listing.modFiles.length) {
+      const leafKey = exam + "/" + slug + "/" + path.join("/");
+      statusPill.className = "pill teal xsmall";
+      if (leafKey === libImportedKey) { statusPill.textContent = "✓ geladen"; row.append(statusPill); return; }
+      statusPill.textContent = "wird geladen …";
+      row.append(statusPill);
+      try {
+        const res = await importFolderAsTest(exam, level, path, listing.modFiles);
+        if (myToken !== libRenderToken) return;
+        libImportedKey = leafKey;
+        S.settings.testId = res.test.id; saveSettings();
+        statusPill.textContent = "✓ geladen (" + res.found + "/" + LIBRARY_MODULES.length + ")";
+        syncTopbar();
+      } catch (e) {
+        if (myToken !== libRenderToken) return;
+        statusPill.className = "pill xsmall"; statusPill.style.color = "var(--color-danger)";
+        statusPill.textContent = "Fehler: " + e.message;
+      }
+      return;
+    }
+
+    if (!listing.dirs.length) {
+      row.append(el("span", { class: "xsmall muted", text: depth === 0 ? "Kein Ordner für dieses Niveau gefunden." : "(leerer Ordner)" }));
+      return;
+    }
+
+    const sel = el("select", {});
+    sel.append(el("option", { value: "", text: depth === 0 ? "Buch wählen …" : "Unterordner wählen …" }));
+    listing.dirs.forEach(d => sel.append(el("option", { value: d, text: d, selected: libPath[depth] === d })));
+    sel.addEventListener("change", e => {
+      libPath = libPath.slice(0, depth);
+      if (e.target.value) libPath.push(e.target.value);
+      renderLibRow();
+    });
+    row.append(sel);
+
+    if (libPath[depth] === undefined) return;
+    path = path.concat([libPath[depth]]);
+  }
+}
+
+function libraryCard() {
+  const cfg = repoConfig();
+  const repoInput = el("input", { type: "text", value: S.settings.githubRepo || "", placeholder: "Benutzername/Repo (nur nötig, falls nicht *.github.io)" });
   return el("div", { class: "card", style: "margin-bottom:16px" },
-    el("h3", { text: "Modellbibliothek (Ordnerstruktur)" }),
+    el("h3", { text: "Modellbibliothek (automatische Ordnererkennung)" }),
     el("p", { class: "xsmall muted", style: "margin:4px 0 10px;max-width:70ch" },
-      "Legen Sie neben dieser HTML-Datei einen Ordner „modeltest” mit dieser Struktur an: " +
-      "modeltest/<Prüfung>/<Niveau>/<Buchname>/<Modul>.json — zum Beispiel modeltest/goethe/B2/Standard/lesen.json. " +
-      "Die Moduldateien sind genau die, die „Einzelnes Modul“ oben erzeugt. Eine Datei modeltest/manifest.json listet, welche Bücher es gibt."),
+      "Kein manifest.json, nichts zu pflegen: legen Sie modeltest/<Prüfung>/<Niveau>/<Buchname>/ an und laden Sie dort " +
+      "lesen.json, hoeren.json, schreiben.json, sprechen.json (bei telc zusätzlich bausteine.json) hoch — genau das, " +
+      "was „Einzelnes Modul“ oben erzeugt. Die Auswahl erscheint automatisch oben in der Kopfzeile, sobald Sie Prüfung " +
+      "und Niveau wählen; weitere Unterordner werden mit einem zusätzlichen Auswahlfeld angezeigt, bis ein Ordner mit " +
+      "den Moduldateien selbst gefunden wird."),
     el("div", { class: "row" },
-      el("label", { class: "field", style: "flex:1" }, "Basisordner", baseInput),
-      el("button", { class: "btn accent", onclick: refreshList }, "Bibliothek laden"),
-      el("button", { class: "btn ghost sm", onclick: downloadManifestSkeleton }, "Leeres manifest.json")),
-    status,
-    listBox,
-    el("details", { style: "margin-top:12px" },
-      el("summary", { class: "small", style: "cursor:pointer" }, "Beispiel für manifest.json"),
-      el("pre", { class: "mono xsmall", style: "background:var(--color-bg-2);padding:10px;border-radius:8px;margin-top:8px;overflow:auto",
-        text: JSON.stringify({ goethe: { B2: ["Standard"] }, telc: { B1: ["Standard"] }, testdaf: { TDN4: ["Standard"] } }, null, 2) }))
+      el("span", { class: "pill " + (cfg ? "teal" : ""), text: cfg ? ("Repository: " + cfg.owner + "/" + cfg.repo) : "Kein Repository erkannt" })),
+    el("label", { class: "field", style: "margin-top:12px" }, "GitHub-Repository (einmalig, nur falls nicht automatisch erkannt)",
+      repoInput),
+    el("div", { class: "row", style: "margin-top:10px" },
+      el("button", { class: "btn sm", onclick: () => {
+        S.settings.githubRepo = repoInput.value.trim();
+        S.settings.githubBranch = "";
+        saveSettings();
+        resetLibPath();
+        renderLibRow();
+        toast("Gespeichert.", "ok");
+      } }, "Speichern"),
+      el("button", { class: "btn sm ghost", onclick: () => { resetLibPath(); renderLibRow(); toast("Bibliothek aktualisiert."); } }, "Bibliothek neu laden")),
+    el("p", { class: "xsmall muted", style: "margin-top:10px" },
+      "Funktioniert nur, wenn diese Seite über einen echten Webserver läuft (GitHub Pages, Vercel, Netlify, oder lokal " +
+      "„python3 -m http.server“) — eine per Doppelklick geöffnete Datei (file://) blockiert der Browser dabei.")
   );
 }
 
@@ -4768,6 +4844,7 @@ function syncTopbar() {
     ? (S.settings.ai.connected ? "KI: verbunden" : "KI: Schlüssel hinterlegt")
     : "KI: nicht verbunden";
   buildModuleNav();
+  renderLibRow();
 }
 
 function boot() {
@@ -4795,10 +4872,12 @@ function boot() {
     const lv = levelsFor(S.settings.exam);
     if (!lv.includes(S.settings.level)) S.settings.level = lv.includes("B2") ? "B2" : lv[0];
     S.settings.testId = null; S.run = null;
+    resetLibPath();
     saveSettings(); syncTopbar(); refresh();
   });
   $("#levelSelect").addEventListener("change", e => {
     S.settings.level = e.target.value; S.settings.testId = null; S.run = null;
+    resetLibPath();
     saveSettings(); syncTopbar(); refresh();
   });
   $("#testSelect").addEventListener("change", e => {
