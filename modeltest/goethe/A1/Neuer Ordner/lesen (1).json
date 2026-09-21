@@ -1,0 +1,167 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T07:28:35.756Z",
+  "exam": "goethe",
+  "level": "A1",
+  "module": "lesen",
+  "name": "Goethe A1 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Lesen Teil 1: E-Mail und Notiz",
+      "instruction": "Lesen Sie die beiden Texte. Sind die Aussagen dazu richtig oder falsch?",
+      "passage": "Liebe Anna,\n\nich schreibe dir, weil ich am Samstag eine kleine Party in meiner neuen Wohnung in der Bergstraße 12 mache. Die Wohnung ist zwar noch nicht ganz fertig, aber wir können trotzdem zusammen feiern. Um wie viel Uhr kannst du kommen? Ab 18 Uhr bin ich zu Hause. Bring bitte etwas zu trinken mit, für das Essen sorge ich. Sag mir bitte bis Donnerstag Bescheid, ob du kommen kannst.\n\nViele Grüße,\nMaria\n\n***\n\nHallo Herr Klein,\n\nich kann heute leider nicht ins Büro kommen, weil ich starke Kopfschmerzen habe und zum Arzt muss. Ich bleibe den ganzen Tag im Bett. Wichtig: Die Dokumente für die Konferenz am Dienstag liegen auf meinem Schreibtisch. Frau Weber kann Ihnen diese bei Bedarf geben. Morgen bin ich hoffentlich wieder gesund und wieder da.\n\nMit freundlichen Grüßen,\nStefan Müller",
+      "items": [
+        {
+          "prompt": "Maria feiert am Samstag in ihrer neuen Wohnung.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text steht: 'ich schreibe dir, weil ich am Samstag eine kleine Party in meiner neuen Wohnung in der Bergstraße 12 mache.'"
+        },
+        {
+          "prompt": "Anna soll das Essen für die Party mitbringen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Im Text steht: 'Bring bitte etwas zu trinken mit, für das Essen sorge ich.'"
+        },
+        {
+          "prompt": "Maria möchte bis Donnerstag eine Antwort von Anna.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text steht: 'Sag mir bitte bis Donnerstag Bescheid, ob du kommen kannst.'"
+        },
+        {
+          "prompt": "Herr Müller ist heute im Büro und arbeitet an Dokumenten.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Im Text steht: 'ich kann heute leider nicht ins Büro kommen, weil ich starke Kopfschmerzen habe und zum Arzt muss.'"
+        },
+        {
+          "prompt": "Frau Weber kann Herrn Klein die Dokumente für die Konferenz geben.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text steht: 'Frau Weber kann Ihnen diese bei Bedarf geben.'"
+        }
+      ]
+    },
+    "L2": {
+      "title": "Lesen Teil 2: Kleinanzeigen",
+      "instruction": "Lesen Sie die Situationen und die Anzeigen. Welche Anzeige passt: a oder b?",
+      "passage": "Hier finden Sie verschiedene Kleinanzeigen von Personen, die etwas suchen oder anbieten.\n\nAnzeige 1:\nHallo, ich heiße Maria und suche für meine zweijährige Tochter und mich eine schöne, ruhige Wohnung mit mindestens drei Zimmern in der Nähe des Stadtparks. Wir wohnen zurzeit noch in Hamburg, ziehen aber nächsten Monat nach München um. Da ich von zu Hause aus arbeite, ist mir ein gutes Internet sehr wichtig. Mein Budget liegt bei maximal 1200 Euro warm.\n\nAnzeige 2:\nVerkaufe mein gebrauchtes, aber sehr gut erhaltenes Sofa. Es ist dunkelgrau, hat drei Sitzplätze und ist super bequem. Die Maße sind 200x90 cm. Keine Haustiere, keine Raucher in der Wohnung. Nur Selbstabholung in der Innenstadt. Preis: 150 Euro VB. Bei Interesse bitte ab 18 Uhr anrufen.\n\nAnzeige 3:\nSuche einen netten Babysitter für meinen fünfjährigen Sohn Leon. Du solltest ab und zu am Wochenende, meistens samstags abends von 18 bis 22 Uhr, Zeit haben. Wir wohnen im Stadtteil Schwabing. Erfahrung mit Kindern und ein Erste-Hilfe-Kurs wären toll. Bezahlung nach Vereinbarung.\n\nAnzeige 4:\nGuten Tag, wir bieten Nachhilfe in Mathematik und Physik für Schülerinnen und Schüler der Klassen 5 bis 10 an. Der Unterricht findet flexibel bei Ihnen zu Hause oder online statt. Unsere Lehrkräfte sind erfahrene Studenten. Erste Probestunde ist kostenlos! Melden Sie sich per E-Mail für einen Termin.\n\nAnzeige 5:\nVergebe einen festen, überdachten Stellplatz für ein Auto in unserer Tiefgarage ab dem 1. nächsten Monat. Die Einfahrt ist nur mit Chipkarte möglich und die Garage ist beleuchtet sowie trocken. Monatliche Miete beträgt 80 Euro. Adresse: Blumenstraße 14.",
+      "items": [
+        {
+          "prompt": "Sie suchen eine Wohnung mit drei Zimmern in München für sich und Ihr Kind.",
+          "options": [
+            "Anzeige 1",
+            "Anzeige 2"
+          ],
+          "answer": 0,
+          "why": "Maria sucht in Anzeige 1 eine Wohnung mit mindestens drei Zimmern für sich und ihre Tochter in München."
+        },
+        {
+          "prompt": "Sie möchten ein Möbelstück für Ihr Wohnzimmer kaufen.",
+          "options": [
+            "Anzeige 3",
+            "Anzeige 2"
+          ],
+          "answer": 1,
+          "why": "In Anzeige 2 wird ein gebrauchtes, dunkelgraues Sofa für 150 Euro verkauft."
+        },
+        {
+          "prompt": "Sie brauchen jemanden, der am Wochenende auf Ihr Kind aufpasst.",
+          "options": [
+            "Anzeige 3",
+            "Anzeige 4"
+          ],
+          "answer": 0,
+          "why": "Anzeige 3 sucht einen Babysitter für einen fünfjährigen Sohn, meistens für samstags abends."
+        },
+        {
+          "prompt": "Ihr Kind braucht Hilfe beim Lernen für die Schule in Mathematik.",
+          "options": [
+            "Anzeige 5",
+            "Anzeige 4"
+          ],
+          "answer": 1,
+          "why": "Anzeige 4 bietet Nachhilfe in Mathematik und Physik für Schüler an."
+        },
+        {
+          "prompt": "Sie suchen einen sicheren Parkplatz für Ihr Auto.",
+          "options": [
+            "Anzeige 5",
+            "Anzeige 1"
+          ],
+          "answer": 0,
+          "why": "Anzeige 5 bietet einen festen, überdachten Stellplatz in einer Tiefgarage an."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Schilder im Alltag",
+      "instruction": "Lesen Sie die Schilder. Sind die Aussagen richtig oder falsch?",
+      "passage": "Schild 1:\nBitte ziehen Sie an der Kasse Ihre Kundenkarte vor dem Bezahlen durch das Lesegerät.\n\nSchild 2:\nAchtung! Wegen Reinigungsarbeiten bleibt das Hallenbad am kommenden Dienstag ganztägig geschlossen.\n\nSchild 3:\nLiebe Gäste, bitte nutzen Sie für Fahrräder ausschließlich die gekennzeichneten Stellplätze vor dem Haupteingang.\n\nSchild 4:\nBesucher des Museums werden gebeten, große Taschen und Rucksäcke an der Garderobe abzugeben.\n\nSchild 5:\nLieferanten und Paketdienste melden sich bitte direkt am Eingang der Verwaltung im ersten Stock an.",
+      "items": [
+        {
+          "prompt": "Man soll die Kundenkarte erst nach dem Bezahlen zeigen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut Schild 1 soll man die Kundenkarte vor dem Bezahlen durch das Lesegerät ziehen."
+        },
+        {
+          "prompt": "Am Dienstag kann man nicht im Hallenbad schwimmen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text steht, dass das Hallenbad am kommenden Dienstag wegen Reinigungsarbeiten geschlossen bleibt."
+        },
+        {
+          "prompt": "Fahrräder dürfen überall im Gebäude abgestellt werden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut Schild 3 soll man ausschließlich die gekennzeichneten Stellplätze vor dem Haupteingang nutzen."
+        },
+        {
+          "prompt": "Man muss große Taschen im Museum abgeben.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Schild 4 besagt, dass Besucher große Taschen und Rucksäcke an der Garderobe abgeben sollen."
+        },
+        {
+          "prompt": "Lieferanten gehen zuerst in die Verwaltung im ersten Stock.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text steht, dass sich Lieferanten und Paketdienste direkt am Eingang der Verwaltung im ersten Stock anmelden sollen."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T05:47:44.525Z",
+  "exam": "goethe",
+  "level": "B2",
+  "module": "lesen",
+  "name": "Goethe B2 — Modelltest 1 — Reading",
+  "content": {
+    "L1": {
+      "title": "Künstliche Intelligenz am Arbeitsplatz",
+      "instruction": "Lesen Sie die vier Forumsbeiträge. Auf welche der Personen treffen die Aussagen 1 bis 9 zu? Sie können jede Person mehrmals wählen.",
+      "personas": [
+        {
+          "name": "Stefan, Projektmanager",
+          "text": "Ich arbeite seit über einem Jahr täglich mit verschiedenen KI-Anwendungen im Projektmanagement. Anfangs war ich skeptisch, ob Maschinen wirklich komplexe Planungen übernehmen können. Mittlerweile bin ich absolut begeistert. Die Tools helfen mir ungemein bei der Ressourcenverteilung und der automatisierten Berichterstattung. Natürlich gab es anfangs Widerstände im Team, weil einige Kollegen um ihren Arbeitsplatz fürchteten. Doch nach einigen Schulungen wurde klar, dass die KI uns keine Jobs wegnimmt, sondern lästige Routineaufgaben erledigt. Dadurch haben wir endlich mehr Zeit für kreative Prozesse und den persönlichen Austausch mit unseren Kunden. Ich finde es fahrlässig, diese Technologie zu ignorieren. Wer sich jetzt nicht weiterbildet, wird den Anschluss auf dem Arbeitsmarkt verpassen."
+        },
+        {
+          "name": "Maria, Grafikerin",
+          "text": "Als Grafikerin sehe ich die Entwicklung rund um generative KI-Bildprogramme sehr kritisch. Viele Unternehmen nutzen inzwischen günstige Algorithmen, anstatt professionelle Designer zu beauftragen. Die Qualität ist oft zweitklassig, aber für viele Auftraggeber zählt leider nur der Preis. Ich habe das Gefühl, dass unsere kreative Arbeit entwertet wird, wenn Maschinen innerhalb von Sekunden Bilder aus bestehendem Datenmaterial zusammenpuzzeln. Manchmal frage ich mich, wohin das führt. Natürlich nutze ich manchmal smarte Filter für einfache Retuschearbeiten, um wettbewerbsfähig zu bleiben. Aber im Grunde bereitet mir diese Entwicklung große Sorgen. Es fehlt an klaren ethischen Regeln und einem gesetzlichen Schutz für Urheberrechte, deren Werke ungefragt zum Trainieren der KIs genutzt werden."
+        },
+        {
+          "name": "Thomas, IT-Sicherheitsexperte",
+          "text": "Die Diskussion über Künstliche Intelligenz dreht sich meistens nur um Effizienz und Arbeitsplätze, aber wir vernachlässigen die Sicherheitsrisiken komplett. In meinem Bereich sehe ich täglich, wie automatisierte Systeme von Kriminellen genutzt werden, um täuschend echte Betrugsmails oder Schadsoftware zu generieren. Auf der anderen Seite setzen wir KI ein, um Angriffe frühzeitig abzuwehren. Es ist ein ständiges Wettrüsten. Unternehmen müssen dringend in robuste Abwehrmechanismen investieren und ihre Mitarbeiter sensibilisieren. Wer blind jedem neuen Trend folgt und sensible Firmendaten in cloudbasierte KI-Tools eingibt, riskiert katastrophale Datenlecks. Ich fordere deshalb deutlich strengere Kontrollen und mehr Transparenz von den Softwareherstellern, bevor noch mehr Schaden entsteht."
+        },
+        {
+          "name": "Claudia, Personalverantwortliche",
+          "text": "In unserer Personalabteilung setzen wir seit Kurzem auf KI-gestützte Software, um eingehende Bewerbungen vorzusortieren. Das spart uns enorm viel Zeit bei der Ersterfassung. Dennoch bin ich überzeugt, dass eine Maschine niemals das menschliche Urteilsvermögen ersetzen kann. Wir hatten bereits Fälle, in denen qualifizierte Bewerber durch das Raster fielen, nur weil ihr Lebenslauf nicht exakt dem vorgegebenen Schema entsprach. Deshalb nutzen wir die KI wirklich nur als grobe Orientierungshilfe. Das eigentliche Vorstellungsgespräch und die endgültige Entscheidung bleiben fest in menschlicher Hand. Ich rate allen Unternehmen zur Vorsicht: Automatisierung darf nicht dazu führen, dass Empathie und der Blick für das individuelle Potenzial eines Menschen auf der Strecke bleiben."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Diese Person nutzt KI im Beruf, um wiederkehrende Standardaufgaben zu erledigen.",
+          "answer": 0,
+          "why": "Stefan berichtet, dass die Tools ihm bei der automatisierten Berichterstattung helfen und Routineaufgaben erledigen.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person befürchtet eine finanzielle Abwertung der eigenen kreativen Branche durch billige Programme.",
+          "answer": 1,
+          "why": "Maria kritisiert, dass Unternehmen günstige Algorithmen nutzen und kreative Arbeit dadurch entwertet wird.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person weist auf Gefahren im Bereich der Datensicherheit und kriminelle Machenschaften hin.",
+          "answer": 2,
+          "why": "Thomas betont, dass automatisierte Systeme von Kriminellen für Betrugsmails genutzt werden und warnt vor Datenlecks.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person betont, dass Maschinen menschliche Empathie und individuelle Beurteilung nicht ersetzen können.",
+          "answer": 3,
+          "why": "Claudia erklärt, dass das eigentliche Gespräch und die Entscheidung in menschlicher Hand bleiben müssen und Empathie wichtig ist.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person hatte zunächst Zweifel, ist inzwischen aber von den Vorteilen der Technologie überzeugt.",
+          "answer": 0,
+          "why": "Stefan sagt: 'Anfangs war ich skeptisch... Mittlerweile bin ich absolut begeistert.'",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person fordert strengere gesetzliche Regelungen und Schutzmaßnahmen für geistiges Eigentum.",
+          "answer": 1,
+          "why": "Maria fordert klare ethische Regeln und einen gesetzlichen Schutz für Urheberrechte.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person setzt eine Software ein, um den Eingang von Bewerbungen effizienter zu bearbeiten.",
+          "answer": 3,
+          "why": "Claudia erwähnt, dass sie KI-gestützte Software nutzen, um eingehende Bewerbungen vorzusortieren.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person warnt davor, unüberlegt sensible Firmeninformationen in cloudbasierte Anwendungen einzugeben.",
+          "answer": 2,
+          "why": "Thomas warnt davor, blind jedem Trend zu folgen und sensible Firmendaten in cloudbasierte KI-Tools einzugeben.",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        },
+        {
+          "prompt": "Diese Person setzt die Technologie trotz großer Vorbehalte in geringem Maße selbst ein, um konkurrenzfähig zu bleiben.",
+          "answer": 1,
+          "why": "Maria gibt an: 'Natürlich nutze ich manchmal smarte Filter für einfache Retuschearbeiten, um wettbewerbsfähig zu bleiben.'",
+          "options": [
+            "Stefan, Projektmanager",
+            "Maria, Grafikerin",
+            "Thomas, IT-Sicherheitsexperte",
+            "Claudia, Personalverantwortliche"
+          ]
+        }
+      ]
+    },
+    "L2": {
+      "title": "Die Zukunft des mobilen Arbeitens",
+      "instruction": "Lesen Sie den Artikel aus einer Zeitschrift. Welche Sätze (a–h) passen in die Lücken 1 bis 6? Zwei Sätze bleiben übrig.",
+      "passage": "In den letzten Jahren hat sich die Art und Weise, wie wir arbeiten, grundlegend gewandelt. Immer mehr Unternehmen ermöglichen ihren Angestellten das sogenannte mobile Arbeiten. ___1___ Dieser Trend bringt jedoch nicht nur Vorteile, sondern auch neue Herausforderungen mit sich. Einerseits schätzen viele Beschäftigte die Flexibilität, ihren Arbeitsort frei wählen zu können. ___2___ Andererseits klagen einige Arbeitnehmer über eine schleichende Entgrenzung von Beruf und Freizeit. Wenn das Büro immer dabei ist, fällt es schwer, gedanklich abzuschalten. ___3___ Um dem entgegenzuwirken, etablieren progressive Firmen klare Regeln für die Erreichbarkeit am Abend. Es wird betont, dass E-Mails nach Feierabend nicht sofort beantwortet werden müssen. ___4___ Schließlich ist erwiesen, dass dauerhaft gestresste Mitarbeitende langfristig weniger produktiv sind. Auch die Unternehmenskultur verändert sich durch die räumliche Distanz drastisch. ___5___ Führungskräfte müssen lernen, auf Vertrauensbasis zu führen, anstatt physische Präsenz zu kontrollieren. Digitale Tools für die Zusammenarbeit sind dabei unverzichtbar, können den persönlichen Austausch aber nur bedingt ersetzen. ___6___ Nur so lässt sich verhindern, dass das Teamgefühl langfristig verloren geht.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Dadurch entfallen oft lange Pendelzeiten, die früher viel Energie gekostet haben."
+        },
+        {
+          "key": "b",
+          "text": "Deshalb planen viele Arbeitgeber regelmäßige Präsenztage ein."
+        },
+        {
+          "key": "c",
+          "text": "Diese Entwicklung wird von modernen technischen Infrastrukturen stark begünstigt."
+        },
+        {
+          "key": "d",
+          "text": "Die wirtschaftlichen Kosten dieser Umstellung werden selten öffentlich diskutiert."
+        },
+        {
+          "key": "e",
+          "text": "Ein bewusster Umgang mit digitalen Medien ist hierbei der Schlüssel zum Erfolg."
+        },
+        {
+          "key": "f",
+          "text": "Kontrolle durch die Vorgesetzten wird im Homeoffice besonders streng gehandhabt."
+        },
+        {
+          "key": "g",
+          "text": "Solche Maßnahmen sind notwendig, um die Gesundheit der Belegschaft zu schützen."
+        },
+        {
+          "key": "h",
+          "text": "Feste Präsenzzeiten im Büro sind für alle Branchen gesetzlich vorgeschrieben."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "c",
+          "text": "Der Satz 'Diese Entwicklung wird von modernen technischen Infrastrukturen stark begünstigt.' passt direkt nach dem Satz über das mobile Arbeiten, da er die technische Bedingung dafür nennt."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "a",
+          "text": "Der Satz 'Dadurch entfallen oft lange Pendelzeiten, die früher viel Energie gekostet haben.' ergänzt die zuvor genannten Vorteile der Flexibilität."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "e",
+          "text": "Der Satz 'Ein bewusster Umgang mit digitalen Medien ist hierbei der Schlüssel zum Erfolg.' leitet logisch zu den genannten Gegenmaßnahmen gegen die Entgrenzung über."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "g",
+          "text": "Der Satz 'Solche Maßnahmen sind notwendig, um die Gesundheit der Belegschaft zu schützen.' begründet die zuvor erwähnten Regeln zur Nichterreichbarkeit."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "f",
+          "text": "Der Satz 'Kontrolle durch die Vorgesetzten wird im Homeoffice besonders streng gehandhabt.' passt inhaltlich zum Thema der veränderten Unternehmenskultur und Führung."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "b",
+          "text": "Der Satz 'Deshalb planen viele Arbeitgeber regelmäßige Präsenztage ein.' bietet eine logische Lösung für das Problem, dass digitale Tools den persönlichen Austausch nur bedingt ersetzen können."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Die Zukunft des mobilen Arbeitens: Chancen und Grenzen der Vier-Tage-Woche",
+      "instruction": "Lesen Sie den Text und die Aufgaben dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "passage": "Die moderne Arbeitswelt befindet sich in einem tiefgreifenden Wandel. Immer mehr Unternehmen experimentieren mit neuen Modellen, um qualifizierte Fachkräfte zu gewinnen und die Zufriedenheit der Angestellten zu erhöhen. Eines der meistdiskutierten Konzepte der vergangenen Monate ist dabei die Einführung einer verkürzten Arbeitswoche bei gleichbleibendem Gehalt und unveränderter Stundenzahl pro Tag.\n\nBefürworter dieses Modells verweisen auf zahlreiche Pilotprojekte, die in den letzten Jahren weltweit durchgeführt wurden. Die Ergebnisse schienen auf den ersten Blick durchschlagend zu sein: Die Produktivität der Mitarbeitenden stieg in vielen Betrieben an, während gleichzeitig die Krankentage deutlich zurückgingen. Viele Arbeitnehmer berichteten von einer spürbaren Verbesserung ihrer Work-Life-Balance, da sie den zusätzlichen freien Tag für familiäre Verpflichtungen, ehrenamtliche Tätigkeiten oder einfach zur Erholung nutzen konnten. Auch aus ökologischer Sicht ergaben sich positive Effekte, da durch den Wegfall eines Pendeltages der CO2-Ausstoß spürbar sank.\n\nKritiker und Skeptiker mahnen jedoch zur Vorsicht und warnen vor vorschnellen Verallgemeinerungen. Sie geben zu bedenken, dass sich dieses Modell keineswegs auf jede Branche gleichermaßen übertragen lässt. Während es in der Verwaltung, im IT-Sektor oder in Agenturen relativ leicht umzusetzen ist, stoßen produzierende Unternehmen oder der Pflegebereich rasch an unüberwindbare Grenzen. Wenn Maschinen rund um die Uhr laufen müssen oder die Betreuung von Patienten durchgehend gewährleistet sein muss, führt eine generelle Reduzierung der Präsenzzeit unweigerlich zu einem massiven Personalbedarf, der auf dem bereits leergefegten Arbeitsmarkt kaum zu decken ist.\n\nEin weiterer oft vernachlässigter Aspekt ist die Verdichtung der Arbeit. Um die bisherigen Aufgaben in kürzerer Zeit zu bewältigen, steigt das Arbeitstempo in den verbleibenden vier Tagen häufig drastisch an. Dies kann langfristig zu einem erhöhten Stresspegel führen, der die gesundheitlichen Vorteile des zusätzlichen freien Tages schnell wieder aufzehrt. Zudem klagen manche Führungskräfte über Kommunikationsprobleme und verzögerte Entscheidungsprozesse, wenn an bestimmten Wochentagen wichtige Ansprechpartner im Betrieb schlichtweg fehlen.\n\nDennoch zeigt die aktuelle Entwicklung, dass starre Arbeitszeitmodelle aus dem vergangenen Jahrhundert zunehmend ausgedient haben. Die Zukunft der Arbeit wird höchstwahrscheinlich nicht in einer starren, für alle gültigen Vorschrift liegen, sondern in flexiblen Lösungen, die auf die individuellen Bedürfnisse der jeweiligen Branche und der Beschäftigten zugeschnitten sind. Entscheidend für den Erfolg wird sein, dass Unternehmen und Belegschaften im engen Dialog bleiben, um gemeinsam tragfähige Kompromisse zu finden.",
+      "items": [
+        {
+          "prompt": "Warum experimentieren immer mehr Unternehmen mit neuen Arbeitszeitmodellen?",
+          "options": [
+            "Sie wollen vor allem Fahrtkosten einsparen.",
+            "Sie möchten Fachkräfte gewinnen und die Zufriedenheit steigern.",
+            "Sie reagieren damit auf strengere gesetzliche Vorgaben."
+          ],
+          "answer": 1,
+          "why": "Im ersten Absatz steht, dass Unternehmen experimentieren, 'um qualifizierte Fachkräfte zu gewinnen und die Zufriedenheit der Angestellten zu erhöhen'."
+        },
+        {
+          "prompt": "Welcher positive Effekt wurde in den Pilotprojekten ebenfalls beobachtet?",
+          "options": [
+            "Die Angestellten machten deutlich mehr Überstunden.",
+            "Der CO2-Ausstoß sank durch den Wegfall eines Pendeltages.",
+            "Die Unternehmen konnten ihre Mieten für die Büros halbieren."
+          ],
+          "answer": 1,
+          "why": "Im zweiten Absatz heißt es: 'Auch aus ökologischer Sicht ergaben sich positive Effekte, da durch den Wegfall eines Pendeltages der CO2-Ausstoß spürbar sank.'"
+        },
+        {
+          "prompt": "Wo stößt das Konzept der verkürzten Arbeitswoche laut Kritikern an Grenzen?",
+          "options": [
+            "Im IT-Sektor und in Werbeagenturen",
+            "Im produzierenden Gewerbe und in der Pflege",
+            "In der gesamten öffentlichen Verwaltung"
+          ],
+          "answer": 1,
+          "why": "Der Text erklärt im dritten Absatz, dass Branchen wie 'produzierende Unternehmen oder der Pflegebereich rasch an unüberwindbare Grenzen' stoßen."
+        },
+        {
+          "prompt": "Welches Problem kann durch die Verdichtung der Arbeit entstehen?",
+          "options": [
+            "Ein langfristig erhöhter Stresspegel bei den Beschäftigten",
+            "Ein drastischer Rückgang der täglichen Aufgaben",
+            "Eine sinkende Motivation für die verbleibenden Arbeitstage"
+          ],
+          "answer": 0,
+          "why": "Im vierten Absatz wird gewarnt: 'Dies kann langfristig zu einem erhöhten Stresspegel führen, der die gesundheitlichen Vorteile ... aufzehrt.'"
+        },
+        {
+          "prompt": "Welche Schwierigkeit benennen Führungskräfte im Zusammenhang mit dem Modell?",
+          "options": [
+            "Zu viele unbezahlte Überstunden im Management",
+            "Verzögerte Entscheidungsprozesse durch fehlende Ansprechpartner",
+            "Schwierigkeiten bei der Nutzung moderner Software"
+          ],
+          "answer": 1,
+          "why": "Im vierten Absatz steht, dass manche Führungskräfte 'über Kommunikationsprobleme und verzögerte Entscheidungsprozesse' klagen."
+        },
+        {
+          "prompt": "Wie sieht laut dem Text die Zukunft der Arbeitswelt voraussichtlich aus?",
+          "options": [
+            "Es wird eine einzige, für alle verbindliche Arbeitszeit geben.",
+            "Starre Modelle aus dem letzten Jahrhundert kehren zurück.",
+            "Es wird flexible Lösungen geben, die auf Branchen und Beschäftigte zugeschnitten sind."
+          ],
+          "answer": 2,
+          "why": "Im letzten Absatz wird betont, dass die Zukunft in 'flexiblen Lösungen liegen, die auf die individuellen Bedürfnisse ... zugeschnitten sind'."
+        }
+      ]
+    },
+    "L4": {
+      "title": "Lesen Teil 4: Meinungsäußerungen zu Künstlicher Intelligenz in der Arbeitswelt",
+      "instruction": "Lesen Sie die Aussagen 1 bis 6 und die Überschriften a bis h. Welche Überschrift passt zu welcher Aussage? Sie können jede Überschrift nur einmal mal verwenden. Zwei Überschriften bleiben übrig.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Sorge vor dem Verlust des menschlichen Faktors im Kundenservice"
+        },
+        {
+          "key": "b",
+          "text": "Notwendigkeit einer grundlegenden Bildungsreform für digitale Kompetenzen"
+        },
+        {
+          "key": "c",
+          "text": "Optimismus bezüglich der Entlastung von lästigen Routineaufgaben"
+        },
+        {
+          "key": "d",
+          "text": "Kritik an der mangelnden Transparenz von automatisierten Entscheidungsprozessen"
+        },
+        {
+          "key": "e",
+          "text": "Forderung nach strengeren gesetzlichen Vorgaben zum Schutz von Arbeitnehmerdaten"
+        },
+        {
+          "key": "f",
+          "text": "Begeisterung über neue kreative Möglichkeiten durch intelligente Software"
+        },
+        {
+          "key": "g",
+          "text": "Zweifel an der tatsächlichen Effizienzsteigerung durch digitale Tools"
+        },
+        {
+          "key": "h",
+          "text": "Angst vor massiver Arbeitslosigkeit in traditionellen Industriezweigen"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Ich verbringe jeden Tag Stunden damit, Rechnungen zu sortieren und Standard-E-Mails zu beantworten. Wenn diese administrativen Tätigkeiten bald von intelligenten Programmen übernommen werden, kann ich mich endlich wieder auf strategische Projekte konzentrieren.",
+          "answer": "c",
+          "why": "Die Aussage drückt große Erleichterung darüber aus, lästige Routineaufgaben abzugeben, was exakt zur Überschrift c passt."
+        },
+        {
+          "prompt": "Unsere Schulen bereiten junge Menschen überhaupt nicht auf die Arbeitswelt von morgen vor. Anstatt immer noch veraltetes Wissen auswendig lernen zu lassen, müssen digitale Werkzeuge und analytisches Denken ganz oben auf dem Lehrplan stehen.",
+          "answer": "b",
+          "why": "Der Text fordert eine Reform des Bildungssystems mit Fokus auf digitale Kompetenzen, was genau der Überschrift b entspricht."
+        },
+        {
+          "prompt": "Wenn ich eine Beschwerde habe, möchte ich mit einem Menschen sprechen und nicht mit einem seelenlosen Chatbot, der mir immer nur vorgefertigte Floskeln liefert. Unternehmen sparen hier am falschen Ende und zerstören jegliche Kundenbindung.",
+          "answer": "a",
+          "why": "Hier wird die Sorge geäußert, dass der menschliche Faktor im Kundenservice verloren geht, was Option a bestätigt."
+        },
+        {
+          "prompt": "Es ist völlig unklar, nach welchen Kriterien die Algorithmen Bewerbungen aussortieren. Niemand erklärt uns die internen Abläufe, und das öffnet Willkür und versteckter Diskriminierung Tür und Tor.",
+          "answer": "d",
+          "why": "Die Kritik richtet sich direkt gegen die mangelnde Transparenz bei automatisierten Prozessen, was zu Überschrift d passt."
+        },
+        {
+          "prompt": "Moderne Grafik- und Text-Tools sind für mich keine Bedrohung, sondern eine unglaubliche Bereicherung. Sie unterstützen mich dabei, visuelle Ideen noch viel schneller und facettenreicher umzusetzen als je zuvor.",
+          "answer": "f",
+          "why": "Die Begeisterung über neue kreative Möglichkeiten durch intelligente Software wird in Option f treffend zusammengefasst."
+        },
+        {
+          "prompt": "Wir müssen unbedingt verhindern, dass Unternehmen das Verhalten ihrer Angestellten im Homeoffice lückenlos überwachen. Hier braucht es sofort klare gesetzliche Regeln zum Schutz der Privatsphäre.",
+          "answer": "e",
+          "why": "Die Forderung nach strengeren Gesetzen zum Schutz von Arbeitnehmerdaten spiegelt sich exakt in Überschrift e wider."
+        }
+      ]
+    },
+    "L5": {
+      "title": "Benutzungsordnung für das Medienzentrum",
+      "instruction": "Lesen Sie den Text und die Überschriften a–h. Welche Überschriften passen zu den Paragraphen 1 bis 3? Vier Überschriften werden nicht gebraucht.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Öffnungszeiten und Einlassbedingungen"
+        },
+        {
+          "key": "b",
+          "text": "Ausleihfristen und Verlängerung"
+        },
+        {
+          "key": "c",
+          "text": "Verhalten in den Arbeitsräumen"
+        },
+        {
+          "key": "d",
+          "text": "Gebühren bei verspäteter Rückgabe"
+        },
+        {
+          "key": "e",
+          "text": "Haftung bei Beschädigung von Medien"
+        },
+        {
+          "key": "f",
+          "text": "Nutzung der IT-Arbeitsplätze"
+        },
+        {
+          "key": "g",
+          "text": "Verpflegung und Rauchen"
+        },
+        {
+          "key": "h",
+          "text": "Fundsachen im Gebäude"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Paragraph 1: In allen Räumen des Medienzentrums ist absolute Ruhe einzuhalten. Telefonieren, lautes Sprechen sowie das Hören von Musik ohne Kopfhörer sind untersagt. Arbeitsgruppen können für ihre Besprechungen separate, glasgedachte Kabinen nutzen, die vorab online zu reservieren sind.",
+          "answer": "c",
+          "why": "Die Überschrift passt, da im Text spezifische Verhaltensregeln wie das Einhalten von Ruhe und das Verbot von lautem Sprechen für die Arbeitsräume genannt werden."
+        },
+        {
+          "prompt": "Paragraph 2: Die reguläre Ausleihzeit für Bücher und Zeitschriften beträgt vier Wochen. Eine Verlängerung dieser Frist ist maximal zweimal um jeweils zwei Wochen möglich, sofern keine Vormerkung durch andere Nutzende vorliegt. Die Verlängerung muss eigenständig über das Online-Konto vor Ablauf der Frist vorgenommen werden.",
+          "answer": "b",
+          "why": "Der Paragraph regelt die Dauer der Ausleihe und wie man diese verlängern kann, was genau zur Überschrift 'Ausleihfristen und Verlängerung' passt."
+        },
+        {
+          "prompt": "Paragraph 3: An den bereitgestellten PC-Arbeitsplätzen ist ausschließlich die Recherche für wissenschaftliche und schulische Zwecke gestattet. Das Herunterladen urheberrechtlich geschützter Software sowie das Aufrufen von Seiten mit illegalen oder gewaltverherrlichenden Inhalten führt zum sofortigen Ausschluss von der Nutzung.",
+          "answer": "f",
+          "why": "Im Text geht es um die Vorschriften und Einschränkungen bei der Verwendung der Computer, weshalb die Überschrift 'Nutzung der IT-Arbeitsplätze' korrekt ist."
+        }
+      ]
+    }
+  }
+}

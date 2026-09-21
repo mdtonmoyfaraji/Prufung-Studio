@@ -1,0 +1,49 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T07:28:36.466Z",
+  "exam": "goethe",
+  "level": "A1",
+  "module": "schreiben",
+  "name": "Goethe A1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Anmeldung im Sportverein",
+      "instruction": "Lesen Sie die E-Mail und ergänzen Sie die fehlenden Angaben im Anmeldeformular.",
+      "items": [
+        {
+          "prompt": "Vorname",
+          "answer": "Anna"
+        },
+        {
+          "prompt": "Familienname",
+          "answer": "Weber"
+        },
+        {
+          "prompt": "Alter",
+          "answer": "28"
+        },
+        {
+          "prompt": "Sportart",
+          "answer": "Tennis"
+        },
+        {
+          "prompt": "Tag",
+          "answer": "Mittwoch"
+        }
+      ]
+    },
+    "S2": {
+      "title": "Wohnen und Umzug",
+      "instruction": "Schreiben Sie eine kurze Mitteilung zu drei Leitpunkten.",
+      "prompt": "Sie sind umgezogen und möchten Ihren Freund Thomas zu einer Party in Ihrer neuen Wohnung einladen. Schreiben Sie an Thomas.",
+      "bullets": [
+        "Grund für die Nachricht (Umzug/Party)",
+        "Datum und Uhrzeit nennen",
+        "Um den Weg zur neuen Wohnung bitten"
+      ],
+      "words": 30,
+      "tips": "Schreiben Sie zu jedem Leitpunkt ein bis zwei Sätze und vergessen Sie nicht die Anrede und den Gruß."
+    }
+  }
+}

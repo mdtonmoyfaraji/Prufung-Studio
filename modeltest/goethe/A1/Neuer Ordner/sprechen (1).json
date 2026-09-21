@@ -1,0 +1,51 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T07:28:36.818Z",
+  "exam": "goethe",
+  "level": "A1",
+  "module": "sprechen",
+  "name": "Goethe A1 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Sich vorstellen",
+      "instruction": "Stellen Sie sich bitte vor. Nutzen Sie die Stichpunkte als Hilfe. Buchstabieren Sie am Ende Ihren Nachnamen und nennen Sie eine Telefonnummer oder eine andere Zahl.",
+      "prompt": "Guten Tag! Erzählen Sie uns bitte etwas über sich selbst. Wer sind Sie, woher kommen Sie und was machen Sie in Ihrer Freizeit?",
+      "bullets": [
+        "Name",
+        "Alter",
+        "Land",
+        "Wohnort",
+        "Sprachen",
+        "Beruf",
+        "Hobby"
+      ],
+      "seconds": 90,
+      "tips": "Sprechen Sie in ganzen Sätzen und vergessen Sie nicht, Ihren Namen und eine Zahl deutlich zu buchstabieren bzw. zu nennen."
+    },
+    "P2": {
+      "title": "Sprechen Teil 2: Um Informationen bitten und geben",
+      "instruction": "Bilden Sie zu den Stichwortkarten je eine Frage und antworten Sie auf die Frage Ihres Gegenübers.",
+      "prompt": "Sie möchten zusammen einkaufen gehen. Ihr Partner oder Ihre Partnerin gibt Ihnen die Stichwortkarten. Stellen Sie Fragen und antworten Sie auf die Fragen.",
+      "bullets": [
+        "Supermarkt: wo?",
+        "Zeit: wann?",
+        "Getränke: kaufen?"
+      ],
+      "seconds": 120,
+      "tips": "Hören Sie gut zu und antworten Sie in ganzen Sätzen auf die Fragen Ihres Partners."
+    },
+    "P3": {
+      "title": "Sprechen Teil 3: Bitten formulieren und darauf reagieren",
+      "instruction": "Sie sehen eine Bildkarte mit einem Symbol. Formulieren Sie eine Bitte dazu und reagieren Sie auf die Bitte Ihres Gesprächspartners.",
+      "prompt": "Auf Ihrer Bildkarte sehen Sie ein Fenster. Bitte Ihren Gesprächspartner darum, das Fenster zu öffnen. Reagieren Sie danach auf die Bitte Ihres Partners.",
+      "bullets": [
+        "Bitte das Fenster zu öffnen",
+        "Auf die Bitte des Partners reagieren",
+        "Ggf. eine weitere Bitte formulieren"
+      ],
+      "seconds": 90,
+      "tips": "Benutzen Sie höfliche Formulierungen wie 'Könnten Sie bitte...' oder 'Möchtest du bitte...' und antworten Sie mit 'Ja, natürlich' oder 'Tut mir leid, das geht leider nicht'."
+    }
+  }
+}
