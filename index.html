@@ -2,8 +2,16 @@
 <html lang="de" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prüfungsstudio — Goethe · telc · TestDaF</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#16171b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Prüfungsstudio">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -94,15 +102,18 @@ button,input,select,textarea{font:inherit; color:inherit}
 
 .main{min-width:0; display:flex; flex-direction:column}
 .topbar{
-  display:flex; align-items:center; flex-wrap:wrap; gap:10px 12px; padding:12px 24px;
+  display:flex; align-items:center; flex-wrap:nowrap; gap:10px 12px; padding:12px 24px;
   border-bottom:1px solid var(--color-rule); background:var(--color-surface);
   position:sticky; top:0; z-index:40;
 }
-.topbar .ctx{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
-.topbar .spacer{flex:1}
-.libctx{flex-basis:100%; gap:6px; min-height:0}
+.topbar .ctx{display:flex; align-items:center; gap:8px; flex:0 1 auto; flex-wrap:nowrap; min-width:0; overflow-x:auto; scrollbar-width:thin}
+.topbar .ctx > *{flex:0 0 auto}
+.topbar .spacer{flex:1 1 0; min-width:0}
+.topbar #passPill,.topbar #quickGenBtn{flex:none; white-space:nowrap}
+.libctx{display:contents}
 .libctx:empty{display:none}
-.libctx select{width:auto; max-width:180px}
+.libctx select{width:auto; max-width:200px; min-width:84px; flex:0 1 auto}
+.libctx .pill,.libctx button,.libctx span{flex:none}
 .page{padding:26px 24px 64px; max-width:1180px; width:100%}
 .page.wide{max-width:1560px; margin:0 auto}
 
@@ -380,7 +391,7 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
   .page{padding:16px 13px 72px}
   .topbar{padding:9px 12px; gap:8px; flex-wrap:wrap}
   .topbar .ctx{width:100%; order:3; gap:6px}
-  .topbar .ctx select{flex:1 1 30%; min-width:0; font-size:13px; padding:7px 8px}
+  .topbar .ctx select{flex:0 0 auto; min-width:0; font-size:13px; padding:7px 8px}
   .topbar .spacer{display:none}
   h1{font-size:23px} h2{font-size:19px}
   .card{padding:15px; border-radius:12px}
@@ -409,7 +420,7 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
 
 @media (max-width:520px){
   .g3,.g4{grid-template-columns:1fr}
-  .topbar .ctx select{flex:1 1 100%}
+  .topbar .ctx select{flex:0 0 auto}
   .ratioseg{width:100%}
   .ratioseg button{flex:1}
 }
@@ -423,6 +434,61 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
 @media print{ .sidebar,.topbar,.runbar,.side,.navscrim{display:none}
   .split{grid-template-columns:1fr!important}
   .split > .pane{max-height:none!important; overflow:visible!important} }
+
+/* ---------- gap-fill chips (replaces plain <select> for cloze gaps) ---------- */
+.gapchip{display:inline-block; position:relative; margin:0 3px; vertical-align:baseline}
+.gapchip>summary{
+  list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+  padding:2px 10px; border-radius:7px; border:1.5px dashed var(--color-accent);
+  background:var(--color-accent-softer); color:var(--color-accent);
+  font-family:var(--font-mono); font-size:13px; line-height:1.5; min-width:20px; justify-content:center;
+}
+.gapchip>summary::-webkit-details-marker{display:none}
+.gapchip>summary::marker{content:""}
+.gapchip>summary:hover{background:var(--color-accent-soft)}
+.gapchip[data-filled="1"]>summary{
+  border-style:solid; background:var(--color-teal-soft); border-color:var(--color-teal);
+  color:var(--color-ink); font-family:var(--font-sans); font-size:14px; white-space:normal;
+}
+.gapchip-list{
+  position:absolute; z-index:60; top:calc(100% + 5px); left:0; min-width:260px; max-width:min(440px,86vw);
+  background:var(--color-surface); border:1px solid var(--color-rule); border-radius:10px;
+  box-shadow:0 10px 28px rgba(0,0,0,.22); padding:6px; display:flex; flex-direction:column; gap:3px;
+  max-height:300px; overflow-y:auto;
+}
+.gapchip-opt{
+  display:flex; gap:9px; align-items:flex-start; text-align:left; padding:7px 9px; border-radius:7px;
+  border:1px solid transparent; background:none; cursor:pointer; font-size:13px; color:var(--color-ink);
+  width:100%; font-family:var(--font-sans);
+}
+.gapchip-opt:hover{background:var(--color-bg-2)}
+.gapchip-opt.sel{background:var(--color-teal-soft); border-color:var(--color-teal)}
+.gapchip-opt .k{font-family:var(--font-mono); color:var(--color-muted); flex:none; min-width:14px; padding-top:1px}
+.gapchip-opt .tx{flex:1; white-space:normal; word-break:break-word; line-height:1.4}
+@media (max-width:720px){
+  .gapchip-list{position:static; margin-top:6px; width:100%; max-width:none; box-shadow:none; display:none}
+  .gapchip[open] .gapchip-list{display:flex}
+}
+
+/* ---------- KI-Fehleranalyse: farbliche Textmarkierungen ---------- */
+.mkleg{display:flex; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; font-size:12px; color:var(--color-muted)}
+.mkleg span{display:inline-flex; align-items:center; gap:5px}
+.mkleg i{width:12px; height:12px; border-radius:3px; display:inline-block; font-style:normal}
+.mktext{line-height:1.9; font-size:15px; white-space:pre-wrap}
+.mk{cursor:pointer; border-radius:4px; padding:0 1px; transition:filter .1s}
+.mk:hover{filter:brightness(1.08)}
+.mk-wrong{background:var(--color-rose-soft); color:var(--color-rose); text-decoration:underline wavy var(--color-rose); text-decoration-thickness:1.5px; text-underline-offset:3px}
+.mk-extra{background:var(--color-rose-soft); color:var(--color-rose); text-decoration:line-through; text-decoration-thickness:1.5px}
+.mk-extra::before{content:"✕"; font-size:10px; margin-right:2px; opacity:.85}
+.mk-missing{background:var(--color-teal-soft); color:var(--color-good); font-weight:600; border-radius:4px; padding:0 3px}
+.mk-missing::before{content:"+"; margin-right:2px; opacity:.8}
+.mk-punct{background:var(--color-amber-soft); color:var(--color-amber); text-decoration:underline dotted var(--color-amber); text-decoration-thickness:1.5px; text-underline-offset:3px}
+.mk-tone{background:var(--color-indigo-soft); color:var(--color-indigo); border-bottom:2px solid var(--color-indigo)}
+.mk-style{background:var(--color-plum-soft); color:var(--color-plum); border-bottom:2px dashed var(--color-plum)}
+.mk-note{
+  margin-top:14px; padding:10px 12px; border-radius:9px; background:var(--color-bg-2);
+  border:1px solid var(--color-rule-soft); font-size:13px;
+}
 </style>
 </head>
 <body>
@@ -459,6 +525,7 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
         <div class="seg" id="langSeg"><button data-lang="de" aria-pressed="true">DE</button><button data-lang="en" aria-pressed="false">EN</button></div>
       </div>
       <button class="btn sm ghost" id="themeBtn"><span class="ic">◐</span> <span id="themeLabel">Hell</span></button>
+      <button class="btn sm ghost" id="installBtn" hidden><span class="ic">⇩</span> App installieren</button>
       <div class="xsmall muted" id="aiStatus">KI: nicht verbunden</div>
     </div>
   </aside>
@@ -470,11 +537,11 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
         <select id="examSelect" style="width:auto"></select>
         <select id="levelSelect" style="width:auto"></select>
         <select id="testSelect" style="width:auto;max-width:260px"></select>
+        <span class="libctx" id="libRow"></span>
       </div>
       <div class="spacer"></div>
       <span class="pill" id="passPill">—</span>
       <button class="btn sm" id="quickGenBtn">✦ <span data-i18n="btn.genall">Alle Module generieren</span></button>
-      <div class="ctx libctx" id="libRow"></div>
     </header>
 
     <main id="app"></main>
@@ -1049,6 +1116,10 @@ const DEFAULT_SETTINGS = {
   navHidden: false,
   speechRate: 0.95,
   speechVoice: "",
+  mistakeAnalysis: {
+    enabled: true,
+    explainLang: ""
+  },
   ai: {
     baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai/",
     model: "gemini-3.5-flash-lite",
@@ -1081,6 +1152,7 @@ const S = {
   run: null                                      // active runner session
 };
 S.settings.ai = Object.assign(clone(DEFAULT_SETTINGS.ai), S.settings.ai || {});
+S.settings.mistakeAnalysis = Object.assign(clone(DEFAULT_SETTINGS.mistakeAnalysis), S.settings.mistakeAnalysis || {});
 
 const saveSettings = () => store.write(LS.settings, S.settings);
 const saveTests    = () => { store.write(LS.tests, S.tests); const n = $("#navTestCount"); if (n) n.textContent = S.tests.length; };
@@ -3138,6 +3210,53 @@ function renderBank(col, right, part, c) {
 }
 
 /* ---- cloze: gapmc (own options) and gapbank (shared bank) ---- */
+/* A gap-fill chip: shows just the gap number until answered, then either the
+   full text (Direkte Lückenauswahl an) or just the key letter (Standard, wie
+   in der echten Prüfung). The choice list underneath always shows every
+   option's FULL text — long Goethe-style Satz-Lücken are never cut off with
+   "…", and picking one inserts the complete text, not a truncated snippet. */
+function buildGapChip(key, gapNo, options, R) {
+  let cur = R.answers[key];
+  const det = el("details", { class: "gapchip" });
+  const sum = el("summary", {});
+  const list = el("div", { class: "gapchip-list" });
+
+  const paint = () => {
+    const chosen = options.find(o => String(o.val) === String(cur));
+    if (!chosen) {
+      sum.textContent = "(" + gapNo + ")";
+      det.removeAttribute("data-filled");
+    } else {
+      sum.textContent = S.settings.directGapFill ? chosen.text : chosen.label;
+      sum.title = chosen.label + " — " + chosen.text;
+      det.setAttribute("data-filled", "1");
+    }
+    Array.from(list.children).forEach(ch => ch.classList.toggle("sel", ch.dataset.k != null && String(ch.dataset.k) === String(cur)));
+  };
+
+  options.forEach(o => {
+    const b = el("button", { type: "button", class: "gapchip-opt",
+      onclick: () => {
+        cur = o.val;
+        R.answers[key] = o.val;
+        saveRunAnswers();
+        paint();
+        det.open = false;
+      } },
+      el("span", { class: "k", text: o.label }), el("span", { class: "tx", text: o.text }));
+    b.dataset.k = o.val;
+    list.append(b);
+  });
+
+  det.addEventListener("toggle", () => {
+    if (det.open) $$(".gapchip[open]").forEach(d => { if (d !== det) d.open = false; });
+  });
+
+  paint();
+  det.append(sum, list);
+  return det;
+}
+
 function renderCloze(col, right, part, c) {
   const R = S.run;
   const isBank = part.format === "gapbank";
@@ -3147,6 +3266,12 @@ function renderCloze(col, right, part, c) {
       el("div", { class: "col", style: "gap:5px;margin-top:8px" },
         c.bank.map(b => el("div", { class: "small" }, el("b", { class: "mono", text: b.key + "  " }), b.text)))));
   }
+
+  const optionsFor = idx => {
+    const it = (c.items || [])[idx];
+    if (isBank) return (c.bank || []).map(b => ({ val: b.key, label: b.key, text: b.text }));
+    return (it && it.options || []).map((o, oi) => ({ val: oi, label: LETTERS[oi], text: o }));
+  };
 
   const box = el("div", { class: "stimulus" });
   const paras = c.passage.split(/\n\n+/);
@@ -3166,15 +3291,7 @@ function renderCloze(col, right, part, c) {
       const it = (c.items || [])[idx];
       const key = part.id + ":" + idx;
       if (!it) { p.append(el("span", { class: "gapmark", text: String(gapNo) })); return; }
-      const sel = el("select", { style: "width:auto;display:inline-block;min-width:" + (S.settings.directGapFill ? "230px" : "110px") + ";margin:0 3px;padding:3px 6px",
-        onchange: e => { R.answers[key] = e.target.value === "" ? undefined : (isBank ? e.target.value : Number(e.target.value)); saveRunAnswers(); } });
-      sel.append(el("option", { value: "", text: "(" + gapNo + ")" }));
-      if (isBank) (c.bank || []).forEach(b => sel.append(el("option", { value: b.key,
-        text: S.settings.directGapFill ? (b.key + " — " + shorten(b.text, 46)) : b.key })));
-      else (it.options || []).forEach((o, oi) => sel.append(el("option", { value: String(oi), text: LETTERS[oi] + ") " + o })));
-      const cur = R.answers[key];
-      if (cur !== undefined && cur !== null) sel.value = String(cur);
-      p.append(sel);
+      p.append(buildGapChip(key, gapNo, optionsFor(idx), R));
     });
     box.append(p);
   });
@@ -3194,27 +3311,15 @@ function renderCloze(col, right, part, c) {
     col.append(listCard);
   }
 
-  /* any items without a gap marker */
+  /* any items without a gap marker in the passage itself */
   const gapCount = (c.passage.match(/___(\d+)___/g) || []).filter(x => x !== "___0___").length;
   if ((c.items || []).length > gapCount) {
-    const extra = el("div", { style: "margin-top:12px" });
+    const extra = el("div", { class: "col", style: "gap:8px;margin-top:12px" });
     (c.items || []).slice(gapCount).forEach((it, k) => {
       const i = gapCount + k, key = part.id + ":" + i;
       const box2 = el("div", { class: "q" }, el("div", { class: "qhead" }, el("span", { class: "qnum", text: String(i + 1) }), el("div", { text: it.prompt })));
-      const row = el("div", { class: "optrow" });
-      (isBank ? (c.bank || []).map(b => b.key) : (it.options || []).map((_, oi) => String(oi))).forEach(k2 => {
-        const sel = String(S.run.answers[key]) === String(k2);
-        const bankEntry = isBank ? (c.bank || []).find(b => b.key === k2) : null;
-        const label = isBank
-          ? (S.settings.directGapFill && bankEntry ? (k2 + " — " + shorten(bankEntry.text, 34)) : k2)
-          : LETTERS[Number(k2)];
-        const b = el("button", { class: "opt" + (sel ? " sel" : ""), type: "button", onclick: () => {
-          S.run.answers[key] = isBank ? k2 : Number(k2); saveRunAnswers();
-          Array.from(row.children).forEach(ch => ch.classList.toggle("sel", ch.dataset.k === k2));
-        } }, el("span", { class: "k", text: label }));
-        b.dataset.k = k2; row.append(b);
-      });
-      box2.append(row); extra.append(box2);
+      box2.append(buildGapChip(key, i + 1, optionsFor(i), R));
+      extra.append(box2);
     });
     col.append(extra);
   }
@@ -3433,8 +3538,12 @@ function reviewView() {
         card.append(el("div", { class: "stimulus", style: "white-space:pre-wrap", text: answer || "(nichts geschrieben)" }));
         if (R.answers[part.id + ":feedback"]) card.append(el("div", { class: "card tight", style: "margin-top:10px;white-space:pre-wrap" },
           el("h4", { text: "KI-Rückmeldung" }), el("div", { class: "small", style: "margin-top:6px", text: R.answers[part.id + ":feedback"] })));
+        const ann = R.answers[part.id + ":annotated"];
+        if (mistakesOn() && Array.isArray(ann) && ann.length) card.append(el("div", { class: "card tight", style: "margin-top:10px" },
+          el("h4", { text: "Fehleranalyse" }), renderAnnotated(ann)));
         page.append(card); continue;
       }
+      const ex = examDef(R.test.exam);
       const list = el("div", { class: "col", style: "gap:8px" });
       (c.items || []).forEach((it, i) => {
         const given = R.answers[part.id + ":" + i];
@@ -3452,13 +3561,26 @@ function reviewView() {
           const n = Number(v);
           return isNaN(n) ? String(v) : (LETTERS[n] || n) + (opts[n] ? ") " + opts[n] : "");
         };
-        list.append(el("div", { class: "row", style: "align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid var(--color-rule-soft)" },
+        const row = el("div", { class: "row", style: "align-items:flex-start;gap:10px;padding:7px 0" },
           el("span", { class: "qnum", text: String(i + 1) }),
           el("div", { style: "flex:1;min-width:0" },
             el("div", { class: "small", text: it.prompt }),
             it.why ? el("div", { class: "xsmall muted", style: "margin-top:2px", text: it.why }) : null),
           el("span", { class: "pill " + (ok ? "teal" : "rose"), text: (ok ? "✓ " : "✗ ") + show(given) }),
-          !ok ? el("span", { class: "pill teal", text: "Lösung " + show(it.answer) }) : null));
+          !ok ? el("span", { class: "pill teal", text: "Lösung " + show(it.answer) }) : null);
+        const itemWrap = el("div", { style: "border-bottom:1px solid var(--color-rule-soft)" }, row);
+        if (mistakesOn() && AI.ready()) {
+          const explainBox = el("div", { class: "xsmall", style: "margin:0 0 8px 30px;display:none;white-space:pre-wrap" });
+          const btn = el("button", { class: "btn sm ghost", style: "margin:0 0 8px 30px",
+            onclick: async () => {
+              explainBox.style.display = "block";
+              btn.disabled = true;
+              await aiExplainItem(part, c, it, given, explainBox, ex.name, R.bp._level);
+              btn.disabled = false;
+            } }, "✦ Ausführlicher erklären (KI)");
+          itemWrap.append(btn, explainBox);
+        }
+        list.append(itemWrap);
       });
       card.append(list);
       page.append(card);
@@ -4002,6 +4124,113 @@ async function aiGenerateAll(testId) {
 }
 
 /* =========================================================================
+   KI-FEHLERANALYSE — geteilte Hilfsfunktionen für Schreiben, Sprechen,
+   Lesen und Hören
+   ======================================================================= */
+function mistakeCfg() { return S.settings.mistakeAnalysis; }
+function mistakesOn() { return !!mistakeCfg().enabled; }
+
+/* Sprache für Erklärungen/Kommentare der KI. Leer = Deutsch (Standard). */
+function explainLang() { return String(mistakeCfg().explainLang || "").trim(); }
+function explainLangLine() {
+  const lang = explainLang();
+  if (!lang) return "Schreibe alle Erklärungen, Kommentare, Bewertungen und Anmerkungen auf Deutsch.";
+  return `Schreibe alle Erklärungen, Kommentare, Anmerkungen, Stärken, Verbesserungsvorschläge und die Gesamtbeurteilung ausschließlich auf ${lang}, verständlich für jemanden, der besser ${lang} als Deutsch kann. ` +
+    `Beispielsätze/Zitate aus dem deutschen Text, die überarbeitete Fassung ("corrected") und alle Prüfungsinhalte selbst (Text, Aufgaben, einzufügende Wörter/Sätze) bleiben auf Deutsch — nur die Erklärungen drumherum werden übersetzt.`;
+}
+
+/* Wie streng/wonach gewichtet werden soll, abhängig vom Prüfungsniveau. */
+function levelWeightLine(level) {
+  const lv = String(level || "").toUpperCase();
+  if (lv.startsWith("A")) return `Niveau ${lv}: Gewichte Grundfehler am stärksten — Verbkonjugation, Wortstellung, Artikel/Kasus, elementare Rechtschreibung. Schon einfache korrekte Sätze zählen positiv; Stil und Register spielen fast keine Rolle.`;
+  if (lv.startsWith("B1")) return `Niveau ${lv}: Grammatik- (Kasus, Zeiten, Nebensätze) und Wortschatzfehler zählen deutlich. Register/Konnektoren werden wichtiger, aber weniger streng bewertet als ab B2.`;
+  if (lv.startsWith("B2")) return `Niveau ${lv}: Grammatikfehler und unpassender Wortschatz zählen klar. Zusätzlich werden Kohärenz, Satzbauvielfalt und ein zur Aufgabe passendes Register erwartet.`;
+  if (lv.startsWith("C1")) return `Niveau ${lv}: Kleine, vereinzelte Grammatikfehler wiegen weniger schwer als unpassender Ton, ungenaue Wortwahl, schwache Kohärenz oder zu einfache Satzstrukturen.`;
+  if (lv.startsWith("C2") || lv.includes("TDN") || lv.includes("4") || lv.includes("5")) return `Höchstes Niveau (${lv}): Bewerte vor allem Präzision, Register, Idiomatik, Textaufbau und Nuancen. Einzelne kleine Flüchtigkeitsfehler fallen kaum ins Gewicht, ungenaue oder unidiomatische Formulierungen dagegen schon.`;
+  return `Gewichte Fehler passend zum genannten Niveau ${lv || "des Tests"}.`;
+}
+
+const ANNOTATION_SCHEMA =
+  `"annotated": [ { "t": "ok"|"wrong"|"extra"|"missing"|"punct"|"tone"|"style", "s": "Textstück", "note": "kurze Erklärung" } ]`;
+const ANNOTATION_RULES = [
+  "Zusätzlich zerlegst du den Kandidatentext für die farbliche Fehleranalyse in 'annotated': eine geordnete Liste kleiner Textstücke (Wort oder kurze Wortgruppe), die aneinandergereiht (ohne die 'missing'-Stücke) wieder den Originaltext ergeben, inklusive Leerzeichen/Umbrüchen.",
+  "t:'ok' für fehlerfreien Text (kein 'note' nötig). t:'wrong' für ein falsches Wort/eine falsche Form — 's' ist die falsche Stelle wie im Original, 'note' nennt kurz Fehlerart und die richtige Form. t:'extra' für ein überflüssiges Wort, das ersatzlos gestrichen werden sollte. t:'missing' für eine fehlende Stelle — 's' enthält das fehlende Wort bzw. die fehlende Wortgruppe, die dort eingefügt werden sollte (im Original nicht vorhanden). t:'punct' für Zeichensetzungsfehler. t:'tone' für Ton-/Registerprobleme (z. B. zu informell/zu förmlich für die Aufgabe). t:'style' für stilistisch schwache, aber nicht falsche Stellen (Wiederholungen, ungenaue Wortwahl) — 'note' nennt eine bessere Formulierung.",
+  "Erfinde keine zusätzlichen Fehler nur um etwas zu markieren — ein sehr guter Text kann fast nur aus 'ok'-Stücken bestehen."
+].join(" ");
+
+/* Farbige Markierungen im Fließtext rendern; Klick auf eine Markierung
+   zeigt die Erklärung im Erläuterungsfeld darunter. */
+const MARK_META = {
+  wrong:   { cls: "mk-wrong",   label: "Falsche Form / falsches Wort", swatch: "var(--color-rose)" },
+  extra:   { cls: "mk-extra",   label: "Überflüssig — entfernen",      swatch: "var(--color-rose)" },
+  missing: { cls: "mk-missing", label: "Fehlt — hier einfügen",        swatch: "var(--color-good)" },
+  punct:   { cls: "mk-punct",   label: "Zeichensetzung",               swatch: "var(--color-amber)" },
+  tone:    { cls: "mk-tone",    label: "Ton / Register",               swatch: "var(--color-indigo)" },
+  style:   { cls: "mk-style",   label: "Stil — geht besser",           swatch: "var(--color-plum)" }
+};
+
+function renderAnnotated(segments) {
+  const wrap = el("div", {});
+  const used = new Set((segments || []).map(s => s.t).filter(t => MARK_META[t]));
+  if (used.size) {
+    wrap.append(el("div", { class: "mkleg" }, Array.from(used).map(t =>
+      el("span", {}, el("i", { style: "background:" + MARK_META[t].swatch }), MARK_META[t].label))));
+  }
+  const note = el("div", { class: "mk-note", hidden: true });
+  const textEl = el("div", { class: "mktext" });
+  (segments || []).forEach(seg => {
+    const meta = MARK_META[seg.t];
+    if (!meta) { textEl.append(document.createTextNode(String(seg.s || ""))); return; }
+    const span = el("span", { class: "mk " + meta.cls, tabindex: "0",
+      onclick: () => {
+        note.hidden = false;
+        note.innerHTML = "";
+        note.append(el("b", { text: meta.label + ": " }), el("span", { text: seg.note || "—" }));
+      } }, String(seg.s || ""));
+    textEl.append(span);
+  });
+  wrap.append(textEl, note);
+  return wrap;
+}
+
+/* Ausführliche KI-Erklärung für ein einzelnes Lesen/Hören/Bausteine-Item
+   (warum die Lösung richtig ist, und warum die gewählte Antwort falsch war). */
+async function aiExplainItem(part, c, it, given, host, examName, level) {
+  if (!AI.ready()) { host.textContent = "Kein API-Schlüssel hinterlegt (Einstellungen → KI)."; return; }
+  host.textContent = "Die KI erklärt …";
+  const fmt = FORMATS[part.format] || {};
+  const opts = it.options || fmt.fixed || part.fixedOpts || [];
+  const showAns = v => {
+    if (v === undefined || v === null || v === "") return "—";
+    if (c.personas) { const n = Number(v); return isNaN(n) ? String(v) : (LETTERS[n] || v) + (c.personas[n] ? ") " + c.personas[n].name : ""); }
+    if (fmt.bank) return String(v);
+    const n = Number(v);
+    return isNaN(n) ? String(v) : (LETTERS[n] || n) + (opts[n] ? ") " + opts[n] : "");
+  };
+  const prompt = [
+    `Erkläre einer/einem Deutschlernenden auf Niveau ${level} bei einer Aufgabe im Stil von ${examName}, warum eine Lösung richtig und eine andere falsch ist.`,
+    `Aufgabe/Item: ${it.prompt}`,
+    opts.length ? "Antwortmöglichkeiten: " + opts.map((o, oi) => LETTERS[oi] + ") " + o).join(" | ") : "",
+    `Richtige Lösung: ${showAns(it.answer)}`,
+    given !== undefined && given !== null && given !== "" ? `Von der Kandidatin/dem Kandidaten gewählt: ${showAns(given)}` : "Wurde nicht beantwortet.",
+    it.why ? `Bereits vorliegende Kurzbegründung: ${it.why}` : "",
+    "Erkläre in 2 bis 4 Sätzen, mit Beleg aus der Aufgabe, warum die richtige Lösung stimmt, und — falls falsch gewählt wurde — woran die gewählte Antwort erkennbar scheitert.",
+    explainLangLine(),
+    'Antworte NUR mit diesem JSON: { "explanation": "..." }'
+  ].filter(Boolean).join("\n");
+  try {
+    const raw = await AI.call([
+      { role: "system", content: "Du bist eine geduldige Deutschlehrerin. Du antwortest ausschließlich mit gültigem JSON." },
+      { role: "user", content: prompt }
+    ], { temperature: 0.3, maxTokens: 700 });
+    const j = AI.parseJSON(raw);
+    host.textContent = j.explanation || "Keine Erklärung erhalten.";
+  } catch (e) {
+    host.textContent = "Fehler: " + e.message;
+  }
+}
+
+/* =========================================================================
    GRADING (Schreiben / Sprechen)
    ======================================================================= */
 async function aiGradeWriting(part, c, text, key) { return aiGrade(part, c, text, key, "schriftlich"); }
@@ -4013,6 +4242,7 @@ async function aiGrade(part, c, text, key, mode) {
   const R = S.run;
   const bp = R ? R.bp : blueprint();
   const ex = examDef(R ? R.test.exam : S.settings.exam);
+  const analyse = mistakesOn();
 
   const id = toast("Die KI liest Ihren Text …", "", 60000);
   const crit = ex.id === "telc"
@@ -4027,6 +4257,7 @@ async function aiGrade(part, c, text, key, mode) {
     c.bullets ? "Leitpunkte: " + c.bullets.join(" | ") : "",
     part.words ? `Vorgegebene Länge: ca. ${part.words} Wörter. Der Text hat ${words(text)} Wörter.` : "",
     `Maximalpunktzahl dieses Teils: ${Math.round(partMax(part))}.`,
+    levelWeightLine(bp._level),
     "",
     "Text der Kandidatin / des Kandidaten:",
     "---",
@@ -4034,13 +4265,15 @@ async function aiGrade(part, c, text, key, mode) {
     "---",
     "",
     "Antworte NUR mit diesem JSON:",
-    `{ "score": 0.0 bis 1.0 (Anteil der erreichten Punkte), "criteria": [ { "name": "${crit[0]}", "score": 0.0-1.0, "comment": "2-3 Sätze" } ] (je ein Objekt für: ${crit.join("; ")}), "strengths": ["..."], "improvements": ["konkreter, umsetzbarer Hinweis"], "corrected": "eine überarbeitete Fassung des Textes auf Zielniveau", "summary": "3-5 Sätze Gesamturteil auf Deutsch" }`,
-    "Sei streng, aber fair und konkret: benenne Fehler mit Beispiel aus dem Text und der korrigierten Form."
+    `{ "score": 0.0 bis 1.0 (Anteil der erreichten Punkte), "criteria": [ { "name": "${crit[0]}", "score": 0.0-1.0, "comment": "2-3 Sätze" } ] (je ein Objekt für: ${crit.join("; ")}), "strengths": ["..."], "improvements": ["konkreter, umsetzbarer Hinweis"], "corrected": "eine überarbeitete Fassung des Textes auf Zielniveau", "summary": "3-5 Sätze Gesamturteil"${analyse ? ", " + ANNOTATION_SCHEMA : ""} }`,
+    "Sei streng, aber fair und konkret: benenne Fehler mit Beispiel aus dem Text und der korrigierten Form.",
+    analyse ? ANNOTATION_RULES : "",
+    explainLangLine()
   ].filter(Boolean).join("\n");
 
   try {
     const raw = await AI.call([{ role: "system", content: "Du bist eine erfahrene, kalibrierte Prüferin für deutsche Sprachprüfungen. Du antwortest ausschließlich mit gültigem JSON." },
-                               { role: "user", content: prompt }], { temperature: 0.3 });
+                               { role: "user", content: prompt }], { temperature: 0.3, maxTokens: analyse ? Math.max(Number(AI.cfg().maxTokens) || 8192, 8192) : undefined });
     const j = AI.parseJSON(raw);
     const score = clamp(Number(j.score), 0, 1);
     if (R) {
@@ -4049,6 +4282,7 @@ async function aiGrade(part, c, text, key, mode) {
         (j.criteria || []).map(cc => "• " + cc.name + " (" + Math.round(cc.score * 100) + " %): " + cc.comment).join("\n") +
         "\n\nStärken:\n" + (j.strengths || []).map(s => "+ " + s).join("\n") +
         "\n\nZu verbessern:\n" + (j.improvements || []).map(s => "→ " + s).join("\n");
+      if (analyse && Array.isArray(j.annotated)) R.answers[part.id + ":annotated"] = j.annotated;
       saveRunAnswers();
     }
     showGradeModal(part, j, score);
@@ -4071,6 +4305,9 @@ function showGradeModal(part, j, score) {
     (j.criteria || []).length ? el("table", { class: "tbl" }, el("tbody", {}, (j.criteria || []).map(c => el("tr", {},
       el("td", {}, el("b", { text: c.name }), el("div", { class: "xsmall muted", text: c.comment || "" })),
       el("td", { style: "width:90px;text-align:right" }, el("span", { class: "pill " + (c.score >= 0.6 ? "teal" : "rose"), text: Math.round((c.score || 0) * 100) + " %" })))))) : null,
+    Array.isArray(j.annotated) && j.annotated.length ? el("div", { style: "margin-top:16px" },
+      el("h4", { text: "Fehleranalyse — angeklickte Markierung erklärt sich unten" }),
+      el("div", { class: "card tight", style: "margin-top:8px" }, renderAnnotated(j.annotated))) : null,
     (j.improvements || []).length ? el("div", { style: "margin-top:14px" }, el("h4", { text: "Konkret verbessern" }),
       el("ul", { style: "margin:6px 0 0 18px;padding:0" }, j.improvements.map(s => el("li", { class: "small", text: s })))) : null,
     j.corrected ? el("details", { style: "margin-top:14px" },
@@ -4549,6 +4786,12 @@ const libImported = new Map();
 let libRenderToken = 0;
 
 function resetLibPath() { libPath = []; libImported.clear(); }
+function libActivate(id) {
+  const changed = S.settings.testId !== id;
+  S.settings.testId = id; saveSettings();
+  if (changed) S.run = null;
+  syncTopbar(); refresh();          // re-render the page so the chosen model test shows up
+}
 function reloadLibrary() { libSrc = null; resetLibPath(); return renderLibRow(); }
 
 function libPickButton(label, remembered) {
@@ -4575,25 +4818,26 @@ async function renderLibRow() {
   const myToken = ++libRenderToken;
   row.innerHTML = "";
 
+  const tSel = $("#testSelect");
   try { await libSource(); }
   catch (e) {
     if (myToken !== libRenderToken) return;
     row.innerHTML = "";
+    if (tSel) tSel.style.display = "";
     const local = location.protocol === "file:";
-    row.append(el("span", { class: "xsmall muted", text: e.code === "NEEDS_PERMISSION"
-      ? "Bibliothek: bitte den gemerkten Ordner einmal freigeben."
-      : local ? "Bibliothek: Seite wurde lokal geöffnet — bitte einmalig den Projektordner wählen (wird gemerkt)."
-              : "Bibliothek: keine Modelltests gefunden (Ordner modeltest/ leer, oder api/library.js bzw. library.php nicht hochgeladen)." }));
-    const b = e.code === "NEEDS_PERMISSION" ? libPickButton("Ordner freigeben", true) : libPickButton("Projektordner wählen …");
+    const msg = e.code === "NEEDS_PERMISSION" ? "Ordnerzugriff erlauben:"
+      : local ? "Projektordner wählen:" : "Keine Modelltests gefunden";
+    row.append(el("span", { class: "xsmall muted", title: libLog.join("\n"), style: "white-space:nowrap", text: msg }));
+    const b = e.code === "NEEDS_PERMISSION" ? libPickButton("Freigeben", true) : libPickButton(local ? "Ordner wählen …" : "Ordner wählen …");
     if (b) row.append(b);
-    if (e.code === "NEEDS_PERMISSION") { const b2 = libPickButton("Anderen Ordner wählen …"); if (b2) row.append(b2); }
-    row.append(el("div", { class: "xsmall muted", style: "flex-basis:100%;white-space:pre-wrap;opacity:.8", text: libLog.join("\n") }));
     return;
   }
   if (myToken !== libRenderToken) return;
 
-  const exam = S.settings.exam, level = S.settings.level, slug = levelSlug(level);
-  row.append(el("span", { class: "xsmall muted", text: "Bibliothek:" }));
+  const exam = S.settings.exam, level = S.settings.level;
+  const rootListing = libListing(exam, level, []);
+  const hasLib = rootListing.dirs.length + rootListing.modFiles.length > 0;
+  if (tSel) tSel.style.display = hasLib ? "none" : "";     // folders pick the test; the plain list only when there are none
   const statusPill = el("span", { class: "pill xsmall" });
   let path = [];
 
@@ -4603,22 +4847,24 @@ async function renderLibRow() {
     if (listing.modFiles.length) {              // this folder is itself a model test
       const leafKey = exam + "/" + level + "/" + path.join("/");
       const pill = el("span", { class: "pill teal xsmall" });
-      row.append(pill);
       const known = libImported.get(leafKey);
       const deepest = !listing.dirs.length || libPath[depth] === undefined;   // only the deepest chosen folder becomes the active test
+      if (deepest) row.append(pill);
       if (known) {
         pill.textContent = "✓ geladen";
-        if (deepest && S.settings.testId !== known) { S.settings.testId = known; saveSettings(); syncTopbar(); }
+        if (deepest && S.settings.testId !== known) libActivate(known);
       } else {
         pill.textContent = "wird geladen …";
         try {
           const res = await importFolderAsTest(exam, level, path, listing.modFiles);
           if (myToken !== libRenderToken) return;
           libImported.set(leafKey, res.test.id);
-          pill.textContent = "✓ geladen (" + res.found + " Modul" + (res.found === 1 ? "" : "e") + ")" + (res.warn ? " ⚠ " + res.warn : "");
-          if (deepest) { S.settings.testId = res.test.id; saveSettings(); syncTopbar(); }
+          pill.textContent = "✓ " + res.found + " Modul" + (res.found === 1 ? "" : "e") + (res.warn ? " ⚠" : "");
+          if (res.warn) pill.title = res.warn;
+          if (deepest) libActivate(res.test.id);
         } catch (e) {
           if (myToken !== libRenderToken) return;
+          if (!pill.isConnected) row.append(pill);
           pill.className = "pill xsmall"; pill.style.color = "var(--color-danger)";
           pill.textContent = "Fehler: " + e.message;
         }
@@ -4627,12 +4873,12 @@ async function renderLibRow() {
 
     if (myToken !== libRenderToken) return;     // syncTopbar() may have re-rendered the row already
     if (!listing.dirs.length) {
-      if (!listing.modFiles.length) row.append(el("span", { class: "xsmall muted", text: depth === 0 ? "Für dieses Niveau sind noch keine Modelltests hinterlegt." : "(leerer Ordner)" }));
+      if (!listing.modFiles.length) row.append(el("span", { class: "xsmall muted", style: "white-space:nowrap", text: depth === 0 ? "Keine Modelltests in diesem Niveau" : "(leer)" }));
       return;
     }
 
     const sel = el("select", {});
-    sel.append(el("option", { value: "", text: depth === 0 ? "Buch wählen …" : "Unterordner wählen …" }));
+    sel.append(el("option", { value: "", text: depth === 0 ? "Ordner wählen …" : "Unterordner …" }));
     listing.dirs.forEach(d => sel.append(el("option", { value: d, text: d, selected: libPath[depth] === d })));
     sel.addEventListener("change", e => {
       libPath = libPath.slice(0, depth);
@@ -4671,7 +4917,7 @@ function libraryCard() {
       pick,
       el("button", { class: "btn sm ghost", onclick: () => {
         dbg.style.display = dbg.style.display === "none" ? "block" : "none";
-        dbg.textContent = libSrc ? (libSrc.files.length + " Dateien gefunden:\n" + libSrc.files.join("\n")) : "Keine Quelle geladen.";
+        dbg.textContent = libSrc ? (libSrc.files.length + " Dateien gefunden:\n" + libSrc.files.join("\n")) : ("Keine Quelle gefunden:\n" + libLog.join("\n"));
       } }, "Gefundene Dateien anzeigen")),
     dbg,
     el("p", { class: "xsmall muted", style: "margin-top:10px" },
@@ -4873,6 +5119,24 @@ VIEWS.settings = () => {
       "Hinweis: Browser blockieren solche Aufrufe in eingebetteten Vorschauen. Öffnen Sie die heruntergeladene Datei direkt, dann funktioniert die Generierung.")
   ));
 
+  /* --- mistake analysis --- */
+  const mCfg = st.mistakeAnalysis;
+  const mToggle = el("input", { type: "checkbox", checked: !!mCfg.enabled,
+    onchange: e => { mCfg.enabled = e.target.checked; saveSettings(); } });
+  const langInput = el("input", { type: "text", value: mCfg.explainLang, placeholder: "leer = Deutsch, z. B. Bengali oder English",
+    oninput: e => { mCfg.explainLang = e.target.value; saveSettings(); } });
+  wrap.append(card("KI-Fehleranalyse",
+    "Markiert Fehler in Schreiben und Sprechen farbig direkt im Text (falsches Wort, fehlendes Wort, überflüssiges Wort, Zeichensetzung, Ton, Stil) und bietet bei Lesen und Hören eine ausführliche Erklärung an, warum eine Lösung richtig oder falsch ist. Die Gewichtung passt sich automatisch an das gewählte Niveau an — bei A1/A2 zählen Grundfehler am meisten, bei C1/C2 vor allem Präzision, Register und Nuancen.",
+    el("label", { class: "row", style: "gap:10px;align-items:flex-start;cursor:pointer;padding:6px 0" }, mToggle,
+      el("div", {}, el("div", { text: "KI-Fehleranalyse aktivieren" }),
+        el("div", { class: "xsmall muted", text: "Aus: nur die bisherige Punktzahl und kurze Rückmeldung. An: zusätzlich farbige Markierungen und eine Erklär-Option bei jeder Lösung." }))),
+    el("div", { class: "sep" }),
+    el("label", { class: "field" }, "Erklärungssprache",
+      langInput),
+    el("p", { class: "xsmall muted", style: "margin-top:6px" },
+      "Legt fest, in welcher Sprache die KI ihre Erklärungen, Kommentare und Verbesserungsvorschläge schreibt — der deutsche Prüfungstext, die Musterlösungen und die korrigierte Fassung bleiben immer auf Deutsch. Feld leer lassen für deutsche Erklärungen, oder z. B. „Bengali“, „English“, „Türkçe“ eintragen.")
+  ));
+
   /* --- appearance --- */
   wrap.append(card("Darstellung", null,
     el("div", { class: "grid g2" },
@@ -4990,10 +5254,38 @@ function syncTopbar() {
   renderLibRow();
 }
 
+/* =========================================================================
+   PWA — installierbar machen und offline zum Laufen bringen.
+   Läuft nur über http(s) (Vercel, GitHub Pages, PHP-Webspace, lokaler
+   Server); beim Doppelklick auf die Datei (file://) wird nichts registriert,
+   die App funktioniert dort aber wie gewohnt online weiter.
+   ======================================================================= */
+function registerPWA() {
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  }
+  let deferredPrompt = null;
+  const btn = $("#installBtn");
+  window.addEventListener("beforeinstallprompt", e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (btn) btn.hidden = false;
+  });
+  if (btn) btn.addEventListener("click", async () => {
+    if (!deferredPrompt) { toast("Installation ist in diesem Browser bereits verfügbar über das Menü (⋮ oder Teilen → Zum Startbildschirm).", "", 6000); return; }
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    btn.hidden = true;
+  });
+  window.addEventListener("appinstalled", () => { if (btn) btn.hidden = true; toast("App installiert.", "ok"); });
+}
+
 function boot() {
   installSeeds();
   applyTheme();
   applyI18n();
+  registerPWA();
 
   /* nav */
   $$(".navitem[data-view]").forEach(b => b.addEventListener("click", () => go(b.dataset.view)));
