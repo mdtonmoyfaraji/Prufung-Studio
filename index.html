@@ -1020,29 +1020,34 @@ const BLUEPRINTS = {
     name: "TestDaF (digital)",
     short: "TestDaF",
     org: "g.a.s.t. / TestDaF-Institut",
-    levels: ["TDN 3", "TDN 4", "TDN 5"],
+    levels: ["TestDaF"],
     levelMeaning: { "TDN 3": "unter B2", "TDN 4": "B2 — Standardzulassung", "TDN 5": "C1" },
     note: {
-      de: "Ein Test, vier getrennt bewertete Teile. Es gibt kein Gesamtergebnis — Sie wählen hier nur Ihr Zielniveau.",
-      en: "One test, four separately graded sections. There is no overall grade — the level selector sets your target TDN."
+      de: "Ein Test, vier getrennt bewertete Teile — alle Aufgaben sind gleich schwer. Es gibt keine Niveau-Auswahl vorab: Ihr TDN (3, 4 oder 5) pro Teil ergibt sich erst aus Ihrem Ergebnis, genau wie bei der echten Prüfung.",
+      en: "One test, four separately graded sections, all equally hard. There is no level to pick in advance — your TDN (3, 4 or 5) per section comes only from how well you answer, exactly as in the real exam."
     },
     L: {}
   }
 };
 
-/* TestDaF uses one structure for all three target levels; only the pass bar moves. */
-/* TestDaF: one structure for all three target levels; only the pass bar moves.
+/* TestDaF: one single test — no level selector. Every candidate answers the exact
+   same items; the TDN (3 / 4 / 5) is a *result*, computed per module from the
+   percentage of correct answers (see gradePart, scoring.kind === "tdn"), never a
+   pre-chosen difficulty tier. sc.target only feeds the "Bestehensgrenze" pill
+   (TDN 4 / Standardzulassung is the most common university requirement) — it does
+   not change the questions or the awarded TDN.
    Aufgabentypen und Itemzahlen exakt nach der offiziellen Tabelle
    "Aufbau des digitalen TestDaF" auf testdaf.de. */
 (function buildTestDaF() {
   const tdnCut = { "TDN 3": 0.40, "TDN 4": 0.60, "TDN 5": 0.80 };
-  const mk = target => ({
-    title: "TestDaF digital — Zielniveau " + target,
+  const target = "TDN 4";
+  const bp = {
+    title: "TestDaF digital",
     modular: true, verified: "verified",
     source: "testdaf.de, „Aufbau des digitalen TestDaF“: Lesen 7 Aufgaben / 34 Items / ca. 55 Min, Hören 7 Aufgaben / 30 Items / ca. 40 Min, Schreiben 2 Aufgaben / ca. 60 Min, Sprechen 7 Aufgaben / ca. 35 Min mit den dort genannten Sprechzeiten.",
     scoring: { kind: "tdn", target, cut: tdnCut, bands: tdnCut },
     topics: "Hochschulalltag, Forschung, Studienorganisation, Gesellschaft, Technik",
-    blockNote: "Die TDN-Grenzen sind hier als Prozentbänder hinterlegt (40 / 60 / 80 %). Die echte Einstufung erfolgt testsatzspezifisch. Die Aufgaben laufen linear: vorwärts ja, zurück nein.",
+    blockNote: "Ihr TDN pro Modul wird aus dem Prozentanteil richtiger Antworten berechnet (Bänder bei 40 / 60 / 80 %) — es gibt keine vorab wählbare Schwierigkeitsstufe. Die echte Einstufung erfolgt testsatzspezifisch. Die Aufgaben laufen linear: vorwärts ja, zurück nein.",
     modules: {
       lesen: { minutes: 55, linear: true, parts: [
         P("L1", "Aufgabe 1", "Lückentext ergänzen (Wortschatz)", "gapbank", 5, 1, 8,
@@ -1092,9 +1097,10 @@ const BLUEPRINTS = {
         P("P7", "Aufgabe 7", "Maßnahmen kritisieren — Veranstaltung der Hochschulverwaltung", "speaking", 1, 100 / 7, 4, { prepSec: 60, seconds: 90 })
       ]}
     }
-  });
-  for (const t of BLUEPRINTS.testdaf.levels) BLUEPRINTS.testdaf.L[t] = mk(t);
+  };
+  BLUEPRINTS.testdaf.L["TestDaF"] = bp;
 })();
+
 </script>
 <script>
 "use strict";
@@ -1212,6 +1218,8 @@ const modName = m => MODULE_META[m] ? MODULE_META[m][S.settings.lang] || MODULE_
 function examDef(examId = S.settings.exam) { return BLUEPRINTS[examId]; }
 
 function levelsFor(examId = S.settings.exam) { return examDef(examId).levels; }
+/** " " + level, but empty when the exam only has one level (nothing to distinguish, e.g. TestDaF). */
+function examLevelText(examId, level) { return levelsFor(examId).length > 1 ? " " + level : ""; }
 
 /** Returns a deep copy of the blueprint for exam+level with any user edits merged in. */
 function blueprint(examId = S.settings.exam, level = S.settings.level) {
@@ -1998,7 +2006,7 @@ const SEED_TELC_B1 = {
 const SEED_TESTDAF = {
   id: "seed_testdaf_tdn4",
   name: "TestDaF digital — Modelltest 1 (Standard)",
-  exam: "testdaf", level: "TDN 4", source: "seed", createdAt: 0,
+  exam: "testdaf", level: "TestDaF", source: "seed", createdAt: 0,
   content: {
     lesen: {
       L1: {
@@ -2438,7 +2446,7 @@ VIEWS.dashboard = () => {
 
   if (!test) {
     wrap.append(el("div", { class: "empty" },
-      el("p", { text: "Für " + ex.short + " " + S.settings.level + " gibt es noch keinen Modelltest." }),
+      el("p", { text: "Für " + ex.short + examLevelText(S.settings.exam, S.settings.level) + " gibt es noch keinen Modelltest." }),
       el("div", { class: "row", style: "justify-content:center;margin-top:12px" },
         el("button", { class: "btn accent", onclick: () => createTestFlow() }, "Leeren Modelltest anlegen"),
         el("button", { class: "btn", onclick: () => go("io") }, "Modelltest importieren"))
@@ -2522,7 +2530,7 @@ VIEWS.tests = () => {
   const ex = examDef();
   wrap.append(el("div", { class: "row", style: "justify-content:space-between;margin-bottom:6px" },
     el("div", {}, el("h1", { text: "Modellprüfungen" }),
-      el("p", { class: "muted small", text: "Jeder Modelltest folgt genau dem Aufbau von " + ex.short + " " + S.settings.level + ". Sie können ihn ganz oder modulweise exportieren, teilen und wieder einlesen." })),
+      el("p", { class: "muted small", text: "Jeder Modelltest folgt genau dem Aufbau von " + ex.short + examLevelText(S.settings.exam, S.settings.level) + ". Sie können ihn ganz oder modulweise exportieren, teilen und wieder einlesen." })),
     el("div", { class: "row" },
       el("button", { class: "btn", onclick: () => $("#fileInput").click() }, "Importieren"),
       el("button", { class: "btn accent", onclick: createTestFlow }, "Neuer Modelltest"))
@@ -2545,7 +2553,7 @@ VIEWS.tests = () => {
           test.id === S.settings.testId ? el("span", { class: "pill accent", text: "aktiv" }) : null,
           el("span", { class: "pill", text: test.source === "seed" ? "Standard" : test.source === "ai" ? "KI" : test.source === "import" ? "importiert" : "manuell" })),
         el("div", { class: "xsmall muted", style: "margin-top:3px",
-          text: ex.short + " " + test.level + " · angelegt " + new Date(test.createdAt || Date.now()).toLocaleDateString("de-DE") })),
+          text: ex.short + examLevelText(test.exam, test.level) + " · angelegt " + new Date(test.createdAt || Date.now()).toLocaleDateString("de-DE") })),
       el("div", { class: "row" },
         el("button", { class: "btn sm", onclick: () => { S.settings.testId = test.id; saveSettings(); refresh(); } }, "Aktiv setzen"),
         el("button", { class: "btn sm", onclick: () => exportTestDialog(test) }, "Export"),
@@ -2598,11 +2606,11 @@ VIEWS.tests = () => {
 };
 
 function createTestFlow() {
-  const nameInput = el("input", { type: "text", value: examDef().short + " " + S.settings.level + " — Modelltest " + (currentTests().length + 1) });
+  const nameInput = el("input", { type: "text", value: examDef().short + examLevelText(S.settings.exam, S.settings.level) + " — Modelltest " + (currentTests().length + 1) });
   modal(el("div", {},
     el("h2", { text: "Neuen Modelltest anlegen" }),
     el("p", { class: "muted small", style: "margin:6px 0 16px",
-      text: "Der Testrahmen wird aus dem Prüfungsaufbau von " + examDef().short + " " + S.settings.level + " erzeugt. Inhalte füllen Sie danach mit der KI oder per Import." }),
+      text: "Der Testrahmen wird aus dem Prüfungsaufbau von " + examDef().short + examLevelText(S.settings.exam, S.settings.level) + " erzeugt. Inhalte füllen Sie danach mit der KI oder per Import." }),
     el("label", { class: "field" }, "Name", nameInput),
     el("div", { class: "row", style: "justify-content:flex-end;margin-top:18px" },
       el("button", { class: "btn", onclick: closeModal }, "Abbrechen"),
@@ -2695,7 +2703,7 @@ VIEWS.structure = (params) => {
 
   wrap.append(el("div", { class: "row", style: "margin-top:10px" },
     el("button", { class: "btn sm danger", onclick: () => {
-      confirmBox("Aufbau zurücksetzen?", "Ihre Änderungen an Zeiten, Itemzahlen und Punkten für " + ex.short + " " + S.settings.level + " werden verworfen.", () => {
+      confirmBox("Aufbau zurücksetzen?", "Ihre Änderungen an Zeiten, Itemzahlen und Punkten für " + ex.short + examLevelText(S.settings.exam, S.settings.level) + " werden verworfen.", () => {
         clearOverrides(S.settings.exam, S.settings.level); refresh(); toast("Standardaufbau wiederhergestellt.", "ok");
       });
     } }, "Auf Standard zurücksetzen"),
@@ -2715,7 +2723,7 @@ VIEWS.progress = () => {
 
   wrap.append(el("div", { style: "margin-bottom:18px" },
     el("h1", { text: "Fortschritt" }),
-    el("p", { class: "muted small", text: "Alle abgeschlossenen Versuche für " + examDef().short + " " + S.settings.level + ". Ergebnisse werden auf 100 normiert, damit sich die Module vergleichen lassen." })));
+    el("p", { class: "muted small", text: "Alle abgeschlossenen Versuche für " + examDef().short + examLevelText(S.settings.exam, S.settings.level) + ". Ergebnisse werden auf 100 normiert, damit sich die Module vergleichen lassen." })));
 
   if (!mine.length) {
     wrap.append(el("div", { class: "empty" }, "Noch keine abgeschlossenen Versuche. Starten Sie ein Modul auf der Übersicht."));
@@ -4043,8 +4051,11 @@ function handleMarkClick(e) {
 const AI = {
   busy: false,
   logNode: null,
+  logLines: [],   // persists for the whole session — survives navigating away and back; only "Leeren" clears it
   log(msg, cls = "") {
     const line = "[" + new Date().toLocaleTimeString("de-DE") + "] " + msg;
+    AI.logLines.push({ line, cls });
+    if (AI.logLines.length > 2000) AI.logLines.splice(0, AI.logLines.length - 2000);
     if (AI.logNode) {
       AI.logNode.append(el("div", { class: cls, text: line }));
       AI.logNode.scrollTop = AI.logNode.scrollHeight;
@@ -4616,6 +4627,8 @@ VIEWS.ai = () => {
   const plabel = el("span", { class: "xsmall muted", text: "bereit" });
   aiProgressLabel = plabel;
   const logBox = el("div", { class: "ailog", text: "" });
+  AI.logLines.forEach(({ line, cls }) => logBox.append(el("div", { class: cls, text: line })));
+  logBox.scrollTop = logBox.scrollHeight;
   AI.logNode = logBox;
 
   wrap.append(el("div", { class: "card", style: "margin-bottom:16px" },
@@ -4627,7 +4640,7 @@ VIEWS.ai = () => {
       moduleKeys(bp).map(mk => el("button", { class: "btn sm", onclick: () => aiGenerateModule(test.id, mk) },
         "Nur " + modName(mk)))) : el("div", { class: "empty" }, "Kein Modelltest ausgewählt."),
     test ? el("div", { class: "xsmall muted", style: "margin-top:10px" },
-      "Ziel: " + test.name + " — " + examDef().short + " " + S.settings.level) : null
+      "Ziel: " + test.name + " — " + examDef().short + examLevelText(S.settings.exam, S.settings.level)) : null
   ));
 
   /* per-part matrix */
@@ -4652,7 +4665,7 @@ VIEWS.ai = () => {
   wrap.append(el("div", { class: "card", style: "margin-top:16px" },
     el("div", { class: "row", style: "justify-content:space-between" },
       el("h3", { text: "Protokoll" }),
-      el("button", { class: "btn sm ghost", onclick: () => { logBox.innerHTML = ""; } }, "Leeren")),
+      el("button", { class: "btn sm ghost", onclick: () => { AI.logLines = []; logBox.innerHTML = ""; } }, "Leeren")),
     logBox));
   return wrap;
 };
@@ -5296,7 +5309,7 @@ VIEWS.settings = () => {
     "Diese Auswahl steuert alles Weitere: Aufbau, Zeiten, Aufgabenformate, Bewertung und die Vorgaben, die an die KI gehen.",
     el("div", { class: "grid g2" },
       el("label", { class: "field" }, "Prüfung", examSel),
-      el("label", { class: "field" }, "Niveau", levelSel)),
+      levelsFor(st.exam).length > 1 ? el("label", { class: "field" }, "Niveau", levelSel) : null),
     examDef().unavailable ? el("p", { class: "xsmall", style: "margin-top:10px;color:var(--color-accent)" },
       Object.entries(examDef().unavailable).map(([k, v]) => k + ": " + (v[st.lang] || v.de)).join(" ")) : null,
     examDef().levelMeaning ? el("p", { class: "xsmall muted", style: "margin-top:8px" },
@@ -5501,8 +5514,10 @@ function syncTopbar() {
 
   const lvSel = $("#levelSelect");
   lvSel.innerHTML = "";
-  levelsFor(st.exam).forEach(l => lvSel.append(el("option", { value: l, selected: l === st.level, text: l })));
-  if (!levelsFor(st.exam).includes(st.level)) { st.level = levelsFor(st.exam)[0]; saveSettings(); lvSel.value = st.level; }
+  const lvList = levelsFor(st.exam);
+  lvSel.style.display = lvList.length > 1 ? "" : "none";   // one level only (e.g. TestDaF): nothing to pick, so hide it
+  lvList.forEach(l => lvSel.append(el("option", { value: l, selected: l === st.level, text: l })));
+  if (!lvList.includes(st.level)) { st.level = lvList[0]; saveSettings(); lvSel.value = st.level; }
 
   const tSel = $("#testSelect");
   tSel.innerHTML = "";
