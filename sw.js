@@ -14,7 +14,7 @@
    ======================================================================= */
 "use strict";
 
-const VERSION = "ps-cache-v1";
+const VERSION = "ps-cache-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
