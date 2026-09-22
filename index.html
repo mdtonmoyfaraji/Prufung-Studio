@@ -574,6 +574,13 @@ const el = (tag, attrs = {}, ...kids) => {
     else if (k === "html") n.innerHTML = v;
     else if (k === "text") n.textContent = v;
     else if (k.startsWith("on") && typeof v === "function") n.addEventListener(k.slice(2), v);
+    /* <textarea>/<select> have no working "value" HTML attribute — the browser
+       ignores setAttribute("value", …) for them, so any pre-filled textarea
+       (Schreiben answer, Sprechen transcript, Notizen) silently rendered empty
+       on every re-render even though the answer was safely saved. Set the DOM
+       property instead for these two tags; every other tag keeps using the
+       attribute exactly as before. */
+    else if (k === "value" && (tag === "textarea" || tag === "select")) n.value = v;
     else n.setAttribute(k, v === true ? "" : v);
   }
   for (const kid of kids.flat()) {
@@ -1119,6 +1126,7 @@ const DEFAULT_SETTINGS = {
   navHidden: false,
   speechRate: 0.95,
   speechVoice: "",
+  speechRecogLang: "de-DE",
   mistakeAnalysis: {
     enabled: true,
     explainLang: ""
@@ -3313,11 +3321,20 @@ function closeGapPopover() {
   if (_gapPopover) _gapPopover.remove();
   _gapPopover = null; _gapPopoverBtn = null;
   document.removeEventListener("click", onGapPopoverOutside, true);
-  window.removeEventListener("scroll", closeGapPopover, true);
+  window.removeEventListener("scroll", onGapPopoverScroll, true);
   window.removeEventListener("resize", closeGapPopover);
 }
 function onGapPopoverOutside(e) {
   if (_gapPopover && !_gapPopover.contains(e.target) && e.target !== _gapPopoverBtn) closeGapPopover();
+}
+/* "scroll" events don't bubble, but a capturing listener on window still
+   fires for a scroll that happened *inside* the popover's own scrollable
+   list (capture runs window → … → target before the event "arrives").
+   That closed the box the instant you tried to scroll it. Only close on a
+   scroll that happened outside the popover. */
+function onGapPopoverScroll(e) {
+  if (_gapPopover && (e.target === _gapPopover || _gapPopover.contains(e.target))) return;
+  closeGapPopover();
 }
 function openGapPopover(btn, options, cur, onPick) {
   if (_gapPopoverBtn === btn) { closeGapPopover(); return; } // click again = close
@@ -3349,7 +3366,7 @@ function openGapPopover(btn, options, cur, onPick) {
   _gapPopover = pop; _gapPopoverBtn = btn;
   setTimeout(() => {
     document.addEventListener("click", onGapPopoverOutside, true);
-    window.addEventListener("scroll", closeGapPopover, true);
+    window.addEventListener("scroll", onGapPopoverScroll, true);
     window.addEventListener("resize", closeGapPopover);
   }, 0);
 }
@@ -3517,8 +3534,20 @@ function renderWriting(col, right, part, c) {
 }
 
 /* ---- speaking ---- */
+/* Languages offered for live speech-to-text. Keyed to BCP-47 tags the
+   browser's SpeechRecognition understands. */
+const SPEECH_RECOG_LANGS = [
+  ["de-DE", "Deutsch (Deutschland)"], ["de-AT", "Deutsch (Österreich)"], ["de-CH", "Deutsch (Schweiz)"],
+  ["en-US", "Englisch (USA)"], ["en-GB", "Englisch (UK)"],
+  ["tr-TR", "Türkisch"], ["ru-RU", "Russisch"], ["uk-UA", "Ukrainisch"], ["pl-PL", "Polnisch"],
+  ["ar-SA", "Arabisch"], ["fr-FR", "Französisch"], ["es-ES", "Spanisch"], ["it-IT", "Italienisch"],
+  ["pt-PT", "Portugiesisch"], ["ro-RO", "Rumänisch"], ["nl-NL", "Niederländisch"],
+  ["zh-CN", "Chinesisch"], ["hi-IN", "Hindi"], ["fa-IR", "Persisch"], ["ur-PK", "Urdu"]
+];
+
 function renderSpeaking(col, right, part, c) {
   const R = S.run, key = part.id + ":0";
+  const audioDbKey = "audio:" + R.testId + ":" + R.moduleKey + ":" + key;
   const secs = c.seconds || part.seconds || 120;
   const prep = c.prepSec != null ? c.prepSec : part.prepSec;
 
@@ -3534,10 +3563,33 @@ function renderSpeaking(col, right, part, c) {
 
   /* timer + recorder */
   const disp = el("div", { class: "clock", text: fmtClock(secs) });
-  let tm = null, remaining = secs, rec = null, chunks = [];
+  let tm = null, remaining = secs, rec = null, chunks = [], recognition = null, recognizing = false;
   const audioBox = el("div", { style: "margin-top:10px" });
   const startBtn = el("button", { class: "btn accent" }, "● Aufnahme starten");
   const stopBtn = el("button", { class: "btn", disabled: true }, "■ Stopp");
+  const delBtn = el("button", { class: "btn sm ghost", style: "display:none" }, "🗑 Aufnahme löschen");
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const langSel = SR
+    ? el("select", { title: "Sprache der Live-Spracherkennung" },
+        SPEECH_RECOG_LANGS.map(([code, label]) =>
+          el("option", { value: code, selected: code === (S.settings.speechRecogLang || "de-DE"), text: label })))
+    : null;
+  if (langSel) langSel.onchange = () => { S.settings.speechRecogLang = langSel.value; saveSettings(); };
+  const liveBox = el("div", { class: "xsmall muted", style: "margin-top:6px;min-height:18px;font-style:italic" });
+
+  function showAudio(blob) {
+    audioBox.innerHTML = "";
+    audioBox.append(el("audio", { controls: true, src: URL.createObjectURL(blob), style: "width:100%" }));
+    delBtn.style.display = "";
+  }
+  /* restore a recording saved earlier in this test (e.g. after "Speichern &
+     Verlassen" or a page reload) — audio never survived a re-render before. */
+  idbGet(audioDbKey).then(blob => { if (blob) showAudio(blob); }).catch(() => {});
+  delBtn.onclick = () => {
+    audioBox.innerHTML = ""; delBtn.style.display = "none";
+    idbDel(audioDbKey).catch(() => {});
+  };
 
   function tick() {
     remaining--; disp.textContent = fmtClock(remaining);
@@ -3546,7 +3598,7 @@ function renderSpeaking(col, right, part, c) {
   }
   startBtn.onclick = async () => {
     remaining = secs; disp.textContent = fmtClock(remaining);
-    startBtn.disabled = true; stopBtn.disabled = false;
+    startBtn.disabled = true; stopBtn.disabled = false; delBtn.style.display = "none";
     tm = setInterval(tick, 1000);
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -3555,17 +3607,46 @@ function renderSpeaking(col, right, part, c) {
       rec.onstop = () => {
         stream.getTracks().forEach(t2 => t2.stop());
         const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
-        audioBox.innerHTML = "";
-        audioBox.append(el("audio", { controls: true, src: URL.createObjectURL(blob), style: "width:100%" }));
+        showAudio(blob);
+        idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
       };
       rec.start();
     } catch (e) {
       toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
     }
+    /* live speech-to-text, alongside the recording, in the chosen language */
+    if (SR) {
+      try {
+        recognition = new SR();
+        recognition.lang = (langSel && langSel.value) || S.settings.speechRecogLang || "de-DE";
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        let finalText = ta.value ? ta.value.trim() + " " : "";
+        recognition.onresult = ev => {
+          let interim = "";
+          for (let i = ev.resultIndex; i < ev.results.length; i++) {
+            const res = ev.results[i];
+            if (res.isFinal) finalText += res[0].transcript + " ";
+            else interim += res[0].transcript;
+          }
+          liveBox.textContent = interim ? "… " + interim : "";
+          ta.value = finalText.trim();
+          R.answers[key] = ta.value; saveRunAnswers();
+        };
+        recognition.onerror = () => {};
+        /* some browsers end recognition on their own well before the timer
+           runs out — restart it silently as long as we're still recording */
+        recognition.onend = () => { if (recognizing) { try { recognition.start(); } catch (e2) {} } };
+        recognizing = true;
+        recognition.start();
+      } catch (e) { recognition = null; }
+    }
   };
   stopBtn.onclick = () => {
     clearInterval(tm); startBtn.disabled = false; stopBtn.disabled = true;
     if (rec && rec.state === "recording") rec.stop();
+    if (recognition) { recognizing = false; try { recognition.stop(); } catch (e) {} }
+    liveBox.textContent = "";
   };
 
   const ta = el("textarea", { rows: 10, placeholder: "Transkript oder Stichpunkte Ihres Vortrags …", value: R.answers[key] || "",
@@ -3574,12 +3655,19 @@ function renderSpeaking(col, right, part, c) {
   right.append(el("div", { class: "card" },
     el("div", { class: "row", style: "justify-content:space-between" },
       el("h4", {}, "Sprechzeit" + (prep ? " (Vorbereitung " + prep + " s)" : "")), disp),
-    el("div", { class: "row", style: "margin-top:8px" }, startBtn, stopBtn,
+    el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" }, startBtn, stopBtn, delBtn,
       el("span", { class: "xsmall muted" }, "Vorgabe: " + Math.round(secs / 60 * 10) / 10 + " Minuten")),
+    SR
+      ? el("div", { class: "row", style: "margin-top:8px;align-items:center;gap:8px" },
+          el("span", { class: "xsmall muted" }, "Live-Transkription:"), langSel)
+      : el("div", { class: "xsmall muted", style: "margin-top:8px" },
+          "Live-Spracherkennung wird von diesem Browser nicht unterstützt (funktioniert z. B. in Chrome/Edge). Aufnahme und manuelles Mitschreiben funktionieren trotzdem."),
+    liveBox,
     audioBox,
     el("div", { class: "sep" }),
     el("h4", { text: "Für die Bewertung: schreiben Sie auf, was Sie gesagt haben" }),
     el("p", { class: "xsmall muted", style: "margin:4px 0 8px" },
+      SR ? "Während der Aufnahme wird hier automatisch mitgeschrieben — kontrollieren und korrigieren Sie den Text danach kurz." :
       "Die KI kann nur Text bewerten. Sprechen Sie zuerst frei, tippen Sie danach mit — das ist selbst schon gutes Training."),
     ta,
     el("div", { class: "row", style: "margin-top:10px" },
@@ -4786,6 +4874,7 @@ async function srcFromDirListing() {
 const idb = () => new Promise((res, rej) => { const r = indexedDB.open("ps-lib", 1); r.onupgradeneeded = () => r.result.createObjectStore("h"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
 async function idbGet(k) { const db = await idb(); return new Promise((res, rej) => { const q = db.transaction("h").objectStore("h").get(k); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); }); }
 async function idbSet(k, v) { const db = await idb(); return new Promise((res, rej) => { const t = db.transaction("h", "readwrite"); t.objectStore("h").put(v, k); t.oncomplete = res; t.onerror = () => rej(t.error); }); }
+async function idbDel(k) { const db = await idb(); return new Promise((res, rej) => { const t = db.transaction("h", "readwrite"); t.objectStore("h").delete(k); t.oncomplete = res; t.onerror = () => rej(t.error); }); }
 
 let libHandle = null;   // remembered local folder (project folder or modeltest folder)
 async function srcFromHandle(root, interactive) {
