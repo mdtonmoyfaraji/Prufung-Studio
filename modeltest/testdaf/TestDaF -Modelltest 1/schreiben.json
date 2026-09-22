@@ -1,0 +1,37 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T12:18:51.971Z",
+  "exam": "testdaf",
+  "level": "TestDaF",
+  "module": "schreiben",
+  "name": "TestDaF — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Digitale Prüfungen an Universitäten",
+      "instruction": "Schreiben Sie einen zusammenhängenden, klar gegliederten argumentativen Text zum Thema digitale Prüfungen. Gehen Sie dabei auf die folgenden Punkte ein:",
+      "prompt": "Immer mehr Universitäten stellen von klassischen Klausuren auf digitale Prüfungsformate am Computer um. Befürworter loben die Effizienz und die bessere Lesbarkeit, während Kritiker vor technischen Problemen und sozialer Ungleichheit warnen.",
+      "bullets": [
+        "Geben Sie Ihre eigene Position zu digitalen Prüfungen an der Hochschule wieder.",
+        "Nennen Sie Argumente, warum digitale Prüfungen Ihrer Meinung nach vorteilhaft oder nachteilig sind, und stützen Sie diese durch Beispiele.",
+        "Gehen Sie auf die Gegenposition ein und setzen Sie sich kritisch damit auseinander.",
+        "Ziehen Sie ein abschließendes Fazit."
+      ],
+      "words": 200,
+      "tips": "Gliedern Sie Ihren Text in Einleitung, Hauptteil mit Argumenten und Gegenargumenten sowie ein klares Fazit."
+    },
+    "S2": {
+      "title": "Zusammenfassung: Nutzung digitaler Medien an Hochschulen",
+      "instruction": "Fassen Sie die wichtigsten Informationen aus dem Lesetext und der dazugehörigen Grafik in einem zusammenhängenden Text zusammen. Beachten Sie dabei die vorgegebenen Leitpunkte. Schreiben Sie circa 100 bis 150 Wörter und bewerten Sie die Informationen nicht.",
+      "prompt": "Immer mehr Studierende nutzen digitale Medien und Lernplattformen im studentischen Alltag. Der vorliegende Text sowie die begleitende Grafik informieren über die Entwicklung und die bevorzugten Anwendungsbereiche dieser Technologien an deutschen Universitäten im Jahr 2023. Fassen Sie die Kerninhalte in Ihrem eigenen Text zusammen.",
+      "bullets": [
+        "Geben Sie das allgemeine Thema des Textes und der Grafik wieder.",
+        "Beschreiben Sie die wichtigsten Entwicklungen oder Trends anhand der Daten.",
+        "Nennen Sie die zentralen Gründe für die genannte Nutzung.",
+        "Fassen Sie die Ergebnisse prägnant zusammen, ohne eigene Meinungen einzubringen."
+      ],
+      "words": 125,
+      "tips": "Achten Sie darauf, die Daten aus der Grafik korrekt einzubinden und den Text sachlich sowie objektiv zusammenzufassen."
+    }
+  }
+}
