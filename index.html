@@ -435,40 +435,42 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
   .split{grid-template-columns:1fr!important}
   .split > .pane{max-height:none!important; overflow:visible!important} }
 
-/* ---------- gap-fill chips (replaces plain <select> for cloze gaps) ---------- */
-.gapchip{display:inline-block; position:relative; margin:0 3px; vertical-align:baseline}
-.gapchip>summary{
-  list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:4px;
-  padding:2px 10px; border-radius:7px; border:1.5px dashed var(--color-accent);
+/* ---------- gap-fill chips (replaces plain <select> for cloze gaps) ----------
+   The chip is a plain <button>; the choice list is a separate element
+   appended to <body> and positioned with fixed coordinates computed in JS.
+   That means opening it never resizes or reflows the chip/passage itself,
+   and it always draws above everything else (no z-index/overflow issues
+   from parent cards clipping it). */
+.gapchip{
+  display:inline-block; margin:0 3px; vertical-align:baseline;
+  cursor:pointer; border:1.5px dashed var(--color-accent); border-radius:7px;
   background:var(--color-accent-softer); color:var(--color-accent);
-  font-family:var(--font-mono); font-size:13px; line-height:1.5; min-width:20px; justify-content:center;
+  font:inherit; font-family:var(--font-mono); font-size:13px; line-height:1.5;
+  padding:2px 10px; min-width:20px;
 }
-.gapchip>summary::-webkit-details-marker{display:none}
-.gapchip>summary::marker{content:""}
-.gapchip>summary:hover{background:var(--color-accent-soft)}
-.gapchip[data-filled="1"]>summary{
+.gapchip:hover{background:var(--color-accent-soft)}
+.gapchip.filled{
   border-style:solid; background:var(--color-teal-soft); border-color:var(--color-teal);
   color:var(--color-ink); font-family:var(--font-sans); font-size:14px; white-space:normal;
 }
+.gapchip.open{outline:2px solid var(--color-accent); outline-offset:1px}
 .gapchip-list{
-  position:absolute; z-index:60; top:calc(100% + 5px); left:0; min-width:260px; max-width:min(440px,86vw);
+  position:fixed; z-index:9999; min-width:250px; max-width:min(440px,92vw);
   background:var(--color-surface); border:1px solid var(--color-rule); border-radius:10px;
-  box-shadow:0 10px 28px rgba(0,0,0,.22); padding:6px; display:flex; flex-direction:column; gap:3px;
-  max-height:300px; overflow-y:auto;
+  box-shadow:0 12px 32px rgba(0,0,0,.28); padding:6px; display:flex; flex-direction:column; gap:5px;
+  max-height:min(320px,70vh); overflow-y:auto;
 }
 .gapchip-opt{
-  display:flex; gap:9px; align-items:flex-start; text-align:left; padding:7px 9px; border-radius:7px;
-  border:1px solid transparent; background:none; cursor:pointer; font-size:13px; color:var(--color-ink);
-  width:100%; font-family:var(--font-sans);
+  display:flex; gap:9px; align-items:flex-start; text-align:left; padding:8px 10px; border-radius:7px;
+  border:1px solid var(--color-rule-soft); background:var(--color-bg-2); cursor:pointer; font-size:13px;
+  color:var(--color-ink); width:100%; font-family:var(--font-sans);
 }
-.gapchip-opt:hover{background:var(--color-bg-2)}
+.gapchip-opt:hover{background:var(--color-accent-softer); border-color:var(--color-accent)}
 .gapchip-opt.sel{background:var(--color-teal-soft); border-color:var(--color-teal)}
 .gapchip-opt .k{font-family:var(--font-mono); color:var(--color-muted); flex:none; min-width:14px; padding-top:1px}
 .gapchip-opt .tx{flex:1; white-space:normal; word-break:break-word; line-height:1.4}
-@media (max-width:720px){
-  .gapchip-list{position:static; margin-top:6px; width:100%; max-width:none; box-shadow:none; display:none}
-  .gapchip[open] .gapchip-list{display:flex}
-}
+.gapchip-opt.gapchip-clear{background:var(--color-rose-soft); border-color:var(--color-rose)}
+.gapchip-opt.gapchip-clear .k,.gapchip-opt.gapchip-clear .tx{color:var(--color-rose)}
 
 /* ---------- KI-Fehleranalyse: farbliche Textmarkierungen ---------- */
 .mkleg{display:flex; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; font-size:12px; color:var(--color-muted)}
@@ -1097,7 +1099,8 @@ const LS = {
   tests:    "ps.tests.v1",
   attempts: "ps.attempts.v1",
   answers:  "ps.answers.v1",
-  pattern:  "ps.patternOverrides.v1"
+  pattern:  "ps.patternOverrides.v1",
+  progress: "ps.progress.v1"
 };
 
 const DEFAULT_SETTINGS = {
@@ -1148,6 +1151,7 @@ const S = {
   attempts: store.read(LS.attempts, []),         // finished module attempts
   answers:  store.read(LS.answers, {}),          // in-progress answers, keyed testId:module
   pattern:  store.read(LS.pattern, {}),          // per exam/level/module/part overrides
+  progress: store.read(LS.progress, {}),         // save checkpoints (savedAt, partIndex, secondsLeft), keyed testId:module
   view: "dashboard",
   run: null                                      // active runner session
 };
@@ -1159,6 +1163,7 @@ const saveTests    = () => { store.write(LS.tests, S.tests); const n = $("#navTe
 const saveAttempts = () => store.write(LS.attempts, S.attempts);
 const saveAnswers  = () => store.write(LS.answers, S.answers);
 const savePattern  = () => store.write(LS.pattern, S.pattern);
+const saveProgress = () => store.write(LS.progress, S.progress);
 
 /* =========================================================================
    i18n — light two-language layer (DE default, EN for the interface chrome)
@@ -1394,6 +1399,36 @@ function getAnswers(testId, mk) { return S.answers[answerKey(testId, mk)] || {};
 function setAnswers(testId, mk, obj) { S.answers[answerKey(testId, mk)] = obj; saveAnswers(); }
 function clearAnswers(testId, mk) { delete S.answers[answerKey(testId, mk)]; saveAnswers(); }
 
+/* ---- save checkpoints: remembers WHEN and WHERE (part + remaining time)
+   a module was left, on top of the answers themselves, so "Fortsetzen"
+   really resumes at the same spot instead of just restoring the ticked
+   boxes. Works the same for every module of every exam/test. ---- */
+function getCheckpoint(testId, mk) { return S.progress[answerKey(testId, mk)] || null; }
+function setCheckpoint(testId, mk, partIndex, secondsLeft) {
+  S.progress[answerKey(testId, mk)] = { savedAt: Date.now(), partIndex: partIndex || 0, secondsLeft: secondsLeft || 0 };
+  saveProgress();
+}
+function clearCheckpoint(testId, mk) { delete S.progress[answerKey(testId, mk)]; saveProgress(); }
+function fmtSavedAt(ts) {
+  if (!ts) return "";
+  const d = new Date(ts), now = new Date();
+  const sameDay = d.toDateString() === now.toDateString();
+  const time = d.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+  return sameDay ? ("heute " + time + " Uhr") : (d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" }) + ", " + time + " Uhr");
+}
+/* every module+test with saved, unfinished progress, across every exam/level,
+   newest first — the "resume from anywhere" list for the dashboard. */
+function allCheckpoints() {
+  return Object.keys(S.progress).map(k => {
+    const idx = k.lastIndexOf("::");
+    const testId = k.slice(0, idx), moduleKey = k.slice(idx + 2);
+    const test = testById(testId);
+    if (!test) return null;
+    const cp = S.progress[k];
+    return { testId, moduleKey, test, savedAt: cp.savedAt, partIndex: cp.partIndex, secondsLeft: cp.secondsLeft };
+  }).filter(Boolean).sort((a, b) => b.savedAt - a.savedAt);
+}
+
 /* =========================================================================
    UI UTILITIES
    ======================================================================= */
@@ -1441,6 +1476,7 @@ function download(filename, data, mime = "application/json") {
    ======================================================================= */
 const VIEWS = {};
 function go(view, params) {
+  if (typeof closeGapPopover === "function") closeGapPopover();
   S.view = view;
   $$(".navitem").forEach(b => b.setAttribute("aria-current", String(b.dataset.view === view)));
   $("#sidebar").classList.remove("open");
@@ -2352,6 +2388,33 @@ VIEWS.dashboard = () => {
     )
   );
 
+  /* "Zuletzt gespeichert" — every saved, unfinished module across ALL exams,
+     levels and Modelltests, newest first, so a checkpoint can be resumed
+     from the dashboard no matter what's currently selected above. */
+  const checkpoints = allCheckpoints();
+  if (checkpoints.length) {
+    wrap.append(el("div", { class: "card", style: "margin-bottom:18px" },
+      el("h3", { text: "Zuletzt gespeichert" }),
+      el("div", { class: "col", style: "gap:8px;margin-top:10px" },
+        checkpoints.slice(0, 6).map(cp => {
+          const cpMeta = MODULE_META[cp.moduleKey];
+          return el("div", { class: "row", style: "justify-content:space-between;align-items:center;padding:8px 10px;border:1px solid var(--color-rule-soft);border-radius:9px" },
+            el("div", { style: "min-width:0" },
+              el("div", { class: "row", style: "gap:8px" },
+                el("span", { class: "pill " + cpMeta.cls }, el("span", { class: "mod-dot" }), modName(cp.moduleKey)),
+                el("span", { class: "small", text: cp.test.name })),
+              el("div", { class: "xsmall muted", style: "margin-top:2px", text: "Gespeichert " + fmtSavedAt(cp.savedAt) + " · Teil " + (cp.partIndex + 1) + " · " + fmtClock(cp.secondsLeft) + " verbleibend" })),
+            el("div", { class: "row", style: "gap:6px;flex:none" },
+              el("button", { class: "btn sm accent", onclick: () => {
+                S.settings.exam = cp.test.exam; S.settings.level = cp.test.level; S.settings.testId = cp.testId; saveSettings();
+                startRun(cp.testId, cp.moduleKey);
+              } }, "Fortsetzen"),
+              el("button", { class: "btn sm ghost", title: "Speicherpunkt verwerfen (Antworten bleiben erhalten, Zeit/Position werden zurückgesetzt)",
+                onclick: () => { clearCheckpoint(cp.testId, cp.moduleKey); refresh(); } }, "✕")));
+        }))
+    ));
+  }
+
   /* headline numbers */
   const cov = contentCoverage(test);
   const stats = el("div", { class: "grid g4", style: "margin-bottom:18px" },
@@ -2380,6 +2443,8 @@ VIEWS.dashboard = () => {
     const mcov = moduleCoverage(test, mk);
     const last = lastAttempt(test.id, mk);
     const hasProgress = Object.keys(getAnswers(test.id, mk)).length > 0;
+    const cp = getCheckpoint(test.id, mk);
+    const startLabel = cp ? "Fortsetzen (" + fmtSavedAt(cp.savedAt) + ")" : (hasProgress ? "Wiederholen" : "Modul starten");
     grid.append(el("div", { class: "modcard " + meta.cls },
       el("div", { class: "row", style: "justify-content:space-between" },
         el("h3", {}, meta.icon + "  " + modName(mk)),
@@ -2392,7 +2457,7 @@ VIEWS.dashboard = () => {
         el("span", { class: "xsmall muted" }, new Date(last.at).toLocaleDateString("de-DE"))) : null,
       el("div", { class: "row", style: "margin-top:2px" },
         el("button", { class: "btn sm accent", disabled: mcov.filled === 0,
-          onclick: () => startRun(test.id, mk) }, hasProgress ? "Fortsetzen" : "Modul starten"),
+          onclick: () => startRun(test.id, mk) }, startLabel),
         el("button", { class: "btn sm", onclick: () => aiGenerateModule(test.id, mk) }, "✦ Generieren"),
         el("button", { class: "btn sm ghost", onclick: () => go("structure", { focus: mk }) }, "Aufbau")
       )
@@ -2789,19 +2854,23 @@ function startRun(testId, moduleKey, opts = {}) {
       () => aiGenerateModule(testId, moduleKey), "Generieren", false);
   }
 
+  const cp = getCheckpoint(testId, moduleKey);
+  const resuming = !!cp && !opts.fresh;
+
   S.run = {
     testId, test, bp, moduleKey, mod,
-    partIndex: 0,
+    partIndex: resuming ? Math.min(cp.partIndex || 0, mod.parts.length - 1) : 0,
     answers: Object.assign({}, getAnswers(testId, moduleKey)),
     plays: {},
     startedAt: Date.now(),
-    secondsLeft: moduleMinutes(mod) * 60,
+    secondsLeft: resuming && cp.secondsLeft > 0 ? cp.secondsLeft : moduleMinutes(mod) * 60,
     finished: false,
     chain: opts.chain || null,     // remaining modules for a full exam run
     reviewing: false
   };
   go("run");
   startClock();
+  if (resuming) toast("Fortgesetzt — gespeichert " + fmtSavedAt(cp.savedAt) + ".", "ok");
 }
 
 function startFullExam(testId) {
@@ -2817,6 +2886,7 @@ function startFullExam(testId) {
 let clockTimer = null;
 function startClock() {
   stopClock();
+  let tick = 0;
   clockTimer = setInterval(() => {
     if (!S.run || S.run.finished) return stopClock();
     S.run.secondsLeft--;
@@ -2825,6 +2895,7 @@ function startClock() {
       c.textContent = fmtClock(S.run.secondsLeft);
       c.className = "clock" + (S.run.secondsLeft < 60 ? " crit" : S.run.secondsLeft < 300 ? " warn" : "");
     }
+    if (++tick % 20 === 0) saveRunAnswers(); // quiet safety-net checkpoint every 20s, on top of the explicit Save button
     if (S.run.secondsLeft <= 0) {
       stopClock();
       if (S.settings.strictTimer) { toast("Zeit abgelaufen — das Modul wurde abgegeben.", "err"); finishRun(); }
@@ -2834,7 +2905,33 @@ function startClock() {
 }
 function stopClock() { if (clockTimer) clearInterval(clockTimer); clockTimer = null; }
 
-function saveRunAnswers() { if (S.run) setAnswers(S.run.testId, S.run.moduleKey, S.run.answers); }
+/* Extra safety net: if the tab is closed, refreshed or backgrounded without
+   using "Speichern & Verlassen" (e.g. urgent interruption), still persist
+   the checkpoint so nothing is lost. */
+window.addEventListener("beforeunload", () => { if (S.run && !S.run.finished) saveRunAnswers(); });
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && S.run && !S.run.finished) saveRunAnswers(); });
+
+function saveRunAnswers() {
+  if (!S.run) return;
+  setAnswers(S.run.testId, S.run.moduleKey, S.run.answers);
+  setCheckpoint(S.run.testId, S.run.moduleKey, S.run.partIndex, S.run.secondsLeft);
+}
+
+/* Explicit "Speichern & Verlassen": always visible during any run, for any
+   module of any exam. Writes the checkpoint (current part + remaining time,
+   not just the answers) with a fresh timestamp, confirms with the exact
+   time, and returns to the dashboard. */
+function saveAndLeaveRun() {
+  if (!S.run) return;
+  stopAudio(); stopClock();
+  saveRunAnswers();
+  const savedAt = Date.now();
+  const chainWas = S.run.chain;
+  S.run = null;
+  go("dashboard");
+  toast("Fortschritt gespeichert — " + fmtSavedAt(savedAt) + ". Sie können jederzeit genau hier weitermachen.", "ok", 5000);
+  if (chainWas && chainWas.length) toast("Der restliche Prüfungsdurchlauf bleibt ebenfalls gespeichert.", "", 5000);
+}
 
 /* =========================================================================
    RUN VIEW
@@ -2864,7 +2961,7 @@ VIEWS.run = () => {
         r === "100" ? "1 Spalte" : r)));
 
   shell.append(el("div", { class: "runbar" },
-    el("button", { class: "btn sm ghost", onclick: () => exitRun() }, "← Übersicht"),
+    el("button", { class: "btn sm ghost", title: "Sichert Antworten, aktuellen Teil und verbleibende Zeit — später an genau dieser Stelle weitermachen.", onclick: () => exitRun() }, "💾 Speichern & Verlassen"),
     el("div", { class: "row", style: "gap:8px" },
       el("span", { class: "pill " + MODULE_META[R.moduleKey].cls }, el("span", { class: "mod-dot" }), modName(R.moduleKey)),
       el("span", { class: "xsmall muted", text: R.test.name })),
@@ -2955,13 +3052,7 @@ VIEWS.run = () => {
   return shell;
 };
 
-function exitRun() {
-  stopAudio(); stopClock(); saveRunAnswers();
-  const chainWas = S.run?.chain;
-  S.run = null;
-  go("dashboard");
-  if (chainWas && chainWas.length) toast("Prüfungsdurchlauf abgebrochen. Antworten sind gespeichert.");
-}
+function exitRun() { saveAndLeaveRun(); }
 
 function totalItems() {
   const R = S.run;
@@ -3210,62 +3301,102 @@ function renderBank(col, right, part, c) {
 }
 
 /* ---- cloze: gapmc (own options) and gapbank (shared bank) ---- */
-/* A gap-fill chip: shows just the gap number until answered, then either the
-   full text (Direkte Lückenauswahl an) or just the key letter (Standard, wie
-   in der echten Prüfung). The choice list underneath always shows every
-   option's FULL text — long Goethe-style Satz-Lücken are never cut off with
-   "…", and picking one inserts the complete text, not a truncated snippet. */
+
+/* Popover manager: a single choice list is appended straight to <body> and
+   positioned with fixed coordinates, so it always draws above every card
+   (no z-index/overflow-clipping issues) and never changes the layout of the
+   chip that opened it (no shift on open/close — only the chip's own text
+   changes width once an answer is actually picked, which is expected). */
+let _gapPopover = null, _gapPopoverBtn = null;
+function closeGapPopover() {
+  if (_gapPopoverBtn) _gapPopoverBtn.classList.remove("open");
+  if (_gapPopover) _gapPopover.remove();
+  _gapPopover = null; _gapPopoverBtn = null;
+  document.removeEventListener("click", onGapPopoverOutside, true);
+  window.removeEventListener("scroll", closeGapPopover, true);
+  window.removeEventListener("resize", closeGapPopover);
+}
+function onGapPopoverOutside(e) {
+  if (_gapPopover && !_gapPopover.contains(e.target) && e.target !== _gapPopoverBtn) closeGapPopover();
+}
+function openGapPopover(btn, options, cur, onPick) {
+  if (_gapPopoverBtn === btn) { closeGapPopover(); return; } // click again = close
+  closeGapPopover();
+  const direct = !!S.settings.directGapFill;
+  const pop = el("div", { class: "gapchip-list" });
+  if (cur !== undefined && cur !== null && cur !== "") {
+    pop.append(el("button", { type: "button", class: "gapchip-opt gapchip-clear",
+      onclick: e => { e.stopPropagation(); onPick(undefined); closeGapPopover(); } },
+      el("span", { class: "k", text: "✕" }), el("span", { class: "tx", text: "Auswahl entfernen" })));
+  }
+  options.forEach(o => {
+    const isSel = String(cur) === String(o.val);
+    const row = el("button", { type: "button", class: "gapchip-opt" + (isSel ? " sel" : ""),
+      onclick: e => { e.stopPropagation(); onPick(isSel ? undefined : o.val); closeGapPopover(); } },
+      el("span", { class: "k", text: o.label + ")" }));
+    if (direct) row.append(el("span", { class: "tx", text: o.text }));
+    pop.append(row);
+  });
+  document.body.appendChild(pop);
+  const r = btn.getBoundingClientRect();
+  const popW = pop.offsetWidth, popH = pop.offsetHeight;
+  let left = Math.min(Math.max(8, r.left), window.innerWidth - popW - 8);
+  let top = r.bottom + 6;
+  if (top + popH > window.innerHeight - 8 && r.top - popH - 6 > 8) top = r.top - popH - 6;
+  pop.style.left = left + "px";
+  pop.style.top = top + "px";
+  btn.classList.add("open");
+  _gapPopover = pop; _gapPopoverBtn = btn;
+  setTimeout(() => {
+    document.addEventListener("click", onGapPopoverOutside, true);
+    window.addEventListener("scroll", closeGapPopover, true);
+    window.addEventListener("resize", closeGapPopover);
+  }, 0);
+}
+
+/* A gap-fill chip: shows just the gap number until answered. With "Direkte
+   Lückenauswahl" AUS (Standard, wie in der echten Prüfung) both the chip and
+   the choice list show ONLY the letter/key — exactly like the real exam,
+   where the full word/sentence lives solely in the side list. With it AN,
+   both the chip and the choice list show the full text, and picking one
+   inserts that full text — never truncated with "…", however long the
+   Goethe-style sentence is. Picking the already-selected option again (or
+   "Auswahl entfernen") clears the gap, so nothing stays answered by
+   accident when you meant to skip it. */
 function buildGapChip(key, gapNo, options, R) {
   let cur = R.answers[key];
-  const det = el("details", { class: "gapchip" });
-  const sum = el("summary", {});
-  const list = el("div", { class: "gapchip-list" });
+  const btn = el("button", { type: "button", class: "gapchip" });
 
   const paint = () => {
     const chosen = options.find(o => String(o.val) === String(cur));
     if (!chosen) {
-      sum.textContent = "(" + gapNo + ")";
-      det.removeAttribute("data-filled");
+      btn.textContent = "(" + gapNo + ")";
+      btn.classList.remove("filled");
+      btn.removeAttribute("title");
     } else {
-      sum.textContent = S.settings.directGapFill ? chosen.text : chosen.label;
-      sum.title = chosen.label + " — " + chosen.text;
-      det.setAttribute("data-filled", "1");
+      const direct = !!S.settings.directGapFill;
+      btn.textContent = direct ? chosen.text : chosen.label;
+      btn.title = direct ? (chosen.label + " — " + chosen.text) : ("Lücke " + gapNo + ": " + chosen.label);
+      btn.classList.add("filled");
     }
-    Array.from(list.children).forEach(ch => ch.classList.toggle("sel", ch.dataset.k != null && String(ch.dataset.k) === String(cur)));
   };
 
-  options.forEach(o => {
-    const b = el("button", { type: "button", class: "gapchip-opt",
-      onclick: () => {
-        cur = o.val;
-        R.answers[key] = o.val;
-        saveRunAnswers();
-        paint();
-        det.open = false;
-      } },
-      el("span", { class: "k", text: o.label }), el("span", { class: "tx", text: o.text }));
-    b.dataset.k = o.val;
-    list.append(b);
-  });
-
-  det.addEventListener("toggle", () => {
-    if (det.open) $$(".gapchip[open]").forEach(d => { if (d !== det) d.open = false; });
+  btn.addEventListener("click", () => {
+    openGapPopover(btn, options, cur, val => {
+      cur = val;
+      R.answers[key] = val;
+      saveRunAnswers();
+      paint();
+    });
   });
 
   paint();
-  det.append(sum, list);
-  return det;
+  return btn;
 }
 
 function renderCloze(col, right, part, c) {
   const R = S.run;
   const isBank = part.format === "gapbank";
-  if (isBank && c.bank) {
-    right.append(el("div", { class: "card tight" },
-      el("h4", { text: "Wortliste / Satzliste" }),
-      el("div", { class: "col", style: "gap:5px;margin-top:8px" },
-        c.bank.map(b => el("div", { class: "small" }, el("b", { class: "mono", text: b.key + "  " }), b.text)))));
-  }
 
   const optionsFor = idx => {
     const it = (c.items || [])[idx];
@@ -3297,11 +3428,16 @@ function renderCloze(col, right, part, c) {
   });
   col.append(box);
 
-  col = right;
-
-  /* per-gap option list for gapmc so the choices stay readable */
-  if (!isBank) {
-    const listCard = el("div", { class: "card tight" }, el("h4", { text: "Optionen je Lücke" }));
+  /* Reference list (bank text, or the options per gap for gapmc) — placed
+     at the bottom of the main column, underneath the passage, rather than
+     in the side panel. */
+  if (isBank && c.bank) {
+    col.append(el("div", { class: "card tight", style: "margin-top:14px" },
+      el("h4", { text: "Wortliste / Satzliste" }),
+      el("div", { class: "col", style: "gap:5px;margin-top:8px" },
+        c.bank.map(b => el("div", { class: "small" }, el("b", { class: "mono", text: b.key + "  " }), b.text)))));
+  } else if (!isBank) {
+    const listCard = el("div", { class: "card tight", style: "margin-top:14px" }, el("h4", { text: "Optionen je Lücke" }));
     const tb = el("tbody");
     (c.items || []).forEach((it, i) => {
       tb.append(el("tr", {}, el("td", { style: "width:46px" }, el("span", { class: "qnum", text: String(i + 1) })),
@@ -3469,6 +3605,7 @@ function finishRun() {
   stopAudio(); stopClock();
   R.finished = true;
   saveRunAnswers();
+  clearCheckpoint(R.testId, R.moduleKey); // done — a later restart begins fresh, not mid-way
 
   const res = scoreModule(R.bp, R.moduleKey, R.test.content[R.moduleKey], R.answers);
   const attempt = {

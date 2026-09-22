@@ -40,6 +40,19 @@ oder „English“). Ist sie aktiv:
 
 Beides braucht einen hinterlegten KI-Schlüssel (Einstellungen → KI-Zugang).
 
+## Speichern & Verlassen
+In jedem laufenden Modul (egal welche Prüfung, welches Niveau, welcher
+Modelltest) steht oben links „💾 Speichern & Verlassen". Das sichert nicht
+nur die Antworten, sondern auch den aktuellen Teil und die verbleibende
+Zeit — beim nächsten Mal geht es an genau dieser Stelle mit der gleichen
+Restzeit weiter, nicht wieder von vorn. Der Modul-Button auf dem Dashboard
+zeigt danach „Fortsetzen (heute 14:32 Uhr)" o. ä.; ein zusätzlicher Block
+„Zuletzt gespeichert" oben auf dem Dashboard listet alle gespeicherten,
+noch nicht abgeschlossenen Module über sämtliche Prüfungen und Niveaus
+hinweg auf und springt mit einem Klick direkt hinein. Zusätzlich wird
+automatisch alle 20 Sekunden sowie beim Schließen/Wechseln des Tabs im
+Hintergrund gesichert, falls es einmal schnell gehen muss.
+
 ## Lückentexte mit langen Sätzen (Goethe-Stil)
 Lücken zeigen jetzt einen anklickbaren Chip statt eines Dropdowns: Die
 Auswahlliste zeigt jede Option immer vollständig, auch lange Sätze werden nie

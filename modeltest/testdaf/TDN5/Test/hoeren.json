@@ -1,0 +1,211 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-21T07:37:06.118Z",
+  "exam": "testdaf",
+  "level": "TDN 5",
+  "module": "hoeren",
+  "name": "TestDaF TDN 5 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Das Konzept der studentischen Peer-Mentorship",
+      "instruction": "Hören Sie den Vortrag. Ergänzen Sie die Übersicht in Stichworten. Der Text läuft nur einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Referentin",
+            "text": "Guten Tag, liebe Studierende. Heute möchte ich Ihnen das neue Konzept der studentischen Peer-Mentorship an unserer Fakultät vorstellen, das im kommenden Semester flächendeckend eingeführt wird. Das Ziel dieser Maßnahme ist es, die Studienabbruchquote im ersten Jahr signifikant zu senken und die soziale Integration der Erstsemester zu erleichtern. Bisher gab es oft das Problem, dass sich neue Studierende von der Masse an Informationen erschlagen fühlten. Hier setzt das Peer-Mentorship an: Studierende aus höheren Semestern, die sogenannten Mentorinnen und Mentoren, begleiten die Neulinge. Das Wichtigste dabei ist die Freiwilligkeit auf beiden Seiten. Niemand wird gezwungen teilzunehmen. Ein zentraler Bestandteil des Programms ist die wöchentliche Sprechstunde, in der organisatorische Fragen geklärt werden können – von der Bibliotheksanmeldung bis zur Vorbereitung auf die ersten Klausuren. Laut unserer internen Evaluation aus der Pilotphase schätzen die Teilnehmenden besonders den informellen Austausch, der Hemmschwellen abbaut. Im Gegensatz zu professionellen Beratungsstellen auf dem Campus arbeiten die studentischen Mentorinnen und Mentoren auf Augenhöhe. Sie teilen ihre eigenen Erfahrungen und geben praktische Tipps zur Zeitmanagement. Damit das Ganze erfolgreich verläuft, erhalten alle beteiligten Studierenden vorab einen zweitägigen Workshop zur Gesprächsführung und zu hochschulinternen Strukturen. Ich lade Sie alle herzlich ein, dieses Angebot zu nutzen, entweder als Mentee im ersten Semester oder später selbst als Mentor."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Hauptziel des Programms ist das Senken der Studienabbruchquote im ersten Jahr und das Erleichtern der ___1___.",
+          "answer": "sozialen Integration"
+        },
+        {
+          "prompt": "Ein wichtiges Grundprinzip der Teilnahme ist die absolute ___2___ für beide Seiten.",
+          "answer": "Freiwilligkeit"
+        },
+        {
+          "prompt": "In den wöchentlichen Sprechstunden werden vor allem ___3___ Fragen geklärt.",
+          "answer": "organisatorische"
+        },
+        {
+          "prompt": "Im Vergleich zu professionellen Beratungsstellen findet die Beratung hier auf ___4___ statt.",
+          "answer": "Augenhöhe"
+        },
+        {
+          "prompt": "Zur Vorbereitung besuchen alle beteiligten Studierenden im Vorfeld einen zweitägigen ___5___.",
+          "answer": "Workshop"
+        }
+      ]
+    },
+    "H2": {
+      "title": "Digitale Lehre an Universitäten",
+      "instruction": "Hören Sie den Beitrag einmal. Notieren Sie in Stichworten, was zu den beiden Begriffen gesagt wird.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem Podcast über die Zukunft der Hochschullehre. Heute sprechen wir über die Rolle von Online-Formaten und Präsenzveranstaltungen an der Universität. Frau Professor Dr. Weber, Sie forschen zu diesem Thema. Welche Bedeutung hat die asynchrone Lehre für die Studierenden?"
+          },
+          {
+            "speaker": "Prof. Dr. Weber",
+            "text": "Guten Tag. Die asynchrone Lehre, also vorab aufgezeichnete Vorlesungen, bietet den großen Vorteil der zeitlichen Flexibilität. Studierende können das Material in ihrem eigenen Tempo bearbeiten und bei Bedarf Abschnitte wiederholen. Allerdings fehlt hierbei der direkte, spontane Austausch mit Kommilitonen und Dozenten völlig."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Und wie bewerten Sie im Gegensatz dazu die klassische Präsenzveranstaltung?"
+          },
+          {
+            "speaker": "Prof. Dr. Weber",
+            "text": "Die Präsenzveranstaltung bleibt unverzichtbar für die soziale Integration und den wissenschaftlichen Diskurs. Der persönliche Dialog fördert kritisches Denken und Teamfähigkeit. Der Nachteil liegt jedoch in starren Raum- und Zeitstrukturen, die besonders für berufstätige Studierende oft schwer zu vereinbaren sind."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Asynchrone Lehre: Vorteil",
+          "answer": "zeitliche Flexibilität; eigenes Tempo; Wiederholung möglich"
+        },
+        {
+          "prompt": "Asynchrone Lehre: Nachteil",
+          "answer": "kein direkter Austausch mit Kommilitonen und Dozenten"
+        },
+        {
+          "prompt": "Präsenzveranstaltung: Vorteil",
+          "answer": "soziale Integration; wissenschaftlicher Diskurs; persönlicher Dialog"
+        },
+        {
+          "prompt": "Präsenzveranstaltung: Nachteil",
+          "answer": "starre Raum- und Zeitstrukturen; schwer vereinbar für Berufstätige"
+        }
+      ]
+    },
+    "H3": {
+      "title": "Künstliche Intelligenz in der universitären Lehre",
+      "instruction": "Hören Sie den Vortrag einmal. Vergleichen Sie ihn mit den Aussagen der Zusammenfassung. Welche Aussage stimmt laut dem Text nicht?",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Professor Dr. Hansen",
+            "text": "Guten Tag und herzlich willkommen zu unserer Ringvorlesung über die Digitalisierung der Hochschulbildung. Heute widmen wir uns der Frage, wie generative Künstliche Intelligenz, kurz KI, die universitäre Lehre und insbesondere das akademische Schreiben verändert. Seit dem Wintersemester beobachten wir an unserer Fakultät einen massiven Anstieg von Seminararbeiten, bei denen KI-gestützte Tools eingesetzt wurden. Dies führt in der Praxis zu heftigen Diskussionen unter Dozenten. Während einige Lehrstühle in diesen Technologien eine Chance zur Effizienzsteigerung und zur Förderung kreativer Schreibprozesse sehen, warnen andere vor einem drastischen Verfall der sprachlichen und analytischen Kompetenzen bei den Studierenden. Um hier eine fundierte Basis zu schaffen, hat unsere Arbeitsgruppe im vergangenen Monat eine empirische Studie durchgeführt. Dabei wurden exakt zweihundert Studierende der Geistes- und Sozialwissenschaften befragt. Entgegen der weitverbreiteten Befürchtung, Studierende würden KI ausschließlich zum vollständigen Ghostwriting nutzen, zeigt unsere Untersuchung ein differenzierteres Bild. Über sechzig Prozent der Befragten gaben an, die Programme primär für die Strukturierung ihrer Gliederungen oder zur Übergrenzung von Fachbegriffen zu verwenden. Nur ein sehr geringer Teil von knapp fünf Prozent gab zu, ganze Hausarbeiten unmodifiziert generieren zu lassen. Dennoch stellt uns das Phänomen vor didaktische Herausforderungen. Wenn die klassische Hausarbeit als Leistungsnachweis zunehmend an Aussagekraft verliert, müssen wir über alternative Prüfungsformate nachdenken. Mündliche Kolloquien, reflexionsbasierte Portfolios und Live-Präsentationen rücken daher verstärkt in den Fokus unserer Curriculumsreformen. Abschließend lässt sich festhalten, dass KI kein temporärer Trend ist, sondern ein permanentes Werkzeug, das die universitäre Bildung nachhaltig umgestalten wird, sofern wir klare ethische und methodische Leitlinien etablieren."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Welche Aussage über den Einsatz von KI in Seminararbeiten stimmt laut dem Vortrag nicht?",
+          "options": [
+            "Die Mehrheit der befragten Studierenden nutzt KI hauptsächlich für die Gliederung und Begriffsklärung.",
+            "Ein sehr kleiner Teil der Studierenden lässt komplette Hausarbeiten unverändert durch KI erstellen.",
+            "Die Nutzung von KI in Seminararbeiten hat seit dem Sommersemester zu keinen nennenswerten Diskussionen geführt.",
+            "An der Fakultät wird über alternative Prüfungsformate wie mündliche Kolloquien nachgedacht."
+          ],
+          "answer": 2,
+          "why": "Der Text besagt das Gegenteil, nämlich dass der Einsatz von KI zu heftigen Diskussionen unter Dozenten geführt hat.",
+          "distractor_type": "Falschinformation"
+        },
+        {
+          "prompt": "Welche Angabe zur empirischen Studie der Arbeitsgruppe ist laut dem Text korrekt?",
+          "options": [
+            "An der Untersuchung nahmen genau zweihundert Studierende aus geistes- und sozialwissenschaftlichen Fächern teil.",
+            "Die Befragung wurde im Auftrag des Rektorats vor zwei Jahren durchgeführt.",
+            "Es wurden ausschließlich Studierende der Naturwissenschaften befragt.",
+            "Die Studie widerlegte die Annahme, dass überhaupt jemand KI für Hausarbeiten nutzt."
+          ],
+          "answer": 0,
+          "why": "Im Text wird explizit genannt, dass exakt zweihundert Studierende der Geistes- und Sozialwissenschaften befragt wurden.",
+          "distractor_type": "Korrekte Detailinformation als richtige Option"
+        }
+      ]
+    },
+    "H4": {
+      "title": "Künstliche Intelligenz in der Lehre",
+      "instruction": "Wer sagt das? Hören Sie die Beiträge von drei Personen und ordnen Sie die Aussagen (1-6) den Personen (0, 1 oder 2) zu.",
+      "personas": [
+        {
+          "name": "Dr. Miriam Weber, Hochschuldozentin",
+          "text": "Als Dozentin sehe ich den Einsatz von künstlicher Intelligenz in unseren Seminaren sehr differenziert. Einerseits nutzen wir adaptive Lernsysteme, die den Studierenden personalisiertes Feedback geben und so das Grundverständnis komplexer Theorien enorm beschleunigen. Andererseits bemerke ich bei vielen Hausarbeiten eine besorgniserregende Abnahme der eigenen Formulierungskompetenz. Wenn Studierende sich zu stark auf automatisierte Textgeneratoren verlassen, geht oft die Tiefe der kritischen Reflexion verloren. Wir müssen daher unsere Prüfungsformate grundlegend reformieren und den Fokus stärker auf mündliche Diskurse sowie die methodische Verteidigung der eigenen Thesen legen, anstatt rein deskriptive Ergebnisse zu bewerten."
+        },
+        {
+          "name": "Jonas Becker, Masterstudent",
+          "text": "Aus der Perspektive der Studierenden kann ich die ganze Aufregung oft gar nicht nachvollziehen. Für uns sind KI-Tools schlicht moderne Werkzeuge, die den studentischen Alltag effizienter gestalten. Ob es darum geht, umfangreiche englischsprachige Fachliteratur zusammenzufassen oder Code-Snippets für ein Informatikprojekt zu debuggen – diese Assistenten sparen wertvolle Zeit, die wir in die eigentliche Forschung stecken können. Natürlich gibt es schwarze Schafe, die sich komplett durchschummeln wollen, aber das gab es früher mit Ghostwritern oder veraltetem Plagiatismus auch schon. Entscheidend ist doch, dass die Universität uns beibringt, diese Technologien verantwortungsvoll, transparent und ethisch reflektiert zu nutzen, statt sie pauschal zu verteufeln."
+        },
+        {
+          "name": "Prof. Dr. Thomas Brandt, Dekan",
+          "text": "Die universitäre Bildung steht durch generative Sprachmodelle vor dem größten Umbruch seit der Erfindung des Buchdrucks. Wir dürfen uns nicht der Illusion hingeben, dass wir den technologischen Fortschritt durch restriktive Verbote aufhalten könnten. Stattdessen müssen wir digitale Kompetenzen und Medienethik fest in allen Curricula verankern. Unsere Aufgabe als Hochschule ist es, die Studierenden auf eine Arbeitswelt vorzubereiten, in der der kritische Umgang mit automatisierten Systemen zur Grundvoraussetzung gehört. Wer heute noch glaubt, man könne den Status quo bewahren, ignoriert die Realität des modernen Wissenschaftsbetriebs. Wir investieren daher gezielt in Fortbildungen für das Lehrpersonal, um den Übergang erfolgreich zu gestalten."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "befürchtet, dass durch die Nutzung von Programmen die Fähigkeit zur kritischen Analyse und zum eigenständigen Formulieren nachlässt",
+          "answer": 0,
+          "why": "Dr. Miriam Weber erklärt, dass bei vielen Hausarbeiten eine Abnahme der Formulierungskompetenz zu bemerken ist und die Tiefe der kritischen Reflexion verloren geht.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        },
+        {
+          "prompt": "sieht in den neuen Technologien vor allem eine sinnvolle Entlastung bei zeitraubenden Routineaufgaben wie dem Zusammenfassen von Texten",
+          "answer": 1,
+          "why": "Jonas Becker betont, dass die Tools helfen, umfangreiche Fachliteratur zusammenzufassen und so wertvolle Zeit sparen.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        },
+        {
+          "prompt": "ist der Ansicht, dass traditionelle Prüfungsformen angesichts der technischen Entwicklung dringend verändert werden müssen",
+          "answer": 0,
+          "why": "Dr. Miriam Weber fordert, dass Prüfungsformate grundlegend reformiert und stärker auf mündliche Diskurse ausgerichtet werden müssen.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        },
+        {
+          "prompt": "vergleicht die aktuelle Kontroverse mit früheren Formen des akademischen Fehlverhaltens und fordert eine Ausbildung im verantwortungsvollen Umgang",
+          "answer": 1,
+          "why": "Jonas Becker erwähnt, dass es Schummeln früher durch Ghostwriter auch schon gab und die Universität den verantwortungsvollen Umgang beibringen muss.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        },
+        {
+          "prompt": "vergleicht die Tragweite der gegenwärtigen Entwicklung mit einem historischen Meilenstein der Mediengeschichte",
+          "answer": 2,
+          "why": "Prof. Dr. Thomas Brandt bezeichnet die Situation als den größten Umbruch seit der Erfindung des Buchdrucks.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        },
+        {
+          "prompt": "warnt davor, den technologischen Wandel durch Verbote aufhalten zu wollen, und plädiert stattdessen für gezielte Investitionen in die Weiterbildung der Lehrenden",
+          "answer": 2,
+          "why": "Prof. Dr. Thomas Brandt sagt, man dürfe sich nicht der Illusion hingeben, den Fortschritt durch Verbote aufzuhalten, und man investiere in Fortbildungen für das Lehrpersonal.",
+          "options": [
+            "Dr. Miriam Weber, Hochschuldozentin",
+            "Jonas Becker, Masterstudent",
+            "Prof. Dr. Thomas Brandt, Dekan"
+          ]
+        }
+      ]
+    },
+    "H5": null,
+    "H6": null,
+    "H7": null
+  }
+}
