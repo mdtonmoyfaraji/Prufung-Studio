@@ -4155,9 +4155,15 @@ function schemaFor(part, ex, level) {
   if (f === "match") {
     const bankSize = part.bank || n + 2;
     const personaStyle = part.bankMulti;
+    const xNote = part.bankHasX
+      ? (personaStyle
+          ? ` Für Aussagen, die zu KEINER der ${bankSize} Personen passen, ist 'answer' exakt der String "x" (nicht 0, nicht "0", nicht die höchste Personenzahl) — genau die im Arbeitsauftrag genannte Anzahl an Items bekommt "x".`
+          : ` Für Aussagen/Situationen ohne passenden Bankeintrag ist 'answer' exakt der String "x" — genau die im Arbeitsauftrag genannte Anzahl an Items bekommt "x".`)
+      : "";
     return `{ ${base}, ${personaStyle
       ? `"personas": [ ${bankSize}x { "name": "Vorname, Rolle", "text": "Forumsbeitrag, 90-140 Wörter" } ]`
-      : `"bank": [ ${bankSize}x { "key": "a", "text": "Anzeige/Überschrift/Aussage" } ]`}, "items": [ ${n}x { "prompt": "Aussage bzw. Situation", "answer": "${personaStyle ? "0" : "a"}"${personaStyle ? " (Index der Person als Zahl)" : ""}, ${why} } ] }`;
+      : `"bank": [ ${bankSize}x { "key": "a", "text": "Anzeige/Überschrift/Aussage" } ]`}, "items": [ ${n}x { "prompt": "Aussage bzw. Situation", "answer": "${personaStyle ? "0" : "a"}"${personaStyle ? " (Index der Person als Zahl, 0-basiert)" : ""}, ${why} } ] }` +
+      (xNote ? "\n" + xNote : "");
   }
 
   // choice formats
@@ -4223,7 +4229,9 @@ function validatePart(part, obj) {
   obj.items.forEach((it, i) => {
     if (it.answer === undefined || it.answer === null || it.answer === "") problems.push("Item " + (i + 1) + ": answer fehlt");
     if (!fmt.bank && !fmt.text && !fmt.cloze && !Array.isArray(it.options)) problems.push("Item " + (i + 1) + ": options fehlen");
-    if (Array.isArray(it.options) && typeof it.answer === "number" && (it.answer < 0 || it.answer >= it.options.length))
+    const isX = typeof it.answer === "string" && it.answer.trim().toLowerCase() === "x";
+    if (isX && !part.bankHasX) problems.push("Item " + (i + 1) + ": answer \"x\" ist bei diesem Teil nicht vorgesehen");
+    if (!isX && Array.isArray(it.options) && typeof it.answer === "number" && (it.answer < 0 || it.answer >= it.options.length))
       problems.push("Item " + (i + 1) + ": answer liegt außerhalb der Optionen");
   });
   return problems;
@@ -4234,7 +4242,12 @@ function normalisePart(part, obj) {
   // personas-based matching: allow numeric or letter answers
   if (obj.personas && Array.isArray(obj.items)) {
     obj.items.forEach(it => {
-      if (typeof it.answer === "string" && /^[a-z]$/i.test(it.answer)) it.answer = LETTERS.indexOf(it.answer.toLowerCase());
+      /* "x" ("passt zu niemandem") is a sentinel, not a person letter — must
+         never be run through the letter→index conversion below, or it gets
+         mistaken for the 24th persona (LETTERS.indexOf("x") === 23) and then
+         rejected as "out of range" even though it was the correct answer. */
+      if (typeof it.answer === "string" && it.answer.trim().toLowerCase() === "x") it.answer = "x";
+      else if (typeof it.answer === "string" && /^[a-z]$/i.test(it.answer)) it.answer = LETTERS.indexOf(it.answer.toLowerCase());
       it.options = it.options || obj.personas.map(p => p.name);
     });
   }
