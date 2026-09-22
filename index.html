@@ -3611,21 +3611,18 @@ function renderSpeaking(col, right, part, c) {
     remaining = secs; disp.textContent = fmtClock(remaining);
     startBtn.disabled = true; stopBtn.disabled = false; delBtn.style.display = "none";
     tm = setInterval(tick, 1000);
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      chunks = []; rec = new MediaRecorder(stream);
-      rec.ondataavailable = e => chunks.push(e.data);
-      rec.onstop = () => {
-        stream.getTracks().forEach(t2 => t2.stop());
-        const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
-        showAudio(blob);
-        idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
-      };
-      rec.start();
-    } catch (e) {
-      toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
-    }
-    /* live speech-to-text, alongside the recording, in the chosen language */
+
+    /* live speech-to-text, alongside the recording, in the chosen language.
+       IMPORTANT: this is started FIRST, synchronously inside the click
+       handler — before any `await`. Several mobile browsers (iOS Safari,
+       Android Chrome) only allow microphone-based APIs like
+       SpeechRecognition to start while still inside the original tap's
+       "user activation" window; once an `await getUserMedia(...)` has
+       resolved that window has closed, so recognition.start() used to run
+       "successfully" (no thrown error) but silently produce no audio/results
+       — which is why the recording still worked while the transcript box
+       stayed empty. Starting it here, before the recorder's own await,
+       keeps it inside the tap. */
     if (SR) {
       try {
         recognition = new SR();
@@ -3644,13 +3641,42 @@ function renderSpeaking(col, right, part, c) {
           ta.value = finalText.trim();
           R.answers[key] = ta.value; saveRunAnswers();
         };
-        recognition.onerror = () => {};
+        recognition.onerror = ev => {
+          /* surface real problems instead of leaving the box silently
+             empty; "no-speech" is normal (just a pause) and not worth
+             showing. */
+          if (ev && ev.error && ev.error !== "no-speech") {
+            const msgs = {
+              "not-allowed": "Mikrofonzugriff für die Spracherkennung verweigert.",
+              "audio-capture": "Kein Mikrofon für die Spracherkennung gefunden.",
+              "network": "Spracherkennung: keine Netzwerkverbindung.",
+              "aborted": ""
+            };
+            const m = msgs[ev.error] != null ? msgs[ev.error] : "Live-Transkription unterbrochen (" + ev.error + ").";
+            if (m) liveBox.textContent = m;
+          }
+        };
         /* some browsers end recognition on their own well before the timer
            runs out — restart it silently as long as we're still recording */
         recognition.onend = () => { if (recognizing) { try { recognition.start(); } catch (e2) {} } };
         recognizing = true;
         recognition.start();
       } catch (e) { recognition = null; }
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      chunks = []; rec = new MediaRecorder(stream);
+      rec.ondataavailable = e => chunks.push(e.data);
+      rec.onstop = () => {
+        stream.getTracks().forEach(t2 => t2.stop());
+        const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
+        showAudio(blob);
+        idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
+      };
+      rec.start();
+    } catch (e) {
+      toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
     }
   };
   stopBtn.onclick = () => {
@@ -4015,8 +4041,7 @@ function showSelPop(rect, range, text) {
   selPopNode = pop;
 }
 
-function handleSelectionMouseUp(e) {
-  if (e.target && e.target.closest && e.target.closest(".selpop")) return;
+function trySelPopFromCurrentSelection() {
   const sel = window.getSelection && window.getSelection();
   if (!sel || sel.isCollapsed || !sel.toString().trim() || !sel.rangeCount) { hideSelPop(); return; }
   const anchor = sel.anchorNode;
@@ -4025,6 +4050,27 @@ function handleSelectionMouseUp(e) {
   if (!pane || !currentRunPart()) { hideSelPop(); return; }
   const range = sel.getRangeAt(0);
   showSelPop(range.getBoundingClientRect(), range, sel.toString().trim());
+}
+
+function handleSelectionMouseUp(e) {
+  if (e.target && e.target.closest && e.target.closest(".selpop")) return;
+  trySelPopFromCurrentSelection();
+}
+
+/* On touch devices, selecting text is a two-step gesture: a long-press
+   selects a first word, then the user drags the native selection handles
+   to adjust the range. That handle-dragging is handled entirely by the
+   OS/browser and never dispatches a "touchend" on the page, so relying on
+   touchend alone (as mouseup does on desktop) misses most mobile
+   selections — the popup simply never appeared. "selectionchange" fires
+   for every step of that gesture and is the reliable cross-device signal,
+   so it's used here (debounced, since it can fire many times in a row
+   while the handles are being dragged) as a fallback/primary path for
+   touch. */
+let selChangeTimer = null;
+function handleSelectionChangeDebounced() {
+  if (selChangeTimer) clearTimeout(selChangeTimer);
+  selChangeTimer = setTimeout(trySelPopFromCurrentSelection, 250);
 }
 
 /** Clicking an existing highlight (a plain click, not a drag-selection)
@@ -5615,6 +5661,7 @@ function boot() {
   });
   document.addEventListener("mouseup", handleSelectionMouseUp);
   document.addEventListener("touchend", handleSelectionMouseUp);
+  document.addEventListener("selectionchange", handleSelectionChangeDebounced);
   document.addEventListener("click", handleMarkClick);
 
   /* warn before leaving a running module */
