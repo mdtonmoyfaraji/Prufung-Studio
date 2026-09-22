@@ -2320,12 +2320,15 @@ const SEED_TESTDAF = {
 /* ---------------------------------------------------------------------- */
 const SEED_TESTS = [SEED_GOETHE_B2, SEED_TELC_B1, SEED_TESTDAF];
 
+/** Makes sure S.tests is an array (first run ever). Does NOT add any "(Standard)"
+ *  example tests — those are only added when the user explicitly clicks
+ *  "Standard-Modelltests wiederherstellen". The library (modeltest/ folders)
+ *  is the only thing that appears automatically. */
+function ensureTestsArray() {
+  if (!Array.isArray(S.tests)) { S.tests = []; saveTests(); }
+}
 function installSeeds() {
-  if (!Array.isArray(S.tests)) {
-    S.tests = SEED_TESTS.map(x => Object.assign(clone(x), { createdAt: Date.now() }));
-    saveTests();
-    return;
-  }
+  if (!Array.isArray(S.tests)) S.tests = [];
   for (const seed of SEED_TESTS) {
     if (!S.tests.some(x => x.id === seed.id)) S.tests.push(Object.assign(clone(seed), { createdAt: Date.now() }));
   }
@@ -4980,6 +4983,30 @@ function libListing(exam, level, path) {
   return { modFiles, dirs: [...dirs].sort((x, y) => x.localeCompare(y, "de")) };
 }
 
+/** Every leaf folder (relative path under modeltest/<exam>/<level>/) that currently
+ *  holds at least one module file, according to the live source just fetched. */
+function libLeafPaths(exam, level) {
+  const set = new Set();
+  if (!libSrc) return set;
+  for (const f of libSrc.files) {
+    if (!isLibModule(f)) continue;
+    const parts = f.split("/");
+    if (parts.length < 3 || norm(parts[0]) !== norm(exam) || norm(parts[1]) !== norm(level)) continue;
+    set.add(parts.slice(2, -1).join("/"));
+  }
+  return set;
+}
+/** Removes locally-cached tests that came from a library folder which was since
+ *  deleted or renamed, so a folder that no longer exists (or under its old name)
+ *  can never linger in the app after the real modeltest/ folder changed. */
+function pruneOrphanedLibraryTests(exam, level) {
+  if (!Array.isArray(S.tests)) return;
+  const valid = libLeafPaths(exam, level);
+  const before = S.tests.length;
+  S.tests = S.tests.filter(t => !(t.source === "library" && t.exam === exam && t.level === level && !valid.has(t.libraryPath)));
+  if (S.tests.length !== before) saveTests();
+}
+
 async function libReadFile(f) {
   const s = libSrc;
   if (s.data && s.data[f.path] !== undefined) return s.data[f.path];
@@ -5074,6 +5101,7 @@ async function renderLibRow() {
   if (myToken !== libRenderToken) return;
 
   const exam = S.settings.exam, level = S.settings.level;
+  pruneOrphanedLibraryTests(exam, level);
   const rootListing = libListing(exam, level, []);
   const hasLib = rootListing.dirs.length + rootListing.modFiles.length > 0;
   if (tSel) tSel.style.display = hasLib ? "none" : "";     // folders pick the test; the plain list only when there are none
@@ -5521,7 +5549,7 @@ function registerPWA() {
 }
 
 function boot() {
-  installSeeds();
+  ensureTestsArray();
   applyTheme();
   applyI18n();
   registerPWA();
