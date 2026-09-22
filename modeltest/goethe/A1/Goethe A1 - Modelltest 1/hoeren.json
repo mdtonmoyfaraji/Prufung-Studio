@@ -1,0 +1,314 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:44:02.050Z",
+  "exam": "goethe",
+  "level": "A1",
+  "module": "hoeren",
+  "name": "Neuer Ordner — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1",
+      "instruction": "Hören Sie sechs kurze Gespräche und Ansagen. Kreuzen Sie bei jeder Aufgabe die richtige Lösung an. Sie hören jeden Text zweimal.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 1. Wo ist der Schlüssel? Text 1."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Maria, hast du meinen Schlüssel gesehen? Ich kann ihn nicht finden."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Welchen Schlüssel meinst du? Den für das Auto?"
+          },
+          {
+            "speaker": "Mann",
+            "text": "Nein, den Haustürschlüssel. Ah, Moment, er liegt hier auf dem Tisch in der Küche."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 2. Wie viel Uhr ist es? Text 2."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Entschuldigung, wie viel Uhr ist es bitte?"
+          },
+          {
+            "speaker": "Mann",
+            "text": "Es ist jetzt genau Viertel nach drei."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Vielen Dank! Dann habe ich noch Zeit bis zum Termin."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 3. Was kauft die Frau im Supermarkt? Text 3."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Schatz, brauchst du noch etwas aus dem Geschäft?"
+          },
+          {
+            "speaker": "Frau",
+            "text": "Ja, bitte bring frische Milch und Äpfel mit. Bananen haben wir noch genug."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Gut, Milch und Äpfel. Ich gehe sofort los."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 4. Wo wohnt Anna jetzt? Text 4."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Hallo Thomas, ich wohne jetzt nicht mehr in der Bahnhofstraße."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Ach so? Bist du in ein anderes Viertel gezogen?"
+          },
+          {
+            "speaker": "Frau",
+            "text": "Ja, ich habe eine schöne Wohnung direkt am Park gefunden."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 5. Wie kommt der Mann zum Bahnhof? Text 5."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Fährst du heute mit dem Bus zum Bahnhof?"
+          },
+          {
+            "speaker": "Mann",
+            "text": "Nein, der Bus fährt heute nicht so oft. Ich nehme mein Fahrrad."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Das ist bei dem schönen Wetter sicher schneller."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Nummer 6. Wer kommt heute Abend zu Besuch? Text 6."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Freust du dich auch schon auf heute Abend?"
+          },
+          {
+            "speaker": "Frau",
+            "text": "Ja, klar! Meine Eltern kommen zum Abendessen vorbei."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Ich koche unsere Lieblingssuppe für alle."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wo liegt der Schlüssel?",
+          "options": [
+            "auf dem Tisch in der Küche",
+            "im Auto",
+            "im Flur auf der Kommode"
+          ],
+          "answer": 0,
+          "why": "Der Mann sagt: 'Ah, Moment, er liegt hier auf dem Tisch in der Küche.'"
+        },
+        {
+          "prompt": "Wie viel Uhr ist es?",
+          "options": [
+            "15:00 Uhr",
+            "15:15 Uhr",
+            "15:45 Uhr"
+          ],
+          "answer": 1,
+          "why": "Der Mann antwortet auf die Frage nach der Uhrzeit: 'Es ist jetzt genau Viertel nach drei.'"
+        },
+        {
+          "prompt": "Was kauft der Mann ein?",
+          "options": [
+            "Milch und Bananen",
+            "Bananen und Äpfel",
+            "Milch und Äpfel"
+          ],
+          "answer": 2,
+          "why": "Die Frau sagt: '... bring frische Milch und Äpfel mit.'"
+        },
+        {
+          "prompt": "Wo wohnt Anna jetzt?",
+          "options": [
+            "in der Bahnhofstraße",
+            "direkt am Park",
+            "in einem anderen Land"
+          ],
+          "answer": 1,
+          "why": "Anna sagt: 'Ja, ich habe eine schöne Wohnung direkt am Park gefunden.'"
+        },
+        {
+          "prompt": "Wie fährt der Mann zum Bahnhof?",
+          "options": [
+            "mit dem Bus",
+            "mit dem Auto",
+            "mit dem Fahrrad"
+          ],
+          "answer": 2,
+          "why": "Der Mann sagt: 'Nein, der Bus fährt heute nicht so oft. Ich nehme mein Fahrrad.'"
+        },
+        {
+          "prompt": "Wer kommt am Abend zu Besuch?",
+          "options": [
+            "die Eltern",
+            "die Geschwister",
+            "gute Freunde"
+          ],
+          "answer": 0,
+          "why": "Die Frau antwortet: 'Meine Eltern kommen zum Abendessen vorbei.'"
+        }
+      ]
+    },
+    "H2": {
+      "title": "Durchsagen am Bahnhof und im Kaufhaus",
+      "instruction": "Hören Sie die Durchsagen. Lesen Sie dazu die Aufgaben 1 bis 4. Entscheiden Sie: Ist die Aussage richtig oder falsch?",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Bahnhofsdurchsage",
+            "text": "Achtung am Gleis 3! Hier kommt der Intercity 2145 aus München. Bitte treten Sie zurück. Vorsicht bei der Einfahrt! — Und hier noch eine wichtige Information für alle Reisenden nach Frankfurt: Der ICE 592 hat heute leider zwanzig Minuten Verspätung. Grund dafür ist eine kurzfristige Reparatur am Zug. Wir bitten um Ihr Verständnis."
+          },
+          {
+            "speaker": "Kaufhausdurchsage",
+            "text": "Liebe Kundinnen und Kunden, wir haben ein Fundstück für Sie: Ein kleines Mädchen namens Mia vermisst ihre Mutter. Mia wartet an der Information im Erdgeschoss auf sie. Liebe Mutter von Mia, bitte kommen Sie schnell zur Information im Erdgeschoss. — Und noch ein Hinweis für unsere Autofahrer: Das Parkhaus schließt heute wegen Wartungsarbeiten bereits um zwanzig Uhr. Bitte verlassen Sie das Parkhaus rechtzeitig."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Der Zug aus München kommt an Gleis 3 an.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es: 'Hier kommt der Intercity 2145 aus München' an 'Gleis 3'."
+        },
+        {
+          "prompt": "Der ICE nach Frankfurt ist pünktlich.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut Durchsage hat der ICE nach Frankfurt 'heute leider zwanzig Minuten Verspätung'."
+        },
+        {
+          "prompt": "Die kleine Mia wartet an der Information im Erdgeschoss.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text wird durchgegeben, dass Mia 'an der Information im Erdgeschoss' auf ihre Mutter wartet."
+        },
+        {
+          "prompt": "Das Parkhaus schließt heute erst um 22 Uhr.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "In der Durchsage steht, dass das Parkhaus 'bereits um zwanzig Uhr' schließt."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Hören Teil 3: Nachrichten auf dem Anrufbeantworter",
+      "instruction": "Hören Sie fünf Nachrichten auf dem Anrufbeantworter. Sie hören jede Nachricht zweimal. Wählen Sie für die Aufgaben die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Sprecher 1",
+            "text": "Hallo Anna, hier ist Stefan. Du, ich stehe gerade im Supermarkt und wollte fragen, ob wir heute Abend zusammen kochen wollen. Ich brauche noch Tomaten und Käse. Bringst du bitte Milch mit? Ruf mich zurück, tschüss!"
+          },
+          {
+            "speaker": "Sprecher 2",
+            "text": "Guten Tag, hier Zahnarztpraxis Dr. Weber. Wir rufen wegen Ihres Termins am Donnerstag an. Leider ist Herr Dr. Weber krank. Ihr Termin muss deshalb auf nächste Woche Dienstag verschoben werden. Bitte rufen Sie uns an, wenn das nicht passt."
+          },
+          {
+            "speaker": "Sprecher 3",
+            "text": "Hi Mama, ich bin's, Lukas. Du, mein Zug hat leider Verspätung. Ich komme heute erst um 18 Uhr am Bahnhof an, nicht um 17 Uhr. Du musst also nicht schon früher losfahren. Bis später!"
+          },
+          {
+            "speaker": "Sprecher 4",
+            "text": "Hallo Herr Müller, hier ist Immobilienmakler Klein. Ich habe eine schöne Wohnung für Sie in der Blumenstraße gesehen. Sie hat drei Zimmer und einen großen Balkon. Die Miete beträgt 850 Euro. Melden Sie sich doch bitte morgen bei mir."
+          },
+          {
+            "speaker": "Sprecher 5",
+            "text": "Hallo Lisa, hier spricht Julia. Wollen wir morgen zusammen in die Stadt gehen? Um wie viel Uhr hast du Zeit? Passt es dir um vier Uhr Nachmittag? Treffpunkt ist vor dem Kino. Sag mir Bescheid!"
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was soll Anna mitbringen?",
+          "options": [
+            "a) Tomaten",
+            "b) Käse",
+            "c) Milch"
+          ],
+          "answer": 2,
+          "why": "Stefan sagt in der Nachricht: \"Bringst du bitte Milch mit?\""
+        },
+        {
+          "prompt": "Wann ist der neue Termin beim Zahnarzt?",
+          "options": [
+            "a) Nächste Woche Dienstag",
+            "b) Am Donnerstag",
+            "c) Nächste Woche Donnerstag"
+          ],
+          "answer": 0,
+          "why": "In der Nachricht wird gesagt: \"Ihr Termin muss deshalb auf nächste Woche Dienstag verschoben werden.\""
+        },
+        {
+          "prompt": "Wann kommt Lukas am Bahnhof an?",
+          "options": [
+            "a) Um 16 Uhr",
+            "b) Um 17 Uhr",
+            "c) Um 18 Uhr"
+          ],
+          "answer": 2,
+          "why": "Lukas sagt: \"Ich komme heute erst um 18 Uhr am Bahnhof an\"."
+        },
+        {
+          "prompt": "Wie hoch ist die Miete für die Wohnung?",
+          "options": [
+            "a) 800 Euro",
+            "b) 850 Euro",
+            "c) 950 Euro"
+          ],
+          "answer": 1,
+          "why": "Der Makler sagt: \"Die Miete beträgt 850 Euro.\""
+        },
+        {
+          "prompt": "Wo wollen sich Julia und Lisa treffen?",
+          "options": [
+            "a) Vor dem Kino",
+            "b) Im Supermarkt",
+            "c) Am Bahnhof"
+          ],
+          "answer": 0,
+          "why": "Julia sagt in der Nachricht: \"Treffpunkt ist vor dem Kino.\""
+        }
+      ]
+    }
+  }
+}
