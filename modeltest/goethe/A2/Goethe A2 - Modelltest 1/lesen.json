@@ -1,0 +1,247 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:17:27.464Z",
+  "exam": "goethe",
+  "level": "A2",
+  "module": "lesen",
+  "name": "Goethe A2 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Neuer Treffpunkt im Stadtteil: Das Café Mosaik",
+      "instruction": "Lesen Sie den Text und wählen Sie für die Aufgaben 1–5 die richtige Lösung a, b oder c.",
+      "passage": "In der Blumenstraße hat vor wenigen Wochen ein neues Geschäft eröffnet, das schnell zum beliebten Treffpunkt für die Nachbarschaft geworden ist. Das „Café Mosaik“ ist kein gewöhnliches Kaffeehaus, sondern verbindet Gemütlichkeit mit sozialem Engagement.\n\nDie Idee dazu hatte die 34-jährige Anna Weber. Sie arbeitete viele Jahre als Köchin in verschiedenen Restaurants, wollte aber etwas Eigenes aufbauen. „Ich wollte einen Ort schaffen, an dem sich Menschen aus unterschiedlichen Kulturen und Generationen treffen können“, erklärt sie. Das Konzept scheint aufzugehen: Jeden Nachmittag sitzen ältere Nachbarn neben Studenten bei Kaffee und selbstgebackenem Kuchen.\n\nBesonders ist auch die Speisekarte. Es gibt täglich wechselnde Gerichte, die oft auf traditionellen Rezepten aus verschiedenen Ländern basieren. Alle Zutaten kauft Anna Weber bei Bauern aus der direkten Umgebung ein. „Mir ist wichtig, dass wir wissen, woher das Essen kommt und dass wir die regionale Wirtschaft unterstützen“, sagt die Gründerin.\n\nNeben dem gastronomischen Angebot gibt es im Café Mosaik auch verschiedene Veranstaltungen. Jeden Dienstag findet ein Sprachcafé statt, bei dem man kostenlos Deutsch oder andere Sprachen üben kann. Am Wochenende gibt es oft kleine Konzerte von lokalen Musikern oder kreative Bastelworkshops für Familien mit Kindern.\n\nDas Café hat von Dienstag bis Sonntag jeweils von 9 bis 18 Uhr geöffnet. Montags ist Ruhetag, den Anna Weber für die Planung und den Einkauf nutzt. Wer das Café besuchen möchte, sollte besonders am Nachmittag etwas Zeit mitbringen, denn die gemütlichen Sessel sind sehr gefragt.",
+      "items": [
+        {
+          "prompt": "Was ist das Besondere am „Café Mosaik“?",
+          "options": [
+            "Es ist ein ganz normales Kaffeehaus.",
+            "Es verbindet Gemütlichkeit mit sozialem Miteinander.",
+            "Es ist ausschließlich für Studenten gedacht."
+          ],
+          "answer": 1,
+          "why": "Im Text steht, dass das Café „Gemütlichkeit mit sozialem Engagement“ verbindet und ein Ort für verschiedene Kulturen und Generationen ist."
+        },
+        {
+          "prompt": "Woher kennt Anna Weber die Gastronomie?",
+          "options": [
+            "Sie hat jahrelang als Köchin gearbeitet.",
+            "Sie hat eine Ausbildung zur Restaurantfachfrau gemacht.",
+            "Sie hat zuvor ein anderes Café geleitet."
+          ],
+          "answer": 0,
+          "why": "Der Text besagt: „Sie arbeitete viele Jahre als Köchin in verschiedenen Restaurants...“"
+        },
+        {
+          "prompt": "Woher kommen die Lebensmittel für die Gerichte?",
+          "options": [
+            "Aus dem Supermarkt im Stadtzentrum.",
+            "Aus dem Ausland per Lieferung.",
+            "Von regionalen Bauern aus der Umgebung."
+          ],
+          "answer": 2,
+          "why": "Im Abschnitt über die Speisekarte steht: „Alle Zutaten kauft Anna Weber bei Bauern aus der direkten Umgebung ein.“"
+        },
+        {
+          "prompt": "Was passiert jeden Dienstag im Café?",
+          "options": [
+            "Es gibt ein kostenloses Sprachcafé zum Üben.",
+            "Es finden Konzerte von Musikern statt.",
+            "Es gibt einen Bastelworkshop für Familien."
+          ],
+          "answer": 0,
+          "why": "Der Text erklärt: „Jeden Dienstag findet ein Sprachcafé statt, bei dem man kostenlos Deutsch oder andere Sprachen üben kann.“"
+        },
+        {
+          "prompt": "An welchem Wochentag ist das Café geschlossen?",
+          "options": [
+            "Sonntag",
+            "Montag",
+            "Dienstag"
+          ],
+          "answer": 1,
+          "why": "Im letzten Absatz steht: „Montags ist Ruhetag, den Anna Weber für die Planung und den Einkauf nutzt.“"
+        }
+      ]
+    },
+    "L2": {
+      "title": "Aktiv im Frühling: Das Bürgerhaus-Programm",
+      "instruction": "Lesen Sie das Programm und wählen Sie die richtige Lösung (a, b oder c).",
+      "passage": "Liebe Bürgerinnen und Bürger,\n\nder Frühling ist da, und das Bürgerhaus in der Rosenstraße hat ein abwechslungsreiches Programm für die kommenden Monate vorbereitet. Ob Sport, Kreativität oder Sprachen – für jede Altersgruppe gibt es spannende Angebote.\n\nLos geht es am Montag, den 4. April, mit dem Kurs „Gesunder Rücken“. Unter Leitung von Physiotherapeutin Maria Becker lernen Teilnehmer jeden Montag von 18:00 bis 19:00 Uhr wichtige Übungen gegen Verspannungen im Büroalltag. Bitte bringen Sie eine eigene Gymnastikmatte und bequeme Kleidung mit. Der Kurs umfasst zehn Abende und kostet 50 Euro.\n\nFür alle, die ihre Kochkünste erweitern möchten, gibt es am Freitag, den 8. April, einen Kochabend zum Thema „Vegetarische Mittelmeerküche“. Gemeinsam mit Koch Thomas Klein bereiten wir ab 18:30 Uhr verschiedene Gerichte aus Italien und Griechenland zu. Der Abend kostet 35 Euro inklusive aller Lebensmittel. Eine Anmeldung ist bis spätestens Mittwoch, den 6. April, an der Rezeption erforderlich, da die Plätze auf maximal zwölf Personen begrenzt sind.\n\nLiebhaber von handwerklichen Arbeiten kommen am Samstag, den 16. April, beim Workshop „Keramik selber machen“ auf ihre Kosten. Von 10:00 bis 14:00 Uhr formen wir Tassen und Schalen aus Ton. Der Kurs kostet 40 Euro plus 10 Euro Materialkosten für Ton und Glasur. Die fertigen Stücke können nach dem Brennen ab dem 30. April im Bürgerhaus abgeholt werden.\n\nWer seine Sprachkenntnisse für den nächsten Urlaub auffrischen möchte, kann ab Dienstag, den 19. April, den Kurs „Spanisch für Anfänger mit Vorkenntnissen“ besuchen. Der Unterricht findet wöchentlich dienstags von 17:30 bis 19:00 Uhr statt. Das Lehrbuch wird im ersten Unterricht besprochen. Der Kurs kostet 60 Euro.\n\nFür Fragen stehen wir Ihnen montags bis freitags von 9:00 bis 16:00 Uhr telefonisch unter der Nummer 0511-987654 oder persönlich im Büro zur Verfügung. Wir freuen uns auf Ihre Teilnahme!",
+      "items": [
+        {
+          "prompt": "Was braucht man für den Kurs „Gesunder Rücken“?",
+          "options": [
+            "Ein eigenes Lehrbuch für 50 Euro",
+            "Eine Gymnastikmatte und bequeme Kleidung",
+            "Einen Termin an der Rezeption bis Mittwoch"
+          ],
+          "answer": 1,
+          "why": "Im Text steht ausdrücklich: „Bitte bringen Sie eine eigene Gymnastikmatte und bequeme Kleidung mit.“"
+        },
+        {
+          "prompt": "Bis wann muss man sich für den Kochabend anmelden?",
+          "options": [
+            "Bis Mittwoch, den 6. April",
+            "Bis Freitag, den 8. April",
+            "Bis Samstag, den 30. April"
+          ],
+          "answer": 0,
+          "why": "Der Text besagt: „Eine Anmeldung ist bis spätestens Mittwoch, den 6. April, an der Rezeption erforderlich“."
+        },
+        {
+          "prompt": "Was kostet der Keramik-Workshop insgesamt?",
+          "options": [
+            "35 Euro",
+            "40 Euro",
+            "50 Euro"
+          ],
+          "answer": 2,
+          "why": "Der Kurs kostet 40 Euro zuzüglich 10 Euro Materialkosten, was zusammen 50 Euro ergibt."
+        },
+        {
+          "prompt": "Wann findet der Spanischkurs statt?",
+          "options": [
+            "Jeden Montag von 18:00 bis 19:00 Uhr",
+            "Jeden Dienstag von 17:30 bis 19:00 Uhr",
+            "Jeden Samstag von 10:00 bis 14:00 Uhr"
+          ],
+          "answer": 1,
+          "why": "Im Text steht: „Der Unterricht findet wöchentlich dienstags von 17:30 bis 19:00 Uhr statt.“"
+        },
+        {
+          "prompt": "Wann kann man das Büro des Bürgerhauses telefonisch erreichen?",
+          "options": [
+            "Montags bis freitags von 9:00 bis 16:00 Uhr",
+            "Jeden Tag rund um die Uhr",
+            "Nur am Wochenende von 10:00 bis 14:00 Uhr"
+          ],
+          "answer": 0,
+          "why": "Der Text gibt an: „Für Fragen stehen wir Ihnen montags bis freitags von 9:00 bis 16:00 Uhr telefonisch [...] zur Verfügung.“"
+        }
+      ]
+    },
+    "L3": {
+      "title": "Lesen Teil 3: E-Mails im Alltag",
+      "instruction": "Lesen Sie die E-Mails und wählen Sie für jede Aufgabe die richtige Lösung a, b oder c.",
+      "passage": "Betreff: Unser Treffen am Wochenende\n\nHallo Claudia,\nwie geht es dir? Ich hoffe, du hattest eine gute Woche im Büro. Tut mir leid, dass ich mich erst jetzt melde, aber ich hatte extrem viel Stress mit dem neuen Projekt.\n\nIch freue mich schon riesig auf unser Treffen am Samstag. Wegen der Uhrzeit müssen wir aber noch einmal kurz sprechen. Eigentlich wollten wir ja um 14:00 Uhr vor dem Kino in der Stadtmitte stehen. Leider hat mein Chef mich gebeten, am Samstagvormittag noch kurz in die Firma zu kommen, weil es ein technisches Problem gibt. Das dauert hoffentlich nicht allzu lange. Könnten wir uns vielleicht eine Stunde später treffen, also um 15:00 Uhr? Dann bin ich ganz sicher fertig und muss mich nicht beeilen.\n\nSag mir einfach kurz Bescheid, ob das bei dir klappt. Falls du schon andere Pläne hast, können wir natürlich auch einen anderen Ort oder eine andere Zeit vereinbaren. Wir können danach auch gerne noch etwas zusammen trinken gehen oder den neuen Film im Kino anschauen.\n\nLiebe Grüße\nMarkus\n\n\nBetreff: Rückfragen zu Ihrer Wohnungsbewerbung\n\nSehr geehrte Damen und Herren,\nwir haben Ihre Unterlagen für die Wohnung in der Blumenstraße dankend erhalten. Die Bewerbung ist sehr vollständig und macht einen sehr guten Eindruck.\n\nLeider haben wir noch eine wichtige Frage bezüglich Ihrer Haustiere. In Ihrem Formular haben Sie angegeben, dass Sie einen Hund besitzen. Laut der Hausordnung in diesem Gebäude sind Hunde leider generell im gesamten Haus nicht erlaubt. Katzen oder kleine Vögel stellen dagegen kein Problem dar. Bitte teilen Sie uns innerhalb der nächsten drei Tage schriftlich per E-Mail an unsere Adresse mit, wie Sie dieses Problem lösen möchten oder ob Sie die Wohnung unter diesen Bedingungen überhaupt noch mieten möchten.\n\nMit freundlichen Grüßen\nHausverwaltung Klein\n\n\nBetreff: Terminabsage für den Zahnarzttermin\n\nLiebe Praxis-Mitarbeiter, hiermit muss ich leider meinen Termin am kommenden Dienstag, den 14. Mai, um 10:15 Uhr absagen. Ich liege seit gestern mit starkem Fieber im Bett und kann das Haus unmöglich verlassen. Könnten wir bitte einen neuen Termin für die Woche darauf vereinbaren? Ich kann meistens dienstags oder donnerstags am Nachmittag ab 14 Uhr. Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen, Sarah Meier",
+      "items": [
+        {
+          "prompt": "Warum schreibt Markus an Claudia?",
+          "options": [
+            "Er möchte das Treffen am Samstag absagen.",
+            "Er möchte die Uhrzeit für das Treffen ändern.",
+            "Er lädt sie zu sich ins Büro ein."
+          ],
+          "answer": 1,
+          "why": "Markus fragt: 'Könnten wir uns vielleicht eine Stunde später treffen, also um 15:00 Uhr?'"
+        },
+        {
+          "prompt": "Was ist der Grund für Markus' Verspätung?",
+          "options": [
+            "Er muss am Samstagvormittag in der Firma arbeiten.",
+            "Er hat Probleme mit seinem Auto in der Stadtmitte.",
+            "Er muss länger im Kino auf Claudia warten."
+          ],
+          "answer": 0,
+          "why": "Er schreibt, dass sein Chef ihn gebeten hat, 'am Samstagvormittag noch kurz in die Firma zu kommen'."
+        },
+        {
+          "prompt": "Was möchte die Hausverwaltung Klein von dem Wohnungsbewerber wissen?",
+          "options": [
+            "Ob er die Miete im Voraus bezahlen kann.",
+            "Wie er mit dem Verbot von Hunden im Haus umgehen will.",
+            "Ob er noch andere Personen in die Wohnung mitbringen möchte."
+          ],
+          "answer": 1,
+          "why": "Die Verwaltung fragt, 'wie Sie dieses Problem lösen möchten', da Hunde laut Hausordnung nicht erlaubt sind."
+        },
+        {
+          "prompt": "Welche Haustiere sind in dem Wohngebäude erlaubt?",
+          "options": [
+            "Nur Hunde und Katzen.",
+            "Hunde und Vögel.",
+            "Katzen und kleine Vögel."
+          ],
+          "answer": 2,
+          "why": "Im Text steht: 'Katzen oder kleine Vögel stellen dagegen kein Problem dar.'"
+        },
+        {
+          "prompt": "Warum schreibt Sarah Meier an die Zahnarztpraxis?",
+          "options": [
+            "Weil sie krank ist und einen neuen Termin braucht.",
+            "Weil sie ihren Termin auf den Vormittag verschieben möchte.",
+            "Weil sie den Termin vergessen hat."
+          ],
+          "answer": 0,
+          "why": "Sie schreibt, sie liegt 'mit starkem Fieber im Bett' und fragt: 'Könnten wir bitte einen neuen Termin für die Woche darauf vereinbaren?'"
+        }
+      ]
+    },
+    "L4": {
+      "title": "Anzeigen im Alltag",
+      "instruction": "Lesen Sie die Situationen 1 bis 5 und die Anzeigen A bis H. Welche Anzeige passt zu welcher Situation? Für eine Situation gibt es keine Anzeige. Schreiben Sie den richtigen Buchstaben (A–H) hinter die Nummer. Jede Anzeige können Sie nur einmal verwenden.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Fahrrad-Reparaturkurs für Anfänger am Wochenende. Lernen Sie, wie man Reifen wechselt und die Bremsen einstellt. Anmeldung unter Tel. 0171-555123."
+        },
+        {
+          "key": "b",
+          "text": "Praxis Dr. med. Weber: Wegen Fortbildung bleibt unsere Praxis am Freitag, den 14., geschlossen. Ab Montag sind wir wieder für Sie da."
+        },
+        {
+          "key": "c",
+          "text": "Italienisches Restaurant 'Bella Italia' sucht zuverlässige Bedienung für den Abendbereich (Di–So). Erfahrung nicht unbedingt nötig, wir lernen Sie an!"
+        },
+        {
+          "key": "d",
+          "text": "Verkaufe gut erhaltenes Sofa (3-Sitzer), grau, wegen Umzug günstig abzugeben. Nur Selbstabholung in der Bahnhofstraße. Preis: 80 Euro."
+        },
+        {
+          "key": "e",
+          "text": "Stadtbibliothek Mainz: Ab nächste Woche gelten unsere neuen Sommer-Öffnungszeiten. Täglich von 9 bis 19 Uhr geöffnet. Sonntags geschlossen."
+        },
+        {
+          "key": "f",
+          "text": "Garten- und Landschaftsbau Müller pflegt Ihren Garten: Rasenmähen, Hecken schneiden und Unkraut entfernen. Rufen Sie uns an für ein Angebot."
+        },
+        {
+          "key": "g",
+          "text": "VHS-Kurs 'Spanisch für die Reise' beginnt am 3. Mai. Keine Vorkenntnisse erforderlich. Perfekt für Ihren nächsten Urlaub in Spanien oder Lateinamerika."
+        },
+        {
+          "key": "h",
+          "text": "Wohnung zu vermieten: 2 Zimmer, 55 qm, Balkon, Einbauküche, ruhige Lage am Stadtrand. Miete 650 Euro warm. Frei ab 1. Juli."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Sie möchten im Sommer in ein spanischsprachiges Land reisen und vorher die Grundlagen der Sprache lernen.",
+          "answer": "g",
+          "why": "Anzeige G bietet einen Kurs 'Spanisch für die Reise' an, der perfekt für den nächsten Urlaub ist."
+        },
+        {
+          "prompt": "Ihr Fahrrad ist kaputt und Sie möchten selbst lernen, wie man kleine Reparaturen wie einen Reifenwechsel durchführt.",
+          "answer": "a",
+          "why": "In Anzeige A wird ein 'Fahrrad-Reparaturkurs für Anfänger' angeboten, bei dem man lernt, Reifen zu wechseln."
+        },
+        {
+          "prompt": "Sie sind Student und suchen einen Nebenjob für die Abendstunden in der Gastronomie.",
+          "answer": "c",
+          "why": "Anzeige C sucht eine Bedienung für den Abendbereich im Restaurant."
+        },
+        {
+          "prompt": "Sie brauchen dringend einen neuen Termin bei Ihrem Hausarzt, haben aber vergessen, dass die Praxis heute wegen einer Fortbildung zu ist.",
+          "answer": "b",
+          "why": "Anzeige B informiert darüber, dass die Praxis wegen Fortbildung geschlossen ist."
+        },
+        {
+          "prompt": "Sie sind in eine neue Wohnung gezogen und suchen ein günstiges, gebrauchtes Sofa, das Sie selbst transportieren können.",
+          "answer": "d",
+          "why": "Anzeige D bietet ein gut erhaltenes Sofa für 80 Euro bei Selbstabholung an."
+        }
+      ]
+    }
+  }
+}

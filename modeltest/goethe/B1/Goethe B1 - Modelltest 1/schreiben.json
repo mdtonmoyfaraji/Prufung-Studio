@@ -1,0 +1,49 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:20:10.450Z",
+  "exam": "goethe",
+  "level": "B1",
+  "module": "schreiben",
+  "name": "Goethe B1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "E-Mail an eine Kollegin zum Thema Umweltschutz im Büro",
+      "instruction": "Schreiben Sie eine E-Mail an Ihre Kollegin Frau Schneider. Beantworten Sie in Ihrer E-Mail alle drei Leitpunkte und achten Sie auf eine passende Anrede und einen passenden Schluss.",
+      "prompt": "Sie möchten mit Ihrer Kollegin Frau Schneider über neue Ideen für den Umweltschutz im Büro sprechen. Schreiben Sie ihr eine E-Mail.",
+      "bullets": [
+        "Grund für das Schreiben (Ideen für Umweltschutz im Büro)",
+        "Vorschlag für ein Treffen in der Mittagspause",
+        "Bitte um kurze Rückmeldung bis morgen"
+      ],
+      "words": 80,
+      "tips": "Achten Sie darauf, alle drei Leitpunkte in einer logischen Reihenfolge zu bearbeiten und schreiben Sie in einem freundlichen, aber professionellen Ton."
+    },
+    "S2": {
+      "title": "Online-Gästebuch: Homeoffice",
+      "instruction": "Schreiben Sie einen Forumsbeitrag zum Thema Heimarbeit.",
+      "prompt": "Sie lesen im Online-Gästebuch eines Blogs zum Thema 'Arbeit der Zukunft' folgenden Satz: 'Jeder sollte selbst entscheiden dürfen, ob er im Büro oder von zu Hause aus arbeitet.' Schreiben Sie nun Ihre Meinung im Gästebuch.",
+      "bullets": [
+        "Äußern Sie Ihre Meinung zum Thema Heimarbeit.",
+        "Nennen Sie einen Vorteil der Arbeit im Büro.",
+        "Nennen Sie einen Vorteil der Arbeit zu Hause.",
+        "Schreiben Sie, wie Sie persönlich am liebsten arbeiten würden."
+      ],
+      "words": 80,
+      "tips": "Achten Sie darauf, alle vier Punkte zu bearbeiten und Ihren Text in Abschnitte zu unterteilen."
+    },
+    "S3": {
+      "title": "Beschwerde über Lärm im Wohnhaus",
+      "instruction": "Schreiben Sie eine formelle E-Mail an die Hausverwaltung wegen anhaltenden Lärms. Beachten Sie dabei die vier Leitpunkte.",
+      "prompt": "Sie wohnen in einem Mehrfamilienhaus und werden seit zwei Wochen jede Nacht durch laute Musik aus der Nachbarwohnung gestört. Schreiben Sie an die Hausverwaltung (Herrn Müller), um das Problem zu schildern.",
+      "bullets": [
+        "Grund für das Schreiben nennen",
+        "Das Problem genauer beschreiben",
+        "Bisherige Maßnahmen erwähnen",
+        "Um schnelle Hilfe bitten"
+      ],
+      "words": 40,
+      "tips": "Achten Sie auf eine höfliche, aber bestimmte Ausdrucksweise und schreiben Sie zu jedem Leitpunkt mindestens einen Satz."
+    }
+  }
+}

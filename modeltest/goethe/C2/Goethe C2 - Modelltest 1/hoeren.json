@@ -1,0 +1,398 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:38:47.843Z",
+  "exam": "goethe",
+  "level": "C2",
+  "module": "hoeren",
+  "name": "Goethe C2 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1: Kultur und Gesellschaft",
+      "instruction": "Sie hören fünf Ausschnitte aus Radiobeiträgen. Zu jedem Ausschnitt hören Sie drei Aussagen. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem heutigen Kulturmagazin. Wir beginnen mit unserem ersten Thema: der fortschreitenden Globalisierung im städtischen Raum. Dr. Elena Berg, Stadtsoziologin, äußert sich kritisch zur Homogenisierung der Innenstädte. Sie betont, dass globale Handelsketten zwar wirtschaftliche Stabilität bringen, aber gleichzeitig den Verlust lokaler Identitäten und gewachsener Strukturen beschleunigen. Demgegenüber steht die These, dass urbane Vielfalt durch internationalen Austausch gerade erst ermöglicht wird. Im zweiten Beitrag widmen wir uns der modernen Literatur. Der Literaturwissenschaftler Thomas Weber analysiert den Trend zu autobiografischen Romanen in der Gegenwartsliteratur. Er stellt fest, dass das erzählende Ich oft als Schutzschild dient, um gesellschaftliche Debatten zu führen, ohne moralische Urteile zu fällen. Unser dritter Ausschnitt beleuchtet ethische Fragen der künstlichen Intelligenz. Prof. Dr. Martin Hansen fordert verbindliche globale Standards für automatisierte Entscheidungsprozesse, um algorithmische Diskriminierung zu verhindern. Er argumentiert, dass rein nationale Regulierungen angesichts grenzüberschreitender Technologiekonzerne ins Leere laufen. Im vierten Bereich blicken wir auf aktuelle Forschung zur Biodiversität. Dr. Sandra Vogel stellt fest, dass langjährige Feldstudien in europäischen Mittelgebirgen einen drastischen Rückgang bestimmter Insektenarten belegen, der direkt mit der Intensivierung der Landwirtschaft zusammenhängt. Den Abschluss bildet eine medienkritische Analyse: Medienexperte Jonas Klein warnt vor der zunehmenden Emotionalisierung politischer Diskurse in sozialen Netzwerken, die eine differenzierte Auseinandersetzung mit komplexen Sachverhalten oft unmöglich macht."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Dr. Elena Berg bewertet die Ansiedlung globaler Handelsketten in den Innenstädten uneingeschränkt positiv.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da Dr. Berg die Homogenisierung kritisch sieht und den Verlust lokaler Identitäten betont."
+        },
+        {
+          "prompt": "Laut Dr. Elena Berg beschleunigt die Ausbreitung globaler Ketten den Verlust gewachsener städtischer Strukturen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, denn sie betont laut Text, dass globale Handelsketten den Verlust gewachsener Strukturen beschleunigen."
+        },
+        {
+          "prompt": "In dem Beitrag wird ausschließlich die These vertreten, dass internationale Einflüsse urbane Vielfalt erst ermöglichen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da diese These lediglich als Gegenposition zu Dr. Bergs kritischer Sichtweise genannt wird."
+        },
+        {
+          "prompt": "Thomas Weber beobachtet in der Gegenwartsliteratur eine zunehmende Beliebtheit autobiografischer Romane.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig; der Literaturwissenschaftler analysiert laut Text den Trend zu autobiografischen Romanen."
+        },
+        {
+          "prompt": "Das erzählende Ich in modernen Romanen dient laut Weber dazu, moralische Urteile des Autors direkt zu verkünden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da das Ich laut Text als Schutzschild dient, um Debatten zu führen, *ohne* moralische Urteile zu fällen."
+        },
+        {
+          "prompt": "Der Literaturwissenschaftler beschäftigt sich in seiner Analyse mit historischen Dramen des 19. Jahrhunderts.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da er die Gegenwartsliteratur und dort den Trend zu autobiografischen Romanen analysiert."
+        },
+        {
+          "prompt": "Prof. Dr. Martin Hansen fordert weltweit verbindliche Standards für automatisierte Entscheidungsprozesse.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, da er verbindliche globale Standards zur Verhinderung algorithmischer Diskriminierung fordert."
+        },
+        {
+          "prompt": "Reine nationale Regulierungen von KI sind laut Hansen angesichts globaler Technologiekonzerne vollkommen ausreichend.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch; Hansen argumentiert im Gegenteil, dass nationale Regulierungen ins Leere laufen."
+        },
+        {
+          "prompt": "Das Hauptziel der geforderten Standards ist es, algorithmische Diskriminierung zu verhindern.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, da er Standards fordert, um genau diese Form der Diskriminierung zu verhindern."
+        },
+        {
+          "prompt": "Langjährige Feldstudien in europäischen Mittelgebirgen zeigen laut Dr. Sandra Vogel einen starken Rückgang bestimmter Insektenarten.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig; Feldstudien belegen laut Text einen drastischen Rückgang bestimmter Insektenarten."
+        },
+        {
+          "prompt": "Der Insektenschwund steht nach Ansicht von Dr. Vogel in keinem direkten Zusammenhang mit der Landwirtschaft.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da der Rückgang laut Text direkt mit der Intensivierung der Landwirtschaft zusammenhängt."
+        },
+        {
+          "prompt": "Der Forschungsbeitrag konzentriert sich auf marine Ökosysteme in Küstenregionen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da es um Feldstudien in europäischen Mittelgebirgen zur Biodiversität der Insekten geht."
+        },
+        {
+          "prompt": "Medienexperte Jonas Klein warnt vor einer zunehmenden Emotionalisierung politischer Diskurse in sozialen Netzwerken.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig; Klein warnt genau vor dieser Emotionalisierung."
+        },
+        {
+          "prompt": "Die Emotionalisierung politischer Diskurse fördert laut Klein eine differenzierte Auseinandersetzung mit komplexen Themen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da sie laut Text eine differenzierte Auseinandersetzung oft unmöglich macht."
+        },
+        {
+          "prompt": "Jonas Klein analysiert im letzten Abschnitt medienkritische Aspekte moderner sozialer Netzwerke.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, da der Ausschnitt als medienkritische Analyse zu sozialen Netzwerken beschrieben wird."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Ethik in der modernen Hirnforschung",
+      "instruction": "Hören Sie das Gespräch einmal. Dazu lösen Sie fünf Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderation",
+            "text": "Herzlich willkommen zu unserem Podcast ‚Wissenschaft und Verantwortung‘. Heute sprechen Dr. Hannes Weber und die Philosophin Dr. Clara Berg über die ethischen Grenzlinien der aktuellen Neurotechnologie. Frau Berg, wir erleben derzeit rasant fortschreitende Entwicklungen an der Schnittstelle von Gehirn und Computer. Wo sehen Sie die dringlichsten Probleme?"
+          },
+          {
+            "speaker": "Dr. Clara Berg",
+            "text": "Guten Tag. Das dringlichste Problem betrifft nicht primär die technische Machbarkeit, sondern die Integrität des menschlichen Geistes. Wenn neurotechnologische Interfaces direkt mit neuronalen Netzwerken kommunizieren, verschwimmen die Grenzen zwischen ureigenen Gedanken und extern gesteuerten Impulsen. Wir müssen uns fragen, ob das Konzept der mentalen Privatsphäre in einer solchen Zukunft überhaupt noch Bestand haben kann."
+          },
+          {
+            "speaker": "Dr. Hannes Weber",
+            "text": "Da sprichst du einen wahren Punkt an, Clara. Allerdings sehe ich die Gefahr im Moment eher auf der kommerziellen Ebene als in dystopischen Science-Fiction-Szenarien. Schon heute sammeln kommerzielle Anbieter biometrische Daten im großen Stil. Wenn diese Unternehmen beginnen, neuronale Reaktionen auszuwerten, um das Konsumverhalten gezielt zu steuern, bewegen wir uns auf dünnes Eis. Es geht hier nicht um Gedankenleserei im klassischen Sinn, sondern um manipulative Beeinflussung durch präzises Profiling."
+          },
+          {
+            "speaker": "Dr. Clara Berg",
+            "text": "Genau das meine ich. Und im Gegensatz zu herkömmlichen Algorithmen, die unser Surfverhalten analysieren, greifen Neurodaten direkt in unsere emotionale Verfassung ein. Es findet eine Entgrenzung statt. Die Verantwortung liegt hierbei keineswegs nur bei den Ingenieuren, sondern vor allem bei interdisziplinären Ethikkommissionen, die bereits in der Entwicklungsphase eingebunden sein müssten – und zwar nicht als blostes Feigenblatt, sondern mit echten Vetorechten."
+          },
+          {
+            "speaker": "Dr. Hannes Weber",
+            "text": "Ein Vetorecht für Ethiker in der freien Wirtschaft? Das klingt wünschenswert, dürfte sich aber international kaum durchsetzen lassen, solange der globale Wettbewerbsdruck so enorm ist. Wenn Land A bremst, zieht Land B unweigerlich vorbei. Wir brauchen daher verbindliche internationale Standards statt nationaler Alleingänge, auch wenn die Verhandlungen mühsam sein werden."
+          },
+          {
+            "speaker": "Dr. Clara Berg",
+            "text": "Einverstanden, globale Standards sind unerlässlich. Doch bis diese verabschiedet sind, riskieren wir, dass vollendete Tatsachen geschaffen werden, die sich kaum noch korrigieren lassen. Die Schutzmauern für unsere kognitiven Grundrechte müssen jetzt errichtet werden."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was betrachtet Dr. Clara Berg als das drängendste Problem der Neurotechnologie?",
+          "options": [
+            "Die Bedrohung der mentalen Privatsphäre und des eigenen Geistes",
+            "Die rein technische Machbarkeit von Gehirn-Computer-Schnittstellen",
+            "Die mangelnde Finanzierung unabhängiger Forschungsprojekte"
+          ],
+          "answer": 0,
+          "why": "Dr. Berg erklärt, dass das dringlichste Problem die 'Integrität des menschlichen Geistes' und die Frage der 'mentalen Privatsphäre' sei.",
+          "type": "mc3"
+        },
+        {
+          "prompt": "Wo sieht Dr. Hannes Weber die gegenwärtig größte Gefahr?",
+          "options": [
+            "In der unkontrollierten Verbreitung dystopischer Romane",
+            "In der kommerziellen Nutzung von Neurodaten für gezieltes Profiling",
+            "In technischen Systemabstürzen bei medizinischen Implantaten"
+          ],
+          "answer": 1,
+          "why": "Weber führt aus, dass er die Gefahr 'auf der kommerziellen Ebene' sieht, wenn Unternehmen 'neuronale Reaktionen auswerten, um das Konsumverhalten gezielt zu steuern'.",
+          "type": "mc3"
+        },
+        {
+          "prompt": "Inwiefern unterscheiden sich Neurodaten laut Dr. Berg von herkömmlichen Algorithmen?",
+          "options": [
+            "Sie sind wesentlich kostengünstiger in der Erfassung.",
+            "Sie greifen direkt in die emotionale Verfassung des Menschen ein.",
+            "Sie unterliegen bereits strengen internationalen Gesetzen."
+          ],
+          "answer": 1,
+          "why": "Dr. Berg betont, dass Neurodaten im Gegensatz zu herkömmlichen Algorithmen 'direkt in unsere emotionale Verfassung ein'greifen.",
+          "type": "mc3"
+        },
+        {
+          "prompt": "Welche Rolle fordert Dr. Berg für Ethikkommissionen?",
+          "options": [
+            "Sie sollen lediglich beratend nach Abschluss der Entwicklung wirken.",
+            "Sie sollten bereits in der Entwicklungsphase echte Vetorechte haben.",
+            "Sie müssen die wirtschaftlichen Kosten der Projekte kalkulieren."
+          ],
+          "answer": 1,
+          "why": "Sie fordert, dass Ethikkommissionen 'bereits in der Entwicklungsphase eingebunden sein müssten – und zwar nicht als bloßes Feigenblatt, sondern mit echten Vetorechten.'",
+          "type": "mc3"
+        },
+        {
+          "prompt": "Wie bewertet Dr. Hannes Weber nationale Alleingänge und Verbote?",
+          "options": [
+            "Er hält sie aufgrund des internationalen Wettbewerbsdrucks für unrealistisch.",
+            "Er befürwortet sie als einzig wirksames Mittel gegen die Industrie.",
+            "Er fordert sie sofort für alle europäischen Staaten."
+          ],
+          "answer": 0,
+          "why": "Weber hält nationale Alleingänge für kaum durchsetzbar, 'solange der globale Wettbewerbsdruck so enorm ist' und fordert stattdessen internationale Standards.",
+          "type": "mc3"
+        }
+      ]
+    },
+    "H3": {
+      "title": "Die Zukunft des gedruckten Buches im digitalen Zeitalter",
+      "instruction": "Hören Sie das Interview einmal. Wählen Sie bei den Aufgaben 1 bis 10 die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderation",
+            "text": "Herzlich willkommen zu unserem Kulturmagazin. Heute widmen wir uns einer scheinbar zeitlosen Frage: Hat das gedruckte Buch im Zeitalter künstlicher Intelligenz und digitaler Lesegeräte überhaupt noch eine Überlebenschancen? Unser Studiogast ist Dr. Hendrik Westermann, Literaturwissenschaftler und Medienhistoriker an der Universität Freiburg. Herr Westermann, die Verkaufszahlen gedruckter Romane stagnieren seit Jahren auf hohem Niveau, während E-Books und Hörbücher boomen. Müssen wir uns vom klassischen Buch verabschieden?"
+          },
+          {
+            "speaker": "Dr. Hendrik Westermann",
+            "text": "Guten Abend. Nein, absolut nicht. Die Geschichte zeigt uns, dass neue Medien alte Medien selten vollständig verdrängen, sondern sie transformieren. Das Fernsehen hat das Radio nicht getötet, und das Internet hat das Buch nicht abgeschafft. Was wir gegenwärtig beobachten, ist vielmehr eine Ausdifferenzierung des Leseverhaltens. Das gedruckte Buch wandelt sich vom reinen Massen-Konsumgut hin zu einem ästhetischen Objekt, das gezielt wegen seiner materiellen Beschaffenheit geschätzt wird."
+          },
+          {
+            "speaker": "Moderation",
+            "text": "Sie sprechen von der Ästhetik. Bedeutet das, dass der Inhalt künftig völlig egal ist und nur noch die bibliophile Ausstattung zählt?"
+          },
+          {
+            "speaker": "Dr. Hendrik Westermann",
+            "text": "Mitnichten. Aber die Funktion teilt sich auf. Für den schnellen Informationstransport, das Pendeln oder die Fachrecherche ist das digitale Format unschlagbar. Wenn es jedoch um tiefe Konzentration, um das sogenannte 'Deep Reading' geht, greifen viele Menschen nach wie vor intuitiv zum Papier. Unsere Studien belegen, dass die haptische Komponente – das Umblättern, das Gewicht des Bandes, ja sogar der Geruch von Druckerschwärze – dem Gehirn verlässliche räumliche Orientierungspunkte liefert. Das begünstigt die kognitive Verankerung des Gelesenen signifikant stärker als der flüchtige Text auf einem Leuchtdisplay."
+          },
+          {
+            "speaker": "Moderation",
+            "text": "Nun klagen Verleger aber über steigende Papierpreise und logistische Probleme. Ist das physische Buch bald ein Luxusgut für wenige?"
+          },
+          {
+            "speaker": "Dr. Hendrik Westermann",
+            "text": "Diese Gefahr besteht durchaus in Ansätzen. Wir sehen, dass Verlage im Massenmarkt extrem kalkulieren müssen, während im Bereich der bibliophilen Sondereditionen ein bemerkenswerter Boom herrscht. Kleinverlage, die auf hochwertige Bindungen und exzellente Typografie setzen, erleben eine Renaissance. Das liegt auch daran, dass junge Menschen, die oft als 'Digital Natives' bezeichnet werden, eine erstaunliche Sehnsucht nach analogen Gegenwelten entwickeln. Sie wollen Dinge besitzen, die nicht sofort wieder gelöscht oder aktualisiert werden können."
+          },
+          {
+            "speaker": "Moderation",
+            "text": "Welche Rolle spielen denn Verlage und Bibliotheken in diesem Übergangsprozess?"
+          },
+          {
+            "speaker": "Dr. Hendrik Westermann",
+            "text": "Eine absolut zentrale. Bibliotheken wandeln sich von reinen Ausleihstationen zu modernen 'Third Places' – zu offenen Begegnungszonen für Wissensdurstige, in denen digitale Arbeitsplätze und historische Buchbestände nahtlos ineinandergreifen. Verlage hingegen müssen lernen, analoge und digitale Kanäle nicht als Konkurrenten zu begreifen, sondern als komplementäre Säulen eines modernen Kulturangebots. Wer heute überleben will, muss die spezifischen Stärken beider Welten klug miteinander verknüpfen."
+          },
+          {
+            "speaker": "Moderation",
+            "text": "Herr Westermann, vielen Dank für diese differenzierten Einblicke."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie bewertet Dr. Westermann die These, dass das gedruckte Buch aussterben wird?",
+          "options": [
+            "Er hält diese Entwicklung für unvermeidlich.",
+            "Er widerspricht ihr und verweist auf historische Präzedenzfälle.",
+            "Er sieht darin eine logische Folge technologischer Innovationen."
+          ],
+          "answer": 1,
+          "why": "Er verneint die Frage explizit und erklärt: 'Die Geschichte zeigt uns, dass neue Medien alte Medien selten vollständig verdrängen'."
+        },
+        {
+          "prompt": "Was geschieht nach Ansicht des Gastes derzeit mit dem gedruckten Buch?",
+          "options": [
+            "Es verliert massiv an gesellschaftlicher Relevanz.",
+            "Es wandelt sich zu einem ästhetischen Objekt mit speziellem materiellem Wert.",
+            "Es wird ausschließlich noch für wissenschaftliche Publikationen genutzt."
+          ],
+          "answer": 1,
+          "why": "Er führt aus, dass sich das Buch 'hin zu einem ästhetischen Objekt' wandelt, das wegen seiner materiellen Beschaffenheit geschätzt wird."
+        },
+        {
+          "prompt": "Welche Eigenschaft des digitalen Formats hebt Dr. Westermann positiv hervor?",
+          "options": [
+            "Die perfekte Eignung für den schnellen Informationstransport und die Recherche",
+            "Die deutliche Entlastung der kognitiven Fähigkeiten beim Lesen",
+            "Die dauerhafte Verankerung von Texten im Gehirn"
+          ],
+          "answer": 0,
+          "why": "Er sagt: 'Für den schnellen Informationstransport, das Pendeln oder die Fachrecherche ist das digitale Format unschlagbar.'"
+        },
+        {
+          "prompt": "Welchen Vorteil bietet das Papier in Bezug auf den Leseprozess?",
+          "options": [
+            "Es schützt vor schneller Ermüdung der Augen.",
+            "Es liefert dem Gehirn durch die Haptik räumliche Orientierungspunkte.",
+            "Es verhindert jegliche Ablenkung durch externe Einflüsse."
+          ],
+          "answer": 1,
+          "why": "Er erklärt, dass die haptische Komponente 'dem Gehirn verlässliche räumliche Orientierungspunkte liefert'."
+        },
+        {
+          "prompt": "Wie reagieren laut Interview junge Menschen ('Digital Natives') auf die Digitalisierung?",
+          "options": [
+            "Sie lehnen physische Produkte kategorisch ab.",
+            "Sie fordern eine vollständige Abschaffung analoger Medien.",
+            "Sie entwickeln eine Sehnsucht nach analogen Gegenwelten und langlebigen Gütern."
+          ],
+          "answer": 2,
+          "why": "Er stellt fest, dass 'junge Menschen [...] eine erstaunliche Sehnsucht nach analogen Gegenwelten entwickeln'."
+        },
+        {
+          "prompt": "Welche Entwicklung zeigt sich im Verlagssektor besonders im Bereich der Kleinverlage?",
+          "options": [
+            "Ein Boom von hochwertigen, bibliophilen Sondereditionen",
+            "Eine starke Fokussierung auf rein digitale Publikationen",
+            "Ein drastischer Rückgang der Verkaufszahlen"
+          ],
+          "answer": 0,
+          "why": "Er beschreibt, dass Kleinverlage, die auf hochwertige Bindungen setzen, 'eine Renaissance' erleben."
+        },
+        {
+          "prompt": "Wie verändern sich Bibliotheken im Zuge dieses Wandels?",
+          "options": [
+            "Sie reduzieren ihre Bestände auf ein Minimum.",
+            "Sie entwickeln sich zu offenen Begegnungszonen ('Third Places').",
+            "Sie schränken den physischen Zugang zugunsten reiner Onlinedienste ein."
+          ],
+          "answer": 1,
+          "why": "Er sagt, Bibliotheken wandeln sich 'zu modernen 'Third Places' – zu offenen Begegnungszonen für Wissensdurstige'."
+        },
+        {
+          "prompt": "Welche Herausforderung nennt der Experte für Verlage im Massenmarkt?",
+          "options": [
+            "Sie müssen extrem präzise und vorsichtig kalkulieren.",
+            "Sie finden keine Autoren mehr für gedruckte Werke.",
+            "Sie werden vollständig von staatlichen Subventionen abhängig."
+          ],
+          "answer": 0,
+          "why": "Er merkt an, dass Verlage im Massenmarkt 'extrem kalkulieren müssen'."
+        },
+        {
+          "prompt": "Wie sollen Verlage laut Dr. Westermann mit den verschiedenen Kanälen umgehen?",
+          "options": [
+            "Sie sollten sich ausschließlich auf das digitale Geschäft konzentrieren.",
+            "Sie müssen analoge und digitale Kanäle als komplementäre Säulen begreifen.",
+            "Sie sollten den analogen Vertrieb komplett einstellen."
+          ],
+          "answer": 1,
+          "why": "Er empfiehlt, analoge und digitale Kanäle 'als komplementäre Säulen eines modernen Kulturangebots' zu nutzen."
+        },
+        {
+          "prompt": "Welches übergeordnete Fazit zieht der Experte bezüglich des gedruckten Buches?",
+          "options": [
+            "Es hat langfristig keine wirtschaftliche Zukunft.",
+            "Es wird durch virtuelle Realität ersetzt werden.",
+            "Es bleibt ein unverzichtbarer Teil unserer Kultur und Wissensvermittlung."
+          ],
+          "answer": 2,
+          "why": "Das gesamte Interview unterstreicht die dauerhafte, wenn auch transformierte Relevanz des gedruckten Buches neben digitalen Medien."
+        }
+      ]
+    }
+  }
+}

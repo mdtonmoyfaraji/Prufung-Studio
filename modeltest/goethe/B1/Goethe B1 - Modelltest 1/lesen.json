@@ -1,0 +1,339 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:20:09.752Z",
+  "exam": "goethe",
+  "level": "B1",
+  "module": "lesen",
+  "name": "Goethe B1 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Neuer Job und neue Gewohnheiten im Büro",
+      "instruction": "Lesen Sie den Blogeintrag und die Aufgaben 1 bis 6 dazu. Sind die Aussagen richtig oder falsch?",
+      "passage": "Hallo liebe Leserinnen und Leser!\n\nNun arbeite ich schon seit genau drei Monaten in meiner neuen Firma im Bereich Marketing und ich habe das Gefühl, es ist an der Zeit für ein kleines Zwischenfazit. Der Start war ehrlich gesagt ziemlich stressig. Da ich zuvor in einem sehr kleinen Handwerksbetrieb angestellt war, musste ich mich erst einmal an die Strukturen eines größeren Unternehmens gewöhnen. Besonders die vielen digitalen Tools und die ständigen Online-Besprechungen haben mich in den ersten Wochen fast erschlagen.\n\nEin großes Thema bei uns im Büro ist das Thema Gesundheit. Unser Arbeitgeber legt großen Wert darauf, dass wir uns während der Arbeitszeit ausreichend bewegen. Deshalb gibt es seit Kurzem höhenverstellbare Schreibtische für alle Mitarbeiter. Ich habe anfangs gedacht, dass das nur ein kurzer Trend ist, aber ich nutze den Tisch mittlerweile jeden Tag mindestens eine Stunde im Stehen. Das tut dem Rücken wirklich gut und man fühlt sich am Nachmittag nicht mehr ganz so müde.\n\nAußerdem haben wir eine neue Initiative zum Thema Umweltschutz gestartet. Da viele Kollegen, genau wie ich, mit dem Auto zur Arbeit kommen, wollten wir den CO2-Ausstoß unseres Teams verringern. Seit letztem Monat bilden wir Fahrgemeinschaften. Das spart nicht nur Benzin und schont die Umwelt, sondern macht die morgendliche Fahrt durch den Berufsverkehr sogar unterhaltsam. Man kommt direkt ins Gespräch und startet ganz anders in den Arbeitstag.\n\nNatürlich läuft nicht immer alles perfekt. Manchmal wünsche ich mir die ruhigen Kaffeepausen aus meiner alten Firma zurück. Hier ist es oft so hektisch, dass man kaum Zeit hat, sich in Ruhe zu unterhalten. Aber im Großen und Ganzen bin ich sehr zufrieden mit meiner Entscheidung, den Job gewechselt zu haben. Die Aufgaben sind abwechslungsreich und das Team ist wirklich nett.\n\nWie sieht es bei euch aus? Habt ihr auch solche Veränderungen in eurem Arbeitsalltag erlebt oder arbeitet ihr noch ganz klassisch? Schreibt es mir unbedingt in die Kommentare!\n\nBis zum nächsten Mal,\nEure Sarah",
+      "items": [
+        {
+          "prompt": "Sarah arbeitet seit einem halben Jahr in der neuen Marketingfirma.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Im Text steht, dass sie seit genau drei Monaten in der neuen Firma arbeitet."
+        },
+        {
+          "prompt": "Der Wechsel von dem kleinen Betrieb in das größere Unternehmen fiel Sarah am Anfang leicht.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Sarah schreibt, dass der Start ziemlich stressig war und sie sich erst an die Strukturen gewöhnen musste."
+        },
+        {
+          "prompt": "Die neuen höhenverstellbaren Schreibtische werden von Sarah regelmäßig genutzt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Sarah erwähnt im Text, dass sie den Tisch mittlerweile jeden Tag mindestens eine Stunde im Stehen nutzt."
+        },
+        {
+          "prompt": "Die Fahrgemeinschaften wurden eingeführt, um den Benzinverbrauch und die Umweltbelastung zu senken.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Blogeintrag steht, dass dies Benzin spart und die Umwelt schont, da viele Kollegen mit dem Auto kommen."
+        },
+        {
+          "prompt": "Sarah vermisst manchmal die ruhigen Kaffeepausen aus ihrer früheren Arbeitsstelle.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Sarah schreibt im Text, dass sie sich manchmal die ruhigen Kaffeepausen aus ihrer alten Firma zurückwünscht."
+        },
+        {
+          "prompt": "Trotz der Hektik bereut Sarah ihren Jobwechsel überhaupt nicht.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Sarah zieht das Fazit, dass sie im Großen und Ganzen sehr zufrieden mit ihrer Entscheidung ist."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Neue Wege im Büro: Vier-Tage-Woche und Digitalisierung",
+      "instruction": "Lesen Sie die zwei Texte aus der Presse. Wählen Sie bei jeder Aufgabe a, b oder c.",
+      "passage": "Text 1: Die Diskussion um die Einführung einer Vier-Tage-Woche nimmt in deutschen Unternehmen weiter zu. Immer mehr Betriebe testen Modelle, bei denen die Mitarbeiter bei gleichem Gehalt an vier statt an fünf Tagen in der Woche arbeiten. Befürworter argumentieren, dass durch die verkürzte Arbeitszeit die Konzentration steigt und Fehlzeiten durch Stress spürbar sinken. Eine kürzlich durchgeführte Befragung unter Angestellten im Dienstleistungssektor zeigte, dass rund achtzig Prozent der Befragten eine solche Umstellung befürworten würden. Kritiker hingegen warnen vor organisatorischen Problemen, besonders in Branchen mit kontinuierlichem Kundenkontakt. Wenn Personal fehlt, könnten Fristen nicht eingehalten werden und die Belastung für die verbleibenden Mitarbeiter wachse paradoxerweise an. Dennoch zeigen sich viele Personalverantwortliche offen für Kompromisse, wie etwa flexible Arbeitszeitmodelle mit individuell vereinbarten Kernzeiten.\n\nText 2: Neben der Arbeitszeitgestaltung steht auch die Digitalisierung der internen Kommunikation im Fokus vieler Firmen. Die Einführung moderner Kollaborationstools soll den Austausch zwischen den Abteilungen erleichtern und den ungeliebten E-Mail-Berg verkleinern. Laut einer firmeninternen Untersuchung in einem mittelständischen Technologiebetrieb führte die Nutzung solcher Plattformen dazu, dass Informationen schneller fließen und Entscheidungen transparenter getroffen werden. Allerdings klagen einige Beschäftigte über eine permanente Erreichbarkeit und die Fülle an digitalen Nachrichten, die zu einer mentalen Erschöpfung führen kann. Experten raten deshalb dazu, klare Regeln für die digitale Kommunikation aufzustellen, wie etwa das Verbot von dienstlichen Nachrichten nach Feierabend. Nur so lasse sich die positive Wirkung der neuen Technologien langfristig für alle Beteiligten sicherstellen.",
+      "items": [
+        {
+          "prompt": "Was ist ein zentrales Argument der Befürworter der Vier-Tage-Woche?",
+          "options": [
+            "Die Angestellten erzielen ein deutlich höheres Einkommen.",
+            "Die Konzentration der Mitarbeiter verbessert sich.",
+            "Kundenkontakte lassen sich wesentlich einfacher planen."
+          ],
+          "answer": 1,
+          "why": "Im Text heißt es, dass Befürworter argumentieren, 'dass durch die verkürzte Arbeitszeit die Konzentration steigt'."
+        },
+        {
+          "prompt": "Welche Sorge äußern Kritiker der Vier-Tage-Woche?",
+          "options": [
+            "Dass wichtige Fristen aufgrund von Personalmangel nicht eingehalten werden können.",
+            "Dass die Unternehmen ihre Dienstleistungen komplett einstellen müssen.",
+            "Dass die Angestellten keine flexiblen Kernzeiten mehr nutzen dürfen."
+          ],
+          "answer": 0,
+          "why": "Kritiker warnen laut Text davor, dass 'Fristen nicht eingehalten werden' können, wenn Personal fehlt."
+        },
+        {
+          "prompt": "Wie stehen Personalverantwortliche dem Thema laut Text gegenüber?",
+          "options": [
+            "Sie lehnen jegliche Veränderungen grundsätzlich ab.",
+            "Sie fordern eine gesetzliche Verpflichtung für alle Betriebe.",
+            "Sie zeigen sich offen für Kompromisse."
+          ],
+          "answer": 2,
+          "why": "Der Text besagt, dass sich 'viele Personalverantwortliche offen für Kompromisse' zeigen."
+        },
+        {
+          "prompt": "Welches Ziel wird mit der Einführung moderner Kollaborationstools verfolgt?",
+          "options": [
+            "Der E-Mail-Berg soll verkleinert und der Austausch erleichtert werden.",
+            "Die Anzahl der abteilungsübergreifenden Meetings soll verdoppelt werden.",
+            "Die Mitarbeiter sollen komplett von der Büroarbeit befreit werden."
+          ],
+          "answer": 0,
+          "why": "Es wird im Text erklärt, dass solche Tools den Austausch erleichtern und 'den ungeliebten E-Mail-Berg verkleinern' sollen."
+        },
+        {
+          "prompt": "Was bemängeln einige Beschäftigte im Zusammenhang mit der digitalen Kommunikation?",
+          "options": [
+            "Dass wichtige Informationen zu spät verschickt werden.",
+            "Dass sie durch zu viele Nachrichten mental erschöpfen.",
+            "Dass technische Plattformen zu selten aktualisiert werden."
+          ],
+          "answer": 1,
+          "why": "Einige Beschäftigte klagen laut Text 'über eine permanente Erreichbarkeit und die Fülle an digitalen Nachrichten, die zu einer mentalen Erschöpfung führen kann'."
+        },
+        {
+          "prompt": "Was empfehlen Experten im Umgang mit digitaler Kommunikation?",
+          "options": [
+            "Die sofortige Abschaffung aller digitalen Plattformen.",
+            "Das Verfassen von Nachrichten nur noch in den Morgenstunden.",
+            "Das Aufstellen klarer Regeln wie ein Verbot von Nachrichten nach Feierabend."
+          ],
+          "answer": 2,
+          "why": "Experten raten dazu, 'klare Regeln für die digitale Kommunikation aufzustellen, wie etwa das Verbot von dienstlichen Nachrichten nach Feierabend'."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Orientierung im Alltag: Anzeigen und Angebote",
+      "instruction": "Lesen Sie die Situationen 1 bis 7 und die Anzeigen A bis J. Finden Sie für jede Situation die passende Anzeige. Jede Anzeige passt nur einmal. Für eine Situation gibt es keine passende Anzeige. Tragen Sie dann den entsprechenden Buchstaben in die Tabelle ein.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Bio-Gemüse direkt vom Bauernhof: Jeden Samstag von 8 bis 13 Uhr auf dem Marktplatz frische Produkte aus der Region."
+        },
+        {
+          "key": "b",
+          "text": "Fahrrad-Selbsthilfewerkstatt 'Kette & Speiche': Reparieren Sie Ihr Rad gemeinsam mit Profis. Werkzeug und Beratung kostenlos, Ersatzteile günstig."
+        },
+        {
+          "key": "c",
+          "text": "Volkshochschule: Kurs 'Digital fit im Alter' – Smartphone- und Computer-Grundlagen für Einsteiger ab 60 Jahren. Start nächsten Dienstag."
+        },
+        {
+          "key": "d",
+          "text": "Umweltinitiative sucht Freiwillige für Baumpflanzaktion im Stadtwald am kommenden Wochenende. Handschuhe bitte mitbringen."
+        },
+        {
+          "key": "e",
+          "text": "Gesundheitszentrum Balance: Kostenloser Vortrag zum Thema 'Gesunder Schlaf und Ernährung im Schichtdienst' am Mittwochabend."
+        },
+        {
+          "key": "f",
+          "text": "Stadtbibliothek modernisiert: Ab sofort können E-Books und digitale Zeitschriften rund um die Uhr kostenlos mit dem Bibliotheksausweis ausgeliehen werden."
+        },
+        {
+          "key": "g",
+          "text": "Jobbörse für Handwerk und Technik: Informieren Sie sich über Umschulungen und Ausbildungsplätze am Freitag im Berufsinformationszentrum."
+        },
+        {
+          "key": "h",
+          "text": "Café Leselust sucht studentische Aushilfe für den Wochenenddienst im Service. Erfahrung im Gastronomiebereich von Vorteil."
+        },
+        {
+          "key": "i",
+          "text": "Nachbarschaftshilfe e.V. vermittelt kostenlose Einkaufshelfer für ältere oder kranke Menschen im Stadtteil."
+        },
+        {
+          "key": "j",
+          "text": "Tierschutzverein lädt zum Tag der offenen Tür ein: Lernen Sie unsere Tierheimbewohner kennen und informieren Sie sich über artgerechte Haltung."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Jemand möchte lernen, wie man den Reifen am eigenen Fahrrad selbst flickt und sucht professionelle Unterstützung.",
+          "answer": "b",
+          "why": "In Anzeige b wird die 'Fahrrad-Selbsthilfewerkstatt' angeboten, wo man das Rad 'gemeinsam mit Profis' reparieren kann."
+        },
+        {
+          "prompt": "Eine ältere Person möchte einen Kurs besuchen, um den sicheren Umgang mit dem Smartphone zu erlernen.",
+          "answer": "c",
+          "why": "Anzeige c bewirbt den Kurs 'Digital fit im Alter' mit 'Smartphone- und Computer-Grundlagen für Einsteiger ab 60 Jahren'."
+        },
+        {
+          "prompt": "Jemand arbeitet im Schichtdienst und sucht nach Tipps für eine bessere Gesundheit und erholsamen Schlaf.",
+          "answer": "e",
+          "why": "Anzeige e bietet einen 'Kostenlosen Vortrag zum Thema 'Gesunder Schlaf und Ernährung im Schichtdienst'' an."
+        },
+        {
+          "prompt": "Eine Person möchte am Wochenende etwas für die Umwelt tun und aktiv bei einer Baumpflanzaktion mithelfen.",
+          "answer": "d",
+          "why": "In Anzeige d sucht eine 'Umweltinitiative' Freiwillige für eine 'Baumpflanzaktion im Stadtwald am kommenden Wochenende'."
+        },
+        {
+          "prompt": "Jemand möchte sonntags gemütlich zu Hause digitale Medien und Zeitschriften lesen, ohne das Haus zu verlassen.",
+          "answer": "f",
+          "why": "Anzeige f informiert darüber, dass man 'E-Books und digitale Zeitschriften rund um die Uhr kostenlos' ausleihen kann."
+        },
+        {
+          "prompt": "Eine Person sucht nach frischen Lebensmitteln aus der unmittelbaren Umgebung, die direkt auf einem Markt verkauft werden.",
+          "answer": "a",
+          "why": "Anzeige a bietet 'Bio-Gemüse direkt vom Bauernhof' jeden Samstag auf dem Marktplatz an."
+        },
+        {
+          "prompt": "Jemand sucht nach einer Arbeitsstelle im handwerklichen Bereich und möchte sich über freie Ausbildungsplätze informieren.",
+          "answer": "g",
+          "why": "Anzeige g ist eine 'Jobbörse für Handwerk und Technik' zur Information über Ausbildungsplätze."
+        }
+      ]
+    },
+    "L4": {
+      "title": "Künstliche Intelligenz im Arbeitsalltag",
+      "instruction": "Lesen Sie den Text und die Aussagen dazu. Wählen Sie: Ist die Person für den Einsatz von KI am Arbeitsplatz (Ja) oder dagegen (Nein)?",
+      "passage": "Das Thema Künstliche Intelligenz (KI) im Berufsleben sorgt derzeit für intensive Diskussionen. Immer mehr Unternehmen setzen auf automatisierte Prozesse und smarte Software, um die Effizienz zu steigern.\n\nStefan (45), Projektleiter in einer Marketingagentur, sieht die Entwicklung sehr kritisch: „Wir verbringen ohnehin schon zu viel Zeit vor Bildschirmen. Wenn jetzt auch noch kreative Prozesse von Maschinen übernommen werden, verlieren wir die menschliche Note. KI kann zwar schnell Daten analysieren, aber sie hat kein echtes Einfühlungsvermögen für unsere Kundschaft. Ich befürchte, dass langfristig viele Arbeitsplätze im kreativen Sektor einfach wegrationalisiert werden.“\n\nMartina (38), Softwareentwicklerin, ist hingegen begeistert von den neuen Möglichkeiten: „KI ist für mich keine Konkurrenz, sondern eine großartige Unterstützung. Lästige Routineaufgaben, wie das Testen von Code oder das Schreiben von Standarddokumentationen, erledigt das Tool in Sekundenschnelle. Das gibt mir endlich mehr Freiräume für komplexe und wirklich spannende Programmieraufgaben. Wer diese Technologie klug nutzt, wird produktiver und zufriedener arbeiten.“\n\nThomas (52), Sachbearbeiter in einer Versicherungsgesellschaft, ist eher zwiegespalten, tendiert aber zur Skepsis: „Einerseits helfen uns die digitalen Assistenten bei der Bewältigung der großen Datenmengen. Andererseits steigen der Druck und das Tempo im Büro enorm. Man muss ständig neue Tools lernen und kommt kaum noch mit. Außerdem mache ich mir Sorgen um den Datenschutz und die Sicherheit unserer internen Kundendaten.“\n\nLisa (29), Gründerin eines Start-ups, plädiert klar für den Einsatz: „Ohne Künstliche Intelligenz hätten wir als kleines Team niemals diese enorme Marktpräsenz erreichen können. KI ermöglicht es uns, rund um die Uhr Kundenservice anzubieten und Trends blitzschnell zu erkennen. Wer sich diesen modernen Werkzeugen verschließt, verliert den Anschluss an die internationale Konkurrenz.“",
+      "items": [
+        {
+          "prompt": "Stefan befürchtet, dass der Einsatz von KI im kreativen Sektor zu Arbeitsplatzverlusten führen könnte.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 0,
+          "why": "Stefan sagt im Text: „Ich befürchte, dass langfristig viele Arbeitsplätze im kreativen Sektor einfach wegrationalisiert werden.“"
+        },
+        {
+          "prompt": "Martina empfindet KI-Tools als eine starke Konkurrenz zu ihrer eigenen Arbeitskraft.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 1,
+          "why": "Martina äußert im Text explizit: „KI ist für mich keine Konkurrenz, sondern eine großartige Unterstützung.“"
+        },
+        {
+          "prompt": "Thomas sorgt sich unter anderem um den Datenschutz und die Sicherheit der Kundendaten.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 0,
+          "why": "Thomas erwähnt im Text: „Außerdem mache ich mir Sorgen um den Datenschutz und die Sicherheit unserer internen Kundendaten.“"
+        },
+        {
+          "prompt": "Lisa ist der Ansicht, dass Unternehmen ohne den Einsatz von KI konkurrenzfähig bleiben können.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 1,
+          "why": "Lisa sagt genau das Gegenteil: „Wer sich diesen modernen Werkzeugen verschließt, verliert den Anschluss an die internationale Konkurrenz.“"
+        },
+        {
+          "prompt": "Stefan kritisiert, dass Maschinen kein echtes Einfühlungsvermögen für Kundinnen und Kunden besitzen.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 0,
+          "why": "Stefan erklärt im Text, dass KI zwar Daten analysieren kann, aber „kein echtes Einfühlungsvermögen für unsere Kundschaft“ hat."
+        },
+        {
+          "prompt": "Martina gibt an, dass durch die Automatisierung mehr Freiräume für komplexe Aufgaben entstehen.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 0,
+          "why": "Martina begründet ihre Haltung im Text mit den Worten: „Das gibt mir endlich mehr Freiräume für komplexe und wirklich spannende Programmieraufgaben.“"
+        },
+        {
+          "prompt": "Lisa argumentiert, dass KI ihrem Start-up dabei geholfen hat, einen besseren Kundenservice anzubieten.",
+          "options": [
+            "Ja",
+            "Nein"
+          ],
+          "answer": 0,
+          "why": "Lisa betont im Text, dass KI es ihrem Team ermöglicht, „rund um die Uhr Kundenservice anzubieten“."
+        }
+      ]
+    },
+    "L5": {
+      "title": "Hausordnung für das Gemeinschaftszentrum „Treffpunkt Linde“",
+      "instruction": "Lesen Sie den Text und wählen Sie für die Aufgaben 27 bis 30 die richtige Lösung (a, b oder c).",
+      "passage": "Herzlich willkommen im Gemeinschaftszentrum „Treffpunkt Linde“. Damit sich alle Besucherinnen und Besucher wohlfühlen und ein reibungsloser Ablauf gewährleistet ist, gilt für alle Räume die folgende Hausordnung.\n\nAllgemeines Verhalten\nAlle Personen im Gebäude verhalten sich so, dass andere weder gestört noch gefährdet werden. Auf Sauberkeit ist im gesamten Haus zu achten. Müll ist ausschließlich in den dafür vorgesehenen Eimern und Containern nach den Regeln der Mülltrennung zu entsorgen. Rauchen ist im gesamten Gebäude strengstens verboten; dies gilt auch für E-Zigaretten. Das Rauchen ist nur im Außenbereich im ausgewiesenen Bereich hinter dem Hauptgebäude gestattet.\n\nNutzung der Gemeinschaftsräume und Küche\nDie gemeinschaftlich genutzten Räume sowie die Küche müssen nach jeder Veranstaltung oder Aktivität in einem ordentlichen Zustand hinterlassen werden. Geschirr ist zu spülen und an seinen Platz zurückzuräumen. Wer die Küche nutzt, wischt nach dem Kochen die Arbeitsflächen ab. Elektrogeräte wie Kaffeemaschinen oder Herdplatten sind nach dem Gebrauch unbedingt vollständig auszuschalten und vom Strom zu trennen, um Brandgefahren zu vermeiden.\n\nRuhezeiten\nIm Interesse aller Nachbarn und Gruppen, die im Zentrum arbeiten oder lernen, gelten im „Treffpunkt Linde“ feste Ruhezeiten. Ab 22:00 Uhr muss im gesamten Gebäude sowie im direkten Außenbereich Zimmerlautstärke eingehalten werden. Musikanlagen dürfen nach dieser Uhrzeit nicht mehr im Freien betrieben werden. Veranstaltungen, die länger dauern, müssen vorher angemeldet und genehmigt werden.\n\nFundsachen und Haftung\nGegenstände, die im Zentrum gefunden werden, sind im Büro im Erdgeschoss abzugeben. Für persönliche Wertsachen übernimmt das Gemeinschaftszentrum keine Haftung. Bei Beschädigungen am Inventar oder am Gebäude haftet die Person oder Gruppe, die den Schaden verursacht hat. Schäden müssen sofort der Leitung gemeldet werden.",
+      "items": [
+        {
+          "prompt": "Wo ist das Rauchen im „Treffpunkt Linde“ erlaubt?",
+          "options": [
+            "Im gesamten Gebäude, wenn man Rücksicht auf andere nimmt.",
+            "Nur im Außenbereich hinter dem Haupt.",
+            "Überall, solange man keine E-Zigaretten nutzt."
+          ],
+          "answer": 1,
+          "why": "Im Text steht ausdrücklich: „Das Rauchen ist nur im Außenbereich im ausgewiesenen Bereich hinter dem Hauptgebäude gestattet.“"
+        },
+        {
+          "prompt": "Was muss man nach der Benutzung der Küche unbedingt tun?",
+          "options": [
+            "Elektrogeräte ausschalten und vom Strom trennen.",
+            "Das Geschirr am nächsten Tag abholen.",
+            "Die Arbeitsflächen von einer Reinigungsfirma putzen lassen."
+          ],
+          "answer": 0,
+          "why": "Der Text besagt: „Elektrogeräte wie Kaffeemaschinen oder Herdplatten sind nach dem Gebrauch unbedingt vollständig auszuschalten und vom Strom zu trennen“."
+        },
+        {
+          "prompt": "Welche Regel gilt für die Zeit ab 22:00 Uhr?",
+          "options": [
+            "Das Zentrum muss komplett geschlossen und verlassen werden.",
+            "Es darf im Gebäude und im Außenbereich nur noch in Zimmerlautstärke gesprochen und gefeiert werden.",
+            "Musikanlagen dürfen im Freien lauter gedreht werden."
+          ],
+          "answer": 1,
+          "why": "Laut Text gilt: „Ab 22:00 Uhr muss im gesamten Gebäude sowie im direkten Außenbereich Zimmerlautstärke eingehalten werden.“"
+        },
+        {
+          "prompt": "Wie soll man mit gefundenen Gegenständen umgehen?",
+          "options": [
+            "Man behält sie, bis der Besitzer sich meldet.",
+            "Man wirft sie in den Müllcontainer.",
+            "Man gibt sie im Büro im Erdgeschoss ab."
+          ],
+          "answer": 2,
+          "why": "Im Text steht klar: „Gegenstände, die im Zentrum gefunden werden, sind im Büro im Erdgeschoss abzugeben.“"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:17:27.823Z",
+  "exam": "goethe",
+  "level": "A2",
+  "module": "hoeren",
+  "name": "Goethe A2 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1",
+      "instruction": "Hören Sie fünf kurze Texte. Sie hören jeden Text zweimal. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Ansage",
+            "text": "Text 1. Guten Tag, hier ist die Zahnarztpraxis Dr. Schmidt. Unsere Praxis ist wegen Urlaub vom 10. bis zum 21. August geschlossen. In dringenden Notfällen wenden Sie sich bitte an den Zahnärztlichen Notdienst unter der Nummer 0180-555-24. Ab dem 24. August sind wir wieder wie gewohnt für Sie da."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text 2. Achtung, eine Durchsage für die Fahrgäste des Regionalexpress 4 nach Hamburg Hauptbahnhof. Wegen einer kurzfristigen Signalstörung verzögert sich die Abfahrt dieses Zuges um voraussichtlich zwanzig Minuten. Wir bitten um Ihr Verständnis."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text 3. Hallo Mama, hier ist Jonas. Du, ich stehe gerade im Supermarkt und wollte fragen, ob wir noch Milch brauchen? Ah, ich sehe gerade, die Milch ist im Angebot, ich nehme einfach zwei Liter mit. Bis später!"
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text 4. Guten Tag Frau Weber, hier spricht Thomas Klein vom Fitnessstudio AktivFit. Sie hatten nachgefragt wegen unseres Yoga-Kurses am Dienstagabend. Leider sind alle Plätze für diesen Kurs bereits belegt. Wir können Sie aber gerne auf die Warteliste setzen."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text 5. Guten Morgen, liebe Hörerinnen und Hörer, hier ist das Wetter für das Wochenende. Am Samstag scheint im ganzen Land die Sonne und es wird bis zu 25 Grad warm. Nur am Sonntag ziehen am Nachmittag ein paar Wolken auf, es bleibt aber meist trocken."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was erfahren Sie in der Nachricht der Zahnarztpraxis?",
+          "options": [
+            "Die Praxis schließt bald wegen Urlaub.",
+            "Die Praxis hat neue Öffnungszeiten.",
+            "Die Praxis zieht in eine andere Stadt um."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es: Unsere Praxis ist wegen Urlaub vom 10. bis zum 21. August geschlossen."
+        },
+        {
+          "prompt": "Warum hat der Zug Verspätung?",
+          "options": [
+            "Wegen schlechten Wetters.",
+            "Wegen einer Signalstörung.",
+            "Wegen Bauarbeiten an den Gleisen."
+          ],
+          "answer": 1,
+          "why": "In der Durchsage wird eine Signalstörung als Grund genannt."
+        },
+        {
+          "prompt": "Was kauft Jonas im Supermarkt ein?",
+          "options": [
+            "Zwei Liter Milch",
+            "Einen Liter Orangensaft",
+            "Zwei Flaschen Wasser"
+          ],
+          "answer": 0,
+          "why": "Jonas sagt: Ich nehme einfach zwei Liter mit."
+        },
+        {
+          "prompt": "Was teilt der Anrufer dem Fitnessstudio mit?",
+          "options": [
+            "Frau Weber kann sofort am Yoga-Kurs teilnehmen.",
+            "Der Yoga-Kurs findet am Mittwoch statt.",
+            "Der Yoga-Kurs ist zurzeit komplett ausgebucht."
+          ],
+          "answer": 2,
+          "why": "Der Anrufer erklärt: Leider sind alle Plätze für diesen Kurs bereits belegt."
+        },
+        {
+          "prompt": "Wie wird das Wetter am Samstag?",
+          "options": [
+            "Es regnet den ganzen Tag.",
+            "Die Sonne scheint und es wird warm.",
+            "Es ist bewölkt und windig."
+          ],
+          "answer": 1,
+          "why": "Im Wetterbericht heißt es: Am Samstag scheint im ganzen Land die Sonne und es wird bis zu 25 Grad warm."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Hören Teil 2: Freizeitaktivitäten am Wochenende",
+      "instruction": "Hören Sie das Gespräch einmal. Welcher Buchstabe passt zu welcher Person? Wählen Sie für jede Aufgabe den richtigen Buchstaben von a bis i. Sie können jeden Buchstaben nur einmal verwenden.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "ins Kino gehen"
+        },
+        {
+          "key": "b",
+          "text": "eine Fahrradtour machen"
+        },
+        {
+          "key": "c",
+          "text": "im Park grillen"
+        },
+        {
+          "key": "d",
+          "text": "ins Schwimmbad gehen"
+        },
+        {
+          "key": "e",
+          "text": "kochen und Freunde einladen"
+        },
+        {
+          "key": "f",
+          "text": "auf den Markt gehen"
+        },
+        {
+          "key": "g",
+          "text": "im Garten arbeiten"
+        },
+        {
+          "key": "h",
+          "text": "ein Museum besuchen"
+        },
+        {
+          "key": "i",
+          "text": "in den Bergen wandern"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Markus",
+          "answer": "b",
+          "why": "Markus sagt im Gespräch: 'Am Samstag nehme ich mein Rad und fahre raus an den See.'"
+        },
+        {
+          "prompt": "Julia",
+          "answer": "e",
+          "why": "Julia erklärt: 'Ich stehe am Wochenende gerne in der Küche und koche etwas Schönes für meine Gäste.'"
+        },
+        {
+          "prompt": "Stefan",
+          "answer": "a",
+          "why": "Stefan meint: 'Abends hole ich mir Karten für den neuen Actionfilm im Kino.'"
+        },
+        {
+          "prompt": "Anna",
+          "answer": "h",
+          "why": "Anna freut sich auf das Wochenende: 'Ich schaue mir die neue Ausstellung in der Stadtgalerie an.'"
+        },
+        {
+          "prompt": "Tobias",
+          "answer": "c",
+          "why": "Tobias plant: 'Wenn das Wetter gut ist, machen wir mit allen Nachbarn ein großes Essen draußen im Park.'"
+        }
+      ]
+    },
+    "H3": {
+      "title": "Hören Teil 3: Fünf kurze Gespräche",
+      "instruction": "Hören Sie fünf kurze Gespräche. Zu jedem Gespräch gibt es eine Aufgabe. Wählen Sie die richtige Lösung: a, b oder c. Sie hören jeden Text zweimal.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Ansager",
+            "text": "Hören Sie nun fünf kurze Gespräche. Sie hören jeden Text zweimal. Zu jedem Gespräch gibt es eine Aufgabe. Lesen Sie zuerst die Aufgaben. Hören wir nun Beispiel 1."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Entschuldigung, wissen Sie, wann der nächste Bus zum Hauptbahnhof fährt?"
+          },
+          {
+            "speaker": "Mann",
+            "text": "Ja, der fährt normalerweise um Viertel nach zehn. Aber heute hat er leider zehn Minuten Verspätung."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Ach so, gut zu wissen. Dann warte ich noch einen Moment. Vielen Dank!"
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Ende von Beispiel 1. Hören wir nun Gespräch Nummer 1."
+          },
+          {
+            "speaker": "Kunde",
+            "text": "Guten Tag, ich möchte diesen Pullover umtauschen. Er ist mir leider viel zu groß."
+          },
+          {
+            "speaker": "Verkäuferin",
+            "text": "Guten Tag. Haben Sie denn den Kassenbon noch dabei?"
+          },
+          {
+            "speaker": "Kunde",
+            "text": "Ja, hier bitte. Ich habe ihn erst gestern gekauft."
+          },
+          {
+            "speaker": "Verkäuferin",
+            "text": "Das ist kein Problem. Möchten Sie ihn in Größe M haben oder lieber das Geld zurück?"
+          },
+          {
+            "speaker": "Kunde",
+            "text": "Ich hätte gerne Größe M, der Pullover gefällt mir nämliche Farbe her sehr gut."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Gespräch Nummer 2."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Du, Jonas, wir müssen für Samstag noch einkaufen. Was brauchen wir denn alles für das Abendessen mit Anna und Mark?"
+          },
+          {
+            "speaker": "Mann",
+            "text": "Also, Tomaten und Salat haben wir noch genug im Kühlschrank. Aber wir brauchen unbedingt frisches Fleisch und Gemüse für die Suppe."
+          },
+          {
+            "speaker": "Frau",
+            "text": "Stimmt. Und vergiss nicht den Apfelkuchen zum Nachtisch beim Bäcker zu bestellen."
+          },
+          {
+            "speaker": "Mann",
+            "text": "Keine Sorge, das mache ich morgen früh direkt auf dem Weg zur Arbeit."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Gespräch Nummer 3."
+          },
+          {
+            "speaker": "Patient",
+            "text": "Guten Tag, Frau Doktor. Ich habe seit gestern starke Kopfschmerzen und Husten."
+          },
+          {
+            "speaker": "Ärztin",
+            "text": "Guten Tag. Haben Sie auch Fieber gemessen?"
+          },
+          {
+            "speaker": "Patient",
+            "text": "Ja, heute Morgen hatte ich 38,5 Grad."
+          },
+          {
+            "speaker": "Ärztin",
+            "text": "Das klingt nach einer Grippe. Sie sollten sich auf jeden Fall bis Freitag komplett ausruhen. Ich schreibe Sie krank."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Gespräch Nummer 4."
+          },
+          {
+            "speaker": "Kollegin",
+            "text": "Sag mal, Lukas, fährst du morgen mit der Bahn ins Büro oder nimmst du das Auto?"
+          },
+          {
+            "speaker": "Kollege",
+            "text": "Normalerweise nehme ich immer den Zug, aber morgen streiken die Bahnen ja leider ganztägig."
+          },
+          {
+            "speaker": "Kollegin",
+            "text": "Ach, stimmt ja! Das habe ich ganz vergessen im Radio zu hören."
+          },
+          {
+            "speaker": "Kollege",
+            "text": "Ja, ich fahre deshalb mit dem Fahrrad, das Wetter soll ja ganz gut werden."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Gespräch Nummer 5."
+          },
+          {
+            "speaker": "Rezeptionist",
+            "text": "Guten Tag, Hotel am Park, was kann ich für Sie tun?"
+          },
+          {
+            "speaker": "Anrufer",
+            "text": "Guten Tag, ich möchte gerne ein Einzelzimmer für nächstes Wochenende reservieren, von Freitag bis Sonntag."
+          },
+          {
+            "speaker": "Rezeptionist",
+            "text": "Da haben wir leider kein Einzelzimmer mehr frei. Ich könnte Ihnen aber ein Doppelzimmer zur Alleinbenutzung anbieten."
+          },
+          {
+            "speaker": "Anrufer",
+            "text": "Hm, gut, das nehme ich. Was kostet das Zimmer pro Nacht inklusive Frühstück?"
+          },
+          {
+            "speaker": "Rezeptionist",
+            "text": "Das macht 90 Euro pro Nacht."
+          },
+          {
+            "speaker": "Anrufer",
+            "text": "Das ist in Ordnung, vielen Dank."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was möchte der Kunde im Geschäft tun?",
+          "options": [
+            "Er möchte das Geld zurückbekommen.",
+            "Er möchte den Pullover in einer anderen Größe.",
+            "Er möchte einen neuen Pullover kaufen."
+          ],
+          "answer": 1,
+          "why": "Der Kunde sagt: 'Ich hätte gerne Größe M', nachdem er erklärt hat, dass der Pullover zu groß ist."
+        },
+        {
+          "prompt": "Was müssen die beiden für Samstag noch kaufen?",
+          "options": [
+            "Tomaten und grünen Salat.",
+            "Fleisch und Gemüse für die Suppe.",
+            "Einen Apfelkuchen vom Supermarkt."
+          ],
+          "answer": 1,
+          "why": "Der Mann sagt, sie brauchen unbedingt frisches Fleisch und Gemüse für die Suppe."
+        },
+        {
+          "prompt": "Was soll der Patient tun?",
+          "options": [
+            "Bis Freitag im Bett bleiben und sich ausruhen.",
+            "Sofut ins Krankenhaus gehen.",
+            "Nur am Wochenende arbeiten."
+          ],
+          "answer": 0,
+          "why": "Die Ärztin sagt: 'Sie sollten sich auf jeden Fall bis Freitag komplett ausruhen.'"
+        },
+        {
+          "prompt": "Wie kommt Lukas morgen ins Büro?",
+          "options": [
+            "Mit dem Zug.",
+            "Mit dem Auto.",
+            "Mit dem Fahrrad."
+          ],
+          "answer": 2,
+          "why": "Lukas sagt, wegen des Bahnstreiks fährt er morgen mit dem Fahrrad."
+        },
+        {
+          "prompt": "Was für ein Zimmer bucht der Anrufer?",
+          "options": [
+            "Ein normales Einzelzimmer.",
+            "Ein Doppelzimmer zur Alleinbenutzung.",
+            "Ein Zimmer ohne Frühstück."
+          ],
+          "answer": 1,
+          "why": "Der Rezeptionist bietet ein Doppelzimmer zur Alleinbenutzung an und der Anrufer antwortet: 'Das nehme ich.'"
+        }
+      ]
+    },
+    "H4": {
+      "title": "Interview über einen ungewöhnlichen Beruf",
+      "instruction": "Lesen Sie die Aufgaben 1 bis 5. Hören Sie nun das Interview. Entscheiden Sie beim Hören, ob die Aussagen Richtig oder Falsch sind.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "text": "Herzlich willkommen zu unserer Sendung „Berufe von heute“. Heute zu Gast im Studio ist Jonas Weber. Herr Weber arbeitet als professioneller Spieletester. Herr Weber, was genau macht man eigentlich den ganzen Tag als Spieletester?"
+          },
+          {
+            "speaker": "Jonas Weber",
+            "text": "Guten Tag! Viele denken ja, dass wir einfach nur den ganzen Tag spielen und Spaß haben. Aber das stimmt so nicht ganz. Natürlich spielen wir viel, aber unsere Hauptaufgabe ist es, Fehler im Spiel zu finden. Wenn ein Computerspiel neu ist, hat es oft noch technische Probleme, die man Bugs nennt."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Ah, verstehe. Und wie sind Sie zu diesem Beruf gekommen? Haben Sie Informatik studiert?"
+          },
+          {
+            "speaker": "Jonas Weber",
+            "text": "Überhaupt nicht. Ich habe nach der Schule eine Ausbildung zum Bürokaufmann gemacht. Aber ich habe schon als Kind jede freie Minute mit Computerspielen verbracht. Vor fünf Jahren habe ich dann durch Zufall im Internet eine Stellenanzeige von einer kleinen Spielefirma in Hamburg gesehen und mich beworben."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Muss man denn bestimmte Voraussetzungen mitbringen, wenn man diesen Beruf machen möchte?"
+          },
+          {
+            "speaker": "Jonas Weber",
+            "text": "Man braucht vor allem sehr viel Geduld. Manchmal muss man nämlich genau dieselbe Stelle in einem Spiel zwanzigmal spielen, um herauszufinden, warum das Programm abstürzt. Außerdem ist Teamarbeit wichtig, weil wir eng mit den Programmierern zusammenarbeiten."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Und arbeiten Sie im Büro oder kann man das auch von zu Hause aus machen?"
+          },
+          {
+            "speaker": "Jonas Weber",
+            "text": "Früher waren wir alle zusammen im Büro. Seit der Pandemie arbeiten wir aber größtenteils im Homeoffice. Das finde ich persönlich sehr praktisch, weil ich mir meine Arbeitszeit dadurch ein bisschen freier einteilen kann."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Vielen Dank für diese spannenden Einblicke, Herr Weber."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Jonas Weber verbringt seine Arbeitszeit ausschließlich damit, Computerspiele zu spielen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, denn laut Text ist die Hauptaufgabe, Fehler im Spiel zu finden: „Natürlich spielen wir viel, aber unsere Hauptaufgabe ist es, Fehler im Spiel zu finden.“"
+        },
+        {
+          "prompt": "Herr Weber hat vor seiner Tätigkeit als Spieletester Informatik studiert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da er eine Ausbildung zum Bürokaufmann gemacht hat: „Ich habe nach der Schule eine Ausbildung zum Bürokaufmann gemacht.“"
+        },
+        {
+          "prompt": "Für den Beruf als Spieletester ist es wichtig, geduldig zu sein.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, denn Jonas Weber sagt: „Man braucht vor allem sehr viel Geduld.“"
+        },
+        {
+          "prompt": "Jonas Weber arbeitet seit Beginn seiner Karriere nur noch im Homeoffice.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Die Aussage ist falsch, da früher im Büro gearbeitet wurde: „Früher waren wir alle zusammen im Büro. Seit der Pandemie arbeiten wir aber größtenteils im Homeoffice.“"
+        },
+        {
+          "prompt": "Durch die Arbeit im Homeoffice kann sich Jonas Weber seine Arbeitszeit freier einteilen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Aussage ist richtig, was er mit den Worten bestätigt: „Das finde ich persönlich sehr praktisch, weil ich mir meine Arbeitszeit dadurch ein bisschen freier einteilen kann.“"
+        }
+      ]
+    }
+  }
+}

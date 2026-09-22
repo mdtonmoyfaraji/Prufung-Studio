@@ -1,0 +1,47 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:17:28.513Z",
+  "exam": "goethe",
+  "level": "A2",
+  "module": "sprechen",
+  "name": "Goethe A2 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Sprechen Teil 1: Informationen zur Person",
+      "instruction": "Stellen Sie einander Fragen zu den Stichwortkarten und antworten Sie auf die Fragen Ihres Partners oder Ihrer Partnerin.",
+      "prompt": "Sie haben eine neue Bekannte auf einer Party kennengelernt. Sprechen Sie über Ihre Hobbys und Ihre Freizeitaktivitäten.",
+      "bullets": [
+        "Hobbys am Wochenende",
+        "Lieblingssport",
+        "Buch oder Film"
+      ],
+      "seconds": 120,
+      "tips": "Hören Sie gut zu und stellen Sie auch Gegenfragen, um das Gespräch am Laufen zu halten."
+    },
+    "P2": {
+      "title": "Mein Wochenende",
+      "instruction": "Erzählen Sie etwas über sich und Ihr Leben. Nutzen Sie dazu die Stichpunkte als Hilfestellung.",
+      "prompt": "Erzählen Sie von Ihrem letzten Wochenende. Was haben Sie gemacht und wie war es?",
+      "bullets": [
+        "Was machen Sie normalerweise am Wochenende?",
+        "Was haben Sie am letzten Wochenende gemacht?",
+        "Mit wem waren Sie zusammen?"
+      ],
+      "seconds": 150,
+      "tips": "Sprechen Sie frei und machen Sie kurze Pausen zwischen den Sätzen."
+    },
+    "P3": {
+      "title": "Gemeinsam etwas planen",
+      "instruction": "Sprechen Sie mit Ihrem Gesprächspartner / Ihrer Gesprächspartnerin über eine gemeinsame Aktivität. Planen Sie zusammen und einigen Sie sich auf einen Vorschlag.",
+      "prompt": "Ein guter Freund von Ihnen hat bald Geburtstag und Sie möchten zusammen mit Ihrem Gesprächspartner eine Überraschungsparty für ihn organisieren. Überlegen Sie, was Sie alles dafür brauchen.",
+      "bullets": [
+        "Wann und wo soll die Party stattfinden?",
+        "Was essen und trinken wir?",
+        "Welche Geschenke kaufen wir?"
+      ],
+      "seconds": 180,
+      "tips": "Reagieren Sie auf die Ideen Ihres Partners und machen Sie eigene Vorschläge."
+    }
+  }
+}

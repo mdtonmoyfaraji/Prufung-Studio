@@ -1,0 +1,36 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:17:28.162Z",
+  "exam": "goethe",
+  "level": "A2",
+  "module": "schreiben",
+  "name": "Goethe A2 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Einladung zum Geburtstag",
+      "instruction": "Schreiben Sie eine kurze informelle Mitteilung. Beantworten Sie in Ihrem Text alle drei Leitpunkte.",
+      "prompt": "Ihre Freundin Anna hat Ihnen geschrieben und Sie zu ihrer Geburtstagsfeier am nächsten Samstag eingeladen. Sie können leider nicht kommen, weil Sie arbeiten müssen. Schreiben Sie an Anna.",
+      "bullets": [
+        "Grund für das Schreiben (Absage)",
+        "Entschuldigung und Erklärung",
+        "Vorschlag für ein Treffen in der nächsten Woche"
+      ],
+      "words": 30,
+      "tips": "Schreiben Sie zu jedem der drei Leitpunkte mindestens einen Satz und vergessen Sie nicht die Anrede und den Gruß am Ende."
+    },
+    "S2": {
+      "title": "Deutschkurs absagen",
+      "instruction": "Schreiben Sie eine E-Mail an Ihre Kursleiterin, Frau Weber. Schreiben Sie zu allen vier Punkten (ca. 40 Wörter).",
+      "prompt": "Sie können heute leider nicht zum Deutschkurs kommen, weil Sie einen Arzttermin haben. Schreiben Sie deshalb eine kurze Nachricht an Ihre Lehrerin Frau Weber.",
+      "bullets": [
+        "Grund für das Fehlen nennen",
+        "Entschuldigung aussprechen",
+        "Nach den Hausaufgaben fragen",
+        "Bescheid geben, wann Sie wieder kommen"
+      ],
+      "words": 40,
+      "tips": "Schreiben Sie zu jedem der vier Punkte mindestens einen kurzen Satz."
+    }
+  }
+}

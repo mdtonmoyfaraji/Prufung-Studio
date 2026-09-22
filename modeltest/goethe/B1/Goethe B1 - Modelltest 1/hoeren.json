@@ -1,0 +1,381 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:20:10.106Z",
+  "exam": "goethe",
+  "level": "B1",
+  "module": "hoeren",
+  "name": "Goethe B1 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1: Fünf kurze Texte",
+      "instruction": "Sie hören fünf kurze Texte zweimal. Zu jedem Text lösen Sie zwei Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Sprecherin",
+            "text": "Text 1. Guten Tag, liebe Hörerinnen und Hörer von Radio Aktiv. Haben Sie schon mal daran gedacht, Ihren Arbeitsweg umweltfreundlicher zu gestalten? Ab dem nächsten Monat bietet unsere Stadt ein neues Projekt an: Wer mindestens drei Monate lang mit dem Rad zur Arbeit fährt, bekommt einen Zuschuss für die Fahrradreparatur und nimmt automatisch an einer Verlosung teil. Zu gewinnen gibt es hochwertige Regensachen und Fahrradtaschen. Machen Sie mit und tun Sie etwas für Ihre Gesundheit und die Umwelt!"
+          },
+          {
+            "speaker": "Sprecher",
+            "text": "Text 2. Hallo Lena, hier ist Jonas. Sag mal, erinnerst du dich an den Computerkurs für Senioren im Bürgerzentrum, den wir im letzten Jahr organisiert haben? Letzte Woche lief die Anmeldung für den neuen Kurs im Herbst, und wir haben innerhalb von nur zwei Tagen über fünfzig Anmeldungen erhalten! Das ist unglaublich. Weil so viele ältere Menschen teilnehmen möchten, brauchen wir unbedingt noch mehr ehrenamtliche Helfer, die sonntags beim Erklären helfen können. Ruf mich doch bitte bald zurück, ob du Zeit hast."
+          },
+          {
+            "speaker": "Sprecherin",
+            "text": "Text 3. Und nun zu unserem Freizeittipp für das Wochenende: Das Stadtmuseum eröffnet am Samstag eine interaktive Ausstellung zum Thema „Medien im Wandel“ vom Buchdruck bis zum modernen Smartphone. Besonders spannend ist der Bereich für Jugendliche und Auszubildende: Hier kann man historische Druckmaschinen ausprobieren und selbst eine kleine Zeitung gestalten. Der Eintritt ist für Schüler und Auszubildende am Eröffnungswochenende frei, alle anderen zahlen den ermäßigten Preis von fünf Euro."
+          },
+          {
+            "speaker": "Sprecher",
+            "text": "Text 4. Guten Morgen aus der Praxis Dr. Weber. Wir möchten Sie daran erinnern, dass ab kommender Woche unsere Öffnungszeiten wegen Renovierungsarbeiten geändert werden. Wir sind dann montags bis donnerstags durchgehend von acht bis sechzehn Uhr für Sie da. Freitags bleibt die Praxis komplett geschlossen. In dringenden Notfällen wenden Sie sich bitte an die zentrale Notfallpraxis am Städtischen Krankenhaus. Vielen Dank für Ihr Verständnis."
+          },
+          {
+            "speaker": "Sprecherin",
+            "text": "Text 5. Hallo zusammen, hier spricht Maria aus der Personalabteilung. Ich möchte Sie kurz an unser diesjähriges Sommerfest erinnern, das am letzten Freitag im August auf dem Gelände unseres Unternehmens stattfindet. Da wir in diesem Jahr besonders viele neue Auszubildende haben, wird es neben dem großen Grillbuffet auch ein spannendes Teambuilding-Spiel am Nachmittag geben. Bitte tragen Sie sich bis spätestens Freitag in die Liste am Empfang ein, damit wir das Essen richtig planen können."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was kann man gewinnen, wenn man mit dem Rad zur Arbeit fährt?",
+          "options": [
+            "Ein neues Fahrrad für den Arbeitsweg",
+            "Regensachen und Fahrradtaschen",
+            "Einen Gutschein für ein Restaurant"
+          ],
+          "answer": 1,
+          "why": "Im Text wird gesagt, dass man Regensachen und Fahrradtaschen gewinnen kann."
+        },
+        {
+          "prompt": "Für wen ist das neue Projekt gedacht?",
+          "options": [
+            "Für Menschen, die mit dem Fahrrad zur Arbeit fahren",
+            "Für alle Schülerinnen und Schüler in der Stadt",
+            "Für Mitarbeiter der Radio-Station"
+          ],
+          "answer": 0,
+          "why": "Das Projekt richtet sich an Personen, die mindestens drei Monate lang mit dem Rad zur Arbeit fahren."
+        },
+        {
+          "prompt": "Warum ruft Jonas Lena an?",
+          "options": [
+            "Um sich für ihre Hilfe im Kurs zu bedanken",
+            "Um ihr zu erzählen, dass der Kurs ausgebucht ist",
+            "Um sie um ehrenamtliche Unterstützung für den Kurs zu bitten"
+          ],
+          "answer": 2,
+          "why": "Jonas bittet Lena zurückzurufen, ob sie Zeit hat, als ehrenamtliche Helferin zu helfen."
+        },
+        {
+          "prompt": "Wie ist die Resonanz auf den neuen Computerkurs?",
+          "options": [
+            "Es gibt bereits sehr viele Anmeldungen.",
+            "Es haben sich bisher nur wenige Senioren gemeldet.",
+            "Der Kurs musste wegen mangelndem Interesse abgesagt werden."
+          ],
+          "answer": 0,
+          "why": "Laut Text gab es innerhalb von nur zwei Tagen über fünfzig Anmeldungen."
+        },
+        {
+          "prompt": "Was kostet der Eintritt am Eröffnungswochenende für Auszubildende?",
+          "options": [
+            "Fünf Euro",
+            "G gar nichts",
+            "Einen ermäßigten Preis"
+          ],
+          "answer": 1,
+          "why": "Im Text heißt es ausdrücklich, dass der Eintritt für Schüler und Auszubildende frei ist."
+        },
+        {
+          "prompt": "Welches Thema behandelt die neue Ausstellung im Stadtmuseum?",
+          "options": [
+            "Medien im Wandel",
+            "Moderne Kunst und Fotografie",
+            "Die Geschichte der Stadt"
+          ],
+          "answer": 0,
+          "why": "Die Ausstellung hat das Thema „Medien im Wandel“ vom Buchdruck bis zum Smartphone."
+        },
+        {
+          "prompt": "Wie lange ist die Praxis Dr. Weber montags bis donnerstags geöffnet?",
+          "options": [
+            "Von acht bis zwölf Uhr",
+            "Durchgehend von acht bis sechzehn Uhr",
+            "Von neun bis achtzehn Uhr"
+          ],
+          "answer": 1,
+          "why": "Die Praxis ist montags bis donnerstags durchgehend von acht bis sechzehn Uhr geöffnet."
+        },
+        {
+          "prompt": "Was gilt für Freitag in der Arztpraxis?",
+          "options": [
+            "Die Praxis schließt bereits um zwölf Uhr.",
+            "Die Praxis bleibt komplett geschlossen.",
+            "Es gibt nur Termine für Notfälle."
+          ],
+          "answer": 1,
+          "why": "Im Text wird gesagt, dass die Praxis freitags komplett geschlossen bleibt."
+        },
+        {
+          "prompt": "Wann findet das diesjährige Sommerfest statt?",
+          "options": [
+            "Am ersten Freitag im August",
+            "Mitte Juli",
+            "Am letzten Freitag im August"
+          ],
+          "answer": 2,
+          "why": "Das Sommerfest findet laut Maria am letzten Freitag im August statt."
+        },
+        {
+          "prompt": "Bis wann soll man sich in die Liste am Empfang eintragen?",
+          "options": [
+            "Bis spätestens Freitag",
+            "Bis zum Ende des Monats",
+            "Bis morgen Früh"
+          ],
+          "answer": 0,
+          "why": "Maria bittet darum, sich bis spätestens Freitag in die Liste einzutragen."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Führung durch das neue Medienzentrum",
+      "instruction": "Hören Sie den Beitrag. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c. Sie hören den Text einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Museumsführerin",
+            "text": "Herzlich willkommen, meine Damen und Herren, zu unserer heutigen Führung durch das neu eröffnete Medienzentrum im Herzen der Stadt. Mein Name ist Sabine Meier, und ich werde Sie in den nächsten zwanzig Minuten durch unsere verschiedenen Abteilungen begleiten. Bevor wir mit dem eigentlichen Rundgang starten, möchte ich Ihnen ein paar kurze organisatorische Hinweise geben. Sie können hier im gesamten Gebäude das kostenlose WLAN nutzen; das Passwort finden Sie auf den Monitoren im Eingangsbereich. Bitte beachten Sie jedoch, dass das Fotografieren mit Blitzlicht in den Ausstellungsräumen aus Gründen des Denkmalschutzes strengstens untersagt ist. Nun werfen wir einen Blick auf die Geschichte dieses Hauses. Das Gebäude wurde bereits im Jahr 1920 als Druckerei erbaut und jahrzehntelang für die Herstellung von Tageszeitungen genutzt. Nach dem Auszug der Zeitungsredaktion stand der Komplex fast zehn Jahre lang leer, bis die Stadtverwaltung beschloss, das architektonisch wertvolle Gebäude zu retten. Seit knapp zwei Jahren wurde es umfassend saniert und modernisiert, um nun als modernes Zentrum für digitale Medien, Journalismus und Medienkompetenz zu dienen. Unser Hauptziel ist es, Besucherinnen und Besuchern jeden Alters zu zeigen, wie Medien funktionieren und wie man Nachrichten kritisch hinterfragen kann. Auf der ersten Etage befindet sich unser historisches Archiv. Hier zeigen wir alte Druckmaschinen aus den Anfängen des Buchdrucks und der Zeitungsherstellung. Sie haben dort auch die Möglichkeit, selbst aktiv zu werden und an einer originalgetreuen Handpresse eine eigene kleine Seite zu drucken – ein Angebot, das besonders bei Schulklassen sehr beliebt ist. In der zweiten Etage wird es dann ganz modern: Dort finden Sie unser interaktives Fernsehstudio. Hier können die Besucher vor einer echten Bluescreen-Kamera stehen und ausprobieren, wie Nachrichten moderiert werden. Am Ende des Rundgangs können Sie sich das Ergebnis sogar per E-Mail nach Hause schicken lassen. Zum Schluss noch ein Hinweis für alle, die eine kleine Pause machen möchten: Unser Café im Erdgeschoss hat heute durchgehend bis acht Uhr abends geöffnet. Dort gibt es nicht nur warme und kalte Getränke, sondern auch regionale Snacks. Wenn Sie keine Fragen mehr haben, würde ich vorschlagen, dass wir jetzt gemeinsam in die erste Etage gehen."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wo finden die Besucher das Passwort für das WLAN?",
+          "options": [
+            "Auf den Monitoren im Eingangsbereich.",
+            "Auf den Eintrittskarten.",
+            "An der Informationstheke im ersten Stock."
+          ],
+          "answer": 0,
+          "why": "Im Text wird ausdrücklich gesagt: „das Passwort finden Sie auf den Monitoren im Eingangsbereich“."
+        },
+        {
+          "prompt": "Was war früher in dem Gebäude untergebracht?",
+          "options": [
+            "Eine Stadtbibliothek.",
+            "Eine Druckerei für Tageszeitungen.",
+            "Ein regionales Fernsehstudio."
+          ],
+          "answer": 1,
+          "why": "Laut Text wurde das Gebäude „im Jahr 1920 als Druckerei erbaut und jahrzehntelang für die Herstellung von Tageszeitungen genutzt“."
+        },
+        {
+          "prompt": "Wie lange stand das Gebäude leer, bevor es saniert wurde?",
+          "options": [
+            "Etwa zwei Jahre.",
+            "Fast fünf Jahre.",
+            "Fast zehn Jahre."
+          ],
+          "answer": 2,
+          "why": "Die Führerin erklärt, dass der Komplex „fast zehn Jahre lang leer“ stand."
+        },
+        {
+          "prompt": "Was kann man in der ersten Etage machen?",
+          "options": [
+            "An einer Handpresse eine eigene Seite drucken.",
+            "Sich als Nachrichtensprecher vor der Kamera filmen.",
+            "Sich historische Dokumente im Internet ansehen."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass Besucher in der ersten Etage „an einer originalgetreuen Handpresse eine eigene kleine Seite zu drucken“ können."
+        },
+        {
+          "prompt": "Wann schließt das Café im Erdgeschoss heute?",
+          "options": [
+            "Um acht Uhr abends.",
+            "Um zwanzig Uhr dreißig.",
+            "Das wird im Text nicht gesagt."
+          ],
+          "answer": 0,
+          "why": "Die Führerin erwähnt am Ende: „Unser Café im Erdgeschoss hat heute durchgehend bis acht Uhr abends geöffnet.“"
+        }
+      ]
+    },
+    "H3": {
+      "title": "Neues Homeoffice-Modell in der Firma",
+      "instruction": "Lesen Sie zuerst die Aufgaben. Hören Sie dann das Gespräch einmal und entscheiden Sie, ob die Aussagen richtig oder falsch sind.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Hanna",
+            "text": "Hey Jonas, hast du schon die Rundmail von der Geschäftsführung bezüglich der neuen Homeoffice-Regelung gelesen? Ab nächsten Monat soll sich einiges ändern."
+          },
+          {
+            "speaker": "Jonas",
+            "text": "Hi Hanna! Ja, ich habe es überflogen. Bisher durften wir ja komplett frei entscheiden, an welchen Tagen wir von zu Hause aus arbeiten, oder?"
+          },
+          {
+            "speaker": "Hanna",
+            "text": "Genau, das war sehr flexibel. Aber laut der neuen Regelung müssen wir ab dem ersten des nächsten Monats wieder mindestens drei Tage pro Woche im Büro sein. Die Firma möchte den persönlichen Austausch im Team stärken."
+          },
+          {
+            "speaker": "Jonas",
+            "text": "Drei Tage? Puh, das finde ich ehrlich gesagt ganz schön viel. Ich habe mich in den letzten zwei Jahren so an das tägliche Arbeiten im Homeoffice gewöhnt. Außerdem spare ich mir dadurch jeden Tag fast eine Stunde Pendelzeit und natürlich das Geld für das Zugticket."
+          },
+          {
+            "speaker": "Hanna",
+            "text": "Das kann ich absolut verstehen, Jonas. Die Fahrtkosten sind ja in letzter Zeit auch enorm gestiegen. Aber andererseits hat die Personalabteilung in der Mail auch betont, dass es Ausnahmen geben wird. Wer zum Beispiel pflegebedürftige Angehörige hat oder extrem weit weg wohnt, kann einen Antrag auf Sonderregelung stellen."
+          },
+          {
+            "speaker": "Jonas",
+            "text": "Na ja, bei mir trifft beides nicht zu. Ich wohne nur zwanzig Minuten mit der S-Bahn entfernt. Trotzdem finde ich es schade, dass die Flexibilität jetzt so stark eingeschränkt wird. Letzte Woche hat der Betriebsrat doch noch vorgeschlagen, zwei Tage im Büro als Kompromiss zu fordern."
+          },
+          {
+            "speaker": "Hanna",
+            "text": "Stimmt, der Betriebsrat hat sich dafür eingesetzt, aber die Geschäftsführung hat das abgelehnt. Sie argumentieren, dass kreative Projekte im Team vor Ort einfach viel besser funktionieren. Immerhin gibt es aber eine Neuerung, die dir vielleicht gefallen könnte: Die Kernarbeitszeit am Vormittag wird komplett abgeschafft."
+          },
+          {
+            "speaker": "Jonas",
+            "text": "Oh, echt? Das wäre ja immerhin etwas Positives. Das bedeutet, man kann morgens früher anfangen und dementsprechend auch früher Feierabend machen?"
+          },
+          {
+            "speaker": "Hanna",
+            "text": "Ganz genau. Du bist da völlig frei, solange du deine tägliche Arbeitszeit leistest und bei wichtigen Meetings erreichbar bist. Das soll die Vereinbarkeit von Beruf und Freizeit verbessern."
+          },
+          {
+            "speaker": "Jonas",
+            "text": "Na gut, das ist zumindest ein kleiner Trost. Dann müssen wir uns wohl oder übel an den neuen Rhythmus gewöhnen und den Kalender entsprechend planen."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Ab dem nächsten Monat gilt eine neue Regelung für die Arbeit im Homeoffice.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Hanna bestätigt dies im Gespräch: 'Ab nächsten Monat soll sich einiges ändern.'"
+        },
+        {
+          "prompt": "Bisher mussten die Angestellten mindestens drei Tage pro Woche im Büro arbeiten.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Jonas sagt, dass sie bisher 'komplett frei entscheiden' konnten, und die Präsenzpflicht von drei Tagen neu ist."
+        },
+        {
+          "prompt": "Jonas ärgert sich vor allem über die höheren Kosten für sein Zugticket.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Jonas erwähnt direkt, dass er durch das Homeoffice Pendelzeit und 'natürlich das Geld für das Zugticket' spart."
+        },
+        {
+          "prompt": "Für alle Mitarbeiter gilt ab sofort uneingeschränkt die neue Pflicht zur dreitägigen Anwesenheit.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Hanna erklärt, dass es Ausnahmen für bestimmte Fälle wie pflegebedürftige Angehörige oder weite Anfahrtswege gibt."
+        },
+        {
+          "prompt": "Der Vorschlag des Betriebsrats mit zwei Präsenztagen wurde von der Geschäftsführung akzeptiert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Hanna sagt klar, dass der Betriebsrat das gefordert hat, 'aber die Geschäftsführung hat das abgelehnt'."
+        },
+        {
+          "prompt": "Die Kernarbeitszeit am Vormittag wird in Zukunft abgeschafft.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Hanna erzählt als Neuerung: 'Die Kernarbeitszeit am Vormittag wird komplett abgeschafft.'"
+        },
+        {
+          "prompt": "Jonas freut sich uneingeschränkt über alle Neuerungen in der Firma.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Jonas findet die Präsenzpflicht 'ganz schön viel' und kritisiert die Einschränkung der Flexibilität."
+        }
+      ]
+    },
+    "H4": {
+      "title": "Radiodiskussion zum Thema Smart Working",
+      "instruction": "Hören Sie die Diskussion im Radio. Wer sagt was? Lesen Sie die Aussagen 1 bis 8 und zuordnen Sie. Wählen Sie: Moderator/in (M), Herr Bergmann (B) oder Frau Wagner (W). Sie hören die Sendung zweimal.",
+      "bank": [
+        {
+          "key": "M",
+          "text": "Moderator/in"
+        },
+        {
+          "key": "B",
+          "text": "Herr Bergmann"
+        },
+        {
+          "key": "W",
+          "text": "Frau Wagner"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Begrüßt die Hörer zur heutigen Sendung und stellt das Thema flexibles Arbeiten vor.",
+          "answer": "M",
+          "why": "Der Moderator eröffnet die Sendung und kündigt das Thema an: „Herzlich willkommen zu unserer heutigen Sendung über flexibles Arbeiten.“"
+        },
+        {
+          "prompt": "Findet, dass feste Bürozeiten nicht mehr zeitgemäß sind und man von überall arbeiten können sollte.",
+          "answer": "B",
+          "why": "Herr Bergmann argumentiert für die Ortsunabhängigkeit: „Feste Präsenzzeiten im Büro sind meiner Meinung nach ein Auslaufmodell.“"
+        },
+        {
+          "prompt": "Warnt vor den Risiken der ständigen Erreichbarkeit und betont die Bedeutung von klaren Grenzen.",
+          "answer": "W",
+          "why": "Frau Wagner weist auf die Gefahren hin: „Wir müssen aufpassen, dass die Grenze zwischen Freizeit und Arbeit nicht völlig verschwimmt.“"
+        },
+        {
+          "prompt": "Fragt nach konkreten Beispielen, wie Unternehmen den Kontakt zwischen den Angestellten halten können.",
+          "answer": "M",
+          "why": "Der Moderator leitet mit einer Frage über: „Wie kann man denn den Zusammenhalt im Team stärken, wenn sich alle im Homeoffice befinden?“"
+        },
+        {
+          "prompt": "Berichtet, dass in seiner Abteilung die Produktivität durch das flexible Modell deutlich gestiegen ist.",
+          "answer": "B",
+          "why": "Herr Bergmann zieht ein positives Fazit: „Bei uns in der Abteilung hat sich gezeigt, dass die Arbeitsleistung im Homeoffice sogar gestiegen ist.“"
+        },
+        {
+          "prompt": "Argumentiert, dass nicht jede Tätigkeit für das Arbeiten von zu Hause aus geeignet ist.",
+          "answer": "W",
+          "why": "Frau Wagner schränkt ein: „Man darf nicht vergessen, dass viele Berufe im Handwerk oder im Service vor Ort erledigt werden müssen.“"
+        },
+        {
+          "prompt": "Hakt nach und möchte wissen, ob es auch negative Rückmeldungen von Kunden gab.",
+          "answer": "M",
+          "why": "Der Moderator stellt eine kritische Zwischenfrage: „Gibt es eigentlich Beschwerden von Kunden, weil sie manchmal niemanden erreichen?“"
+        },
+        {
+          "prompt": "Schlägt vor, dass Unternehmen verbindliche Tage für die gemeinsame Arbeit im Büro einführen sollten.",
+          "answer": "W",
+          "why": "Frau Wagner bringt einen konkreten Vorschlag ein: „Ein guter Kompromiss sind feste Teamtage, an denen sich alle im Büro treffen.“"
+        }
+      ]
+    }
+  }
+}

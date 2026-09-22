@@ -1,0 +1,387 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:38:47.480Z",
+  "exam": "goethe",
+  "level": "C2",
+  "module": "lesen",
+  "name": "Goethe C2 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Die Illusion der Unendlichkeit im digitalen Zeitalter",
+      "instruction": "Lesen Sie den folgenden Text und wählen Sie für die Aufgaben 1 bis 10 die richtige Lösung (a, b, c oder d).",
+      "passage": "Die gegenwärtige Informationskultur ist von einer eigentümlichen Paradoxie geprägt: Einerseits beklagt die Öffentlichkeit eine kaum noch bewältigbare Hypertrophie an Daten, andererseits verhält sich das Kollektiv so, als ob die Kapazitäten des virtuellen Raums gänzlich unerschöpflich wären. Dieses Phänomen lässt sich nicht bloß auf eine technologische Fehleinschätzung reduzieren, sondern wurzelt tief in einem veränderten epistemischen Paradigma. Wo früher das Wissen als ein mühsam zu kultivierendes Gut galt, dessen Erwerb Selektion und Verzicht voraussetzte, suggeriert die Gegenwart eine grenzenlose Verfügbarkeit von Inhalten, die jeder hierarchischen Ordnung entbehren.\n\nDabei gerät oft aus dem Blick, dass die digitale Speicherung keineswegs immateriell erfolgt. Die physische Infrastruktur, die Serverfarmen, Unterseekabel und Kühlkreisläufe verlangen nach enormen Ressourcen. Doch die Entkörperlichung der Daten in der Wahrnehmung der Nutzer führt dazu, dass die ökologischen und ökonomischen Folgelasten ausgeblendet werden. Es entsteht eine virtuelle Scheinwelt, in der die Schwere der materiellen Welt zugunsten einer scheinbar mühelosen Ubiquität suspendiert zu sein scheint. Diese Entgrenzung hat weitreichende Konsequenzen für das menschliche Erinnerungsvermögen und die Urteilskraft.\n\nKritiker weisen darauf hin, dass die unendliche Aufzeichnung aller Lebensäußerungen keineswegs zu einer umfassenderen Aufklärung beiträgt. Vielmehr führt die Akkumulation von Belanglosigkeiten zu einer Erosion des Bedeutsamen. Wenn jedes private Detail und jede flüchtige Äußerung für die Ewigkeit im Netz konserviert werden, verliert das Ereignis seine historische Kontur. Das Vergessen, das in früheren Epochen eine notwendige Schutzfunktion des Geistes darstellte und Identitätsbildung überhaupt erst ermöglichte, wird nun als Defizit verstanden, das durch technische Algorithmen behoben werden müsse.\n\nBesonders gravierend zeigt sich diese Entwicklung im Bereich der wissenschaftlichen und publizistischen Rezeption. Die Halbwertzeit von Analysen sinkt rapide, da der ständige Strom neuer Veröffentlichungen jede Reflexion über das bereits Gesagte verunmöglicht. An die Stelle eines argumentativen Diskurses tritt eine beschleunigte Reiz-Reaktions-Kette. Die vermeintliche Informationsfreiheit entpuppt sich somit bei genauerer Betrachtung als eine subtile Form der Disziplinierung: Wer nicht kontinuierlich sendet und konsumiert, droht im Rauschen der Kanäle unsichtbar zu werden. Eine Emanzipation von diesem Diktat erfordert nicht minder als eine bewusste Wiederentdeckung der Limitation.",
+      "items": [
+        {
+          "prompt": "Wie bewertet der Autor die aktuelle Informationskultur im ersten Absatz?",
+          "options": [
+            "Sie basiert auf einer bewussten technologischen Fehlplanung der IT-Konzerne.",
+            "Sie beruht auf einem Widerspruch zwischen Datenüberfluss und dem Glauben an unendliche Speicherkapazitäten.",
+            "Sie führt zu einer strikten Hierarchisierung und strengen Selektion des Wissens.",
+            "Sie zeichnet sich durch eine gelassene Haltung gegenüber den vorhandenen Datenmengen aus."
+          ],
+          "answer": 1,
+          "why": "Der Autor beschreibt eine 'Paradoxie' aus beklagter 'Hypertrophie' und dem Verhalten, als wären die Kapazitäten 'unerschöpflich'."
+        },
+        {
+          "prompt": "Welche Ursache nennt der Autor für die Ausblendung der physischen Realität von Daten?",
+          "options": [
+            "Die gezielte Desinformation durch Technologieunternehmen",
+            "Das Desinteresse der Öffentlichkeit an ökologischen Fragen",
+            "Die vermeintliche Immateriellheit und Entkörperlichung der Daten für den Nutzer",
+            "Die mangelnde Transparenz über den Standort von Serverfarmen"
+          ],
+          "answer": 2,
+          "why": "Im Text heißt es, dass die 'Entkörperlichung der Daten in der Wahrnehmung der Nutzer' dazu führt, dass Folgelasten ausgeblendet werden."
+        },
+        {
+          "prompt": "Welche Funktion hatte das Vergessen laut dem dritten Absatz in früheren Zeiten?",
+          "options": [
+            "Es war eine rein technische Notwendigkeit wegen begrenzten Speicherplatzes.",
+            "Es diente als Schutzfunktion des Geistes und war Voraussetzung für Identitätsbildung.",
+            "Es verhinderte die Verbreitung von unwichtigen Informationen im öffentlichen Raum.",
+            "Es unterstützte die historische Aufarbeitung von politischen Ereignissen."
+          ],
+          "answer": 1,
+          "why": "Das Vergessen wird als 'notwendige Schutzfunktion des Geistes' beschrieben, die 'Identitätsbildung überhaupt erst ermöglichte'."
+        },
+        {
+          "prompt": "Was ist die Konsequenz der permanenten Aufzeichnung aller Lebensäußerungen?",
+          "options": [
+            "Eine Stärkung des historischen Bewusstseins",
+            "Eine präzisere Dokumentation wissenschaftlicher Durchbrüche",
+            "Eine Erosion des Bedeutsamen durch die Ansammlung von Belanglosigkeiten",
+            "Eine Verbesserung der individuellen Erinnerungsfähigkeit"
+          ],
+          "answer": 2,
+          "why": "Der Text konstatiert, dass die 'Akkumulation von Belanglosigkeiten zu einer Erosion des Bedeutsamen' führt."
+        },
+        {
+          "prompt": "Wie verändert sich laut Text der wissenschaftliche und publizistische Diskurs?",
+          "options": [
+            "Er wird durch langsame und gründliche Reflexionen geprägt.",
+            "Er wandelt sich zu einer beschleunigten Reiz-Reaktions-Kette ohne Raum für Reflexion.",
+            "Er verliert völlig an Bedeutung für die breite Öffentlichkeit.",
+            "Er konzentriert sich ausschließlich auf die Bewahrung historischer Texte."
+          ],
+          "answer": 1,
+          "why": "Der Autor führt aus: 'An die Stelle eines argumentativen Diskurses tritt eine beschleunigte Reiz-Reaktions-Kette.'"
+        },
+        {
+          "prompt": "Welches Paradoxon beschreibt der Autor bezüglich der vermeintlichen Informationsfreiheit im letzten Absatz?",
+          "options": [
+            "Sie führt in Wirklichkeit zu einer Form von Disziplinierung und Anpassungszwang.",
+            "Sie ist nur für eine privilegierte akademische Oberschicht zugänglich.",
+            "Sie schränkt die Meinungsfreiheit in den sozialen Medien massiv ein.",
+            "Sie erfordert hochentwickelte technische Kenntnisse, über die nur wenige verfügen."
+          ],
+          "answer": 0,
+          "why": "Die vermeintliche Informationsfreiheit entpuppt sich als 'subtile Form der Disziplinierung', da man sonst unsichtbar wird."
+        },
+        {
+          "prompt": "Welche Haltung nimmt der Autor gegenüber modernen Algorithmen ein?",
+          "options": [
+            "Er sieht in ihnen den einzigen Ausweg aus der Informationskrise.",
+            "Er bewundert ihre Fähigkeit, das menschliche Gedächtnis zu unterstützen.",
+            "Er betrachtet sie skeptisch als Instrumente, die ein vermeintliches Defizit (das Vergessen) beheben sollen.",
+            "Er fordert ihren sofortigen gesetzlichen Verbot zum Schutz der Privatsphäre."
+          ],
+          "answer": 2,
+          "why": "Das Vergessen wird als Schutzfunktion verstanden, das nun fälschlich als Defizit gesehen wird, 'das durch technische Algorithmen behoben werden müsse'."
+        },
+        {
+          "prompt": "Was fordert der Autor am Ende des Textes als Gegenmittel zur aktuellen Entwicklung?",
+          "options": [
+            "Einen vollständigen Rückzug aus der digitalen Welt und dem Internet",
+            "Eine staatliche Regulierung der Serverinfrastrukturen",
+            "Die bewusste Wiederentdeckung der Limitation und Begrenztheit",
+            "Eine stärkere finanzielle Förderung von Archiven und Bibliotheken"
+          ],
+          "answer": 2,
+          "why": "Der letzte Satz fordert 'nicht minder als eine bewusste Wiederentdeckung der Limitation'."
+        },
+        {
+          "prompt": "Welche Rolle spielt die physische Infrastruktur im Kontext der Digitalisierung laut Text?",
+          "options": [
+            "Sie wird von den Nutzern aufgrund ihres enormen Nutzens geschätzt.",
+            "Sie erfordert enorme Ressourcen wie Energie und Kühlung, wird aber ignoriert.",
+            "Sie ist dank modernster Technik inzwischen vollständig CO2-neutral.",
+            "Sie schränkt die weltweite Reichweite von Daten erheblich ein."
+          ],
+          "answer": 1,
+          "why": "Die physische Infrastruktur verlangt nach enormen Ressourcen, doch die Nutzer blenden diese Folgelasten aus."
+        },
+        {
+          "prompt": "Welche übergeordnete Absicht verfolgt der Text?",
+          "options": [
+            "Eine Anleitung zur effizienten Mülltrennung im digitalen Raum zu geben",
+            "Die technischen Funktionsweisen von modernen Serverfarmen zu erklären",
+            "Eine philosophisch-kritische Reflexion über die Folgen des ungezügelten Datenkonsums anzuregen",
+            "Die historischen Ursprünge des Internets wissenschaftlich darzulegen"
+          ],
+          "answer": 2,
+          "why": "Der Text analysiert kritisch die epistemischen, ökologischen und gesellschaftlichen Folgen des heutigen Umgangs mit Informationen."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Kulturwandel im Zeitalter digitaler Vernetzung",
+      "instruction": "Lesen Sie die sechs Textabschnitte und ordnen Sie ihnen die jeweils passenden Hauptaussagen aus der Auswahlliste (a–h) zu. Zwei Aussagen bleiben übrig.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Die wirtschaftliche Globalisierung fördert eine homogene Massenkultur, die lokale Traditionen bedroht."
+        },
+        {
+          "key": "b",
+          "text": "Literarische Werke spiegeln den historischen Wandel wider und bieten einen kritischen Gegenentwurf zur technologischen Beschleunigung."
+        },
+        {
+          "key": "c",
+          "text": "Technologische Innovationen erfordern dringend ethische Leitplanken, um die Autonomie des Menschen zu wahren."
+        },
+        {
+          "key": "d",
+          "text": "Wissenschaftliche Forschung verliert durch den Druck zur Ökonomisierung ihre tiefere Erkenntniskraft."
+        },
+        {
+          "key": "e",
+          "text": "Medienkritik muss heute über die reine Inhaltsanalyse hinausgehen und die algorithmische Kuration hinterfragen."
+        },
+        {
+          "key": "f",
+          "text": "Der Verlust regionaler Dialekte führt unweigerlich zu einer Verarmung des philosophischen Denkens."
+        },
+        {
+          "key": "g",
+          "text": "Die Zunahme digitaler Informationskanäle begünstigt eine oberflächliche Rezeption und erschwert die konzentrierte Vertiefung."
+        },
+        {
+          "key": "h",
+          "text": "Ethische Prinzipien in der Wirtschaft sind oft nur ein Feigenblatt für rein profitorientiertes Handeln."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Abschnitt 1: Globale Verflechtungen",
+          "answer": "a",
+          "why": "Der Text beschreibt, wie globale Märkte eine einheitliche Massenkultur erzeugen, wodurch lokale Traditionen verdrängt werden, was genau der Aussage 'a' entspricht.",
+          "text": "Die fortschreitende ökonomische Vernetzung hinterlässt Spuren in allen Lebensbereichen. Insbesondere multinationale Konzerne treiben eine Vereinheitlichung voran, die gewachsene kulturelle Eigenheiten regionaler Gemeinschaften zunehmend an den Rand drängt."
+        },
+        {
+          "prompt": "Abschnitt 2: Die Rolle der Literatur",
+          "answer": "b",
+          "why": "Der Text hebt hervor, dass Literatur als Korrektiv gegen das moderne Tempo wirkt, was durch Aussage 'b' belegt wird.",
+          "text": "In einer Epoche, die von ständiger Erreichbarkeit und Beschleunigung geprägt ist, bewahrt die moderne Belletristik einen Raum der Kontemplation. Sie fungiert als feinsinniges Medium, das die gesellschaftlichen Transformationsprozesse reflektiert und hinterfragt."
+        },
+        {
+          "prompt": "Abschnitt 3: Verantwortung in der Wissenschaft",
+          "answer": "c",
+          "why": "Der Text fordert ethische Grenzen angesichts technischer Fortschritte, was exakt zu Aussage 'c' passt.",
+          "text": "Mit den rasanten Fortschritten in der Künstlichen Intelligenz wächst die Verantwortung der Entwickler. Ohne verbindliche moralische Rahmenbedingungen droht die Technik, den Menschen zu entmachten, weshalb ethische Debatten unverzichtbar sind."
+        },
+        {
+          "prompt": "Abschnitt 4: Verwertungslogik in der Forschung",
+          "answer": "d",
+          "why": "Der Text kritisiert den Verwertungsdruck in der Forschung, der den wahren Erkenntnisgewinn gefährdet (Aussage 'd').",
+          "text": "Der akademische Betrieb leidet unter einer zunehmenden Ökonomisierung. Wenn Forschungsergebnisse primär nach ihrer wirtschaftlichen Verwertbarkeit bemessen werden, leidet darunter die freie, ergebnisoffene Suche nach Erkenntnis."
+        },
+        {
+          "prompt": "Abschnitt 5: Neue Herausforderungen der Medienkritik",
+          "answer": "e",
+          "why": "Der Text thematisiert die Notwendigkeit, Algorithmen zu hinterfragen, was Aussage 'e' präzise wiedergibt.",
+          "text": "Klassische Medienkritik, die sich lediglich mit dem journalistischen Inhalt befasst, greift heute zu kurz. Entscheidend ist die Analyse jener unsichtbaren Algorithmen, die unsere Informationsströme steuern und filtern."
+        },
+        {
+          "prompt": "Abschnitt 6: Informationsflut und Konzentration",
+          "answer": "g",
+          "why": "Der Text warnt vor oberflächlicher Informationsrezeption durch digitale Reizüberflutung, was mit Aussage 'g' übereinstimmt.",
+          "text": "Die Omnipräsenz digitaler Kanäle führt zu einer ständigen Fragmentierung der Aufmerksamkeit. An die Stelle tiefgehender Textlektüre tritt oft ein oberflächliches Überfliegen, das die Fähigkeit zur nachhaltigen Konzentration schwächt."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Die Ökonomisierung der Aufmerksamkeit in der digitalen Moderne",
+      "instruction": "Lesen Sie den Text. Welche der Sätze (a–h) stellen den Textzusammenhang in den Lücken 1 bis 6 am besten wieder her? Zwei Sätze passen nicht.",
+      "passage": "Die moderne Informationsgesellschaft steht vor einem Paradoxon: Während das Wissen exponentiell wächst, schrumpft die menschliche Aufnahmekapazität relativ dazu. ___1___ In diesem ökonomischen Modell wird Aufmerksamkeit zu einer knappen Ware, um die algorithmisch gesteuerte Plattformen weltweit konkurrieren. \n\nDie Konsequenzen dieser Entwicklung für den Einzelnen sind weitreichend. Ständige Erreichbarkeit und die Flut an Reizen führen zu einer Fragmentierung des Bewusstseins, die tiefgreifende Auswirkungen auf unsere Konzentrationsfähigkeit hat. ___2___ Wer jedoch permanent auf der Ebene schneller Reize agiert, verliert die Fähigkeit zur tiefen, reflektierten Auseinandersetzung mit komplexen Sachverhalten. \n\nBesonders deutlich zeigt sich diese Transformation im Bereich des Leseverhaltens. Lange Romane oder wissenschaftliche Abhandlungen werden zunehmend durch kurze, prägnante Formate ersetzt, die den schnellen Konsum begünstigen. ___3___ Dennoch wäre es verfehlt, diesen Wandel ausschließlich negativ zu bewerten, da neue digitale Medien auch partizipative Räume eröffnen. \n\nDennoch mahnen Kulturphilosophen zur Wachsamkeit gegenüber den subtilen Formen der Verhaltenssteuerung. Wenn Algorithmen antizipieren, welche Inhalte unsere Emotionen am stärksten ansprechen, wird unsere Entscheidungsfreiheit schleichend unterminiert. ___4___ Dieser schleichende Verlust von Autonomie geschieht oft unbemerkt, weil er sich als gesteigerter Komfort tarnt. \n\nUm dieser Entwicklung entgegenzuwirken, fordern Bildungsexperten eine neue Kultur der digitalen Mündigkeit. Diese soll nicht das Internet verteufeln, sondern Werkzeuge zur bewussten Selbstregulation vermitteln. ___5___ Wer gelernt hat, die eigene Aufmerksamkeit gezielt zu steuern, entzieht sich dem Diktat der Aufmerksamkeitsökonomie. \n\nZusammenfassend lässt sich sagen, dass die Bewältigung dieser Herausforderung eine der zentralen Aufgaben des kommenden Jahrzehnts sein wird. Es gilt, die Balance zwischen technologischer Innovation und mentaler Hygiene neu zu definieren. ___6___ Nur so lässt sich sicherstellen, dass der Mensch souveräner Nutzer bleibt und nicht zum bloßen Datenobjekt degradiert wird.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Dies hat zur Folge, dass nicht mehr Kapital, sondern die menschliche Aufmerksamkeit als das eigentliche knappste Gut unserer Epoche gehandelt wird."
+        },
+        {
+          "key": "b",
+          "text": "Historische Vergleiche zeigen allerdings, dass jede Medienrevolution ähnliche Ängste hervorgerufen hat."
+        },
+        {
+          "key": "c",
+          "text": "Philosophen betonen seit langem, dass die Fähigkeit zur Kontemplation die Voraussetzung für echtes Verstehen ist."
+        },
+        {
+          "key": "d",
+          "text": "Dabei geraten literarische Werke unter einen wirtschaftlichen Rechtfertigungsdruck, der ihren ästhetischen Eigenwert bedroht."
+        },
+        {
+          "key": "e",
+          "text": "An die Stelle autonomer Wahl treten psychologisch optimierte Reize, die gezielt auf Bestätigung und Empörung setzen."
+        },
+        {
+          "key": "f",
+          "text": "Ein bewusster Umgang mit den eigenen kognitiven Ressourcen bildet dafür das fundamentale Fundament."
+        },
+        {
+          "key": "g",
+          "text": "Hierbei spielen Medienkompetenz und die bewusste Pflege von Offline-Zeiten eine entscheidende Rolle."
+        },
+        {
+          "key": "h",
+          "text": "Darin liegt die eigentliche Gefahr: Nicht Zensur schränkt unsere Freiheit ein, sondern die freiwillige Unterwerfung unter den Reizstrom."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "a",
+          "why": "Der Satz greift das Thema der ökonomischen Betrachtung von Aufmerksamkeit direkt auf und leitet zur Erwähnung des 'ökonomischen Modells' im Folgesatz über."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "c",
+          "why": "Der Satz stellt einen direkten Bezug zur Kontemplation her und bereitet die im Text folgende Diskussion über tiefe Reflexion versus schnelle Reize vor."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "d",
+          "why": "Er thematisiert den im Absatz behandelten wirtschaftlichen Druck auf literarische Werke und leitet über zu den ambivalenten Folgen des Wandels."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "e",
+          "why": "Der Satz konkretisiert die im vorherigen Satz erwähnte subtile Verhaltenssteuerung durch Algorithmen und beschreibt die Mechanismen der Reizoptimierung."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "g",
+          "why": "Er bietet konkrete Handlungsempfehlungen (Medienkompetenz, Offline-Zeiten), die direkt an die Forderung nach digitaler Mündigkeit im vorherigen Satz anknüpfen."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "f",
+          "why": "Der Satz fasst den Gedanken der mentalen Hygiene und des bewussten Umgangs zusammen, was nahtlos zur abschließenden Forderung nach Souveränität passt."
+        }
+      ]
+    },
+    "L4": {
+      "title": "Kultur- und Geisteswissenschaften im Diskurs",
+      "instruction": "Lesen Sie die vier Forumsbeiträge (A–D) zu aktuellen Themen aus Forschung, Ethik, Medienkritik, Globalisierung und Literatur. Welche Aussage (1–8) passt zu welchem Beitrag? Sie können jede Anzeige mehrfach nutzen.",
+      "personas": [
+        {
+          "name": "Dr. Helena Voss, Literaturwissenschaftlerin",
+          "text": "Die fortschreitende Ökonomisierung des Literaturbetriebs bereitet mir zunehmend Sorge. Romane werden vermehrt unter dem Diktat der Verwertbarkeit und raschen Konsumierbarkeit produziert, anstatt literarische Wagnisse einzugehen. Verlage agieren oft wie seelenlose Konzerne, die den Marktwert eines Buches über dessen ästhetischen Eigenwert stellen. Das führt zu einer bedenklichen Homogenisierung des Angebots. Wenn wir nicht bald wieder den Mut zur Avantgarde und zu unbequemen, sperrigen Texten aufbringen, verkümmert die Literatur zu einem blassen Abziehbild des Zeitgeistes. Es braucht dringend neue Förderstrukturen, die jenseits von Bestsellerlisten und Algorithmen jene Stimmen schützen, die das Risiko des Scheiterns nicht scheuen und den Leser intellektuell herausfordern."
+        },
+        {
+          "name": "Markus Berg, Medienkritiker",
+          "text": "Die digitale Informationsflut unserer Tage hat eine paradoxe Dynamik entfesselt: Einerseits stehen uns unermessliche Wissensbestände offen, andererseits führt die algorithmische Personalisierung zu einer massiven Verengung unseres Weltbildes. Wir bewegen uns in Echokammern, in denen nur noch das bestätigt wird, was ohnehin ins eigene Weltbild passt. Journalismus wird zunehmend auf Klickzahlen und Erregungsbewirtschaftung reduziert. Komplexe Sachverhalte fallen der Beschleunigung zum Opfer. Um dieser Entwicklung entgegenzuwirken, müssen wir Medienkompetenz nicht nur als technische Fertigkeit begreifen, sondern als ethische Haltung verankern. Nur wer gelernt hat, Quellen kritisch zu hinterfragen und Ambivalenzen auszuhalten, kann in dieser hypermediierten Realität noch als mündiger Bürger agieren."
+        },
+        {
+          "name": "Prof. Dr. Aris Thorne, Ethiker",
+          "text": "Mit der rasanten Entwicklung autonomer Systeme betreten wir ein ethisches Neuland, das unsere traditionellen Kategorien der Verantwortung strapaziert. Wenn Maschinen Entscheidungen über Leben und Tod, über Kreditwürdigkeit oder medizinische Behandlungen treffen, stellt sich die Frage nach der Zurechenbarkeit drängender denn je. Wir neigen dazu, Algorithmen eine Objektivität zuzuschreiben, die sie schlicht nicht besitzen, da sie auf historischem, oft diskriminierendem Datenmaterial basieren. Technischer Fortschritt darf sich nicht von humanistischen Prinzipien abkoppeln. Eine bloße Schadensminimierung reicht nicht aus; wir benötigen einen verbindlichen globalen Kodex, der die Würde des Menschen bedingungslos über die Effizienzsteigerung stellt. Technik muss dem Menschen dienen, nicht umgekehrt."
+        },
+        {
+          "name": "Svenja Ahlers, Globalisierungsforscherin",
+          "text": "Globalisierung wird allzu oft auf den ungehinderten Austausch von Waren und Kapital reduziert, während die sozialen und kulturellen Verwerfungen ignoriert werden. Die Entwurzelung ganzer Gemeinschaften durch globale Produktionsketten und die Vereinheitlichung städtischer Räume zerstören lokale Identitäten. Dennoch halte ich nichts von einer nostalgischen Romantisierung nationaler Abschottung. Die Lösung kann nicht in protektionistischen Reflexen liegen, sondern in einer gerechteren, solidarischeren Neugestaltung der globalen Vernetzung. Wir müssen globale Ströme demokratisch bändigen und sicherstellen, dass nicht nur multinationale Konzerne, sondern die Zivilgesellschaften vor Ort von transnationaler Kooperation profitieren. Es geht um die Balance zwischen Weltoffenheit und der Bewahrung kultureller Vielfalt."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Es wird kritisiert, dass Algorithmen menschliches Verhalten und den Informationszugang in bedenklicher Weise verengen.",
+          "answer": 1,
+          "why": "Markus Berg bemängelt, dass 'die algorithmische Verengung unseres Weltbildes' zu Echokammern führt.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Hier wird die Befürchtung geäußert, dass wirtschaftlicher Profit den literarischen Wert von Büchern verdrängt.",
+          "answer": 0,
+          "why": "Dr. Helena Voss kritisiert das 'Diktat der Verwertbarkeit' und dass Verlage den Marktwert über den ästhetischen Eigenwert stellen.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Der Beitrag fordert einen globalen Verhaltenskodex, um die Menschenwürde über rein technische Effizienz zu stellen.",
+          "answer": 2,
+          "why": "Prof. Dr. Aris Thorne plädiert für 'einen verbindlichen globalen Kodex, der die Würde des Menschen bedingungslos über die Effizienzsteigerung stellt'.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Es wird argumentiert, dass weder rein wirtschaftliche Verflechtungen noch protektionistische Abschottung die richtigen Wege sind.",
+          "answer": 3,
+          "why": "Svenja Ahlers lehnt sowohl die einseitige Reduktion auf Kapital ab als auch 'eine nostalgische Romantisierung nationaler Abschottung'.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Der Autor betont, dass Medienkompetenz nicht nur technisch, sondern vor allem als ethische Haltung verstanden werden muss.",
+          "answer": 1,
+          "why": "Markus Berg fordert, dass 'Medienkompetenz nicht nur als technische Fertigkeit begriffen, sondern als ethische Haltung verankert' wird.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Hier wird gefordert, unkonventionelle und experimentelle Literatur durch geeignete Strukturen vor dem kommerziellen Druck zu schützen.",
+          "answer": 0,
+          "why": "Dr. Helena Voss fordert 'neue Förderstrukturen', die jenseits von Bestsellerlisten jene Stimmen schützen, die das Risiko des Scheiterns nicht scheuen.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Es wird davor gewarnt, autonomen Systemen eine irrtümliche Objektivität zuzusprechen, da sie auf fehlerhaften Daten basieren.",
+          "answer": 2,
+          "why": "Prof. Dr. Aris Thorne warnt davor, dass wir Algorithmen 'eine Objektivität zuzuschreiben, die sie schlicht nicht besitzen, da sie auf historischem... Datenmaterial basieren'.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        },
+        {
+          "prompt": "Die Autorin plädiert dafür, globale Ströme demokratisch zu kontrollieren, um den Nutzen fairer zu verteilen.",
+          "answer": 3,
+          "why": "Svenja Ahlers fordert, dass wir 'globale Ströme demokratisch bändigen und sicherstellen, dass... die Zivilgesellschaften vor Ort profitieren'.",
+          "options": [
+            "Dr. Helena Voss, Literaturwissenschaftlerin",
+            "Markus Berg, Medienkritiker",
+            "Prof. Dr. Aris Thorne, Ethiker",
+            "Svenja Ahlers, Globalisierungsforscherin"
+          ]
+        }
+      ]
+    }
+  }
+}

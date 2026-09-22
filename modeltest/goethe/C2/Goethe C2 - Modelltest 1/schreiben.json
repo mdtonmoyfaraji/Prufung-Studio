@@ -1,0 +1,37 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:38:48.188Z",
+  "exam": "goethe",
+  "level": "C2",
+  "module": "schreiben",
+  "name": "Goethe C2 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Stilistische Umformung eines Kurzreferats zum Thema Forschung",
+      "instruction": "Formulieren Sie die folgenden Passagen eines wissenschaftlichen Kurzreferats zum Thema „Interdisziplinäre Forschungsansätze“ sprachlich und stilistisch angemessen für ein akademisches Publikum um.",
+      "prompt": "Im Rahmen eines universitären Kolloquiums sollen Sie einen Auszug aus einem studentischen Vortrag über die Herausforderungen interdisziplinärer Zusammenarbeit überarbeiten. Nutzen Sie einen präzisen, sachlichen und wissenschaftlich fundierten Sprachstil, der typisch für das Niveau C2 ist.",
+      "bullets": [
+        "Ersetzen Sie umgangssprachliche Formulierungen und Metaphern durch fachsprachliche Termini.",
+        "Variieren Sie die Satzstrukturen durch den Einsatz komplexer Hypotaxen.",
+        "Achten Sie auf eine präzise Nominalstilistik, wo dies dem wissenschaftlichen Duktus dient.",
+        "Behalten Sie den inhaltlichen Kern der Passagen uneingeschränkt bei."
+      ],
+      "words": 200,
+      "tips": "Vermeiden Sie Redundanzen und achten Sie auf eine stringente, logische Argumentationsführung."
+    },
+    "S2": {
+      "title": "Goethe-Zertifikat C2: Schreiben, Teil 2",
+      "instruction": "Verfassen Sie einen anspruchsvollen, strukturierten Artikel für eine überregionale Kulturzeitschrift zu einem der unten stehenden Themen. Gehen Sie dabei präzise auf die geforderten Leitpunkte ein.",
+      "prompt": "Im Zeitalter der zunehmenden Digitalisierung und Künstlichen Intelligenz erleben wir eine fundamentale Verschiebung im Verständnis von Kreativität und Autorschaft. Verfassen Sie einen fundierten Zeitschriftenartikel, der sich kritisch mit der Frage auseinandersetzt, ob maschinell erzeugte Kunstwerke den traditionellen Begriff von menschlicher Schöpferkraft ablösen oder lediglich bereichern können.",
+      "bullets": [
+        "Analysieren Sie die philosophischen und ethischen Imzlikationen von KI-generierter Kunst für den menschlichen Schaffensprozess.",
+        "Diskutieren Sie konkrete Beispiele aus der aktuellen Literatur- oder Kunstszene, in denen Maschinen als Co-Autoren auftreten.",
+        "Bewerten Sie die Rolle des Rezipienten in Bezug auf Authentizität und Werkverständnis im digitalen Zeitalter.",
+        "Leiten Sie eine begründete Prognose über die zukünftige Verortung menschlicher Originalität ab."
+      ],
+      "words": 350,
+      "tips": "Achten Sie auf einen differenzierten, akademischen Schreibstil, eine präzise Wortwahl sowie eine stringente Argumentation mit deutlichen Übergängen."
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:20:10.802Z",
+  "exam": "goethe",
+  "level": "B1",
+  "module": "sprechen",
+  "name": "Goethe B1 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Gemeinsam etwas planen: Abschiedsgeschenk für eine Kollegin",
+      "instruction": "Sprechen Sie über die Aufgabe, machen Sie Vorschläge und einigen Sie sich auf eine gemeinsame Lösung. Sie haben zusammen etwa 3 Minuten Zeit.",
+      "prompt": "Ihre Kollegin Frau Schmidt verlässt nach fünf Jahren die Firma. Sie möchten ihr gemeinsam ein schönes Abschiedsgeschenk besorgen und eine kleine Feier im Büro organisieren.",
+      "bullets": [
+        "Welches Geschenk Sie kaufen möchten und wer es besorgt",
+        "Wann und wo die kleine Abschiedsfeier stattfinden soll",
+        "Wer sich um das Essen und die Getränke kümmert"
+      ],
+      "seconds": 180,
+      "tips": "Reagieren Sie auf die Vorschläge Ihres Partners oder Ihrer Partnerin und begründen Sie Ihre eigenen Ideen freundlich."
+    },
+    "P2": {
+      "title": "Präsentation Teil 2: Ein Thema präsentieren",
+      "instruction": "Präsentieren Sie Ihr Thema in circa drei Minuten. Nutzen Sie dabei die fünf vorgegebenen Punkte auf Ihrem Aufgabenblatt.",
+      "prompt": "Stellen Sie das Thema 'Fitnessstudio oder Sport im Freien?' vor. Berichten Sie von Ihren eigenen Erfahrungen, der Situation in Ihrem Heimatland sowie den Vor- und Nachteilen, und beenden Sie Ihre Präsentation mit einem Fazit und dem Dank an das Publikum.",
+      "bullets": [
+        "Thema vorstellen",
+        "Eigene Erfahrung",
+        "Situation im Heimatland",
+        "Vor- und Nachteile mit eigener Meinung",
+        "Schluss und Dank"
+      ],
+      "topics": [
+        "Gesundheit",
+        "Zusammenleben"
+      ],
+      "seconds": 180,
+      "tips": "Sprechen Sie frei, machen Sie kurze Pausen zwischen den Folien und schauen Sie Ihr Publikum an."
+    },
+    "P3": {
+      "title": "Über ein Thema sprechen: Das Homeoffice",
+      "instruction": "Hören Sie die Präsentation Ihres Partners oder Ihrer Partnerin. Geben Sie eine kurze Rückmeldung, stellen Sie eine Frage zum Thema und beantworten Sie die Fragen zu Ihrer eigenen Präsentation.",
+      "prompt": "Sie haben gerade die Präsentation zum Thema 'Arbeiten im Homeoffice - Vor- und Nachteile' gehört. Reagieren Sie nun auf den Vortrag und sprechen Sie über Ihre eigenen Erfahrungen.",
+      "bullets": [
+        "Geben Sie eine kurze Rückmeldung zur Präsentation (was fanden Sie besonders interessant?).",
+        "Stellen Sie Ihrem Gesprächspartner / Ihrer Gesprächspartnerin eine passende Frage zum Thema.",
+        "Reagieren Sie auf die Fragen, die man Ihnen zu Ihrer eigenen Präsentation stellt."
+      ],
+      "seconds": 120,
+      "tips": "Hören Sie gut zu, machen Sie sich Notizen während der Präsentation und sprechen Sie frei und natürlich."
+    }
+  }
+}

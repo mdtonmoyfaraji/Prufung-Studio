@@ -1,0 +1,35 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T07:38:48.528Z",
+  "exam": "goethe",
+  "level": "C2",
+  "module": "sprechen",
+  "name": "Goethe C2 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Vortrag: Die Ökonomisierung der Aufmerksamkeit in digitalen Medien",
+      "instruction": "Halten Sie einen strukturierten Vortrag zu dem vorgegebenen Thema und gehen Sie dabei auf die folgenden Aspekte ein. Nach Ihrem Vortrag folgen vertiefende Nachfragen.",
+      "prompt": "Analysieren Sie die These, dass die zunehmende Monetarisierung menschlicher Aufmerksamkeit in digitalen Räumen nicht nur den gesellschaftlichen Diskurs verändert, sondern auch das Individuum in seiner Autonomie gefährdet. Wägen Sie verschiedene wissenschaftliche und ethische Perspektiven ab.",
+      "bullets": [
+        "Kritische Analyse der Mechanismen, mit denen Plattformen kognitive Ressourcen binden",
+        "Konsequenzen für den demokratischen Meinungsbildungsprozess und die Diskurskultur",
+        "Diskussion möglicher regulatorischer Gegenmaßnahmen und ethischer Auswege"
+      ],
+      "seconds": 300,
+      "tips": "Strukturieren Sie Ihren Vortrag klar mit Einleitung, Hauptteil und Schluss und nutzen Sie präzise, akademische Fachtermini."
+    },
+    "P2": {
+      "title": "Pro-und-Kontra-Gespräch: Ökonomisches Wachstum vs. Post-Wachstums-Ökonomie",
+      "instruction": "Diskutieren Sie mit Ihrem Gesprächspartner bzw. Ihrer Gesprächspartnerin über die Notwendigkeit einer Abkehr vom klassischen Wirtschaftswachstum. Nehmen Sie eine klare Position ein, argumentieren Sie differenziert und versuchen Sie, Ihr Gegenüber durch rhetorische Strategien zu überzeugen.",
+      "prompt": "Führen Sie ein Streitgespräch darüber, ob eine Post-Wachstums-Ökonomie das einzig zukunftsfähige Modell zur Bewältigung globaler Krisen darstellt oder ob technologischer Fortschritt und grünes Wachstum ausreichen. Gehen Sie auf die Argumente Ihres Gegenübers ein und verteidigen Sie Ihren Standpunkt.",
+      "bullets": [
+        "Ressourcenverbrauch und ökologische Belastungsgrenzen",
+        "Soziale Stabilität und Arbeitsplätze ohne Wachstum",
+        "Rolle technologischer Innovationen bei der Entkopplung von Wachstum und Verbrauch"
+      ],
+      "seconds": 300,
+      "tips": "Achten Sie auf eine nuancierte Wortwahl, strukturieren Sie Ihre Argumente klar und setzen Sie gezielt rhetorische Mittel ein, um strittige Punkte konstruktiv zu vertiefen."
+    }
+  }
+}
