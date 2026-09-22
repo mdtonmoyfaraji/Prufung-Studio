@@ -1,0 +1,40 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T08:11:47.213Z",
+  "exam": "goethe",
+  "level": "C1",
+  "module": "sprechen",
+  "name": "Goethe C1 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Vortrag und Diskussion: Künstliche Intelligenz an Hochschulen",
+      "instruction": "Halten Sie einen strukturierten Vortrag zu einem der zur Auswahl stehenden Themen und gehen Sie dabei auf alle vier Leitpunkte ein. Nach Ihrem Vortrag folgen Fragen und eine kurze Diskussion.",
+      "prompt": "Wählen Sie eines der beiden Themen aus und präsentieren Sie Ihre Argumente und Erfahrungen in einem ca. fünfminütigen Vortrag. Beziehen Sie alle vorgegebenen Aspekte in Ihre Ausführungen ein.",
+      "bullets": [
+        "Stellen Sie die aktuellen Entwicklungen und den Einsatz von KI-gestützten Tools im Hochschulalltag dar.",
+        "Wägen Sie die Vor- und Nachteile dieser Technologie für den Lern- und Prüfungsprozess ab.",
+        "Diskutieren Sie ethische Fragestellungen und die Verantwortung von Lehrenden sowie Studierenden.",
+        "Erläutern Sie Ihre persönliche Einschätzung zur zukünftigen Rolle von KI in der akademischen Bildung."
+      ],
+      "topics": [
+        "Wissenschaft",
+        "Bildung"
+      ],
+      "seconds": 300,
+      "tips": "Achten Sie auf eine klare Gliederung mit Einleitung, Hauptteil und Schluss sowie auf einen flüssigen, akademischen Redefluss."
+    },
+    "P2": {
+      "title": "Künstliche Intelligenz an Universitäten",
+      "instruction": "Diskutieren Sie circa 5 Minuten zu zweit: Position beziehen, begründen, auf die Gegenseite eingehen und sich am Ende auf etwas einigen.",
+      "prompt": "Sollten KI-gestützte Schreibwerkzeuge und Textgeneratoren an Hochschulen uneingeschränkt erlaubt sein oder müssen sie streng reguliert werden?",
+      "bullets": [
+        "Chancen für die individuelle Förderung und Effizienzsteigerung",
+        "Gefahr von Plagiat und Verlust eigener Schreib- und Denkkompetenzen",
+        "Notwendigkeit neuer Prüfungsformate statt bloßer Verbote"
+      ],
+      "seconds": 300,
+      "tips": "Hören Sie aktiv auf Ihren Gesprächspartner und versuchen Sie, am Ende einen gemeinsamen Kompromiss zu finden."
+    }
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T08:11:46.512Z",
+  "exam": "goethe",
+  "level": "C1",
+  "module": "hoeren",
+  "name": "Goethe C1 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Literarischer Podcast: Neue Sachbücher im Fokus",
+      "instruction": "Hören Sie den Podcast. Wählen Sie bei den Aufgaben 1 bis 6, zu welchem der drei Bücher (A, B oder C) die Aussagen passen. Sie hören den Text einmal.",
+      "personas": [
+        {
+          "name": "Dr. Helena Berg, Literaturkritikerin",
+          "text": "Herzlich willkommen zu unserem wöchentlichen Literaturpott. Heute widmen wir uns drei faszinierenden Neuerscheinungen an der Schnittstelle von Gesellschaft und Wissenschaft. Beginnen wir mit dem Werk 'Die Vermessung des Alltags' von Jonas Weber. Weber untersucht darin sehr anschaulich, wie digitale Algorithmen unser konsumorientiertes Verhalten steuern. Besonders überzeugend finde ich, dass der Autor komplett auf akademisches Fachchinesisch verzichtet. Stattdessen nutzt er alltägliche Beispiele aus dem Supermarkt oder von Streaming-Diensten, um komplexe Big-Data-Strukturen verständlich zu machen. Das Buch richtet sich an alle, die verstehen wollen, wie unbemerkt unsere täglichen Entscheidungen von unsichtbaren Codes beeinflusst werden, ohne dabei den moralischen Zeigefinger zu erheben."
+        },
+        {
+          "name": "Markus Thiel, Redakteur",
+          "text": "Kommen wir nun zu einem gänzlich anderen Themenbereich: der Ökologie und urbanen Zukunft. In 'Grüne Metropolen' analysiert Hannah Stern, wie europäische Großstädte den Herausforderungen des Klimawandels begegnen. Stern blickt dabei nicht nur auf bereits umfasste Begrünungsprojekte, sondern wagt einen radikalen Blick in die Zukunft. Sie argumentiert faktenbasiert, dass vertikale Gärten und autofreie Zonen allein nicht ausreichen werden, um unsere Städte langfristig lebenswert zu erhalten. Kritiker mögen einwandern, dass ihre Visionen utopisch wirken, doch Stern untermauert ihre Thesen mit fundierten Fallstudien aus Kopenhagen und Wien. Ein inspirierendes Buch für Stadtplaner und alle Bürgerinnen und Bürger, die aktiv an der Gestaltung ihrer urbanen Umwelt mitwirken möchten."
+        },
+        {
+          "name": "Svenja Ahlers, Moderatorin",
+          "text": "Zu guter Letzt werfen wir einen Blick auf den Arbeitsmarkt der Zukunft. In 'Das Ende der Präsenzkultur' beleuchtet Tobias Klein den rasanten Wandel unserer Arbeitswelt. Klein fordert einen grundlegenden Paradigmenwechsel weg von starren Arbeitszeiten hin zu reiner Vertrauensarbeit und ergebnisorientierter Bewertung. Was dieses Buch von der Masse ähnlicher Ratgeber abhebt, ist der enorme Praxisbezug. Klein hat über zwei Jahre lang mittelständische Unternehmen begleitet, die die Vier-Tage-Woche eingeführt haben, und dokumentiert die jeweiligen Erfolge und Stolpersteineungslos. Es ist ein hochaktueller Leitfaden für Führungskräfte, die den Anschluss an moderne Arbeitsmodelle nicht verpassen wollen und bereit sind, bewährte Strukturen kritisch zu hinterfragen."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Dieses Buch verzichtet bewusst auf komplizierte Fachbegriffe, um komplexe technologische Zusammenhänge für ein breites Publikum zugänglich zu machen.",
+          "answer": 0,
+          "why": "Im ersten Text wird über Jonas Webers Buch gesagt: 'dass der Autor komplett auf akademisches Fachchinesisch verzichtet.'",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        },
+        {
+          "prompt": "In dieser Publikation wird argumentiert, dass bisherige ökologische Maßnahmen in Städten für die Zukunft nicht ausreichen werden.",
+          "answer": 1,
+          "why": "Im zweiten Text heißt es über Hannah Sterns Buch, sie argumentiere, 'dass vertikale Gärten und autofreie Zonen allein nicht ausreichen werden'.",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        },
+        {
+          "prompt": "Dieses Werk dokumentiert die Erfahrungen von Unternehmen, die neue Arbeitszeitmodelle in der Praxis erprobt haben.",
+          "answer": 2,
+          "why": "Im dritten Text wird zu Tobias Kleins Buch erwähnt, er habe 'mittelständische Unternehmen begleitet, die die Vier-Tage-Woche eingeführt haben'.",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        },
+        {
+          "prompt": "Hier wird untersucht, wie digitale Systeme und Algorithmen unbemerkt das Konsumverhalten der Menschen lenken.",
+          "answer": 0,
+          "why": "Im ersten Text beschreibt Dr. Berg, dass Weber untersucht, 'wie digitale Algorithmen unser konsumorientiertes Verhalten steuern'.",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        },
+        {
+          "prompt": "Das Buch stützt seine zukunftsweisenden Thesen auf konkrete Fallstudien aus ausgewählten europäischen Städten.",
+          "answer": 1,
+          "why": "Im zweiten Text wird betont, dass Stern 'ihre Thesen mit fundierten Fallstudien aus Kopenhagen und Wien' untermauert.",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        },
+        {
+          "prompt": "Diese Neuerscheinung richtet sich vor allem an Führungskräfte, die herkömmliche Arbeitsstrukturen überdenken möchten.",
+          "answer": 2,
+          "why": "Im dritten Text wird das Buch als 'hochaktueller Leitfaden für Führungskräfte' bezeichnet, 'die bereit sind, bewährte Strukturen kritisch zu hinterfragen'.",
+          "options": [
+            "Dr. Helena Berg, Literaturkritikerin",
+            "Markus Thiel, Redakteur",
+            "Svenja Ahlers, Moderatorin"
+          ]
+        }
+      ]
+    },
+    "H2": {
+      "title": "Radiointerview: Künstliche Intelligenz in der Archäologie",
+      "instruction": "Lesen Sie die Aussagen und hören Sie dann das Interview. Entscheiden Sie: Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt?",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem Wissenschaftsmagazin. Heute sprechen wir über den Einsatz moderner Technologien in der historischen Forschung. Mein Gast ist Dr. Marion Bergmann, Informatikerin und spezialisiert auf digitale Archäologie an der Universität Freiburg. Frau Bergmann, wie muss man sich die Arbeit einer modernen Archäologin vorstellen? Sitzen Sie überhaupt noch im Staub und graben mit der Kelle?"
+          },
+          {
+            "speaker": "Dr. Marion Bergmann",
+            "text": "Guten Tag. Ja, die klassische Grabung gibt es natürlich nach wie vor, und dieser romantische Aspekt gehört auch dazu. Aber unsere wichtigste Arbeit findet mittlerweile oft am Computer statt. Wir nutzen hochauflösende Satellitenbilder und Laserscans, sogenannte LiDAR-Daten, um versteckte Strukturen unter der Erdoberfläche sichtbar zu machen, ohne einen einzigen Spatenstich zu tun. Das spart enorm viel Zeit und schont die Fundstätten."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Das klingt faszinierend. Und an dieser Stelle kommt Künstliche Intelligenz ins Spiel, richtig?"
+          },
+          {
+            "speaker": "Dr. Marion Bergmann",
+            "text": "Genau. Die Datenmengen, die wir heutzutage erheben, sind gigantisch. Kein menschliches Team könnte diese Terabytes an Laserscans in absehbarer Zeit vollständig manuell auswerten. Wir trainieren daher neuronale Netze darauf, Anomalien in der Landschaft zu erkennen – also Formen, die auf antike Mauern, Gräber oder Straßen hinweisen. Die KI übernimmt quasi die Vorarbeit und schlägt uns Fundverdachtsgebiete vor."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Das bedeutet aber auch, dass die KI die eigentliche Entdeckung macht und die Wissenschaftler überflüssig werden?"
+          },
+          {
+            "speaker": "Dr. Marion Bergmann",
+            "text": "Keineswegs. Die KI ist lediglich ein Werkzeug, ein sehr schnelles Filterorgan. Sie versteht den historischen Kontext nicht. Sie erkennt lediglich geometrische Muster. Ob es sich bei einer kreisrunden Struktur im Boden um eine keltische Befestigung, einen mittelalterlichen Kohlenmeiler oder schlicht um ein neuzeitliches Entwässerungsbecken handelt, das muss nach wie vor das menschliche Expertenteam vor Ort verifizieren."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Gibt es denn Regionen, in denen diese Methode besonders erfolgreich eingesetzt wird?"
+          },
+          {
+            "speaker": "Dr. Marion Bergmann",
+            "text": "Besonders in dicht bewaldeten Gebieten oder im dichten Dschungel, wo herkömmliche Luftbilder an ihre Grenzen stoßen, feiern wir große Erfolge. Die Laserstrahlen durchdringen das Blätterdach, und die KI filtert die Vegetation heraus. So haben wir kürzlich in Mitteleuropa bisher völlig unbekannte Siedlungsstrukturen aus der Eisenzeit kartieren können."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Frau Bergmann, vielen Dank für diese spannenden Einblicke in Ihre Forschungsarbeit."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Dr. Marion Bergmann verbringt ihre Arbeitszeit inzwischen ausschließlich im Labor vor dem Computer.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 1,
+          "why": "Die Aussage stimmt nicht, da sie erklärt: 'Ja, die klassische Grabung gibt es natürlich nach wie vor'."
+        },
+        {
+          "prompt": "Durch den Einsatz von LiDAR-Daten und Satellitenbildern können Fundstätten geschont werden.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 0,
+          "why": "Die Aussage stimmt, laut Text werden dadurch Strukturen sichtbar, 'ohne einen einzigen Spatenstich zu tun. Das spart enorm viel Zeit und schont die Fundstätten.'"
+        },
+        {
+          "prompt": "Die anfallenden Datenmengen sind so groß, dass sie ohne technische Unterstützung nicht komplett manuell ausgewertet werden können.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 0,
+          "why": "Dies stimmt, denn die Expertin sagt: 'Kein menschliches Team könnte diese Terabytes an Laserscans in absehbarer Zeit vollständig manuell auswerten.'"
+        },
+        {
+          "prompt": "Künstliche Intelligenz ist in der Lage, den historischen Kontext von Funden vollständig zu verstehen.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 1,
+          "why": "Die Aussage stimmt nicht; Dr. Bergmann betont ausdrücklich: 'Sie versteht den historischen Kontext nicht.'"
+        },
+        {
+          "prompt": "Die Finanzierung für das Projekt an der Universität Freiburg wurde im vergangenen Jahr aufgestockt.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 2,
+          "why": "Dazu wird im Interview überhaupt nichts gesagt."
+        },
+        {
+          "prompt": "Die Verifizierung der von der KI vorgeschlagenen Fundgebiete muss von Menschen durchgeführt werden.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 0,
+          "why": "Dies stimmt laut Text: 'Ob es sich bei einer kreisrunden Struktur... handelt, das muss nach wie vor das menschliche Expertenteam vor Ort verifizieren.'"
+        },
+        {
+          "prompt": "Besonders in bewaldeten Regionen erweist sich die Kombination aus Laserscans und KI als sehr erfolgreich.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 0,
+          "why": "Die Aussage stimmt, da sie sagt: 'Besonders in dicht bewaldeten Gebieten... feiern wir große Erfolge.'"
+        },
+        {
+          "prompt": "Dr. Bergmann hat an der Universität Freiburg selbst Informatik und Archäologie im Doppelstudium belegt.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 2,
+          "why": "Über ihr konkretes Studium wird im Gespräch nichts ausgesagt."
+        },
+        {
+          "prompt": "Mit Hilfe dieser Technologie wurden in Mitteleuropa kürzlich bisher unbekannte eisenzeitliche Siedlungsstrukturen kartiert.",
+          "options": [
+            "stimmt",
+            "stimmt nicht",
+            "dazu wird nichts gesagt"
+          ],
+          "answer": 0,
+          "why": "Die Aussage stimmt, was durch den Beleg 'So haben wir kürzlich in Mitteleuropa bisher völlig unbekannte Siedlungsstrukturen aus der Eisenzeit kartieren können' bestätigt wird."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Künstliche Intelligenz in der Hochschullehre",
+      "instruction": "Hören Sie die Diskussion zwischen drei Personen. Sie hören den Text einmal. Zu jedem Abschnitt gibt es zwei Aufgaben. Wählen Sie für jede Aufgabe die richtige Lösung.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "press": "Herzlich willkommen zu unserer heutigen Podiumsdiskussion. Unser Thema lautet: Künstliche Intelligenz in der Hochschullehre — Chance oder Risiko? Bei mir sind Prof. Dr. Martina Weber, Expertin für Bildungswissenschaften, und Jonas Berger, Student der Informatik. Frau Weber, wie verändert KI den Unialltag?",
+            "text": "Herzlich willkommen zu unserer heutigen Podiumsdiskussion. Unser Thema lautet: Künstliche Intelligenz in der Hochschullehre — Chance oder Risiko? Bei mir sind Prof. Dr. Martina Weber, Expertin für Bildungswissenschaften, und Jonas Berger, Student der Informatik. Frau Weber, wie verändert KI den Unialltag?"
+          },
+          {
+            "speaker": "Prof. Dr. Martina Weber",
+            "text": "Guten Tag. Die Veränderung ist massiv und erfolgt rasant. Studierende nutzen Sprachmodelle längst nicht mehr nur für die Rechtschreibprüfung, sondern zur Strukturierung komplexer Arbeiten. Das zwingt uns Dozierende dazu, die Art und Weise, wie wir Leistungen abfragen, grundlegend zu überarbeiten. Reine Hausarbeiten verlieren an Aussagekraft. Stattdessen müssen wir vermehrt auf mündliche Prüfungen oder praxisnahe Projektarbeiten setzen, bei denen der individuelle Denkprozess im Vordergrund steht."
+          },
+          {
+            "speaker": "Jonas Berger",
+            "text": "Da kann ich Frau Weber nur zustimmen, allerdings aus einer anderen Perspektive. Für uns Studierende ist KI wie ein persönlicher Tutor, der rund um die Uhr verfügbar ist. Wenn ich ein mathematisches Konzept in der Vorlesung nicht verstanden habe, lasse ich es mir von der KI in einfacheren Worten erklären. Das nimmt enorm viel Druck aus dem Semester. Natürlich gibt es schwarze Schafe, die sich einfach ganze Essays schreiben lassen, aber die Mehrheit nutzt die Tools als Lernhilfe."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Das klingt nach einem produktiven Miteinander. Aber sehen wir uns die Schattenseiten an: Was ist mit der Entstehung von Abhängigkeiten und dem Verlust eigener kritischer Analysefähigkeiten?"
+          },
+          {
+            "speaker": "Prof. Dr. Martina Weber",
+            "text": "Das ist exakt der Punkt, der mir Sorge bereitet. Wenn die KI mir vorschlägt, wie ein Argument aufgebaut sein soll, sinkt die Bereitschaft, sich intellektuell zu quälen. Wissenschaftliches Arbeiten lebt jedoch genau von diesem Ringen um Erkenntnis. Wenn wir diesen Prozess an Algorithmen delegieren, bilden wir am Ende eine Generation heran, die zwar gut formulieren, aber Probleme nicht mehr eigenständig durchdringen kann."
+          },
+          {
+            "speaker": "Jonas Berger",
+            "text": "Aber ist das nicht ein Generationenkonflikt? Jede neue Technologie — vom Taschenrechner bis zum Internet — wurde verteufelt. Wir müssen lernen, mit diesen Tools umzugehen, statt sie zu verbieten. Anstatt wissenschaftliches Schreiben abzuschaffen, sollten Universitäten verpflichtende Seminare zur kritischen Reflexion von KI-Ergebnissen anbieten. Es geht um Medienkompetenz im digitalen Zeitalter."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Ein sehr konstruktiver Vorschlag. Wie bewerten Sie beide denn die Chancengleichheit durch diese Technologien?"
+          },
+          {
+            "speaker": "Prof. Dr. Martina Weber",
+            "text": "Paradoxerweise sehe ich hier ein zweischneidiges Schwert. Einerseits haben Studierende ohne akademischen Hintergrund nun Zugang zu einem 24-Stunden-Mentoring, was extrem hilfreich ist. Andererseits kosten die wirklich leistungsstarken, werbefreien KI-Modelle monatlich Geld. Wer sich das nicht leisten kann, fällt technologisch zurück. Die Universität muss hier als sozialer Ausgleich wirken und allen kostenfreien Zugang zu diesen Ressourcen ermöglichen."
+          },
+          {
+            "speaker": "Jonas Berger",
+            "text": "Genau das fordert die Studierendenschaft auch. Es darf nicht sein, dass der Studienerfolg vom Geldbeutel abhängt. Wenn KI zur Grundausstattung des modernen Studierens gehört, dann muss die Hochschule diese Lizenzen zentral finanzieren. Nur so bleibt Bildung gerecht."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie bewertet Prof. Dr. Martina Weber die aktuellen Auswirkungen von KI auf universitäre Leistungsnachweise?",
+          "options": [
+            "Traditionelle Hausarbeiten sind durch den Einsatz von KI weniger aussagekräftig geworden.",
+            "Schriftliche Arbeiten sollten komplett abgeschafft und durch reine Multiple-Choice-Tests ersetzt werden.",
+            "Die Benotung von studentischen Arbeiten ist durch automatisierte Korrektursysteme gerechter geworden."
+          ],
+          "answer": 0,
+          "why": "Laut Martina Weber verlieren reine Hausarbeiten an Aussagekraft, weil Studierende Sprachmodelle nutzen, weshalb Prüfungsformen überarbeitet werden müssen."
+        },
+        {
+          "prompt": "Welche Funktion erfüllt die Künstliche Intelligenz laut Jonas Berger vor allem für die Studierenden?",
+          "options": [
+            "Sie ersetzt die Vorlesungen vollständig durch virtuelle Seminare.",
+            "Sie dient als jederzeit verfügbarer, unterstützender Tutor beim Lernen.",
+            "Sie übernimmt eigenständig die gesamte Planung des Stundenplans."
+          ],
+          "answer": 1,
+          "why": "Jonas Berger beschreibt KI als einen „persönlichen Tutor, der rund um die Uhr verfügbar ist“, um Konzepte zu erklären."
+        },
+        {
+          "prompt": "Welche Hauptsorge äußert Martina Weber bezüglich des Einsatzes von KI im wissenschaftlichen Arbeiten?",
+          "options": [
+            "Studierende könnten die kostenpflichtigen Abonnements nicht mehr bezahlen.",
+            "Die Universität verliert die Kontrolle über die Datenschutzrichtlinien der Anbieter.",
+            "Die Bereitschaft zur tiefgehenden, eigenständigen Auseinandersetzung mit Problemen nimmt ab."
+          ],
+          "answer": 2,
+          "why": "Weber befürchtet, dass die Bereitschaft sinkt, sich intellektuell zu quälen, und Probleme nicht mehr eigenständig durchdrungen werden."
+        },
+        {
+          "prompt": "Welche Maßnahme schlägt Jonas Berger vor, um dem Missbrauch und Problemen vorzubeugen?",
+          "options": [
+            "Die Einführung verpflichtender Seminare zur kritischen Reflexion von KI-Inhalten",
+            "Ein striktes Verbot von Laptops und Smartphones in allen Hörsälen",
+            "Die Entwicklung einer eigenen, universitätseigenen Sperrsoftware für KI-Modelle"
+          ],
+          "answer": 0,
+          "why": "Jonas schlägt vor, „verpflichtende Seminare zur kritischen Reflexion von KI-Ergebnissen“ anzubieten."
+        },
+        {
+          "prompt": "Wie beurteilt Martina Weber den Aspekt der Chancengleichheit in Bezug auf Künstliche Intelligenz?",
+          "options": [
+            "Sie sieht ausschließlich Vorteile für Studierende aus finanzstarken Familien.",
+            "Sie bewertet es als zweischneidig, da kostenpflichtige Modelle soziale Ungleichheit verstärken können.",
+            "Sie ist der Meinung, dass KI keinerlei Einfluss auf die soziale Herkunft der Studierenden hat."
+          ],
+          "answer": 1,
+          "why": "Weber nennt es ein „zweischneidiges Schwert“, da kostenpflichtige, leistungsstarke Modelle dazu führen können, dass finanzschwächere Studierende zurückfallen."
+        },
+        {
+          "prompt": "Was fordern die Studierenden laut Jonas Berger als Konsequenz aus der technologischen Entwicklung?",
+          "options": [
+            "Dass die Hochschule notwendige KI-Lizenzen zentral und für alle kostenfrei finanziert",
+            "Dass Dozenten keine schriftlichen Arbeiten mehr als Prüfungsleistung verlangen dürfen",
+            "Dass Studierende eine finanzielle Beihilfe für private Technikanschaffungen erhalten"
+          ],
+          "answer": 0,
+          "why": "Jonas erklärt: „Wenn KI zur Grundausstattung des modernen Studierens gehört, dann muss die Hochschule diese Lizenzen zentral finanzieren.“"
+        },
+        {
+          "prompt": "Welchen historischen Vergleich zieht Jonas Berger im Verlauf der Diskussion?",
+          "options": [
+            "Er vergleicht die KI-Euphorie mit dem Platzen der Dotcom-Blase.",
+            "Er vergleicht die Skepsis gegenüber KI mit früheren Vorbehalten gegen den Taschenrechner und das Internet.",
+            "Er vergleicht die Einführung von KI mit der Erfindung des Buchdrucks."
+          ],
+          "answer": 1,
+          "why": "Er sagt, dass jede neue Technologie „— vom Taschenrechner bis zum Internet — verteufelt“ wurde."
+        },
+        {
+          "prompt": "Worin sind sich die Moderatorin und ihre Gäste am Ende der Diskussion im Kern einig?",
+          "options": [
+            "Dass Künstliche Intelligenz umgehend aus den Universitäten verbannt werden muss",
+            "Dass die Risiken von KI ihren Nutzen bei Weitem übersteigen",
+            "Dass ein konstruktiver, aber kritischer Umgang mit KI in der Bildung unerlässlich ist"
+          ],
+          "answer": 2,
+          "why": "Sowohl die Vorschläge für Seminare zur Reflexion als auch die Forderung nach sozialem Ausgleich zeigen, dass ein aufgeklärter, regulierter Umgang gesucht wird."
+        }
+      ]
+    },
+    "H4": {
+      "title": "Die Zukunft des mobilen Arbeitens",
+      "instruction": "Sie hören einen Vortrag über die Entwicklung und die Zukunft des mobilen Arbeitens. Hören Sie den Vortrag zweimal. Dazu lösen Sie sieben Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Vortragende",
+            "text": "Guten Tag, meine Damen und Herren! Ich freue mich, Sie heute zu meinem Vortrag über die Evolution des mobilen Arbeitens begrüßen zu dürfen. Wenn wir an die Anfänge des sogenannten Homeoffice oder der ortsunabhängigen Arbeit vor zehn oder fünfzehn Jahren denken, dominierte oft ein provisorischer Eindruck: Man arbeitete am Küchentisch, die Technik war fehleranfällig und die Skepsis vonseiten der Arbeitgeber war spürbar. Heute stellt sich die Situation grundlegend anders dar. Die digitale Infrastruktur hat sich rasant entwickelt, und das mobile Arbeiten ist längst zu einem zentralen Pfeiler der modernen Unternehmenskultur geworden. Doch wohin geht die Reise? Ein aktueller Trend, den wir beobachten, ist die Abkehr von der reinen Präsenzkultur hin zu einer ergebnisorientierten Vertrauenskultur. Unternehmen erkennen zunehmend, dass die Anwesenheit im physischen Büro keinen Aufschluss über die tatsächliche Produktivität gibt. Stattdessen rücken messbare Resultate und transparente Zielvereinbarungen in den Vordergrund. Dies erfordert jedoch von Führungskräften ein völlig neues Verständnis von Kontrolle und Führung. Micromanagement hat hier keinen Platz mehr; stattdessen ist Coaching auf Augenhöhe gefragt. Ein weiterer wichtiger Aspekt betrifft die soziale Komponente des Arbeitens. Obwohl die Flexibilität von den Beschäftigten hoch geschätzt wird, klagen viele über Gefühle der Isolation und den Verlust des informellen Austauschs. Um diesem Phänomen entgegenzuwirken, experimentieren innovative Firmen mit hybriden Konzepten, bei denen das Büro nicht mehr als traditioneller Arbeitsplatz dient, sondern vielmehr als Begegnungsstätte für Kreativität, Teamarbeit und den Aufbau sozialer Bindungen fungiert. Das klassische Büro wird also neu erfunden: weg vom Einzelschreibtisch, hin zum Gemeinschaftszentrum. Natürlich bringt diese Entwicklung auch rechtliche und regulatorische Herausforderungen mit sich. Fragen des Datenschutzes, der ergonomischen Ausstattung des Heimarbeitsplatzes und vor allem der Abgrenzung zwischen Berufs- und Privatleben müssen neu verhandelt werden. Das sogenannte Recht auf Nichterreichbarkeit gewinnt in diesem Zusammenhang drastisch an Bedeutung, um Burnout-Symptomen vorzubeugen. Zusammenfassend lässt sich sagen, dass mobiles Arbeiten kein vorübergehendes Phänomen ist, sondern eine nachhaltige Transformation unserer Arbeitswelt darstellt, die sowohl Chancen als auch klare strukturelle Aufgaben für die Zukunft bereithält."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie wurde das mobile Arbeiten in der Anfangszeit laut der Vortragenden meist wahrgenommen?",
+          "options": [
+            "Als vorübergehender Trend ohne wirtschaftliche Relevanz",
+            "Als provisorisch und mit Skepsis seitens der Arbeitgeber behaftet",
+            "Als hochentwickelte Methode zur Steigerung der Effizienz"
+          ],
+          "answer": 1,
+          "why": "Im Text heißt es, dass die Arbeit anfangs einen 'provisorischen Eindruck' machte und die 'Skepsis vonseiten der Arbeitgeber war spürbar'."
+        },
+        {
+          "prompt": "Welcher Wandel vollzieht sich laut Vortrag bezüglich der Unternehmenskultur?",
+          "options": [
+            "Ein Übergang von Präsenzkultur zu einer ergebnisorientierten Vertrauenskultur",
+            "Eine strengere Überwachung der Arbeitszeiten durch digitale Tools",
+            "Eine Rückkehr zu verpflichtenden Anwesenheitspflichten im Büro"
+          ],
+          "answer": 0,
+          "why": "Die Vortragende spricht direkt von einer 'Abkehr von der reinen Präsenzkultur hin zu einer ergebnisorientierten Vertrauenskultur'."
+        },
+        {
+          "prompt": "Welche Eigenschaft wird von Führungskräften im Rahmen des neuen Arbeitsmodells verlangt?",
+          "options": [
+            "Die konsequente Anwendung von Micromanagement",
+            "Ein tiefgreifendes Verständnis für technische Fehlerquellen",
+            "Ein Führungsstil, der auf Coaching und Dialog auf Augenhöhe basiert"
+          ],
+          "answer": 2,
+          "why": "Im Text wird betont, dass 'Micromanagement' keinen Platz mehr hat und stattdessen 'Coaching auf Augenhöhe gefragt' ist."
+        },
+        {
+          "prompt": "Welches Problem wird im Zusammenhang mit der Flexibilität des mobilen Arbeitens genannt?",
+          "options": [
+            "Ein weit verbreitetes Gefühl der Isolation bei den Beschäftigten",
+            "Ein signifikanter Rückgang der individuellen Leistungsfähigkeit",
+            "Technische Überforderung durch zu komplexe Software"
+          ],
+          "answer": 0,
+          "why": "Die Vortragende erwähnt, dass viele Beschäftigte 'über Gefühle der Isolation und den Verlust des informellen Austauschs' klagen."
+        },
+        {
+          "prompt": "Wie soll das klassische Büro in Zukunft vor allem genutzt werden?",
+          "options": [
+            "Als ruhiger Rückzugsort für konzentrierte Einzelarbeit",
+            "Als Begegnungsstätte für Kreativität und Teamarbeit",
+            "Als reines Archiv für physische Dokumente"
+          ],
+          "answer": 1,
+          "why": "Es wird erläutert, dass das Büro als 'Begegnungsstätte für Kreativität, Teamarbeit und den Aufbau sozialer Bindungen fungiert'."
+        },
+        {
+          "prompt": "Welche regulatorische Frage gewinnt laut Vortrag stark an Bedeutung?",
+          "options": [
+            "Die gesetzliche Verpflichtung zur Nutzung bestimmter Kommunikations-Apps",
+            "Das Recht auf Nichterreichbarkeit zur Vermeidung von Burnout",
+            "Die steuerliche Absetzbarkeit von privaten Möbeln im Homeoffice"
+          ],
+          "answer": 1,
+          "why": "Der Text führt an: 'Das sogenannte Recht auf Nichterreichbarkeit gewinnt in diesem Zusammenhang drastisch an Bedeutung, um Burnout-Symptomen vorzubeugen.'"
+        },
+        {
+          "prompt": "Welches Fazit zieht die Vortragende über das mobile Arbeiten?",
+          "options": [
+            "Es ist ein dauerhafter Transformationsprozess mit vielen Herausforderungen.",
+            "Es wird sich langfristig nicht gegen traditionelle Bürostrukturen durchsetzen.",
+            "Es erfordert keine weiteren rechtlichen Anpassungen mehr."
+          ],
+          "answer": 0,
+          "why": "Abschließend wird zusammengefasst, dass mobiles Arbeiten 'eine nachhaltige Transformation unserer Arbeitswelt darstellt, die sowohl Chancen als auch klare strukturelle Aufgaben... bereithält'."
+        }
+      ]
+    }
+  }
+}

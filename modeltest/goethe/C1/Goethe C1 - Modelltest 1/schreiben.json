@@ -1,0 +1,37 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T08:11:46.860Z",
+  "exam": "goethe",
+  "level": "C1",
+  "module": "schreiben",
+  "name": "Goethe C1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Künstliche Intelligenz an Universitäten",
+      "instruction": "Schreiben Sie einen Diskussionsbeitrag zu einem Online-Forum zum Thema Künstliche Intelligenz in der Hochschulbildung.",
+      "prompt": "In einem Online-Magazin wird intensiv darüber diskutiert, ob der Einsatz von KI-basierten Schreibwerkzeugen an Universitäten uneingeschränkt erlaubt oder streng reguliert werden sollte. Verfassen Sie einen Forumsbeitrag, in dem Sie auf die verschiedenen Argumente eingehen und Ihre eigene Position begründen.",
+      "bullets": [
+        "Erklären Sie Ihre grundsätzliche Haltung zum Einsatz von KI im akademischen Studium.",
+        "Führen Sie Argumente für die Befürworter einer flexiblen Nutzung an.",
+        "Erläutern Sie anhand eines Beispiels, welche Risiken durch unkritische Nutzung entstehen.",
+        "Stellen Sie eine konkrete Alternative zur vollständigen Verbannung oder unkontrollierten Erlaubnis von KI dar."
+      ],
+      "words": 230,
+      "tips": "Achten Sie darauf, alle vier Leitpunkte im Text logisch zu verknüpfen und stilistisch abwechslungsreich zu argumentieren."
+    },
+    "S2": {
+      "title": "Änderung des Arbeitszeitmodells",
+      "instruction": "Schreiben Sie eine E-Mail an Ihre Vorgesetzte, Frau Dr. Berger, in der Sie auf ein Problem im Team hinweisen und eine konstruktive Lösung vorschlagen. Beachten Sie dabei die folgenden vier Leitpunkte.",
+      "prompt": "Sie arbeiten in der Forschungsabteilung eines Technologieunternehmens. Seit der Einführung eines neuen, flexiblen Arbeitszeitmodells gibt es vermehrt Koordinationsschwierigkeiten bei gemeinsamen Projekten. Schreiben Sie eine E-Mail an Ihre Abteilungsleiterin, Frau Dr. Berger, um die Situation zu schildern und Verbesserungsvorschläge zu unterbreiten.",
+      "bullets": [
+        "Machen Sie auf die aktuellen Probleme bei der Teamabsprache aufmerksam.",
+        "Zeigen Sie Verständnis für die Flexibilität des neuen Modells.",
+        "Schlagen Sie verbindliche Kernarbeitszeiten für Meetings vor.",
+        "Bitten Sie um ein kurzes Gespräch zur Klärung der Details."
+      ],
+      "words": 120,
+      "tips": "Achten Sie auf einen angemessenen, (halb-)formellen Ton und formulieren Sie alle vier Leitpunkte präzise aus."
+    }
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T08:11:32.552Z",
+  "exam": "goethe",
+  "level": "C1",
+  "module": "lesen",
+  "name": "Goethe C1 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Die Zukunft des mobilen Arbeitens",
+      "instruction": "Lesen Sie den folgenden Text und wählen Sie für jede Lücke die richtige Lösung (a, b, c oder d).",
+      "passage": "Die Art und Weise, wie wir arbeiten, hat sich in den letzten Jahren grundlegend verändert. Insbesondere das Konzept des ortsunabhängigen Arbeitens hat sich von einem temporären Trend zu einer dauerhaften ___1___ entwickelt. Viele Unternehmen stellen fest, dass Flexibilität nicht nur die Zufriedenheit der Angestellten erhöht, sondern auch die Produktivität ___2___ kann. Dennoch bringt diese Entwicklung neue Herausforderungen mit sich, vor allem im Bereich der internen Kommunikation. Wenn Teams geografisch verstreut sind, ist es leicht möglich, dass der informelle Austausch ___3___ leidet. Um dem entgegenzuwirken, investieren moderne Firmen verstärkt in digitale Kollaborationsplattformen. Diese Werkzeuge sollen dazu dienen, virtuelle Barrieren abzubauen und das Gemeinschaftsgefühl trotz räumlicher Distanz zu ___4___ . Ein weiterer wichtiger Aspekt betrifft die rechtlichen Rahmenbedingungen. Die Frage, wer haftet, wenn ein Beschäftigter im Ausland einen Arbeitsunfall hat, ist oft komplex und ___5___ geklärt. Experten fordern daher einheitliche europäische Standards, um sowohl Arbeitnehmern als auch Arbeitgebern mehr Rechtssicherheit zu ___6___ . Darüber hinaus spielt die psychologische Komponente eine zentrale Rolle. Wer ständig erreichbar ist, neigt dazu, die Grenzen zwischen Berufs- und Privatleben zu ___7___ . Langfristig kann dies zu Erschöpfung führen, weshalb präventive Maßnahmen zum Schutz der mentalen Gesundheit dringend ___8___ sind.",
+      "items": [
+        {
+          "prompt": "1",
+          "options": [
+            "a) Einrichtung",
+            "b) Institution",
+            "c) Etablierung",
+            "d) Struktur"
+          ],
+          "answer": 3,
+          "کش": "",
+          "why": "Im Kontext des Textes beschreibt 'Struktur' treffend eine feste, dauerhafte Organisationsform des Arbeitens."
+        },
+        {
+          "prompt": "2",
+          "options": [
+            "a) steigern",
+            "b) erheben",
+            "c) vergrößern",
+            "d) erweitern"
+          ],
+          "answer": 0,
+          "why": "Die feste Verbindung 'die Produktivität steigern' ist im wirtschaftlichen Kontext sprachlich korrekt."
+        },
+        {
+          "prompt": "3",
+          "options": [
+            "a) gewaltig",
+            "b) stark",
+            "c) hoch",
+            "d) schwer"
+          ],
+          "answer": 1,
+          "why": "Das Adverb 'stark' passt graduell am besten zu dem Verb 'leiden' in diesem Kontext."
+        },
+        {
+          "prompt": "4",
+          "options": [
+            "a) bewahren",
+            "b) erhalten",
+            "c) festhalten",
+            "d) unterhalten"
+          ],
+          "answer": 1,
+          "why": "Das Verb 'erhalten' passt stilistisch und semantisch perfekt zu 'Gemeinschaftsgefühl'."
+        },
+        {
+          "prompt": "5",
+          "options": [
+            "a) keineswegs",
+            "b) niemals",
+            "c) nirgends",
+            "d) nirgendwo"
+          ],
+          "answer": 0,
+          "why": "Der Ausdruck 'keineswegs geklärt' drückt präzise aus, dass die Frage noch offen ist."
+        },
+        {
+          "prompt": "6",
+          "options": [
+            "a) überreichen",
+            "b) bieten",
+            "c) gewähren",
+            "d) liefern"
+          ],
+          "answer": 1,
+          "why": "Man bietet jemandem Sicherheit ('Rechtssicherheit bieten')."
+        },
+        {
+          "prompt": "7",
+          "options": [
+            "a) verwischen",
+            "b) löschen",
+            "c) trennen",
+            "d) spalten"
+          ],
+          "answer": 0,
+          "why": "Grenzen zwischen Bereichen können 'verwischen', was bildhaft für das Verschwimmen der Arbeits- und Freizeit steht."
+        },
+        {
+          "prompt": "8",
+          "options": [
+            "a) geboten",
+            "b) gefordert",
+            "c) nötig",
+            "d) ratsam"
+          ],
+          "answer": 0,
+          "why": "Das Partizip 'geboten' bildet mit 'sind' eine gehobene Redewendung für 'notwendig sein'."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Die Renaissance der Handarbeit im digitalen Zeitalter",
+      "instruction": "Lesen Sie den Artikel und wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+      "passage": "In einer Epoche, in der künstliche Intelligenz und automatisierte Prozesse nahezu jeden Aspekt unseres Berufs- und Privatlebens durchdringen, beobachten Soziologen ein bemerkenswertes Phänomen: die bewusste Rückbesinnung auf manuelle Tätigkeiten. Ob Tischlern, Töpfern oder traditionelles Sticken – handwerkliche Hobbys boomen vor allem bei jungen Erwachsenen, die den Großteil ihres Tages vor Bildschirmen verbringen.\n\nDiese Entwicklung mag auf den ersten Blick paradox wirken. Schließlich bieten moderne Technologien uns maximalen Komfort und befreien uns von mühsamen Routinearbeiten. Doch genau hier liegt nach Ansicht von Psychologen der Knackpunkt. Die digitale Arbeitswelt ist oft abstrakt. Wer den ganzen Tag Codezeilen schreibt, Daten analysiert oder virtuelle Projekte steuert, sieht am Ende des Tages selten ein greifbares Resultat seiner Anstrengungen. Das fertige Produkt existiert meist nur als Datei auf einem Server. Das haptische Erlebnis fehlt völlig.\n\nGenau dieses Vakuum füllt die Handarbeit. Wenn man einen Holzblock bearbeitet, spürt man den Widerstand des Materials, riecht den frischen Leim und sieht unmittelbar, wie unter den eigenen Händen ein physisches Objekt entsteht. Diese Unmittelbarkeit vermittelt ein tiefes Gefühl von Selbstwirksamkeit, das im digitalen Büroalltag häufig verloren geht. Zudem erfordert handwerkliche Arbeit eine hohe Konzentration im Hier und Jetzt. Ein Moment der Unachtsamkeit beim Sägen oder Töpfern hat sofortige Konsequenzen, was paradoxerweise als entspannend empfunden wird: Man muss sich auf die eine Sache fokussieren und kann nicht gleichzeitig E-Mails checken oder Nachrichten konsumieren.\n\nDennoch lässt sich die neue Lust am Handwerk nicht als bloßer Technikpessimismus abtun. Viele Handwerker nutzen digitale Medien sehr wohl, allerdings als Werkzeug zur Inspiration und Vernetzung. Sie holen sich Schnittmuster aus Online-Communities, tauschen Tipps in Foren aus oder präsentieren ihre fertigen Werke auf Social-Media-Plattformen. Die Technologie wird somit nicht verteufelt, sondern gezielt als Ergänzung genutzt, um die analoge Praxis zu bereichern.\n\nFür die Zukunft der Arbeitswelt könnte dieser Trend weitreichende Signale senden. Er zeigt, dass der Mensch das Bedürfktur hat, seine physischen Fähigkeiten zu nutzen und mit der materialisierten Welt zu interagieren. Unternehmen erkennen dies teilweise bereits und versuchen, auch in hochdigitalisierten Büros kreative Freiräume zu schaffen, in denen haptisches Arbeiten und analoges Brainstorming mit Papier und Stift wieder salonfähig werden.",
+      "items": [
+        {
+          "prompt": "Welche Beobachtung machen Soziologen in Bezug auf junge Erwachsene?",
+          "options": [
+            "Sie verbringen immer mehr Zeit mit der Programmierung eigener Software.",
+            "Sie zeigen ein starkes Interesse an traditionellen, manuellen Tätigkeiten.",
+            "Sie wenden sich vollständig von digitalen Kommunikationsmitteln ab."
+          ],
+          "answer": 1,
+          "why": "Im ersten Absatz wird beschrieben, dass handwerkliche Hobbys vor allem bei jungen Erwachsenen boomen.",
+          "answer_index": 1
+        },
+        {
+          "prompt": "Warum wirkt die Begeisterung für das Handwerk laut Text paradox?",
+          "options": [
+            "Weil moderne Technologie uns eigentlich von mühsamen Arbeiten entlastet.",
+            "Weil handwerkliche Produkte meist teurer sind als maschinell gefertigte.",
+            "Weil junge Menschen im Beruf kaum noch mit digitalen Systemen arbeiten."
+          ],
+          "answer": 0,
+          "why": "Der Text erklärt das Paradoxon damit, dass moderne Technologien eigentlich maximalen Komfort bieten und von Routinearbeiten befreien.",
+          "answer_index": 0
+        },
+        {
+          "prompt": "Was fehlt vielen Menschen laut dem Artikel in der heutigen digitalen Arbeitswelt?",
+          "options": [
+            "Eine ausreichende finanzielle Entlohnung für ihre Leistungen",
+            "Ein physisches, greifbares Resultat ihrer täglichen Anstrengungen",
+            "Die Möglichkeit zur ortsunabhängigen Arbeit im Homeoffice"
+          ],
+          "answer": 1,
+          "why": "Es wird erläutert, dass man im digitalen Büro selten ein greifbares Resultat sieht, da das Produkt nur als Datei existiert.",
+          "answer_index": 1
+        },
+        {
+          "prompt": "Wie wirkt sich die Konzentration auf handwerkliche Arbeit auf den Menschen aus?",
+          "options": [
+            "Sie führt zu permanentem Stress und Überforderung.",
+            "Sie wird trotz hoher Anforderung als entspannend empfunden.",
+            "Sie schränkt die Kreativität bei anderen Aufgaben ein."
+          ],
+          "answer": 1,
+          "why": "Der Text besagt, dass die notwendige Fokussierung paradoxerweise als entspannend empfunden wird.",
+          "answer_index": 1
+        },
+        {
+          "prompt": "Wie stehen die Anhänger des Handwerks zur modernen Technik?",
+          "options": [
+            "Sie lehnen jegliche Nutzung von Computern strikt ab.",
+            "Sie nutzen digitale Medien gezielt zur Vernetzung und Inspiration.",
+            "Sie betrachten das Internet als Hauptursache für den Bedeutungsverlust des Handwerks."
+          ],
+          "answer": 1,
+          "why": "Im vierten Absatz steht, dass viele Handwerker digitale Medien als Werkzeug zur Inspiration und Vernetzung nutzen.",
+          "answer_index": 1
+        },
+        {
+          "prompt": "Was verdeutlicht dieser Trend nach Ansicht des Autors für die Zukunft?",
+          "options": [
+            "Dass der Mensch das Bedürfnis hat, seine physischen Fähigkeiten einzusetzen",
+            "Dass Büros in Zukunft komplett durch Werkstätten ersetzt werden",
+            "Dass digitale Arbeitsplätze bald völlig veraltet sein werden"
+          ],
+          "answer": 0,
+          "why": "Der letzte Absatz zeigt, dass der Trend beweist, dass der Mensch das Bedürfnis hat, seine physischen Fähigkeiten zu nutzen.",
+          "answer_index": 0
+        },
+        {
+          "prompt": "Wie reagieren einige Unternehmen bereits auf diese Entwicklung?",
+          "options": [
+            "Sie verbieten die Nutzung von Smartphones während der Arbeitszeit.",
+            "Sie schaffen Freiräume für analoges Brainstorming und haptisches Arbeiten.",
+            "Sie verlagern die Produktion vollständig in handwerkliche Manufakturen."
+          ],
+          "answer": 1,
+          "why": "Im letzten Absatz heißt es, Unternehmen versuchen kreative Freiräume zu schaffen, in denen haptisches Arbeiten wieder salonfähig wird.",
+          "answer_index": 1
+        }
+      ]
+    },
+    "L3": {
+      "title": "Die Zukunft der urbanen Mobilität",
+      "instruction": "Lesen Sie den Kommentar. Welche der Sätze (a–j) passen in die Lücken (1–8)? Zwei Sätze bleiben übrig.",
+      "passage": "Die Diskussion über die Neugestaltung unserer Innenstädte reißt nicht ab. Angesichts steigender Emissionswerte und chronisch verstopfter Straßen fordern Stadtplaner seit Jahren einen radikalen Wandel. ___1___ Dennoch verlaufen die konkreten Umsetzungsprozesse in den Kommunen oft schleppend. Ein wesentlicher Grund dafür liegt in den divergierenden Interessen der verschiedenen Verkehrsteilnehmer. ___2___ Während Automobilverbände auf den Erhalt bestehender Parkflächen pochen, fordern Radfahrorganisationen geschützte Spuren und deutlich mehr Platz. Um diesen gordischen Knoten zu durchschlagen, braucht es mutige politische Entscheidungen und innovative Konzepte. ___3___ Ein vielversprechender Ansatz besteht darin, den öffentlichen Nahverkehr so auszubauen, dass er für alle Bevölkerungsschichten zur echten Alternative wird. ___4___ Wenn Fahrkarten erschwinglich und die Takte eng sind, steigen nachweislich mehr Menschen um. Damit allein ist das Problem jedoch nicht gelöst, denn der Raum in Metropolen ist begrenzt. ___5___ Hier setzt das Konzept der sogenannten 'Stadt der kurzen Wege' an, bei dem Wohnen, Arbeiten und Erholung wieder enger miteinander verzahnt werden. Niemand soll mehr gezwungen sein, täglich stundenlang zu pendeln. ___6___ Kritiker wenden allerdings ein, dass dieser Idealzustand historisch gewachsene Strukturen ignoriert. Nicht jede Industrie oder Handwerksbetriebe lassen sich problemlos in Wohngebiete integrieren. ___7___ Dennoch zeigen internationale Modellprojekte, dass eine schrittweise Entflechtung durchaus möglich und erfolgreich ist. Die urbane Mobilität von morgen muss flexibel, vernetzt und vor allem umweltverträglich sein. ___8___",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Dabei stehen sich ökologische Notwendigkeiten und wirtschaftliche Partikularinteressen unversöhnlich gegenüber."
+        },
+        {
+          "key": "b",
+          "text": "Wer den Individualverkehr einschränken will, muss gleichzeitig attraktive Angebote im Bereich der Mikromobilität schaffen."
+        },
+        {
+          "key": "c",
+          "text": "Zwar herrscht über das Fernziel weitgehend Konsens, doch der Weg dorthin bleibt umstritten."
+        },
+        {
+          "key": "d",
+          "text": "Es geht längst nicht mehr nur um kosmetische Korrekturen, sondern um eine fundamentale Abkehr vom autozentrierten Denken."
+        },
+        {
+          "key": "e",
+          "text": "Zusätzliche Fahrradstraßen allein reichen oft nicht aus, um die Verkehrswende herbeizuführen."
+        },
+        {
+          "key": "f",
+          "text": "Hierbei spielen digitale Mobilitätsplattformen, die verschiedene Verkehrsmittel nahtlos miteinander verknüpfen, eine zentrale Rolle."
+        },
+        {
+          "key": "g",
+          "text": "Kurze Wege bedeuten auch mehr Lebensqualität und eine spürbare Entlastung der Verkehrsadern."
+        },
+        {
+          "key": "h",
+          "text": "Die Mobilität der Zukunft verlangt folglich von allen Beteiligten ein hohes Maß an Kompromissbereitschaft."
+        },
+        {
+          "key": "i",
+          "text": "Ein Blick auf erfolgreiche europäische Nachbarstädte verdeutlicht, wie eine gelungene Transformation aussehen kann."
+        },
+        {
+          "key": "j",
+          "text": "Solange die Ticketpreise steigen, bleibt der Umstieg auf Bus und Bahn für viele unattraktiv."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "d",
+          "why": "Der Satz greift den vorherigen Gedanken über den 'radikalen Wandel' auf und führt aus, dass es um eine fundamentale Abkehr geht."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "a",
+          "why": "Die 'divergierenden Interessen' aus dem vorherigen Satz werden hier konkret durch den Gegensatz von Automobilverbänden und Radfahrern erklärt."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "c",
+          "why": "Hier wird der Übergang von den Konflikten zu den notwendigen politischen Entscheidungen und Konzepten hergestellt."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "j",
+          "why": "Der Satz knüpft direkt an die Erwähnung des öffentlichen Nahverkehrs an und thematisiert die Preisgestaltung und deren Wirkung."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "e",
+          "why": "Der Bezug liegt auf der Begrenztheit des Raumes und der Feststellung, dass einfache Maßnahmen (Fahrradstraßen) nicht ausreichen."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "g",
+          "why": "Die Erläuterung des Konzepts der 'Stadt der kurzen Wege' wird hier durch die direkte Folge von Lebensqualität und Entlastung fortgeführt."
+        },
+        {
+          "prompt": "Lücke 7",
+          "answer": "b",
+          "why": "Das genannte 'Zwar' im Text („Zwar herrscht...“) korrespondiert mit dem Einwand der Kritiker, auf den hier eingegangen wird."
+        },
+        {
+          "prompt": "Lücke 8",
+          "answer": "h",
+          "why": "Der abschließende Satz fasst die Anforderungen an die urbane Mobilität zusammen und fordert Kompromissbereitschaft."
+        }
+      ]
+    },
+    "L4": {
+      "title": "Künstliche Intelligenz in der Hochschullehre",
+      "instruction": "Lesen Sie die Beiträge von drei Fachleuten aus dem Bereich der Bildungswissenschaften. Wählen Sie bei jeder Aussage (1–7), wer diese geäußert hat. Jede Person kann mehrmals gewählt werden. Zwei Aussagen passen zu keiner der Personen – wählen Sie dann x.",
+      "personas": [
+        {
+          "name": "Dr. Miriam Weber, Mediendidaktikerin",
+          "text": "Die Integration generativer Künstlicher Intelligenz in universitäre Studiengänge schreitet rasant voran, wirft jedoch fundamentale Fragen zur Chancengleichheit auf. Nicht alle Studierenden verfügen über denselben Zugang zu kostenpflichtigen Premium-Modellen, was zu einer ungleichen Verzerrung bei der Leistungsbewertung führen kann. Dennoch halte ich ein generelles Verbot für kontraproduktiv. Stattdessen müssen Hochschulen verbindliche Leitlinien entwickeln, die den transparenten und kritischen Einsatz dieser Werkzeuge fördern. Wir dürfen uns nicht länger hinter veralteten Prüfungsformaten verstecken, sondern müssen akademische Kompetenzen neu definieren. Es geht längst nicht mehr darum, ob KI genutzt wird, sondern wie kompetent und reflektiert die Studierenden damit umgehen. Wer hier blockiert, verpasst den Anschluss an eine digitalisierte Arbeitswelt."
+        },
+        {
+          "name": "Prof. Dr. Thomas Brandt, Hochschulforscher",
+          "text": "In unseren aktuellen Studien zeigt sich deutlich, dass die Euphorie bezüglich personalisierten Lernens durch KI oft übertrieben wird. Zwar bieten intelligente Tutorensysteme enorme Potenziale zur Unterstützung, sie können jedoch die menschliche Interaktion und den sokratischen Dialog im Seminarraum niemals vollständig ersetzen. Ein besorgniserregender Trend ist die zunehmende Verwahrlosung des wissenschaftlichen Schreibens, weil viele Lernende die Verantwortung für Argumentationsstrukturen komplett an Algorithmen delegieren. Universitäten sollten daher verstärkt auf mündliche Prüfungen und kollaborative Projektarbeiten setzen, um echte Eigenleistung zu sichern. Die Technologie sollte als Ergänzung verstanden werden, keinesfalls aber als Ersatz für kritisches Denken. Wenn wir nicht aufpassen, bilden wir eine Generation heran, die zwar komplexe Prompts verfassen kann, aber unfähig ist, eigenständige Thesen zu formulieren."
+        },
+        {
+          "name": "Sandra Klein, M.A., E-Learning-Koordinatorin",
+          "text": "Aus administrativer Sicht sehe ich vor allem die enorme Entlastung des akademischen Mittelbaus durch automatisierte Feedbackprozesse als großen Gewinn. Vor allem in großen Anfängervorlesungen mit mehrerenhundert Teilnehmenden stoßen traditionelle Betreuungsstrukturen an ihre Kapazitätsgrenzen. KI-gestützte Tools können Erstkorrekturen vornehmen und individuelle Hinweise liefern, sodass sich Dozenten wieder auf die inhaltliche Tiefe konzentrieren können. Natürlich müssen wir datenschutzrechtliche Bedenken ernst nehmen und dürfen sensible studentische Daten nicht leichtfertig an kommerzielle Anbieter übermitteln. Dennoch überwiegen für mich die praktischen Vorteile im Hochschulalltag deutlich. Wer die Digitalisierung im Bildungssektor erfolgreich gestalten will, muss pragmatische Lösungen finden, statt sich in endlosen theoretischen Debatten über die Perfektion des Lehrens zu verlieren."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "warnt davor, dass Studierende verlernen könnten, eigenständige wissenschaftliche Argumente aufzubauen.",
+          "answer": 1,
+          "why": "Prof. Dr. Thomas Brandt spricht davon, dass die Verantwortung für Argumentationsstrukturen an Algorithmen delegiert wird und die Fähigkeit zur Formulierung eigener Thesen schwindet.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "sieht die Gefahr, dass finanzielle Unterschiede zwischen Studierenden durch den Einsatz teurer KI-Tools verstärkt werden.",
+          "answer": 0,
+          "why": "Dr. Miriam Weber kritisiert, dass nicht alle Studierenden den gleichen Zugang zu kostenpflichtigen Premium-Modellen haben, was zu Ungleichheiten führt.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "betont den praktischen Nutzen von KI-Systemen bei der Bewältigung administrativer Aufgaben und Massenveranstaltungen.",
+          "answer": 2,
+          "why": "Sandra Klein M.A. hebt die Entlastung durch automatisierte Feedbackprozesse besonders bei großen Anfängervorlesungen hervor.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "fordert, dass Hochschulen angesichts neuer technologischer Möglichkeiten völlig neue Prüfungsformen etablieren.",
+          "answer": 1,
+          "why": "Prof. Dr. Thomas Brandt schlägt vor, verstärkt auf mündliche Prüfungen und kollaborative Projektarbeiten zu setzen, um Eigenleistung zu sichern.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "schlägt vor, den genauen Umgang mit intelligenten Systemen durch klare universitäre Richtlinien zu regeln.",
+          "answer": 0,
+          "why": "Dr. Miriam Weber fordert, dass Hochschulen verbindliche Leitlinien entwickeln, die den transparenten Einsatz fördern.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "fordert, dass staatliche Universitäten die Entwicklung komplett eigener Open-Source-Modelle finanzieren müssen.",
+          "answer": "x",
+          "why": "Diese Forderung nach staatlich finanzierten Open-Source-Modellen wird von keiner der drei Personen im Text geäußert.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        },
+        {
+          "prompt": "argumentiert, dass KI-basierte Plattformen traditionelle Lehrveranstaltungen und den persönlichen Austausch im Seminar vollständig ersetzen sollten.",
+          "answer": "x",
+          "why": "Das Gegenteil ist richtig: Prof. Brandt betont, dass KI den sokratischen Dialog niemals ersetzen kann, und niemand fordert eine vollständige Ersetzung.",
+          "options": [
+            "Dr. Miriam Weber, Mediendidaktikerin",
+            "Prof. Dr. Thomas Brandt, Hochschulforscher",
+            "Sandra Klein, M.A., E-Learning-Koordinatorin"
+          ]
+        }
+      ]
+    }
+  }
+}
