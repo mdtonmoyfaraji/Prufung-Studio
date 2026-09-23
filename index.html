@@ -3556,6 +3556,16 @@ const SPEECH_RECOG_LANGS = [
   ["zh-CN", "Chinesisch"], ["hi-IN", "Hindi"], ["fa-IR", "Persisch"], ["ur-PK", "Urdu"]
 ];
 
+/* On Android, MediaRecorder (used to save a playable recording) and the
+   native SpeechRecognition engine (used for the live transcript) fight over
+   exclusive access to the microphone when started at the same time. Desktop
+   OSes happily share the mic between two consumers; Android generally does
+   not, and the failure often surfaces — misleadingly — as a "network" error
+   from SpeechRecognition, even with a perfectly fine internet connection.
+   So on Android we let the person choose which one gets the mic instead of
+   silently racing both for it. */
+const isAndroid = /Android/i.test(navigator.userAgent || "");
+
 function renderSpeaking(col, right, part, c) {
   const R = S.run, key = part.id + ":0";
   const audioDbKey = "audio:" + R.testId + ":" + R.moduleKey + ":" + key;
@@ -3589,6 +3599,21 @@ function renderSpeaking(col, right, part, c) {
   if (langSel) langSel.onchange = () => { S.settings.speechRecogLang = langSel.value; saveSettings(); };
   const liveBox = el("div", { class: "xsmall muted", style: "margin-top:6px;min-height:18px;font-style:italic" });
 
+  /* Android-only: let the person pick live transcript OR a recorded audio
+     file, since the device's microphone can't reliably feed both at once.
+     Defaults to live transcript, since that's what most people expect to
+     see while they talk. */
+  const androidPreferLive = SR && isAndroid;
+  const liveToggle = androidPreferLive
+    ? el("label", { class: "row xsmall muted", style: "align-items:center;gap:6px;margin-top:6px" },
+        el("input", {
+          type: "checkbox",
+          checked: S.settings.androidPreferLiveTranscript !== false,
+          onchange: e => { S.settings.androidPreferLiveTranscript = e.target.checked; saveSettings(); }
+        }),
+        el("span", { text: "Live-Transkription statt Audioaufnahme (auf Android kann das Mikrofon nicht beides gleichzeitig)" }))
+    : null;
+
   function showAudio(blob) {
     audioBox.innerHTML = "";
     audioBox.append(el("audio", { controls: true, src: URL.createObjectURL(blob), style: "width:100%" }));
@@ -3616,7 +3641,9 @@ function renderSpeaking(col, right, part, c) {
       "not-allowed": "Mikrofonzugriff für Live-Transkription verweigert.",
       "service-not-allowed": "Mikrofonzugriff für Live-Transkription verweigert.",
       "audio-capture": "Kein Mikrofon gefunden.",
-      "network": "Keine Verbindung für die Spracherkennung (Internet nötig).",
+      "network": isAndroid
+        ? "Spracherkennung nicht erreichbar — auf Android meist ein Mikrofon-Konflikt (z. B. gleichzeitige Aufnahme einer anderen App), seltener fehlendes Internet."
+        : "Keine Verbindung für die Spracherkennung (Internet nötig).",
       "language-not-supported": "Sprache wird nicht unterstützt.",
       "no-speech": null /* not an error worth showing */
     })[code] ?? "Live-Transkription nicht verfügbar.";
@@ -3668,22 +3695,31 @@ function renderSpeaking(col, right, part, c) {
       liveBox.textContent = "⚠ Dieser Browser unterstützt keine Live-Transkription — Text bitte manuell eingeben.";
     }
 
-    (async () => {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        chunks = []; rec = new MediaRecorder(stream);
-        rec.ondataavailable = e => chunks.push(e.data);
-        rec.onstop = () => {
-          stream.getTracks().forEach(t2 => t2.stop());
-          const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
-          showAudio(blob);
-          idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
-        };
-        rec.start();
-      } catch (e) {
-        toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
-      }
-    })();
+    /* Skip the second, competing microphone consumer on Android while live
+       transcript is preferred — see the isAndroid comment above. Desktop and
+       iOS are unaffected and keep recording + live transcript together. */
+    if (androidPreferLive && S.settings.androidPreferLiveTranscript !== false) {
+      audioBox.innerHTML = "";
+      audioBox.append(el("div", { class: "xsmall muted", style: "font-style:italic" },
+        "Auf Android läuft während der Live-Transkription keine separate Audioaufnahme (Mikrofon-Konflikt) — der Text oben wird trotzdem live mitgeschrieben."));
+    } else {
+      (async () => {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          chunks = []; rec = new MediaRecorder(stream);
+          rec.ondataavailable = e => chunks.push(e.data);
+          rec.onstop = () => {
+            stream.getTracks().forEach(t2 => t2.stop());
+            const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
+            showAudio(blob);
+            idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
+          };
+          rec.start();
+        } catch (e) {
+          toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
+        }
+      })();
+    }
   };
   stopBtn.onclick = () => {
     clearInterval(tm); startBtn.disabled = false; stopBtn.disabled = true;
@@ -3701,8 +3737,10 @@ function renderSpeaking(col, right, part, c) {
     el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" }, startBtn, stopBtn, delBtn,
       el("span", { class: "xsmall muted" }, "Vorgabe: " + Math.round(secs / 60 * 10) / 10 + " Minuten")),
     SR
-      ? el("div", { class: "row", style: "margin-top:8px;align-items:center;gap:8px" },
-          el("span", { class: "xsmall muted" }, "Live-Transkription:"), langSel)
+      ? el("div", { class: "col", style: "margin-top:8px;gap:6px" },
+          el("div", { class: "row", style: "align-items:center;gap:8px" },
+            el("span", { class: "xsmall muted" }, "Live-Transkription:"), langSel),
+          liveToggle)
       : el("div", { class: "xsmall muted", style: "margin-top:8px" },
           "Live-Spracherkennung wird von diesem Browser nicht unterstützt (funktioniert z. B. in Chrome/Edge). Aufnahme und manuelles Mitschreiben funktionieren trotzdem."),
     liveBox,
