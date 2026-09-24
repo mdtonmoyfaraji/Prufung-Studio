@@ -454,6 +454,8 @@ input[type=range].scrub{width:100%; margin:0; accent-color:var(--color-teal)}
   color:var(--color-ink); font-family:var(--font-sans); font-size:14px; white-space:normal;
 }
 .gapchip.open{outline:2px solid var(--color-accent); outline-offset:1px}
+.gapchip.filled.correct{background:var(--color-teal-soft); border-color:var(--color-good)}
+.gapchip.filled.wrong{background:var(--color-rose-soft); border-color:var(--color-danger)}
 .gapchip-list{
   position:fixed; z-index:9999; min-width:250px; max-width:min(440px,92vw);
   background:var(--color-surface); border:1px solid var(--color-rule); border-radius:10px;
@@ -1126,6 +1128,9 @@ const DEFAULT_SETTINGS = {
   autoAdvance: false,
   showSolutionsAfter: true,
   directGapFill: false,
+  instantFeedback: false,
+  libSel: [],
+  libMemory: {},
   githubRepo: "",
   githubBranch: "",
   splitRatio: "50-50",
@@ -3252,6 +3257,15 @@ function renderPart(col, right, part, c) {
   return renderChoice(right, part, c);
 }
 
+/* Instant feedback (Einstellungen → „Sofort-Feedback“): the chosen answer turns
+   green when it is right and red when it is wrong. Off = exactly as before. */
+function fbClass(it, val) {
+  if (!S.settings.instantFeedback || !it) return "";
+  if (val === undefined || val === null || val === "") return "";
+  if (it.answer === undefined || it.answer === null || it.answer === "") return "";
+  return String(val) === String(it.answer) ? "correct" : "wrong";
+}
+
 /* ---- multiple choice / true-false / yes-no ---- */
 function renderChoice(col, part, c) {
   const R = S.run;
@@ -3267,12 +3281,22 @@ function renderChoice(col, part, c) {
       const lab = el("label", { class: "opt" + (sel ? " sel" : "") },
         el("input", { type: "radio", name: key, checked: sel, onchange: () => {
           R.answers[key] = oi; saveRunAnswers();
-          Array.from(list.children).forEach((ch, ci) => ch.classList.toggle("sel", ci === oi));
+          paint();
           if (S.settings.autoAdvance) {} // reserved
         } }),
         el("span", { class: "k", text: LETTERS[oi] }), el("span", { text: String(o) }));
       list.append(lab);
     });
+    function paint() {
+      const cur = R.answers[key];
+      Array.from(list.children).forEach((ch, ci) => {
+        const on = cur !== undefined && String(cur) === String(ci);
+        ch.classList.toggle("sel", on);
+        ch.classList.remove("correct", "wrong");
+        if (on) { const f = fbClass(it, cur); if (f) ch.classList.add(f); }
+      });
+    }
+    paint();
     box.append(list);
     col.append(box);
   });
@@ -3307,13 +3331,20 @@ function renderBank(col, right, part, c) {
     choices.forEach(ch => {
       const sel = String(R.answers[key]) === String(ch.val);
       const b = el("button", { class: "opt" + (sel ? " sel" : ""), type: "button", title: ch.title,
-        onclick: () => {
-          R.answers[key] = ch.val; saveRunAnswers();
-          Array.from(row.children).forEach(n => n.classList.toggle("sel", n.dataset.k === String(ch.val)));
-        } }, el("span", { class: "k", text: ch.label }));
+        onclick: () => { R.answers[key] = ch.val; saveRunAnswers(); paint(); } }, el("span", { class: "k", text: ch.label }));
       b.dataset.k = String(ch.val);
       row.append(b);
     });
+    function paint() {
+      const cur = R.answers[key];
+      Array.from(row.children).forEach(n => {
+        const on = cur !== undefined && n.dataset.k === String(cur);
+        n.classList.toggle("sel", on);
+        n.classList.remove("correct", "wrong");
+        if (on) { const f = fbClass(it, cur); if (f) n.classList.add(f); }
+      });
+    }
+    paint();
     box.append(row);
     col.append(box);
   });
@@ -3391,7 +3422,7 @@ function openGapPopover(btn, options, cur, onPick) {
    Goethe-style sentence is. Picking the already-selected option again (or
    "Auswahl entfernen") clears the gap, so nothing stays answered by
    accident when you meant to skip it. */
-function buildGapChip(key, gapNo, options, R) {
+function buildGapChip(key, gapNo, options, R, it) {
   let cur = R.answers[key];
   const btn = el("button", { type: "button", class: "gapchip" });
 
@@ -3399,13 +3430,15 @@ function buildGapChip(key, gapNo, options, R) {
     const chosen = options.find(o => String(o.val) === String(cur));
     if (!chosen) {
       btn.textContent = "(" + gapNo + ")";
-      btn.classList.remove("filled");
+      btn.classList.remove("filled", "correct", "wrong");
       btn.removeAttribute("title");
     } else {
       const direct = !!S.settings.directGapFill;
       btn.textContent = direct ? chosen.text : chosen.label;
       btn.title = direct ? (chosen.label + " — " + chosen.text) : ("Lücke " + gapNo + ": " + chosen.label);
       btn.classList.add("filled");
+      btn.classList.remove("correct", "wrong");
+      const f = fbClass(it, cur); if (f) btn.classList.add(f);
     }
   };
 
@@ -3450,7 +3483,7 @@ function renderCloze(col, right, part, c) {
       const it = (c.items || [])[idx];
       const key = part.id + ":" + idx;
       if (!it) { p.append(el("span", { class: "gapmark", text: String(gapNo) })); return; }
-      p.append(buildGapChip(key, gapNo, optionsFor(idx), R));
+      p.append(buildGapChip(key, gapNo, optionsFor(idx), R, it));
     });
     box.append(p);
   });
@@ -3482,7 +3515,7 @@ function renderCloze(col, right, part, c) {
     (c.items || []).slice(gapCount).forEach((it, k) => {
       const i = gapCount + k, key = part.id + ":" + i;
       const box2 = el("div", { class: "q" }, el("div", { class: "qhead" }, el("span", { class: "qnum", text: String(i + 1) }), el("div", { text: it.prompt })));
-      box2.append(buildGapChip(key, i + 1, optionsFor(i), R));
+      box2.append(buildGapChip(key, i + 1, optionsFor(i), R, it));
       extra.append(box2);
     });
     col.append(extra);
@@ -3566,6 +3599,37 @@ const SPEECH_RECOG_LANGS = [
    silently racing both for it. */
 const isAndroid = /Android/i.test(navigator.userAgent || "");
 
+/* Phones (Android Chrome above all) deliver cumulative speech results:
+   "während" → "während der" → "während der Aufnahme", every one of them as its
+   own result. Appending them piece by piece gives the endless repetition.
+   This folds a list of result texts into one clean sentence: a result that
+   merely extends what is already there replaces it, one already contained is
+   skipped, and a partial overlap is joined once. */
+function mergeTranscript(segments) {
+  const W = s => String(s || "").trim().split(/\s+/).filter(Boolean);
+  const N = w => String(w).toLowerCase().replace(/[.,;:!?„“"'()\-–]/g, "");
+  const eq = (a, b) => N(a) === N(b);
+  const startsWith = (big, small) => small.length > 0 && big.length >= small.length && small.every((w, i) => eq(big[i], w));
+  const endsWith = (big, small) => small.length > 0 && big.length >= small.length && small.every((w, i) => eq(big[big.length - small.length + i], w));
+  let acc = [], last = [];
+  for (const seg of segments) {
+    const w = W(seg);
+    if (!w.length) continue;
+    if (!acc.length) { acc = w.slice(); last = w; continue; }
+    if (startsWith(w, acc)) { acc = w.slice(); last = w; continue; }
+    if (last.length && startsWith(w, last)) { acc = acc.slice(0, acc.length - last.length).concat(w); last = w; continue; }
+    if (endsWith(acc, w)) continue;
+    let found = 0;
+    for (let k = Math.min(acc.length, w.length - 1, 12); k >= 2; k--) {
+      if (endsWith(acc, w.slice(0, k))) { found = k; break; }
+    }
+    if (found) { acc = acc.concat(w.slice(found)); last = w; continue; }
+    acc = acc.concat(w); last = w;
+  }
+  return acc.join(" ");
+}
+
+
 function renderSpeaking(col, right, part, c) {
   const R = S.run, key = part.id + ":0";
   const audioDbKey = "audio:" + R.testId + ":" + R.moduleKey + ":" + key;
@@ -3582,12 +3646,15 @@ function renderSpeaking(col, right, part, c) {
     c.chart ? el("div", { class: "stimulus", style: "margin-top:10px;font-family:var(--font-mono);font-size:13px", text: c.chart }) : null,
     c.tips ? el("div", { class: "xsmall muted", style: "margin-top:10px", text: c.tips }) : null));
 
-  /* timer + recorder */
+  /* timer + recorder (with Pause / Weiter) */
   const disp = el("div", { class: "clock", text: fmtClock(secs) });
-  let tm = null, remaining = secs, rec = null, chunks = [], recognition = null, recognizing = false;
+  let tm = null, remaining = secs, rec = null, recStream = null, chunks = [];
+  let recognition = null, recognizing = false;
+  let state = "idle";                       // idle | recording | paused
   const audioBox = el("div", { style: "margin-top:10px" });
   const startBtn = el("button", { class: "btn accent" }, "● Aufnahme starten");
-  const stopBtn = el("button", { class: "btn", disabled: true }, "■ Stopp");
+  const pauseBtn = el("button", { class: "btn", disabled: true }, "⏸ Pause");
+  const finishBtn = el("button", { class: "btn sm ghost", disabled: true, title: "Aufnahme abschließen und Audio speichern" }, "✓ Beenden");
   const delBtn = el("button", { class: "btn sm ghost", style: "display:none" }, "🗑 Aufnahme löschen");
 
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -3600,9 +3667,7 @@ function renderSpeaking(col, right, part, c) {
   const liveBox = el("div", { class: "xsmall muted", style: "margin-top:6px;min-height:18px;font-style:italic" });
 
   /* Android-only: let the person pick live transcript OR a recorded audio
-     file, since the device's microphone can't reliably feed both at once.
-     Defaults to live transcript, since that's what most people expect to
-     see while they talk. */
+     file, since the device's microphone can't reliably feed both at once. */
   const androidPreferLive = SR && isAndroid;
   const liveToggle = androidPreferLive
     ? el("label", { class: "row xsmall muted", style: "align-items:center;gap:6px;margin-top:6px" },
@@ -3619,23 +3684,27 @@ function renderSpeaking(col, right, part, c) {
     audioBox.append(el("audio", { controls: true, src: URL.createObjectURL(blob), style: "width:100%" }));
     delBtn.style.display = "";
   }
-  /* restore a recording saved earlier in this test (e.g. after "Speichern &
-     Verlassen" or a page reload) — audio never survived a re-render before. */
   idbGet(audioDbKey).then(blob => { if (blob) showAudio(blob); }).catch(() => {});
   delBtn.onclick = () => {
     audioBox.innerHTML = ""; delBtn.style.display = "none";
     idbDel(audioDbKey).catch(() => {});
   };
 
+  function syncBtns() {
+    startBtn.disabled = state !== "idle";
+    pauseBtn.disabled = state === "idle";
+    pauseBtn.textContent = state === "paused" ? "▶ Weiter" : "⏸ Pause";
+    pauseBtn.className = "btn" + (state === "paused" ? " accent" : "");
+    finishBtn.disabled = state === "idle";
+    ta.readOnly = state === "recording";      // the live text is written by the recognizer while recording
+  }
+
   function tick() {
     remaining--; disp.textContent = fmtClock(remaining);
     disp.className = "clock" + (remaining < 15 ? " crit" : remaining < 45 ? " warn" : "");
-    if (remaining <= 0) { stopBtn.click(); }
+    if (remaining <= 0) finishRec();
   }
-  /* Friendly messages for SpeechRecognition error codes. Mobile browsers
-     fail here far more often than desktop (no mic permission granted yet,
-     no network for the recognition service, language not supported, etc.),
-     so surface it instead of failing silently. */
+
   function speechErrMsg(code) {
     return ({
       "not-allowed": "Mikrofonzugriff für Live-Transkription verweigert.",
@@ -3645,59 +3714,79 @@ function renderSpeaking(col, right, part, c) {
         ? "Spracherkennung nicht erreichbar — auf Android meist ein Mikrofon-Konflikt (z. B. gleichzeitige Aufnahme einer anderen App), seltener fehlendes Internet."
         : "Keine Verbindung für die Spracherkennung (Internet nötig).",
       "language-not-supported": "Sprache wird nicht unterstützt.",
-      "no-speech": null /* not an error worth showing */
+      "no-speech": null, "aborted": null
     })[code] ?? "Live-Transkription nicht verfügbar.";
   }
 
-  startBtn.onclick = () => {
-    remaining = secs; disp.textContent = fmtClock(remaining);
-    startBtn.disabled = true; stopBtn.disabled = false; delBtn.style.display = "none";
+  /* ---- live transcript ----
+     Text = `base` (what was already in the box when this take began) + one
+     entry per recognition session. Every session REBUILDS its text from the
+     complete result list (mergeTranscript) instead of appending pieces —
+     that is what stops the stuttering "während während der während der …"
+     on phones, where the engine hands out cumulative results. */
+  let base = "", sessTexts = [], epoch = 0;
+  function paintTranscript() {
+    ta.value = [base.trim(), ...sessTexts.filter(Boolean)].filter(Boolean).join(" ");
+    R.answers[key] = ta.value; saveRunAnswers();
+  }
+  function newBase() { base = ta.value; sessTexts = []; epoch++; }
+
+  function startRecognition() {
+    if (!SR) { liveBox.textContent = "⚠ Dieser Browser unterstützt keine Live-Transkription — Text bitte manuell eingeben."; return; }
+    try {
+      const myEpoch = epoch, idx = sessTexts.push("") - 1;
+      const r = new SR();
+      r.lang = (langSel && langSel.value) || S.settings.speechRecogLang || "de-DE";
+      r.continuous = true;
+      r.interimResults = true;
+      r.onresult = ev => {
+        if (myEpoch !== epoch) return;
+        const segs = [];
+        for (let i = 0; i < ev.results.length; i++) segs.push(ev.results[i][0].transcript);
+        sessTexts[idx] = mergeTranscript(segs);
+        paintTranscript();
+      };
+      r.onerror = ev => {
+        const msg = speechErrMsg(ev.error);
+        if (msg) { liveBox.textContent = "⚠ " + msg; toast(msg, "err"); }
+        if (ev.error === "not-allowed" || ev.error === "service-not-allowed") recognizing = false;
+      };
+      /* browsers end recognition on their own now and then — start a fresh
+         session (its own text slot) as long as we are still recording */
+      r.onend = () => {
+        if (recognizing && recognition === r && myEpoch === epoch) { try { startRecognition(); } catch (e2) {} }
+      };
+      recognition = r; recognizing = true;
+      r.start();
+      liveBox.textContent = "";
+    } catch (e) {
+      recognition = null; recognizing = false;
+      liveBox.textContent = "⚠ Live-Transkription konnte nicht gestartet werden.";
+    }
+  }
+  function stopRecognition() {
+    recognizing = false;
+    const r = recognition; recognition = null;
+    if (r) { try { r.stop(); } catch (e) {} }
+  }
+
+  function savePartialAudio() {
+    if (!chunks.length) return;
+    const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
+    showAudio(blob);
+    idbSet(audioDbKey, blob).catch(() => {});
+  }
+
+  function startRec() {
+    remaining = secs; disp.textContent = fmtClock(remaining); disp.className = "clock";
+    state = "recording"; delBtn.style.display = "none"; syncBtns();
+    newBase();
     tm = setInterval(tick, 1000);
 
-    /* Start speech recognition FIRST and synchronously, still inside the
-       click handler. Mobile Safari/Chrome drop the "user activation" flag
-       from the tap very quickly — once we `await` getUserMedia below, it's
-       often gone, so recognition.start() would fail (silently, before this
-       fix) on phones even though it kept working on desktop. */
-    if (SR) {
-      try {
-        recognition = new SR();
-        recognition.lang = (langSel && langSel.value) || S.settings.speechRecogLang || "de-DE";
-        recognition.continuous = true;
-        recognition.interimResults = true;
-        let finalText = ta.value ? ta.value.trim() + " " : "";
-        recognition.onresult = ev => {
-          let interim = "";
-          for (let i = ev.resultIndex; i < ev.results.length; i++) {
-            const res = ev.results[i];
-            if (res.isFinal) finalText += res[0].transcript + " ";
-            else interim += res[0].transcript;
-          }
-          liveBox.textContent = interim ? "… " + interim : "";
-          ta.value = finalText.trim();
-          R.answers[key] = ta.value; saveRunAnswers();
-        };
-        recognition.onerror = ev => {
-          const msg = speechErrMsg(ev.error);
-          if (msg) { liveBox.textContent = "⚠ " + msg; toast(msg, "err"); }
-          if (ev.error === "not-allowed" || ev.error === "service-not-allowed") recognizing = false;
-        };
-        /* some browsers end recognition on their own well before the timer
-           runs out — restart it silently as long as we're still recording */
-        recognition.onend = () => { if (recognizing) { try { recognition.start(); } catch (e2) {} } };
-        recognizing = true;
-        recognition.start();
-      } catch (e) {
-        recognition = null;
-        liveBox.textContent = "⚠ Live-Transkription konnte nicht gestartet werden.";
-      }
-    } else {
-      liveBox.textContent = "⚠ Dieser Browser unterstützt keine Live-Transkription — Text bitte manuell eingeben.";
-    }
+    /* Recognition FIRST and synchronously inside the click handler — mobile
+       browsers drop the "user activation" flag very quickly. */
+    startRecognition();
 
-    /* Skip the second, competing microphone consumer on Android while live
-       transcript is preferred — see the isAndroid comment above. Desktop and
-       iOS are unaffected and keep recording + live transcript together. */
     if (androidPreferLive && S.settings.androidPreferLiveTranscript !== false) {
       audioBox.innerHTML = "";
       audioBox.append(el("div", { class: "xsmall muted", style: "font-style:italic" },
@@ -3705,36 +3794,79 @@ function renderSpeaking(col, right, part, c) {
     } else {
       (async () => {
         try {
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          chunks = []; rec = new MediaRecorder(stream);
-          rec.ondataavailable = e => chunks.push(e.data);
+          recStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          chunks = []; rec = new MediaRecorder(recStream);
+          rec.ondataavailable = e => {
+            if (e.data && e.data.size) chunks.push(e.data);
+            if (state === "paused") savePartialAudio();    // safe copy in case the person leaves now
+          };
           rec.onstop = () => {
-            stream.getTracks().forEach(t2 => t2.stop());
-            const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
-            showAudio(blob);
-            idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
+            if (recStream) recStream.getTracks().forEach(t2 => t2.stop());
+            recStream = null;
+            if (chunks.length) {
+              const blob = new Blob(chunks, { type: chunks[0]?.type || "audio/webm" });
+              showAudio(blob);
+              idbSet(audioDbKey, blob).catch(() => toast("Aufnahme konnte nicht gespeichert werden (Speicherplatz?).", "err"));
+            }
           };
           rec.start();
+          if (state === "paused") { try { rec.pause(); rec.requestData(); } catch (e3) {} }
         } catch (e) {
           toast("Kein Mikrofonzugriff — der Zeitgeber läuft trotzdem.", "");
         }
       })();
     }
-  };
-  stopBtn.onclick = () => {
-    clearInterval(tm); startBtn.disabled = false; stopBtn.disabled = true;
-    if (rec && rec.state === "recording") rec.stop();
-    if (recognition) { recognizing = false; try { recognition.stop(); } catch (e) {} }
+  }
+
+  function pauseRec(auto) {
+    if (state !== "recording") return;
+    state = "paused";
+    clearInterval(tm); tm = null;
+    stopRecognition();
+    if (rec && rec.state === "recording") { try { rec.pause(); rec.requestData(); } catch (e) {} }
+    liveBox.textContent = "⏸ Pausiert — mit „Weiter“ geht es genau hier weiter.";
+    syncBtns();
+    if (auto) toast("Aufnahme pausiert.", "");
+  }
+  function resumeRec() {
+    if (state !== "paused") return;
+    state = "recording";
+    newBase();                                  // continue after whatever the text says now (it may have been corrected)
+    tm = setInterval(tick, 1000);
+    startRecognition();                          // inside the tap → allowed on phones
+    if (rec && rec.state === "paused") { try { rec.resume(); } catch (e) {} }
+    syncBtns();
+  }
+  function finishRec() {
+    if (state === "idle") return;
+    state = "idle";
+    clearInterval(tm); tm = null;
+    stopRecognition();
+    if (rec && rec.state !== "inactive") { try { rec.stop(); } catch (e) {} }
+    else if (recStream) { recStream.getTracks().forEach(t2 => t2.stop()); recStream = null; }
     liveBox.textContent = "";
+    syncBtns();
+  }
+
+  startBtn.onclick = startRec;
+  pauseBtn.onclick = () => (state === "paused" ? resumeRec() : pauseRec(false));
+  finishBtn.onclick = finishRec;
+
+  /* leaving the tab / locking the phone silences the microphone anyway —
+     pause cleanly so nothing is lost and the timer stops */
+  const onHidden = () => {
+    if (!disp.isConnected) { document.removeEventListener("visibilitychange", onHidden); if (state !== "idle") finishRec(); return; }
+    if (document.hidden && state === "recording") pauseRec(true);
   };
+  document.addEventListener("visibilitychange", onHidden);
 
   const ta = el("textarea", { rows: 10, placeholder: "Transkript oder Stichpunkte Ihres Vortrags …", value: R.answers[key] || "",
-    oninput: e => { R.answers[key] = e.target.value; saveRunAnswers(); } });
+    oninput: e => { R.answers[key] = e.target.value; saveRunAnswers(); if (state === "paused") newBase(); } });
 
   right.append(el("div", { class: "card" },
     el("div", { class: "row", style: "justify-content:space-between" },
       el("h4", {}, "Sprechzeit" + (prep ? " (Vorbereitung " + prep + " s)" : "")), disp),
-    el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" }, startBtn, stopBtn, delBtn,
+    el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" }, startBtn, pauseBtn, finishBtn, delBtn,
       el("span", { class: "xsmall muted" }, "Vorgabe: " + Math.round(secs / 60 * 10) / 10 + " Minuten")),
     SR
       ? el("div", { class: "col", style: "margin-top:8px;gap:6px" },
@@ -4923,15 +5055,23 @@ function repoConfig() {
 let libAutoRepo = null;
 
 const encPath = p => p.split("/").map(encodeURIComponent).join("/");
-async function fetchJson(url) {
-  const r = await fetch(url, { cache: "no-cache" });
-  if (!r.ok) throw new Error("HTTP " + r.status);
-  return r.json();
+async function fetchJson(url, ms, cacheMode) {
+  const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), ms || 12000);
+  try {
+    const r = await fetch(url, { cache: cacheMode || "no-cache", signal: ctl.signal });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return await r.json();
+  } catch (e) {
+    if (e.name === "AbortError") throw new Error("Zeitüberschreitung");
+    throw e;
+  } finally { clearTimeout(to); }
 }
 
 async function srcFromApi(url, label) {
   let m;
-  try { m = await fetchJson(url); } catch (e) { throw new Error(/^HTTP/.test(e.message) ? e.message : "keine gültige Antwort"); }
+  /* unique query string: no service worker, CDN or browser cache can hand back an old list */
+  const bust = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
+  try { m = await fetchJson(bust, 10000, "no-store"); } catch (e) { throw new Error(/^HTTP/.test(e.message) ? e.message : "keine gültige Antwort"); }
   if (!m || !Array.isArray(m.files)) throw new Error("keine Liste");
   if (m.repo && m.repo.owner) libAutoRepo = m.repo;
   return { kind: "api", label, files: m.files };
@@ -4942,7 +5082,8 @@ async function srcFromGitHub() {
   const branches = S.settings.githubBranch ? [S.settings.githubBranch] : [cfg.branch, "main", "master"].filter(Boolean);
   for (const b of branches) {
     try {
-      const j = await fetchJson("https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/git/trees/" + encodeURIComponent(b) + "?recursive=1");
+      const j = await fetchJson("https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/git/trees/" + encodeURIComponent(b) + "?recursive=1", 12000, "no-cache");
+      if (j.truncated) throw new Error("Liste zu groß");
       const files = (j.tree || []).filter(t => t.type === "blob" && t.path.startsWith(LIB_BASE)).map(t => t.path.slice(LIB_BASE.length));
       if (!S.settings.githubBranch) { S.settings.githubBranch = b; saveSettings(); }
       return { kind: "github", label: "GitHub " + cfg.owner + "/" + cfg.repo, files,
@@ -5022,72 +5163,153 @@ async function srcFromStoredHandle() {
   return srcFromHandle(libHandle, false);
 }
 
-let libSrc = null;
+/* =========================================================================
+   LIBRARY STATE
+   The top bar is built from the real folder tree under modeltest/:
+     modeltest/<Prüfung>/<Niveau>/<Ordner>/<Unterordner …>/(lesen|hoeren|schreiben|sprechen).json
+   One dropdown per folder level, as deep as the folders go, until a folder
+   that holds the module .json files — that folder is the model test.
+   Delete a folder (e.g. telc) and it disappears from the bar; add one and it
+   shows up. Nothing is hard-coded except how to score a known exam.
+   ======================================================================= */
+let libSrc = null;      // source used to read module files
 let libLog = [];
+let libTree = null;     // folder tree built from libSrc.files
+let libLive = false;    // libSrc came from a live source (not the saved offline copy)
+let libLoadP = null;    // in-flight load, shared by every caller (no parallel storms)
+let libLastTry = 0;
+let libError = null;
+let libBusy = false;
+let libIntent = false;  // the person just picked something in the bar
+const libSynced = new Set();     // leaf keys re-read from the source this session
+const libBusyLeaf = new Set();   // leaf keys being read right now
+const libStatus = new Map();     // leaf key -> { text, err, warn }
+let libPathNow = [];
+let libRefreshQueued = false;
+const LIB_CACHE_KEY = "ps.libFiles.v1";
+const libCmp = (a, b) => a.localeCompare(b, "de", { numeric: true, sensitivity: "base" });
+
+/* last known file list — lets the bar appear instantly and keeps it alive when
+   the network or GitHub's rate limit fails */
+function libCacheStore(s) {
+  if (!s || !["api", "listing", "github"].includes(s.kind)) return;
+  try { localStorage.setItem(LIB_CACHE_KEY, JSON.stringify({ kind: s.kind, label: s.label, raw: s.raw || null, files: s.files, at: Date.now() })); } catch (e) {}
+}
+function libCacheLoad() {
+  try {
+    const c = JSON.parse(localStorage.getItem(LIB_CACHE_KEY) || "null");
+    if (!c || !Array.isArray(c.files) || !c.files.some(isLibModule)) return null;
+    return { kind: c.kind, label: "zuletzt bekannte Liste", raw: c.raw || undefined, files: c.files };
+  } catch (e) { return null; }
+}
+
 async function libSource() {
-  if (libSrc) return libSrc;
-  const log = [];
-  const attempts = [
-    ["api/library", () => srcFromApi("api/library", "Server (api/library)")],
-    ["library.php", () => srcFromApi("library.php", "Server (library.php)")],
-    ["Ordnerliste des Servers", srcFromDirListing],
-    ["GitHub", srcFromGitHub],
-    ["gemerkter Ordner", srcFromStoredHandle],
-  ];
-  let needsPermission = false;
-  for (const [name, attempt] of attempts) {
-    try {
-      const s = await attempt();
-      if (s.files.some(isLibModule)) { libSrc = s; return s; }
-      log.push(name + ": erreichbar, aber keine .json-Dateien in modeltest/ gefunden");
-    } catch (e) {
-      if (e.code === "NEEDS_PERMISSION") needsPermission = true;
-      log.push(name + ": " + e.message);
+  if (libSrc && (libLive || Date.now() - libLastTry < 30000)) return libSrc;
+  if (libLoadP) return libLoadP;
+  libLastTry = Date.now();
+  libLoadP = (async () => {
+    const log = [];
+    const attempts = [
+      ["api/library", () => srcFromApi("api/library", "Server (api/library)")],
+      ["library.php", () => srcFromApi("library.php", "Server (library.php)")],
+      ["library-index.json", () => srcFromApi("library-index.json", "Server (library-index.json)")],
+      ["Ordnerliste des Servers", srcFromDirListing],
+      ["GitHub", srcFromGitHub],
+      ["gemerkter Ordner", srcFromStoredHandle],
+    ];
+    let needsPermission = false;
+    for (const [name, attempt] of attempts) {
+      try {
+        const s = await attempt();
+        if (s.files.some(isLibModule)) { libSrc = s; libLive = true; libLog = log; libCacheStore(s); return s; }
+        log.push(name + ": erreichbar, aber keine .json-Dateien in modeltest/ gefunden");
+      } catch (e) {
+        if (e.code === "NEEDS_PERMISSION") needsPermission = true;
+        log.push(name + ": " + e.message);
+      }
     }
-  }
-  libLog = log;
-  const err = new Error("Keine Bibliothek gefunden."); err.code = needsPermission ? "NEEDS_PERMISSION" : "NO_SOURCE"; throw err;
+    libLog = log;
+    const c = libCacheLoad();                 // offline / rate-limited: last known list
+    if (c) { libSrc = c; libLive = false; return c; }
+    const err = new Error("Keine Bibliothek gefunden."); err.code = needsPermission ? "NEEDS_PERMISSION" : "NO_SOURCE"; throw err;
+  })().finally(() => { libLoadP = null; });
+  return libLoadP;
 }
 
-/** One folder level from the flat file list. Folder names are matched ignoring case, spaces and dashes
- *  ("TDN 4" = "tdn4" = "TDN-4"). Folders without any .json beneath them are hidden. */
-function libListing(exam, level, path) {
-  const dirs = new Set(), modFiles = [];
-  for (const f of libSrc.files) {
+/** Folder tree from the flat list of relative file paths. */
+function buildLibTree(files) {
+  const mk = (name, path) => ({ name, path, children: new Map(), mods: [] });
+  const root = mk("", []);
+  for (const f of files) {
     if (!isLibModule(f)) continue;
-    const parts = f.split("/");
-    if (parts.length < 3 || norm(parts[0]) !== norm(exam) || norm(parts[1]) !== norm(level)) continue;
-    const rel = parts.slice(2);
-    if (path.some((seg, i) => rel[i] !== seg)) continue;
-    const rest = rel.slice(path.length);
-    if (rest.length > 1) dirs.add(rest[0]);
-    else if (rest.length === 1) modFiles.push({ name: rest[0], path: f });
+    const parts = f.split("/").filter(Boolean);
+    if (parts.length < 2) continue;          // a .json directly inside modeltest/ belongs to no folder
+    let n = root;
+    for (let i = 0; i < parts.length - 1; i++) {
+      let c = n.children.get(parts[i]);
+      if (!c) { c = mk(parts[i], parts.slice(0, i + 1)); n.children.set(parts[i], c); }
+      n = c;
+    }
+    n.mods.push({ name: parts[parts.length - 1], path: f });
   }
-  return { modFiles, dirs: [...dirs].sort((x, y) => x.localeCompare(y, "de")) };
+  return root;
+}
+function libNodeAt(path) {
+  let n = libTree;
+  for (const s of path) { n = n && n.children.get(s); }
+  return n || null;
 }
 
-/** Every leaf folder (relative path under modeltest/<exam>/<level>/) that currently
- *  holds at least one module file, according to the live source just fetched. */
-function libLeafPaths(exam, level) {
-  const set = new Set();
-  if (!libSrc) return set;
-  for (const f of libSrc.files) {
-    if (!isLibModule(f)) continue;
-    const parts = f.split("/");
-    if (parts.length < 3 || norm(parts[0]) !== norm(exam) || norm(parts[1]) !== norm(level)) continue;
-    set.add(parts.slice(2, -1).join("/"));
-  }
-  return set;
+/* folder name -> blueprint id ("goethe", "Goethe-Zertifikat", "TestDaF" …) */
+function examIdForFolder(name) {
+  const n = norm(name);
+  for (const x of Object.values(BLUEPRINTS)) if ([x.id, x.short, x.name].some(v => v && norm(v) === n)) return x.id;
+  for (const x of Object.values(BLUEPRINTS)) if (n.startsWith(norm(x.id))) return x.id;
+  return null;
 }
-/** Removes locally-cached tests that came from a library folder which was since
- *  deleted or renamed, so a folder that no longer exists (or under its old name)
- *  can never linger in the app after the real modeltest/ folder changed. */
-function pruneOrphanedLibraryTests(exam, level) {
-  if (!Array.isArray(S.tests)) return;
-  const valid = libLeafPaths(exam, level);
+function examLabel(folder) {
+  const id = examIdForFolder(folder), x = id && BLUEPRINTS[id];
+  return x && [x.id, x.short].some(v => v && norm(v) === norm(folder)) ? x.name : folder;
+}
+/** Which blueprint (exam + level) does a folder path use, and what is the path below the level? */
+function libSelection(path) {
+  let exam = examIdForFolder(path[0]);
+  const known = !!exam;
+  if (!exam) exam = "goethe";
+  const lvls = levelsFor(exam);
+  let level = path[1] ? lvls.find(l => norm(l) === norm(path[1])) : null;
+  let from = 2;
+  if (!level) { level = lvls.includes("B2") ? "B2" : lvls[0]; from = 1; }
+  return { exam, level, known, key: path.join("/"), rel: path.slice(from).join("/") };
+}
+function libLeaves() {
+  const out = [];
+  (function walk(n) { if (n.mods.length) out.push({ node: n, sel: libSelection(n.path) }); n.children.forEach(walk); })(libTree);
+  return out;
+}
+function findLibTest(sel) {
+  let t = S.tests.find(x => x.source === "library" && x.libraryKey === sel.key);
+  if (t) return t;
+  t = S.tests.find(x => x.source === "library" && !x.libraryKey && x.exam === sel.exam && x.level === sel.level && x.libraryPath === sel.rel);
+  if (t) { t.libraryKey = sel.key; saveTests(); }
+  return t || null;
+}
+
+/** Removes locally cached library tests whose folder no longer exists (deleted
+ *  or renamed). Only ever runs against a LIVE listing, never the offline copy. */
+function pruneOrphanedLibraryTests() {
+  if (!Array.isArray(S.tests) || !libTree || !libLive) return;
+  const leaves = libLeaves();
+  if (!leaves.length) return;
+  const keys = new Set(leaves.map(l => l.sel.key));
+  const legacy = new Set(leaves.map(l => l.sel.exam + "|" + l.sel.level + "|" + l.sel.rel));
   const before = S.tests.length;
-  S.tests = S.tests.filter(t => !(t.source === "library" && t.exam === exam && t.level === level && !valid.has(t.libraryPath)));
-  if (S.tests.length !== before) saveTests();
+  S.tests = S.tests.filter(t => t.source !== "library" ||
+    (t.libraryKey ? keys.has(t.libraryKey) : legacy.has(t.exam + "|" + t.level + "|" + t.libraryPath)));
+  if (S.tests.length !== before) {
+    saveTests();
+    if (S.settings.testId && !testById(S.settings.testId)) { S.settings.testId = null; saveSettings(); }
+  }
 }
 
 async function libReadFile(f) {
@@ -5095,17 +5317,19 @@ async function libReadFile(f) {
   if (s.data && s.data[f.path] !== undefined) return s.data[f.path];
   if (s.fileObjs) return JSON.parse((await s.fileObjs.get(f.path).text()).replace(/^\uFEFF/, ""));
   if (s.handles) return JSON.parse((await (await s.handles.get(f.path).getFile()).text()).replace(/^\uFEFF/, ""));
-  try { return await fetchJson(LIB_BASE + encPath(f.path)); }
-  catch (e) { if (s.raw) return fetchJson(s.raw + encPath(f.path)); throw e; }
+  try { return await fetchJson(LIB_BASE + encPath(f.path), 15000, "no-cache"); }
+  catch (e) { if (s.raw) return fetchJson(s.raw + encPath(f.path), 15000, "no-cache"); throw e; }
 }
 
 /** Reads every module file of a leaf folder and merges them into a model test
- *  (created on first visit, refreshed on later ones). */
-async function importFolderAsTest(exam, level, pathSegs, modFiles) {
+ *  (created on first visit, refreshed — including removed modules — on later ones). */
+async function importFolderAsTest(sel, modFiles) {
+  const { exam, level } = sel;
   const results = await Promise.allSettled(modFiles.map(f => libReadFile(f).then(payload => ({ name: f.name, payload }))));
   const found = [], warns = [];
+  let failed = false;
   for (const r of results) {
-    if (r.status !== "fulfilled") continue;
+    if (r.status !== "fulfilled") { failed = true; continue; }
     const { name, payload: p } = r.value;
     if (p && p.kind === "prepstudio.test" && p.test && p.test.content) {
       Object.keys(p.test.content).forEach(k => LIBRARY_MODULES.includes(k) && found.push({ mk: k, content: p.test.content[k] }));
@@ -5116,129 +5340,235 @@ async function importFolderAsTest(exam, level, pathSegs, modFiles) {
     if (p && ((p.level && norm(p.level) !== norm(level)) || (p.exam && norm(p.exam) !== norm(exam)))) warns.push(name + " ist für " + p.exam + " " + p.level);
     found.push({ mk, content: p && p.content ? p.content : p });
   }
-  if (!found.length) throw new Error("Keine erkennbaren Moduldateien (lesen / hoeren / schreiben / sprechen) in diesem Ordner.");
-  const libraryPath = pathSegs.join("/");
-  let test = S.tests.find(t => t.exam === exam && t.level === level && t.libraryPath === libraryPath);
+  if (!found.length) throw new Error(failed ? "Dateien konnten nicht gelesen werden." : "Keine erkennbaren Moduldateien (lesen / hoeren / schreiben / sprechen) in diesem Ordner.");
+  let test = findLibTest(sel), changed = false;
   if (!test) {
-    test = newTest(exam, level, pathSegs[pathSegs.length - 1] || "Modelltest", "library");
-    test.libraryPath = libraryPath;
-    S.tests.push(test);
+    test = newTest(exam, level, sel.key.split("/").pop() || "Modelltest", "library");
+    test.libraryKey = sel.key; test.libraryPath = sel.rel;
+    S.tests.push(test); changed = true;
   }
-  for (const f of found) test.content[f.mk] = clone(f.content);
-  saveTests();
-  return { test, found: found.length, warn: warns.join("; ") };
+  for (const f of found) {
+    const next = clone(f.content);
+    if (JSON.stringify(test.content[f.mk]) !== JSON.stringify(next)) { test.content[f.mk] = next; changed = true; }
+  }
+  if (!failed) {          // a module file that was deleted from the folder is removed from the test as well
+    const bp = blueprint(test.exam, test.level), empty = emptyContent(bp);
+    for (const mk of moduleKeys(bp)) {
+      if (found.some(f => f.mk === mk)) continue;
+      if (Object.values(test.content[mk] || {}).some(Boolean)) { test.content[mk] = empty[mk]; changed = true; }
+    }
+  }
+  if (changed) saveTests();
+  return { test, found: found.length, warn: warns.join("; "), changed };
 }
 
-/* ---- the top-bar breadcrumb row: one dropdown per folder level ---- */
-let libPath = [];
-const libImported = new Map();
-let libRenderToken = 0;
+/* ---- the top-bar: one dropdown per folder level ---- */
+function resetLibPath() { S.settings.libSel = []; }
 
-function resetLibPath() { libPath = []; libImported.clear(); }
-function libActivate(id) {
-  const changed = S.settings.testId !== id;
-  S.settings.testId = id; saveSettings();
-  if (changed) S.run = null;
-  syncTopbar(); refresh();          // re-render the page so the chosen model test shows up
+function libApplyTest(t) {
+  const st = S.settings;
+  const ch = st.exam !== t.exam || st.level !== t.level || st.testId !== t.id;
+  if (ch) {
+    if (st.testId !== t.id) S.run = null;
+    st.exam = t.exam; st.level = t.level; st.testId = t.id; saveSettings();
+  }
+  return ch;
 }
-function reloadLibrary() { libSrc = null; resetLibPath(); return renderLibRow(); }
+function libQueueRefresh() {
+  if (libRefreshQueued) return;
+  libRefreshQueued = true;
+  setTimeout(() => { libRefreshQueued = false; try { refresh(); } catch (e) {} }, 0);
+}
+
+/** The folder path the bar shows right now. */
+function libResolve() {
+  const st = S.settings;
+  let want = Array.isArray(st.libSel) ? st.libSel : [];
+  const cur = st.testId ? testById(st.testId) : null;
+  if (!libIntent && cur && cur.source === "library" && cur.libraryKey) {      // e.g. "Fortsetzen" jumped to another test
+    const p = cur.libraryKey.split("/"), n = libNodeAt(p);
+    if (n && n.mods.length) want = p;
+  }
+  /* exam / level changed elsewhere (Einstellungen) beat a stale remembered path */
+  if (want.length && !libIntent) {
+    const ex = examIdForFolder(want[0]);
+    if (ex && ex !== st.exam && !(cur && cur.source === "library")) want = [];
+    else if (want[1] && ex && levelsFor(ex).some(l => norm(l) === norm(want[1])) && norm(want[1]) !== norm(st.level) && ex === st.exam && !(cur && cur.source === "library")) want = want.slice(0, 1);
+  }
+  let node = libTree; const path = [];
+  for (const name of want) { const c = node.children.get(name); if (!c) break; node = c; path.push(name); }
+  while (!node.mods.length && node.children.size) {
+    const names = [...node.children.keys()].sort(libCmp);
+    const mem = (st.libMemory || {})[path.join("/")];
+    let pick = null;
+    if (path.length === 0) pick = names.find(n => examIdForFolder(n) === st.exam) || null;
+    if (!pick && mem && node.children.has(mem)) pick = mem;          // back to what was chosen there last time
+    if (!pick && path.length === 1) {
+      const ex = examIdForFolder(path[0]);
+      pick = ex ? names.find(n => norm(n) === norm(st.level) && levelsFor(ex).some(l => norm(l) === norm(n))) || null : null;
+    }
+    if (!pick) pick = names[0];
+    node = node.children.get(pick); path.push(pick);
+  }
+  return path;
+}
+
+function libPick(depth, value) {
+  const path = libPathNow.slice(0, depth);
+  const st = S.settings;
+  st.libMemory = st.libMemory || {};
+  if (value) { st.libMemory[path.join("/")] = value; path.push(value); }
+  st.libSel = path; saveSettings();
+  libIntent = true;
+  renderLibRow();
+}
+
+/** Makes the leaf's model test the active one (reading it first if it is new). */
+function libEnsureActive(leaf, path) {
+  const sel = libSelection(path), key = sel.key, st = S.settings;
+  if (JSON.stringify(st.libSel) !== JSON.stringify(path)) {
+    st.libSel = path.slice();
+    st.libMemory = st.libMemory || {};
+    path.forEach((seg, i) => { st.libMemory[path.slice(0, i).join("/")] = seg; });   // remember the choice on every level
+    saveSettings();
+  }
+  const cur = testById(st.testId);
+  const manualActive = cur && cur.source !== "library" && cur.exam === st.exam && cur.level === st.level;
+  const t = findLibTest(sel);
+  if (t && (libIntent || !manualActive)) {
+    libIntent = false;
+    if (libApplyTest(t)) libQueueRefresh();
+  }
+  if ((!t || (libLive && !libSynced.has(key))) && !libBusyLeaf.has(key)) libSyncLeaf(leaf, sel);
+}
+function libSyncLeaf(leaf, sel) {
+  const key = sel.key;
+  libBusyLeaf.add(key);
+  if (!findLibTest(sel)) libStatus.set(key, { text: "wird geladen …" });
+  importFolderAsTest(sel, leaf.mods).then(res => {
+    libSynced.add(key); libBusyLeaf.delete(key);
+    libStatus.set(key, { text: "✓ " + res.found + " Modul" + (res.found === 1 ? "" : "e") + (res.warn ? " ⚠" : ""), warn: res.warn });
+    if (libPathNow.join("/") === key) {
+      const st = S.settings, cur = testById(st.testId);
+      const manualActive = cur && cur.source !== "library" && cur.exam === st.exam && cur.level === st.level;
+      let ch = false;
+      if (libIntent || !manualActive) { libIntent = false; ch = libApplyTest(res.test); }
+      if ((ch || res.changed) && !(S.run && !S.run.finished && S.run.testId === res.test.id)) libQueueRefresh();
+    }
+    renderLibRow();
+  }).catch(e => {
+    libSynced.add(key); libBusyLeaf.delete(key);            // no endless retry loop; "Bibliothek neu laden" tries again
+    libStatus.set(key, { text: "Fehler: " + e.message, err: true });
+    renderLibRow();
+  });
+}
+
+/** Loads (or reloads) the folder list, then redraws the bar. */
+async function libReload(force) {
+  if (force) { libLive = false; libLastTry = 0; libSynced.clear(); libStatus.clear(); }
+  libBusy = true; renderLibRow();
+  try {
+    const s = await libSource();
+    libTree = buildLibTree(s.files); libError = null;
+    if (libLive) pruneOrphanedLibraryTests();
+  } catch (e) {
+    libError = e;
+    if (!libSrc) libTree = null;
+  }
+  libBusy = false;
+  renderLibRow();
+}
+function libUseSource(src) {
+  libSrc = src; libLive = true; libError = null; libLastTry = Date.now();
+  libTree = buildLibTree(src.files);
+  libSynced.clear(); libStatus.clear();
+  pruneOrphanedLibraryTests();
+  renderLibRow();
+}
+function libInit() {
+  const c = libCacheLoad();                    // instant bar from the last known list, refreshed right after
+  if (c) { libSrc = c; libLive = false; libTree = buildLibTree(c.files); }
+  libReload(false);
+}
+function reloadLibrary() { return libReload(true); }
 
 function libPickButton(label, remembered) {
   if (!window.showDirectoryPicker) {
     const inp = document.createElement("input");
     inp.type = "file"; inp.webkitdirectory = true; inp.multiple = true; inp.style.display = "none";
     inp.addEventListener("change", () => {
-      try { libSrc = srcFromInput([...inp.files]); resetLibPath(); renderLibRow(); }
+      try { libUseSource(srcFromInput([...inp.files])); }
       catch (e) { toast(e.message, "err", 8000); }
     });
     return el("button", { class: "btn sm ghost", onclick: () => inp.click() }, label || "Ordner wählen …", inp);
   }
   return el("button", { class: "btn sm ghost", onclick: async () => {
     try {
-      libSrc = remembered && libHandle ? await srcFromHandle(libHandle, true) : await srcFromPicker();
-      resetLibPath(); renderLibRow();
+      libUseSource(remembered && libHandle ? await srcFromHandle(libHandle, true) : await srcFromPicker());
     } catch (e) { if (e.name !== "AbortError") toast(e.message, "err", 8000); }
   } }, label || "Ordner wählen …");
 }
 
-async function renderLibRow() {
+/** Synchronous: draws the bar from the folder tree (never blocks on the network,
+ *  never flashes "no model test" while loading). */
+function renderLibRow() {
   const row = $("#libRow");
   if (!row) return;
-  const myToken = ++libRenderToken;
   row.innerHTML = "";
+  const exSel = $("#examSelect"), lvSel = $("#levelSelect"), tSel = $("#testSelect");
+  const classic = show => { if (exSel) exSel.style.display = show ? "" : "none"; if (tSel) tSel.style.display = show ? "" : "none"; if (!show && lvSel) lvSel.style.display = "none"; };
 
-  const tSel = $("#testSelect");
-  try { await libSource(); }
-  catch (e) {
-    if (myToken !== libRenderToken) return;
-    row.innerHTML = "";
-    if (tSel) tSel.style.display = "";
+  if (!libTree || !libTree.children.size) {
+    if (libBusy || (!libError && !libTree && !libLastTry)) {
+      classic(false);
+      row.append(el("span", { class: "xsmall muted", style: "white-space:nowrap", text: "Bibliothek wird geladen …" }));
+      return;
+    }
+    classic(true);                              // no library reachable: the classic selectors still work
+    if (!libBusy && Date.now() - libLastTry > 30000) { libReload(false); }
     const local = location.protocol === "file:";
-    const msg = e.code === "NEEDS_PERMISSION" ? "Ordnerzugriff erlauben:"
-      : local ? "Projektordner wählen:" : "Keine Modelltests gefunden";
+    const e = libError || {};
+    const msg = e.code === "NEEDS_PERMISSION" ? "Ordnerzugriff erlauben:" : local ? "Projektordner wählen:" : "Keine Modelltests gefunden";
     row.append(el("span", { class: "xsmall muted", title: libLog.join("\n"), style: "white-space:nowrap", text: msg }));
-    const b = e.code === "NEEDS_PERMISSION" ? libPickButton("Freigeben", true) : libPickButton(local ? "Ordner wählen …" : "Ordner wählen …");
+    if (!local && e.code !== "NEEDS_PERMISSION") row.append(el("button", { class: "btn sm ghost", onclick: () => libReload(true) }, "Erneut versuchen"));
+    const b = e.code === "NEEDS_PERMISSION" ? libPickButton("Freigeben", true) : libPickButton("Ordner wählen …");
     if (b) row.append(b);
     return;
   }
-  if (myToken !== libRenderToken) return;
 
-  const exam = S.settings.exam, level = S.settings.level;
-  pruneOrphanedLibraryTests(exam, level);
-  const rootListing = libListing(exam, level, []);
-  const hasLib = rootListing.dirs.length + rootListing.modFiles.length > 0;
-  if (tSel) tSel.style.display = hasLib ? "none" : "";     // folders pick the test; the plain list only when there are none
-  const statusPill = el("span", { class: "pill xsmall" });
-  let path = [];
+  classic(false);
+  const path = libResolve();
+  libPathNow = path;
+  const chain = [libTree];
+  path.forEach(p => chain.push(chain[chain.length - 1].children.get(p)));
 
-  for (let depth = 0; ; depth++) {
-    const listing = libListing(exam, level, path);
-
-    if (listing.modFiles.length) {              // this folder is itself a model test
-      const leafKey = exam + "/" + level + "/" + path.join("/");
-      const pill = el("span", { class: "pill teal xsmall" });
-      const known = libImported.get(leafKey);
-      const deepest = !listing.dirs.length || libPath[depth] === undefined;   // only the deepest chosen folder becomes the active test
-      if (deepest) row.append(pill);
-      if (known) {
-        pill.textContent = "✓ geladen";
-        if (deepest && S.settings.testId !== known) libActivate(known);
-      } else {
-        pill.textContent = "wird geladen …";
-        try {
-          const res = await importFolderAsTest(exam, level, path, listing.modFiles);
-          if (myToken !== libRenderToken) return;
-          libImported.set(leafKey, res.test.id);
-          pill.textContent = "✓ " + res.found + " Modul" + (res.found === 1 ? "" : "e") + (res.warn ? " ⚠" : "");
-          if (res.warn) pill.title = res.warn;
-          if (deepest) libActivate(res.test.id);
-        } catch (e) {
-          if (myToken !== libRenderToken) return;
-          if (!pill.isConnected) row.append(pill);
-          pill.className = "pill xsmall"; pill.style.color = "var(--color-danger)";
-          pill.textContent = "Fehler: " + e.message;
-        }
-      }
-    }
-
-    if (myToken !== libRenderToken) return;     // syncTopbar() may have re-rendered the row already
-    if (!listing.dirs.length) {
-      if (!listing.modFiles.length) row.append(el("span", { class: "xsmall muted", style: "white-space:nowrap", text: depth === 0 ? "Keine Modelltests in diesem Niveau" : "(leer)" }));
-      return;
-    }
-
-    const sel = el("select", {});
-    sel.append(el("option", { value: "", text: depth === 0 ? "Ordner wählen …" : "Unterordner …" }));
-    listing.dirs.forEach(d => sel.append(el("option", { value: d, text: d, selected: libPath[depth] === d })));
-    sel.addEventListener("change", e => {
-      libPath = libPath.slice(0, depth);
-      if (e.target.value) libPath.push(e.target.value);
-      renderLibRow();
-    });
+  for (let d = 0; d < chain.length; d++) {
+    const node = chain[d];
+    if (!node.children.size) break;
+    const names = [...node.children.keys()].sort(libCmp);
+    const ex = d >= 1 ? examIdForFolder(path[0]) : null;
+    const isLevel = d === 1 && ex && levelsFor(ex).some(l => norm(l) === norm(names[0]));
+    if (isLevel && names.length === 1 && !node.mods.length) continue;       // a single level (TestDaF): nothing to choose
+    const sel = el("select", { title: d === 0 ? "Prüfung" : "Ordner" });
+    if (node.mods.length) sel.append(el("option", { value: "", text: "(dieser Ordner)" }));
+    names.forEach(n => sel.append(el("option", { value: n, selected: path[d] === n, text: d === 0 ? examLabel(n) : n })));
+    if (node.mods.length && path[d] === undefined) sel.value = "";
+    const depth = d;
+    sel.addEventListener("change", e => libPick(depth, e.target.value));
     row.append(sel);
+  }
 
-    if (libPath[depth] === undefined) return;
-    path = path.concat([libPath[depth]]);
+  const leaf = chain[chain.length - 1];
+  if (leaf.mods.length) {
+    const sel = libSelection(path);
+    const known = libStatus.get(sel.key) || (findLibTest(sel) ? { text: "✓ geladen" } : { text: "wird geladen …" });
+    const pill = el("span", { class: "pill xsmall " + (known.err ? "" : "teal"), text: known.text });
+    if (known.err) pill.style.color = "var(--color-danger)";
+    if (known.warn) pill.title = known.warn;
+    else if (!sel.known) pill.title = "Unbekannte Prüfung — es wird der Aufbau von Goethe verwendet.";
+    if (!libLive) pill.title = (pill.title ? pill.title + " · " : "") + "Zuletzt bekannte Liste (offline)";
+    row.append(pill);
+    libEnsureActive(leaf, path);
   }
 }
 
@@ -5260,7 +5590,7 @@ function libraryCard() {
         S.settings.githubRepo = repoInput.value.trim();
         S.settings.githubBranch = "";
         saveSettings();
-        libSrc = null; reloadLibrary();
+        reloadLibrary();
         toast("Gespeichert.", "ok");
       } }, "Speichern"),
       el("button", { class: "btn sm ghost", onclick: async () => { await reloadLibrary(); toast("Bibliothek aktualisiert."); } }, "Bibliothek neu laden"),
@@ -5396,6 +5726,7 @@ VIEWS.settings = () => {
     toggle("Strenger Zeitgeber", "strictTimer", "Bei 00:00 wird das Modul automatisch abgegeben — wie in der echten Prüfung."),
     toggle("Lösungen nach der Abgabe zeigen", "showSolutionsAfter", "Mit Begründung zu jeder Aufgabe."),
     toggle("Nach Antwort automatisch weiter", "autoAdvance", "Springt bei Einzelauswahl zur nächsten Aufgabe."),
+    toggle("Sofort-Feedback bei der Auswahl", "instantFeedback", "Ein: Sobald Sie eine Antwort wählen, wird sie sofort grün (richtig) oder rot (falsch). Aus (Standard): normales Prüfungsverhalten, Ergebnis erst nach der Abgabe."),
     toggle("Direkte Lückenauswahl", "directGapFill",
       "Aus (Standard): In Lücken stehen nur Buchstaben (a, b, c …), wie in der echten Prüfung — Sie schlagen das Wort in der Liste daneben nach. An: Das Auswahlmenü in jeder Lücke zeigt das Wort bzw. den Satz direkt mit an, sodass Sie ohne Nachschlagen auswählen können.")
   ));
@@ -5614,7 +5945,9 @@ function syncTopbar() {
    ======================================================================= */
 function registerPWA() {
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
-    navigator.serviceWorker.register("./sw.js").catch(() => {});
+    navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" })
+      .then(reg => { try { reg.update(); } catch (e) {} })
+      .catch(() => {});
   }
   let deferredPrompt = null;
   const btn = $("#installBtn");
@@ -5692,6 +6025,7 @@ function boot() {
     if (S.run && !S.run.finished) { e.preventDefault(); e.returnValue = ""; }
   });
 
+  libInit();
   syncTopbar();
   go("dashboard");
 }

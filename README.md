@@ -73,6 +73,26 @@ Ordner selbst anlegen und Dateien hochladen:
 - Dateinamen und Groß-/Kleinschreibung der Ordner sind egal (`tdn4` = `TDN 4`).
 - Nach dem Hochladen: Vercel deployt automatisch (ca. 1 Minute), dann Seite neu laden.
 
+## Kopfleiste = Ordnerbaum von modeltest/
+Die Auswahlfelder oben werden direkt aus den Ordnern unter `modeltest/` gebaut — pro Ordner-Ebene ein Feld,
+beliebig tief, bis zu dem Ordner, in dem die Moduldateien (lesen/hoeren/schreiben/sprechen .json) liegen.
+- Ordner löschen (z. B. `telc`) → verschwindet oben (samt zwischengespeichertem Test). Ordner hinzufügen → erscheint oben.
+- Die zuletzt gewählte Auswahl pro Ebene wird gemerkt (zurück zu „Goethe“ = wieder dasselbe Niveau/derselbe Test).
+- Die Ordnerliste kommt nie aus einem Cache (Service Worker `ps-cache-v3`), und die zuletzt bekannte Liste dient nur als
+  Notfall-Kopie, wenn Netz/GitHub gerade nicht erreichbar sind.
+- GitHub Pages: der Workflow `.github/workflows/static.yml` erzeugt beim Deploy automatisch `library-index.json`
+  (Liste aller Modul-Dateien) — kein GitHub-API-Limit, nichts manuell zu pflegen.
+
+## Sprechen: Pause statt nur Stopp
+„⏸ Pause“ hält Zeitgeber, Live-Transkription und Aufnahme an, „▶ Weiter“ macht genau dort weiter (der Text wird
+ergänzt, nicht überschrieben). „✓ Beenden“ schließt die Aufnahme ab. Beim Verlassen des Tabs / Sperren des Handys wird
+automatisch pausiert; das Audio bis dahin ist bereits gesichert. Auf Handys, die die Ergebnisse kumulativ liefern
+(„während“ → „während der“ → …), wird der Text jetzt sauber zusammengeführt statt wiederholt.
+
+## Sofort-Feedback (Einstellungen → Prüfungsverhalten)
+An: gewählte Antwort wird sofort grün (richtig) oder rot (falsch) — bei Einzelauswahl, Zuordnung und Lücken-Chips.
+Aus (Standard): unverändert, Ergebnis erst nach der Abgabe.
+
 ## Wo funktioniert es
 | Umgebung | Erkennung |
 |---|---|

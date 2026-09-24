@@ -8,3 +8,6 @@ Modelltests hier ablegen:
 
 Jeder Ordner mit JSON-Dateien ist ein Modelltest. Es koennen 1 bis 5 Module in einem Ordner liegen
 (lesen, hoeren, schreiben, sprechen, bausteine). Diese Datei wird von der App ignoriert.
+
+Kopfleiste: Jede Ordner-Ebene wird ein Auswahlfeld (beliebig tief), bis der Ordner mit den Moduldateien erreicht ist.
+Ordner löschen = verschwindet oben, Ordner hinzufügen = erscheint oben.

@@ -31,6 +31,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate model-test index
+        # Lists every .json under modeltest/ at deploy time, so the app always sees the
+        # current folders (no GitHub API rate limit, no manual step).
+        run: |
+          python3 - <<'PY'
+          import os, json
+          files = []
+          for d, _, fs in os.walk('modeltest'):
+              for f in fs:
+                  if f.lower().endswith('.json'):
+                      files.append(os.path.relpath(os.path.join(d, f), 'modeltest').replace(os.sep, '/'))
+          files.sort()
+          with open('library-index.json', 'w', encoding='utf-8') as fh:
+              json.dump({'files': files}, fh, ensure_ascii=False)
+          PY
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

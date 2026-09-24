@@ -14,7 +14,7 @@
    ======================================================================= */
 "use strict";
 
-const VERSION = "ps-cache-v2";
+const VERSION = "ps-cache-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -26,7 +26,10 @@ const APP_SHELL = [
 ];
 
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
-const LIBRARY_PATTERN = /(^|\/)(api\/library\.js|library\.php)(\?|$)/;
+/* the folder LIST must never come from a cache while the network works — it decides what the
+   top bar shows. (Vercel serves the function at /api/library, without ".js", which the
+   old pattern missed, so an old list was handed out forever until a hard reload.) */
+const LIBRARY_PATTERN = /(^|\/)(api\/library(\.js)?|library\.php|library-index\.json)$/;
 const MODELTEST_PATTERN = /\/modeltest\//;
 
 self.addEventListener("install", event => {
@@ -58,17 +61,21 @@ async function cacheFirst(request) {
   return res;
 }
 
-/* network-first, falling back to the last cached copy when offline */
+/* network-first, falling back to the last cached copy when offline.
+   Cached under the URL WITHOUT its query string, so cache-busting parameters
+   (?t=…) don't fill the cache with one entry per request. */
 async function networkFirst(request) {
+  const u = new URL(request.url);
+  const key = new Request(u.origin + u.pathname);
   try {
-    const res = await fetch(request, { cache: "no-cache" });
+    const res = await fetch(request, { cache: "no-store" });
     if (res && res.ok) {
       const cache = await caches.open(VERSION);
-      cache.put(request, res.clone());
+      cache.put(key, res.clone());
     }
     return res;
   } catch (e) {
-    const cached = await caches.match(request);
+    const cached = await caches.match(key);
     if (cached) return cached;
     throw e;
   }
