@@ -1,0 +1,50 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:06:45.918Z",
+  "exam": "telc",
+  "level": "A1",
+  "module": "schreiben",
+  "name": "telc A1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Anmeldung im Sportverein",
+      "instruction": "Lesen Sie die Informationen und ergänzen Sie das Formular.",
+      "items": [
+        {
+          "prompt": "Vorname",
+          "answer": "Maria"
+        },
+        {
+          "prompt": "Nachname",
+          "answer": "Santos"
+        },
+        {
+          "prompt": "Geburtsdatum",
+          "answer": "12.05.1995"
+        },
+        {
+          "prompt": "Sportart",
+          "answer": "Tennis"
+        },
+        {
+          "prompt": "E-Mail-Adresse",
+          "answer": "m.santos@web.de"
+        }
+      ]
+    },
+    "S2": {
+      "title": "Schreiben Teil 2",
+      "instruction": "Schreiben Sie eine kurze E-Mail. Beantworten Sie dabei alle vier Punkte.",
+      "prompt": "Sie möchten am Samstag eine Party machen und schreiben an Ihre Freundin Anna. Schreiben Sie eine Nachricht und antworten Sie auf die vier Punkte.",
+      "bullets": [
+        "Grund für die Nachricht",
+        "Uhrzeit",
+        "Essen und Trinken",
+        "Bitte um Antwort"
+      ],
+      "words": 30,
+      "tips": "Schreiben Sie zu jedem Leitpunkt mindestens einen Satz."
+    }
+  }
+}
