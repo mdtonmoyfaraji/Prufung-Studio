@@ -1,0 +1,247 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:22:53.192Z",
+  "exam": "telc",
+  "level": "B1",
+  "module": "lesen",
+  "name": "telc B1 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Lesen Teil 1: Überschriften zuordnen",
+      "instruction": "Lesen Sie die fünf Texte und die zehn Überschriften (a–j). Welche Überschrift passt am besten zu welchem Text? Sie können jede Überschrift nur einmal verwenden. Fünf Überschriften bleiben übrig.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Gesünder arbeiten mit modernen Stehpulten"
+        },
+        {
+          "key": "b",
+          "text": "Warum das Homeoffice die Karriere bremst"
+        },
+        {
+          "key": "c",
+          "text": "Neues Konzept für das Leben in der Gemeinschaft"
+        },
+        {
+          "key": "d",
+          "text": "Plastikmüll im Alltag effektiv reduzieren"
+        },
+        {
+          "key": "e",
+          "text": "Wie digitale Medien den Schulalltag verändern"
+        },
+        {
+          "key": "f",
+          "text": "Wichtige Tipps für eine ausgewogene Ernährung"
+        },
+        {
+          "key": "g",
+          "text": "Günstiger Wohnraum durch cleveres Tauschen"
+        },
+        {
+          "key": "h",
+          "text": "Die Bedeutung von Schlaf für die Konzentration"
+        },
+        {
+          "key": "i",
+          "text": "Weiterbildung neben dem Beruf wird immer beliebter"
+        },
+        {
+          "key": "j",
+          "text": "Mit dem Fahrrad schneller ans Ziel kommen"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Text 1",
+          "answer": "c",
+          "why": "Der Text beschreibt das gemeinschaftliche Wohnen verschiedener Generationen in einem Gebäude, was exakt zu der Überschrift 'Neues Konzept für das Leben in der Gemeinschaft' passt."
+        },
+        {
+          "prompt": "Text 2",
+          "answer": "a",
+          "why": "Im Text geht es um ergonomische Möbel und höhenverstellbare Tische im Büro, was genau der Überschrift 'Gesünder arbeiten mit modernen Stehpulten' entspricht."
+        },
+        {
+          "prompt": "Text 3",
+          "answer": "j",
+          "why": "Der Text wirbt für das Fahrradfahren auf dem Weg zur Arbeit als schnelle und umweltfreundliche Alternative, was perfekt zur Überschrift 'Mit dem Fahrrad schneller ans Ziel kommen' passt."
+        },
+        {
+          "prompt": "Text 4",
+          "answer": "d",
+          "why": "Der Text gibt praktische Ratschläge zur Vermeidung von Verpackungen und Müll, was sich in der Überschrift 'Plastikmüll im Alltag effektiv reduzieren' widerspiegelt."
+        },
+        {
+          "prompt": "Text 5",
+          "answer": "e",
+          "why": "Der Text thematisiert den Einsatz von Whiteboards und Tablets in Schulen und die damit verbundenen Veränderungen, was exakt zu 'Wie digitale Medien den Schulalltag verändern' passt."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Die Zukunft des mobilen Arbeitens",
+      "instruction": "Lesen Sie den Text und wählen Sie für jede Aufgabe die richtige Lösung a, b oder c.",
+      "passage": "In den letzten Jahren hat sich die Arbeitswelt rasant verändert. Immer mehr Unternehmen bieten ihren Angestellten die Möglichkeit, flexibel von zu Hause oder von unterwegs aus zu arbeiten. Dieses sogenannte mobile Arbeiten oder Homeoffice war früher eine seltene Ausnahme, ist aber heute in vielen Branchen zum festen Standard geworden.\n\nFür viele Arbeitnehmer bringt diese Entwicklung enorme Vorteile mit sich. Der tägliche Weg zur Arbeit, der oft viel Zeit und Nerven kostet, entfällt komplett. Das schafft Freiräume, die Mitarbeiter für ihre Familie, für Hobbys oder für sportliche Aktivitäten nutzen können. Zudem berichten viele Beschäftigte, dass sie in ihrer gewohnten Umgebung konzentrierter arbeiten können, da es im Großraumbüro oft zu laut und ablenkend ist.\n\nAllerdings bringt das Arbeiten außerhalb des Firmengebäudes auch einige Herausforderungen mit sich. Ein zentrales Problem ist die Trennung von Berufs- und Privatleben. Wenn der Laptop auch abends noch auf dem Küchentisch steht, fällt es vielen Menschen schwer, abzuschalten. Oft wird unbewusst länger gearbeitet, was langfristig zu Erschöpfung und Burnout führen kann. Auch der persönliche Austausch mit Kolleginnen und Kollegen kommt oft zu kurz. Kurze Gespräche in der Kaffeepause, die für ein gutes Betriebsklima wichtig sind, fehlen im digitalen Alltag.\n\nUm diese Nachteile zu vermeiden, entwickeln viele Betriebe neue Regeln und Modelle. Dazu gehört beispielsweise das sogenannte Hybride Arbeiten. Bei diesem Modell verbringen die Angestellten nur an bestimmten Tagen pro Woche zu Hause und kommen an den übrigen Tagen ins Büro. So kann man die Vorteile des konzentrierten Arbeitens in den eigenen vier Wänden mit dem persönlichen Teamgeist im Unternehmen optimal verbinden.\n\nAuch die Technik spielt eine entscheidende Rolle für den Erfolg des mobilen Arbeitens. Damit der Datenaustausch sicher funktioniert und Teams reibungslos digital zusammenarbeiten können, investieren Firmen massiv in moderne Software und sichere Internetverbindungen. Experten sind sich einig, dass der Trend zum flexiblen Arbeiten in Zukunft weiter zunehmen wird, solange Unternehmen und Beschäftigte eine gesunde Balance zwischen Freiheit und Verpflichtung finden.",
+      "items": [
+        {
+          "prompt": "Wie war die Situation beim mobilen Arbeiten früher im Vergleich zu heute?",
+          "options": [
+            "Es war eine seltene Ausnahme.",
+            "Es wurde von allen Firmen verboten.",
+            "Es war bereits in jeder Branche üblich."
+          ],
+          "answer": 0,
+          "why": "Im Text steht ausdrücklich, dass das Homeoffice früher eine seltene Ausnahme war."
+        },
+        {
+          "prompt": "Welchen Vorteil nennen Arbeitnehmer besonders oft in Bezug auf den Arbeitsweg?",
+          "options": [
+            "Man spart Fahrtkosten mit den öffentlichen Verkehrsmitteln.",
+            "Der zeit- und nervenraubende Weg zur Arbeit entfällt.",
+            "Man lernt auf dem Weg neue Kolleginnen und Kollegen kennen."
+          ],
+          "answer": 1,
+          "why": "Der Text besagt, dass der tägliche Weg zur Arbeit, der oft viel Zeit und Nerven kostet, komplett entfällt."
+        },
+        {
+          "prompt": "Welches Problem kann entstehen, wenn man ständig von zu Hause aus arbeitet?",
+          "options": [
+            "Man verliert schnell seinen Arbeitsplatz.",
+            "Die Technik funktioniert fast nie zuverlässig.",
+            "Es ist schwer, Beruf und Privatleben klar zu trennen."
+          ],
+          "answer": 2,
+          "why": "Laut Text ist ein zentrales Problem die Trennung von Berufs- und Privatleben."
+        },
+        {
+          "prompt": "Was versteht man unter dem Modell des 'Hybriden Arbeitens'?",
+          "options": [
+            "Man arbeitet abwechselnd an einigen Tagen zu Hause und an anderen im Büro.",
+            "Man arbeitet ausschließlich im Ausland an verschiedenen Orten.",
+            "Man teilt sich einen Schreibtisch mit einer anderen Person."
+          ],
+          "answer": 0,
+          "why": "Im Text wird erklärt, dass Angestellte bei diesem Modell nur an bestimmten Tagen zu Hause sind und sonst ins Büro kommen."
+        },
+        {
+          "prompt": "Wovon hängt laut Experten der zukünftige Erfolg des flexiblen Arbeitens ab?",
+          "options": [
+            "Von der Abschaffung aller Büroräume in den Städten",
+            "Von einer gesunden Balance zwischen Freiheit und Verpflichtung",
+            "Von der strikten Trennung der Mitarbeiter durch Software"
+          ],
+          "answer": 1,
+          "why": "Der letzte Satz des Textes nennt als Voraussetzung eine gesunde Balance zwischen Freiheit und Verpflichtung."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Lesen, Teil 3: Anzeigen",
+      "instruction": "Lesen Sie die Situationen 1 bis 10 und die Anzeigen a bis l. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal verwenden. Manchmal passt keine Anzeige. Tragen Sie dann ein „x“ ein.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Bio-Gemüsehof Müller: Frisches Gemüse und Obst aus der Region direkt ab Hof. Öffnungszeiten: Di–Fr 9–18 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Fahrradwerkstatt Zweirad: Reparatur aller Marken, Inspektion und Verkauf von Gebrauchträdern. Bahnhofstraße 12."
+        },
+        {
+          "key": "c",
+          "text": "Sprachschule Lingua: Intensivkurse Deutsch und Englisch für Anfänger und Fortgeschrittene. Start nächste Woche!"
+        },
+        {
+          "key": "d",
+          "text": "Umweltzentrum Stadtgrün: Workshop zum Thema Müllvermeidung im Alltag am kommenden Samstag um 14 Uhr."
+        },
+        {
+          "key": "e",
+          "text": "Gesundheitsstudio FitAktiv: Rückenfitness, Yoga und Pilates. Kostenloses Probetraining nach vorheriger Anmeldung."
+        },
+        {
+          "key": "f",
+          "text": "PC-Hilfe 24: Schnelle Hilfe bei Computerproblemen, Virenwarnungen und langsamen Systemen. Vor-Ort-Service."
+        },
+        {
+          "key": "g",
+          "text": "Wohnungsbörse Heimisch: Wir suchen ständig 2- bis 3-Zimmer-Wohnungen für solvente Kunden im Stadtgebiet."
+        },
+        {
+          "key": "h",
+          "text": "Café Leselust: Genießen Sie hausgemachten Kuchen und Kaffeespezialitäten in gemütlicher Atmosphäre. Kostenloses WLAN."
+        },
+        {
+          "key": "i",
+          "text": "Nachhilfe-Kreis: Qualifizierte Nachhilfe in Mathematik, Physik und Deutsch für alle Klassenstufen."
+        },
+        {
+          "key": "j",
+          "text": "Jobvermittlung Zukunft: Wir unterstützen Sie bei der Suche nach einer neuen Vollzeit- oder Teilzeitstelle im Büro."
+        },
+        {
+          "key": "k",
+          "text": "Garten- und Landschaftsbau Grün & Schön: Baumschnitt, Rasenpflege und Neugestaltung Ihres Gartens."
+        },
+        {
+          "key": "l",
+          "text": "Kino Central: Heute Abend Sondervorführung des preisgekrönten Dokumentarfilms über den Regenwald."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Sie möchten lernen, wie Sie zu Hause weniger Müll produzieren.",
+          "answer": "d",
+          "why": "Das Umweltzentrum Stadtgrün bietet einen „Workshop zum Thema Müllvermeidung im Alltag“ an."
+        },
+        {
+          "prompt": "Ihr Fahrrad hat einen platten Reifen und muss repariert werden.",
+          "answer": "b",
+          "why": "Die „Fahrradwerkstatt Zweirad“ bietet „Reparatur aller Marken“ an."
+        },
+        {
+          "prompt": "Sie suchen einen Kurs, um Ihre Deutschkenntnisse zu verbessern.",
+          "answer": "c",
+          "why": "Die „Sprachschule Lingua“ bietet „Intensivkurse Deutsch“ an."
+        },
+        {
+          "prompt": "Sie wollen sich beruflich verändern und suchen eine neue Stelle im Büro.",
+          "answer": "j",
+          "why": "Die „Jobvermittlung Zukunft“ unterstützt bei der „Suche nach einer neuen Vollzeit- oder Teilzeitstelle im Büro“."
+        },
+        {
+          "prompt": "Sie möchten etwas für Ihre Rückengesundheit tun und vorher testen, ob Ihnen das Angebot gefällt.",
+          "answer": "e",
+          "why": "Das „Gesundheitsstudio FitAktiv“ bietet „Rückenfitness“ und ein „Kostenloses Probetraining“ an."
+        },
+        {
+          "prompt": "Sie benötigen frisches Obst und Gemüse direkt aus der Umgebung.",
+          "answer": "a",
+          "why": "Der „Bio-Gemüsehof Müller“ verkauft „Frisches Gemüse und Obst aus der Region“."
+        },
+        {
+          "prompt": "Ihr Computer funktioniert nicht richtig und Sie brauchen professionelle Hilfe.",
+          "answer": "f",
+          "why": "Die Anzeige „PC-Hilfe 24“ verspricht „Schnelle Hilfe bei Computerproblemen“."
+        },
+        {
+          "prompt": "Ihr Kind braucht Unterstützung in der Schule im Fach Mathematik.",
+          "answer": "i",
+          "why": "Der „Nachhilfe-Kreis“ bietet „qualifizierte Nachhilfe in Mathematik“ an."
+        },
+        {
+          "prompt": "Sie möchten am Wochenende gemütlich Kaffee trinken und im Internet surfen.",
+          "answer": "h",
+          "why": "Im „Café Leselust“ gibt es „Kaffeespezialitäten“ und „Kostenloses WLAN“."
+        },
+        {
+          "prompt": "Sie suchen nach einer Möglichkeit, Ihr Auto günstig reparieren zu lassen.",
+          "answer": "x",
+          "why": "Es gibt keine Anzeige, die Reparaturen für Autos anbietet."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:22:54.243Z",
+  "exam": "telc",
+  "level": "B1",
+  "module": "schreiben",
+  "name": "telc B1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Schreiben Teil 1: E-Mail an den Vermieter",
+      "instruction": "Schreiben Sie eine E-Mail. Bearbeiten Sie alle vier Leitpunkte. Achten Sie auf Anrede, Aufbau und Gruß.",
+      "prompt": "In Ihrer Wohnung gibt es ein Problem mit der Heizung. Schreiben Sie an Ihren Vermieter, Herrn Weber, und schildern Sie die Situation.",
+      "bullets": [
+        "Grund für das Schreiben (Heizung funktioniert nicht)",
+        "Beschreiben Sie das genaue Problem",
+        "Bitte um einen schnellen Termin für die Reparatur",
+        "Vorschlag für die Erreichbarkeit"
+      ],
+      "words": 150,
+      "tips": "Achten Sie darauf, alle vier Leitpunkte zu bearbeiten und schreiben Sie in einem höflichen Ton."
+    }
+  }
+}

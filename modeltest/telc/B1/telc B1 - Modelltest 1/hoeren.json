@@ -1,0 +1,318 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:22:53.890Z",
+  "exam": "telc",
+  "level": "B1",
+  "module": "hoeren",
+  "name": "telc B1 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1 — Globalverstehen",
+      "instruction": "Sie hören fünf kurze Texte. Zu jedem Text gibt es eine Aufgabe. Lesen Sie die Aufgaben zuerst, hören Sie dann den Text und kreuzen Sie die richtige Lösung an. Sie hören jeden Text einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Ansager",
+            "text": "Hören Sie Teil 1. Nummer 1. Was plant Herr Wagner im Büro? Lesen Sie die Aufgabe und hören Sie den Text dazu."
+          },
+          {
+            "speaker": "Herr Wagner",
+            "text": "Guten Morgen, Frau Klein. Ich wollte Ihnen nur kurz sagen, dass ich heute leider nicht an der Teamsitzung am Nachmittag teilnehmen kann. Ich muss dringend zum Zahnarzt, weil ich starke Schmerzen habe. Bitte schicken Sie mir das Protokoll, sobald es fertig ist."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Nummer 2. Worüber spricht die Radiomoderatorin? Hören Sie gut zu."
+          },
+          {
+            "speaker": "Radiomoderatorin",
+            "text": "Und nun zu unserem heutigen Umwelttipp: Immer mehr Menschen werfen alte Elektrogeräte einfach in den normalen Müll. Das ist nicht nur verboten, sondern schadet auch unserer Umwelt enorm. Nutzen Sie stattdessen die städtischen Recyclinghöfe, wo die Geräte fachgerecht und kostenlos entsorgt werden."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Nummer 3. Was sucht Anna im Internet? Hören Sie die Durchsage oder den Text."
+          },
+          {
+            "speaker": "Anna",
+            "text": "Hey Tom, sag mal, hast du vielleicht einen Tipp für mich? Ich möchte im nächsten Monat für ein Wochenende wegfahren, am besten ans Meer. Ich schaue gerade im Internet nach einer schönen und nicht zu teuren Ferienwohnung, aber die Auswahl ist riesig und ich kann mich einfach nicht entscheiden."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Nummer 4. Welches Schulfach betrifft die Nachricht? Hören Sie gut zu."
+          },
+          {
+            "speaker": "Lehrer",
+            "text": "Liebe Schülerinnen und Schüler, bitte denkt daran, dass wir in der nächsten Woche keinen regulären Unterricht in Biologie haben. Stattdessen machen wir einen Ausflug in den Botanischen Garten, um die verschiedenen Pflanzenarten direkt vor Ort zu bestimmen. Bringt bitte wetterfeste Kleidung mit."
+          },
+          {
+            "speaker": "Ansager",
+            "text": "Nummer 5. Was empfiehlt der Arzt im Gesundheitsmagazin? Hören Sie den letzten Text."
+          },
+          {
+            "speaker": "Arzt",
+            "text": "Viele Menschen klagen in der dunklen Jahreszeit über ständige Müdigkeit und Antriebslosigkeit. Mein wichtigster Rat dagegen: Gehen Sie trotz Kälte jeden Tag mindestens eine halbe Stunde an die frische Luft. Das Tageslicht regt den Kreislauf an und stärkt nachweislich das Immunsystem."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was plant Herr Wagner?",
+          "options": [
+            "Er möchte an einer Teamsitzung teilnehmen.",
+            "Er muss dringend zum Zahnarzt gehen.",
+            "Er schreibt heute ein wichtiges Protokoll."
+          ],
+          "answer": 1,
+          "why": "Herr Wagner sagt im Text: „Ich muss dringend zum Zahnarzt, weil ich starke Schmerzen habe.“"
+        },
+        {
+          "prompt": "Worüber spricht die Radiomoderatorin?",
+          "options": [
+            "Über die richtige Entsorgung von alten Elektrogeräten",
+            "Über den Bau von neuen Recyclinghöfen in der Stadt",
+            "Über den Kauf von umweltfreundlichen Haushaltsgeräten"
+          ],
+          "answer": 0,
+          "why": "Die Moderatorin kritisiert, dass Elektrogeräte in den Müll geworfen werden, und empfiehlt die Entsorgung auf Recyclinghöfen."
+        },
+        {
+          "prompt": "Was sucht Anna im Internet?",
+          "options": [
+            "Einen günstigen Flug ans Meer",
+            "Eine Ferienwohnung für ein Wochenende",
+            "Einen Reiseführer für den nächsten Urlaub"
+          ],
+          "answer": 1,
+          "why": "Anna erklärt Tom: „Ich schaue gerade im Internet nach einer schönen und nicht zu teuren Ferienwohnung.“"
+        },
+        {
+          "prompt": "Um welches Schulfach geht es in der Nachricht?",
+          "options": [
+            "Sport",
+            "Biologie",
+            "Erdkunde"
+          ],
+          "answer": 1,
+          "why": "Der Lehrer kündigt an: „...dass wir in der nächsten Woche keinen regulären Unterricht in Biologie haben.“"
+        },
+        {
+          "prompt": "Was empfiehlt der Arzt gegen Müdigkeit?",
+          "options": [
+            "Regelmäßig Medikamente gegen Schmerzen einzunehmen",
+            "Täglich eine halbe Stunde an die frische Luft zu gehen",
+            "Mehr Kaffee zu trinken und früh schlafen zu gehen"
+          ],
+          "answer": 1,
+          "why": "Der Arzt sagt als seinen wichtigsten Rat: „Gehen Sie trotz Kälte jeden Tag mindestens eine halbe Stunde an die frische Luft.“"
+        }
+      ]
+    },
+    "H2": {
+      "title": "Hören Teil 2: Interview zum Thema Telearbeit und Gesundheit",
+      "instruction": "Lesen Sie zuerst die Aufgaben. Hören Sie dann das Interview zweimal. Entscheiden Sie bei jedem Satz, ob die Aussage Richtig oder Falsch ist.",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "text": "Herzlich willkommen zu unserem Podcast 'Gesund im Beruf'. Heute sprechen wir über das Thema Telearbeit und wie sich die Arbeit im Homeoffice auf unsere Gesundheit auswirkt. Dazu begrüße ich Herrn Dr. Weber, Arbeitsmediziner aus Stuttgart. Herr Dr. Weber, seit die Menschen vermehrt von zu Hause aus arbeiten, beobachten Sie da bestimmte gesundheitliche Veränderungen?"
+          },
+          {
+            "speaker": "Dr. Weber",
+            "text": "Guten Tag. Ja, absolut. Auf der einen Seite berichten viele Angestellte, dass sie den Weg zur Arbeit vermissen und dadurch morgens mehr Zeit für sich haben. Der Wegfall des Pendelns reduziert den Stress deutlich. Auf der anderen Seite sehen wir vermehrt körperliche Beschwerden. Viele Menschen haben zu Hause keinen ergonomisch geformten Bürostuhl und arbeiten stattdessen am Küchentisch. Das führt sehr schnell zu Rückenschmerzen und Verspannungen im Nackenbereich."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Das klingt ein bisschen so, als ob die moderne Technik zwar praktisch ist, aber unser Körper darunter leidet. Was raten Sie denn den Betroffenen, um diese Schmerzen zu vermeiden?"
+          },
+          {
+            "speaker": "Dr. Weber",
+            "text": "Das Wichtigste ist Bewegung. Man sollte jede Stunde einmal aufstehen, ein paar Schritte durch die Wohnung gehen oder ein paar Dehnübungen machen. Viele vergessen im Homeoffice schlichtweg, Pausen zu machen, weil sie ohne Ablenkung durch Kollegen konzentriert durcharbeiten. Außerdem hilft es, feste Arbeitszeiten einzuhalten und den Laptop am Abend wirklich zuzuklappen, um gedanklich Feierabend zu machen."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Ein guter Punkt ist die Grenze zwischen Arbeit und Freizeit. Viele Klagen ja darüber, dass sie abends noch E-Mails beantworten. Gibt es denn auch positive Effekte für die psychische Gesundheit?"
+          },
+          {
+            "speaker": "Dr. Weber",
+            "text": "Durchaus. Die Flexibilität wird von den meisten Beschäftigten als großer Vorteil genannt. Man kann besser auf familiäre Bedürfnisse eingehen, zum Beispiel wenn man Kinder hat oder sich um pflegebedürftige Angehörige kümmert. Wichtig ist jedoch, dass die Unternehmen klare Regeln aufstellen und von ihren Mitarbeitern nicht erwarten, rund um die Uhr erreichbar zu sein. Das führt sonst direkt in die Erschöpfung."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Herr Dr. Weber arbeitet als Arbeitsmediziner in einer Klinik in München.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut Text ist Dr. Weber Arbeitsmediziner aus Stuttgart, nicht aus München."
+        },
+        {
+          "prompt": "Der Wegfall des Arbeitswegs am Morgen führt bei vielen Menschen zu einer Reduzierung des Stresses.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es: 'Der Wegfall des Pendelns reduziert den Stress deutlich.'"
+        },
+        {
+          "prompt": "Viele Beschäftigte arbeiten zu Hause an einem ergonomisch perfekten Bürostuhl.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Dr. Weber erklärt, dass viele keinen ergonomischen Stuhl haben und stattdessen am Küchentisch arbeiten."
+        },
+        {
+          "prompt": "Die falsche Sitzhaltung im Homeoffice kann zu Nackenverspannungen führen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Der Experte bestätigt, dass dies sehr schnell zu Rückenschmerzen und Verspannungen im Nackenbereich führt."
+        },
+        {
+          "prompt": "Dr. Weber empfiehlt, sich während der Arbeitszeit jede Stunde kurz zu bewegen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Er sagt wörtlich: 'Man sollte jede Stunde einmal aufstehen, ein paar Schritte durch die Wohnung gehen oder ein paar Dehnübungen machen.'"
+        },
+        {
+          "prompt": "Arbeitnehmer im Homeoffice machen von sich aus sehr viele und lange Pausen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Im Interview wird erwähnt: 'Viele vergessen im Homeoffice schlichtweg, Pausen zu machen...'"
+        },
+        {
+          "prompt": "Am Abend sollte man den Laptop ausschalten, um einen klaren Feierabend zu haben.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Er rät dazu, 'den Laptop am Abend wirklich zuzuklappen, um gedanklich Feierabend zu machen.'"
+        },
+        {
+          "prompt": "Die größere zeitliche Flexibilität im Homeoffice wird von den Angestellten meist negativ bewertet.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut Dr. Weber wird 'die Flexibilität von den meisten Beschäftigten als großer Vorteil genannt.'"
+        },
+        {
+          "prompt": "Homeoffice erleichtert es oft, die Bedürfnisse von Familie und Beruf miteinander zu vereinbaren.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Er bestätigt, dass man 'besser auf familiäre Bedürfnisse eingehen' kann."
+        },
+        {
+          "prompt": "Unternehmen sollten laut Dr. Weber unbedingt verlangen, dass Mitarbeiter rund um die Uhr erreichbar sind.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Er sagt genau das Gegenteil: Unternehmen sollen nicht erwarten, rund um die Uhr erreichbar zu sein, da das zu Erschöpfung führt."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Hören Teil 3: Ansagen im Alltag und Beruf",
+      "instruction": "Hören Sie fünf Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Wählen Sie die richtige Lösung (a, b oder c). Sie hören die Ansagen nur einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Ansage 1",
+            "text": "Guten Tag, hier spricht Sabine Wagner von der Personalabteilung der Firma TechCon. Ich rufe wegen Ihrer Bewerbung als Projektassistent an. Wir haben Ihre Unterlagen mit großem Interesse gelesen und würden Sie sehr gerne zu einem persönlichen Gespräch einladen. Als Termin schlagen wir kommenden Dienstag um 14 Uhr in unserem Hauptbüro vor. Bitte geben Sie uns kurz per E-Mail Bescheid, ob dieser Termin bei Ihnen passt oder ob Sie einen anderen Vorschlag haben. Auf Wiederhören."
+          },
+          {
+            "speaker": "Ansage 2",
+            "text": "Achtung, eine wichtige Durchsage für alle Mieterinnen und Mieter im Haus Lindenstraße 12 bis 18. Wegen dringender Reparaturarbeiten am Hauptwasserrohr muss die Wasserversorgung am kommenden Mittwoch in der Zeit von 8 Uhr morgens bis voraussichtlich 14 Uhr komplett abgestellt werden. Bitte stellen Sie sicher, dass alle Wasserhähne in Ihren Wohnungen während dieser Zeit geschlossen bleiben, um Wasserschäden zu vermeiden. Wir bitten für die Unannehmlichkeiten um Verständnis."
+          },
+          {
+            "speaker": "Ansage 3",
+            "text": "Guten Tag, hier ist die Zahnarztpraxis Dr. Schmidt. Sie hatten für heute Nachmittag um 16:30 Uhr einen Termin zur Kontrolle vereinbart. Leider ist Herr Dr. Schmidt kurzfristig erkrankt, sodass wir den Termin heute leider abschicken beziehungsweise verschieben müssen. Wir möchten Ihnen gerne einen neuen Termin in der nächsten Woche anbieten, zum Beispiel am Montag um 10 Uhr. Bitte rufen Sie uns kurz zurück, ob dieser Termin für Sie infrage kommt. Vielen Dank."
+          },
+          {
+            "speaker": "Ansage 4",
+            "text": "Guten Tag, liebe Kundinnen und Kunden unseres Bio-Supermarkts. Wir möchten Sie darauf hinweisen, dass ab dem kommenden Monat unsere Öffnungszeiten von Montag bis Samstag einheitlich von 8 Uhr bis 20 Uhr gelten. Bisher haben wir samstags bereits um 18 Uhr geschlossen. Damit möchten wir Ihnen noch mehr Flexibilität beim Einkaufen bieten. Ihr Team vom Frische-Markt freut sich auf Ihren Besuch."
+          },
+          {
+            "speaker": "Ansage 5",
+            "text": "Hallo Thomas, hier ist Julia. Du hast mich doch gefragt, ob ich dir bei deinem Umzug am Samstag helfen kann. Es tut mir wirklich leid, aber ich bin seit gestern krank im Bett und kann dir deshalb leider nicht beim Schleppen helfen. Mein Bruder Lukas hat aber Zeit und würde stattdessen gerne vorbeikommen und mit anpacken. Ruf ihn doch einfach kurz an, um alles Weitere zu besprechen. Gute Besserung für mich und viel Erfolg beim Umzug!"
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was will Frau Wagner von der Personalabteilung?",
+          "options": [
+            "Sie möchte das Bewerbungsgespräch absagen.",
+            "Sie lädt die Person zu einem Gespräch ein.",
+            "Sie bittet um Zusendung weiterer Unterlagen."
+          ],
+          "answer": 1,
+          "why": "Laut Text lädt Frau Wagner die Person 'sehr gerne zu einem persönlichen Gespräch ein'."
+        },
+        {
+          "prompt": "Was müssen die Mieter am kommenden Mittwoch beachten?",
+          "options": [
+            "Es gibt für einige Stunden kein fließendes Wasser.",
+            "Die Heizung im ganzen Haus wird repariert.",
+            "Alle Mieter müssen ihre Wohnung verlassen."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass 'die Wasserversorgung am kommenden Mittwoch... komplett abgestellt werden' muss."
+        },
+        {
+          "prompt": "Warum ruft die Zahnarztpraxis an?",
+          "options": [
+            "Um den Termin wegen eines Unfalls vorzuverlegen.",
+            "Um den Termin heute abzusagen, weil der Arzt krank ist.",
+            "Um den Patienten an einen bereits bestätigten Termin zu erinnern."
+          ],
+          "answer": 1,
+          "why": "Die Praxis teilt mit, dass Dr. Schmidt kurzfristig erkrankt ist und der Termin verschoben werden muss."
+        },
+        {
+          "prompt": "Was ändert sich beim Bio-Supermarkt ab dem nächsten Monat?",
+          "options": [
+            "Das Geschäft hat samstags länger geöffnet.",
+            "Der Supermarkt bleibt künftig an Samstagen ganz geschlossen.",
+            "Die Öffnungszeiten gelten nur noch werktags."
+          ],
+          "answer": 0,
+          "why": "Es wird erklärt, dass der Markt samstags statt bis 18 Uhr künftig einheitlich bis 20 Uhr geöffnet hat."
+        },
+        {
+          "prompt": "Welche Information gibt Julia ihrem Freund Thomas?",
+          "options": [
+            "Sie kann selbst nicht helfen, aber jemand anderes springt ein.",
+            "Sie muss den Umzugstermin auf einen anderen Tag verlegen.",
+            "Sie ist wieder gesund und kommt pünktlich zum Umzug."
+          ],
+          "answer": 0,
+          "why": "Julia sagt, dass sie krank im Bett liegt und nicht helfen kann, aber ihr Bruder Lukas stattdessen kommt."
+        }
+      ]
+    }
+  }
+}

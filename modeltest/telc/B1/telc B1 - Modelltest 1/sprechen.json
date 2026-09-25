@@ -1,0 +1,47 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:22:54.589Z",
+  "exam": "telc",
+  "level": "B1",
+  "module": "sprechen",
+  "name": "telc B1 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Sprechen Teil 1: Kontaktaufnahme",
+      "instruction": "Stellen Sie sich vor und stellen Sie einander Fragen zum Thema Arbeit.",
+      "prompt": "Unterhalten Sie sich mit Ihrer Gesprächspartnerin oder Ihrem Gesprächspartner über Ihre aktuelle Arbeit oder Ihren Berufswunsch. Stellen Sie sich gegenseitig Fragen und antworten Sie darauf.",
+      "bullets": [
+        "Was machen Sie beruflich?",
+        "Wie lange arbeiten Sie schon dort?",
+        "Was gefällt Ihnen an Ihrer Arbeit besonders gut?"
+      ],
+      "seconds": 150,
+      "tips": "Hören Sie gut zu und stellen Sie auch eine Gegenfrage, um das Gespräch am Laufen zu halten."
+    },
+    "P2": {
+      "title": "Gespräch über ein Thema: Homeoffice vs. Büroarbeit",
+      "instruction": "Tauschen Sie sich mit Ihrem Gesprächspartner oder Ihrer Gesprächspartnerin über das Thema aus. Sprechen Sie über Ihre eigenen Erfahrungen und Meinungen.",
+      "prompt": "Arbeiten Sie lieber im Büro oder im Homeoffice? Diskutieren Sie die Vor- und Nachteile von beiden Arbeitsformen und begründen Sie Ihre Meinung.",
+      "bullets": [
+        "Ihre eigenen Erfahrungen mit Homeoffice oder Büroarbeit",
+        "Die Vorteile und Nachteile von der Arbeit zu Hause",
+        "Welche Form der Arbeit Ihrer Meinung nach in Zukunft wichtiger sein wird"
+      ],
+      "seconds": 300,
+      "tips": "Hören Sie gut zu, stellen Sie Fragen an Ihren Partner und reagieren Sie auf dessen Argumente."
+    },
+    "P3": {
+      "title": "Gemeinsam eine Aufgabe lösen: Geschenk zum Abschied",
+      "instruction": "Sprechen, Teil 3: Planen Sie gemeinsam etwas. Sie haben dazu ca. 3 Minuten Zeit. Bitte sprechen Sie über alle Punkte unten.",
+      "prompt": "Ihre Kollegin Frau Müller verlässt die Firma nach zehn Jahren, weil sie in eine andere Stadt zieht. Sie möchten gemeinsam ein Abschiedsgeschenk für sie organisieren und eine kleine Feier planen.",
+      "bullets": [
+        "Welches Geschenk kaufen wir und wer besorgt es?",
+        "Wann und wo machen wir eine kleine Abschiedsparty?",
+        "Wer kümmert sich um Getränke und Snacks?"
+      ],
+      "seconds": 180,
+      "tips": "Hören Sie gut zu, machen Sie Vorschläge und einigen Sie sich am Ende auf einen gemeinsamen Plan."
+    }
+  }
+}

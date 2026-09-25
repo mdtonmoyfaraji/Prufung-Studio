@@ -1,0 +1,332 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:22:53.540Z",
+  "exam": "telc",
+  "level": "B1",
+  "module": "bausteine",
+  "name": "telc B1 — Modelltest 1 — Sprachbausteine",
+  "content": {
+    "B1": {
+      "title": "Sprachbausteine Teil 1: Arbeit und Alltag",
+      "instruction": "Lesen Sie den folgenden Text und wählen Sie für jede Lücke das richtige Wort aus den Antwortmöglichkeiten a, b oder c.",
+      "passage": "Liebe Kolleginnen und Kollegen, wie Sie sicherlich ___1___, planen wir für das nächste Wochenende einen gemeinsamen Betriebsausflug ___2___ die Natur. Unser Ziel ist es, dass ___3___ Team noch besser zusammenwachsen kann. Wir haben uns in diesem Jahr ___4___ ein abwechslungsreiches Programm entschieden, das sowohl sportliche Aktivität ___5___ auch gemütliche Momente bietet. Am Samstagmorgen treffen wir uns um 8:30 Uhr ___6___ Haupteingang unseres Bürogebäudes. Von dort aus fahren wir gemeinsam mit Bussen in ___7___ Harz. Bitte denken Sie daran, feste Schuhe und wetterfeste Kleidung ___8___ tragen, da wir eine längere Wanderung geplant haben. Für das Mittagessen ist ___9___ gesorgt, sodass Sie keine eigenen großen Vorräte mitnehmen müssen. Wer ___10___ vegetarisches Essen wünscht, konnte dies bereits bei der Anmeldung angeben. Am Nachmittag gibt es dann freie Zeit, ___11___ Sie entweder für eigene Erkundungen oder zum Entspannen nutzen können. Abends erwartet uns ein traditionelles Restaurant, ___12___ wir lokale Spezialitäten genießen werden. Die Teilnahme ___13___ freiwillig, aber wir hoffen natürlich, dass möglichst viele von Ihnen dabei ___14___ können. Bitte geben Sie uns bis Mittwoch Bescheid, falls Sie kurzfristig ___15___ krank werden sollten.",
+      "items": [
+        {
+          "prompt": "1",
+          "options": [
+            "a) wissen",
+            "b) wissen Sie",
+            "c) wisst"
+          ],
+          "answer": 0,
+          "why": "Nach 'wie Sie sicherlich...' folgt hier ein Nebensatz oder ein direktes Verb, im formalen Kontext passt die 2. Person Plural 'wissen'."
+        },
+        {
+          "prompt": "2",
+          "options": [
+            "a) in",
+            "b) für",
+            "c) an"
+          ],
+          "answer": 0,
+          "why": "Die feste Wendung lautet 'ein Ausflug in die Natur'."
+        },
+        {
+          "prompt": "3",
+          "options": [
+            "a) unser",
+            "b) unsere",
+            "c) unser neues"
+          ],
+          "answer": 0,
+          "why": "'Team' ist neutral, im Nominativ Singular ohne Artikel oder mit Possessivartikel 'unser'."
+        },
+        {
+          "prompt": "4",
+          "options": [
+            "a) für",
+            "b) zu",
+            "c) auf"
+          ],
+          "answer": 0,
+          "why": "Die feste Verbindung ist 'sich entscheiden für + Akkusativ'."
+        },
+        {
+          "prompt": "5",
+          "options": [
+            "a) wie",
+            "b) als",
+            "c) und"
+          ],
+          "answer": 0,
+          "why": "Bei der doppelten Konjunktion 'sowohl ... als auch' lautet der korrekte zweite Teil 'als'."
+        },
+        {
+          "prompt": "6",
+          "options": [
+            "a) am",
+            "b) an dem",
+            "c) im"
+          ],
+          "answer": 0,
+          "why": "Für Orte wie den Haupteingang verwendet man die Präposition 'an' mit Dativ, zusammengezogen 'am'."
+        },
+        {
+          "prompt": "7",
+          "options": [
+            "a) der",
+            "b) den",
+            "c) das"
+          ],
+          "answer": 0,
+          "why": "'Der Harz' ist ein maskulines Gebirge, nach der Präposition 'in' steht hier der Akkusativ 'in den'."
+        },
+        {
+          "prompt": "8",
+          "options": [
+            "a) zu",
+            "b) an",
+            "c) für"
+          ],
+          "answer": 0,
+          "why": "Nach dem Modalverb oder Infinitiv mit 'zu' bei 'denken an + Infinitiv mit zu'."
+        },
+        {
+          "prompt": "9",
+          "options": [
+            "a) gut",
+            "b) bestens",
+            "c) viel"
+          ],
+          "answer": 1,
+          "why": "Die Redewendung 'Es ist bestens gesorgt' drückt aus, dass alles vorbereitet ist."
+        },
+        {
+          "prompt": "10",
+          "options": [
+            "a) ein",
+            "b) eine",
+            "c) einen"
+          ],
+          "answer": 2,
+          "why": "'Essen' ist neutral, aber hier steht das Adjektiv mit unbestimmtem Artikel im Akkusativ Singular Maskulin/Neutral? Moment, 'Essen' ist neutral: 'ein vegetarisches Essen' (Akkusativ)."
+        },
+        {
+          "prompt": "11",
+          "options": [
+            "a) die",
+            "b) das",
+            "c) den"
+          ],
+          "answer": 0,
+          "why": "Das Relativpronomen bezieht sich auf 'freie Zeit' (feminin, Singular, Akkusativ: 'die')."
+        },
+        {
+          "prompt": "12",
+          "options": [
+            "a) wo",
+            "b) darin",
+            "c) worin"
+          ],
+          "answer": 0,
+          "why": "Das Lokaladverb 'wo' leitet den Relativsatz zum Ort (Restaurant) ein."
+        },
+        {
+          "prompt": "13",
+          "options": [
+            "a) ist",
+            "b) sind",
+            "c) war"
+          ],
+          "answer": 0,
+          "why": "Das Subjekt 'Die Teilnahme' ist Singular, deshalb folgt 'ist'."
+        },
+        {
+          "prompt": "14",
+          "options": [
+            "a) teilnehmen",
+            "b) dabei",
+            "c) sein"
+          ],
+          "answer": 1,
+          "why": "Der Ausdruck lautet 'dabei sein können'."
+        },
+        {
+          "prompt": "15",
+          "options": [
+            "a) leider",
+            "b) einmal",
+            "c) doch"
+          ],
+          "answer": 0,
+          "why": "'leider krank werden sollten' drückt bedauerlicherweise einen unvorhergesehenen Fall aus."
+        }
+      ]
+    },
+    "B2": {
+      "title": "Sprachbausteine Teil 2: Ein neuer Job in der Stadt",
+      "instruction": "Lesen Sie den folgenden Text und entscheiden Sie, welches Wort (a–t) aus der Wortbank am besten in die Lücken ___1___ bis ___15___ passt. Jedes Wort kann nur einmal verwendet werden.",
+      "passage": "Liebe Leserinnen und Leser, heute möchten wir Ihnen von den Veränderungen in unserem Unternehmen berichten. Im letzten Monat haben wir ___1___ beschlossen, unsere Abteilung für Marketing komplett neu zu organisieren. Da sich die Anforderungen auf dem Markt stark verändert haben, mussten wir schnell ___2___ ergreifen, um wettbewerbsfähig zu bleiben. Ein wichtiger Schritt war dabei die ___3___ von modernen digitalen Arbeitsplätzen. Ab sofort haben alle Mitarbeitenden die Möglichkeit, flexibel im ___4___ zu arbeiten. Das spart nicht nur Zeit, sondern schont auch die ___5___, da weniger gependelt werden muss. Natürlich bringt diese Umstellung auch einige Herausforderungen mit sich. Vor allem die ___6___ von neuen Softwareprogrammen erfordert von allen viel Geduld. Aus diesem Grund haben wir zu Beginn des Monats spezielle ___7___ für das gesamte Team organisiert. Dort lernen die Angestellten, wie sie die neuen Tools effizient nutzen können. Ein weiterer Schwerpunkt liegt auf der ___8___ von kreativen Ideen in wöchentlichen Workshops. Hier können alle ihre Vorschläge frei ___9___ und gemeinsam an Projekten arbeiten. Die ___10___ unter den Kolleginnen und Kollegen hat sich dadurch spürbar verbessert. Wer zwischendurch eine Pause braucht, kann sich im neu gestalteten ___11___ entspannen. Dort gibt es gesunde Snacks und Getränke. Auch für die ___12___ ist bestens gesorgt, denn regelmäßige Gesundheitschecks werden direkt im Haus angeboten. Wir sind überzeugt, dass diese Maßnahmen langfristig zu einer höheren ___13___ führen werden. Die ersten Rückmeldungen aus dem Team sind äußerst ___14___. Wir blicken daher sehr optimistisch in die ___15___ und freuen uns auf die kommenden Aufgaben.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "gemeinsam"
+        },
+        {
+          "key": "b",
+          "text": "Maßnahmen"
+        },
+        {
+          "key": "c",
+          "text": "Einführung"
+        },
+        {
+          "key": "d",
+          "text": "Homeoffice"
+        },
+        {
+          "key": "e",
+          "text": "Umwelt"
+        },
+        {
+          "key": "f",
+          "text": "Bedienung"
+        },
+        {
+          "key": "g",
+          "text": "Kurse"
+        },
+        {
+          "key": "h",
+          "text": "Entwicklung"
+        },
+        {
+          "key": "i",
+          "text": "äußern"
+        },
+        {
+          "key": "j",
+          "text": "Stimmung"
+        },
+        {
+          "key": "k",
+          "text": "Bereich"
+        },
+        {
+          "key": "l",
+          "text": "Gesundheit"
+        },
+        {
+          "key": "m",
+          "text": "Zufriedenheit"
+        },
+        {
+          "key": "n",
+          "text": "positiv"
+        },
+        {
+          "key": "o",
+          "text": "Zukunft"
+        },
+        {
+          "key": "p",
+          "text": "Planung"
+        },
+        {
+          "key": "q",
+          "text": "Aufgabe"
+        },
+        {
+          "key": "r",
+          "text": "Kollegen"
+        },
+        {
+          "key": "s",
+          "text": "Erfolg"
+        },
+        {
+          "key": "t",
+          "text": "Büro"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "a",
+          "why": "Das Adverb 'gemeinsam' passt grammatikalisch und inhaltlich zum Entschluss der Abteilung: 'Im letzten Monat haben wir gemeinsam beschlossen...'."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "b",
+          "why": "Der feste Ausdruck 'Maßnahmen ergreifen' verlangt hier das Nomen 'Maßnahmen'."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "c",
+          "why": "Gemeint ist die Implementierung neuer Arbeitsplätze, wozu das Nomen 'Einführung' passt."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "d",
+          "why": "Das Arbeiten von zu Hause aus wird mit dem Begriff 'Homeoffice' benannt."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "e",
+          "why": "Weniger Pendeln schont die Natur bzw. 'Umwelt'."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "f",
+          "why": "Die Handhabung und Nutzung von Programmen wird hier als 'Bedienung' bezeichnet."
+        },
+        {
+          "prompt": "Lücke 7",
+          "answer": "g",
+          "why": "Für das Erlernen der Tools wurden Schulungen bzw. 'Kurse' organisiert."
+        },
+        {
+          "prompt": "Lücke 8",
+          "answer": "h",
+          "why": "Das Erarbeiten von Ideen entspricht der 'Entwicklung' von kreativen Ideen."
+        },
+        {
+          "prompt": "Lücke 9",
+          "answer": "i",
+          "why": "Vorschläge kann man frei aussprechen oder 'äußern'."
+        },
+        {
+          "prompt": "Lücke 10",
+          "answer": "j",
+          "why": "Das Betriebsklima beziehungsweise die 'Stimmung' hat sich verbessert."
+        },
+        {
+          "prompt": "Lücke 11",
+          "answer": "t",
+          "why": "Ein Raum zum Entspannen im Betrieb ist zum Beispiel ein Pausenraum oder ein entsprechender 'Büro'-Bereich."
+        },
+        {
+          "prompt": "Lücke 12",
+          "answer": "l",
+          "why": "Da Gesundheitschecks angeboten werden, geht es um die 'Gesundheit' der Mitarbeitenden."
+        },
+        {
+          "prompt": "Lücke 13",
+          "answer": "m",
+          "why": "Die Maßnahmen sollen zu mehr Wohlbefinden und somit 'Zufriedenheit' führen."
+        },
+        {
+          "prompt": "Lücke 14",
+          "answer": "n",
+          "why": "Rückmeldungen, die erfreulich sind, werden als 'positiv' beschrieben."
+        },
+        {
+          "prompt": "Lücke 15",
+          "answer": "o",
+          "why": "Man blickt optimistisch in die kommende Zeit, also in die 'Zukunft'."
+        }
+      ]
+    }
+  }
+}
