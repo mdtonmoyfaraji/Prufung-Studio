@@ -1,0 +1,24 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:42:31.663Z",
+  "exam": "telc",
+  "level": "C1",
+  "module": "schreiben",
+  "name": "telc C1 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Digitalisierung in der Hochschullehre",
+      "instruction": "Schreiben Sie einen zusammenhängenden Text im Rahmen des Moduls Schreiben für die Prüfung telc Deutsch C1 Hochschule. Bearbeiten Sie die unten stehenden Leitpunkte in einem wissenschaftlichen Stil.",
+      "prompt": "Im Zuge der fortschreitenden Digitalisierung diskutieren Hochschulen weltweit über den Einsatz digitaler Lernplattformen und virtueller Seminare. Verfassen Sie einen wissenschaftlichen Text, in dem Sie die Entwicklung anhand einer fiktiven Grafik beschreiben und die Vor- sowie Nachteile dieses Wandels kritisch erörtern.",
+      "bullets": [
+        "Geben Sie das Thema der Grafik in eigenen Worten wieder und beschreiben Sie zentrale Entwicklungen und Daten.",
+        "Diskutieren Sie die Vor- und Nachteile digitaler Lehrmethoden aus der Perspektive von Studierenden und Lehrenden.",
+        "Nehmen Sie begründet Stellung dazu, in welchem Maße Präsenzlehre durch digitale Formate ersetzt werden sollte.",
+        "Achten Sie auf einen akademischen Schreibstil, eine klare Struktur und einen sprachlich präzisen Ausdruck."
+      ],
+      "words": 350,
+      "tips": "Strukturieren Sie Ihren Text in Einleitung, Beschreibung der Grafik mit Hypothesenbildung, begründete Stellungnahme und einen prägnanten Schluss."
+    }
+  }
+}

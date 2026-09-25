@@ -1,0 +1,47 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:42:32.009Z",
+  "exam": "telc",
+  "level": "C1",
+  "module": "sprechen",
+  "name": "telc C1 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Präsentation: Digitale Lehre an Universitäten",
+      "instruction": "Präsentieren Sie ein aktuelles Thema aus dem Hochschulbereich. Sie haben für die Vorbereitung ca. 20 Minuten Zeit und sollen in Ihrem Vortrag auf die folgenden Punkte eingehen.",
+      "prompt": "Stellen Sie die Vor- und Nachteile der digitalen Lehre im Vergleich zur klassischen Präsenzlehre dar. Berücksichtigen Sie dabei auch Ihre eigenen Studienerfahrungen.",
+      "bullets": [
+        "Erläutern Sie die wesentlichen Veränderungen durch digitale Lernformate an deutschen Hochschulen.",
+        "Wägen Sie die Vor- und Nachteile von Online-Vorlesungen und hybriden Seminaren ab.",
+        "Beschreiben Sie Ihre persönliche Einschätzung und geben Sie einen Ausblick auf die zukünftige Entwicklung."
+      ],
+      "seconds": 300,
+      "tips": "Strukturieren Sie Ihren Vortrag durch eine klare Einleitung, einen gut gegliederten Hauptteil und ein prägnantes Fazit."
+    },
+    "P2": {
+      "title": "Diskussion: Künstliche Intelligenz in der universitären Lehre",
+      "instruction": "Diskutieren Sie mit Ihrem Gesprächspartner über das folgende Thema. Sie haben dafür insgesamt etwa 6 Minuten Zeit. Tauschen Sie Argumente aus, gehen Sie auf die Gegenposition ein und finden Sie schließlich einen gemeinsamen Kompromiss.",
+      "prompt": "Immer mehr Studierende nutzen automatisierte Textgeneratoren und KI-Tools für das Verfassen von Hausarbeiten und Abschlussarbeiten. Diskutieren Sie darüber, wie sich die Hochschullehre und die Gestaltung von Prüfungsleistungen an diese technische Entwicklung anpassen sollten.",
+      "bullets": [
+        "Vor- und Nachteile des Einsatzes von KI im studentischen Alltag",
+        "Veränderung traditioneller Prüfungsformate (z. B. Mündliche Prüfungen statt Hausarbeiten)",
+        "Maßnahmen zur Sicherung der akademischen Integrität und Eigenleistung"
+      ],
+      "seconds": 360,
+      "tips": "Hören Sie Ihrem Partner oder Ihrer Partnerin gut zu, greifen Sie seine oder ihre Argumente auf und begründen Sie Ihre eigene Position klar und differenziert."
+    },
+    "P3": {
+      "title": "Gemeinsame Planung: Virtuelles Mentoring-Programm für internationale Studienanfänger",
+      "instruction": "Diskutieren Sie mit Ihrem Gesprächspartner bzw. Ihrer Gesprächspartnerin über die Konzeption eines virtuellen Mentoring-Programms an Ihrer Hochschule. Sie haben 8 Minuten Zeit, um gemeinsam eine Lösung zu finden und sich auf konkrete Schritte zu einigen.",
+      "prompt": "Um internationalen Studienanfängern den Einstieg zu erleichtern, soll im kommenden Semester ein rein digitales Mentoring-Programm starten. Überlegen Sie gemeinsam, wie dieses Format strukturiert sein, welche Zielgruppen konkret erreicht werden sollen und wie man die Studierenden zur Teilnahme motivieren kann.",
+      "bullets": [
+        "Auswahl und Schulung der studentischen Mentorinnen und Mentoren",
+        "Technische Umsetzung und datenschutzkonforme Kommunikationskanäle",
+        "Maßnahmen zur langfristigen Motivation und Qualitätssicherung"
+      ],
+      "seconds": 480,
+      "tips": "Achten Sie darauf, im Gespräch aktiv auf die Argumente Ihres Gegenübers einzugehen und am Ende einen klaren Kompromiss zu finden."
+    }
+  }
+}

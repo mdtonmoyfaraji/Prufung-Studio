@@ -1,0 +1,275 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:42:31.308Z",
+  "exam": "telc",
+  "level": "C1",
+  "module": "hoeren",
+  "name": "telc C1 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Wissenschaftskommunikation im digitalen Zeitalter",
+      "instruction": "Hören Sie den Vorlesungsausschnitt und ergänzen Sie währenddessen die Notizen. Schreiben Sie maximal drei Wörter pro Lücke.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Professor Dr. Berger",
+            "text": "Guten Morgen meine Damen und Herren. Herzlich willkommen zur heutigen Vorlesung im Modul Medienwissenschaft. Unser Thema lautet heute: Wissenschaftskommunikation im digitalen Zeitalter. Bis vor wenigen Jahren war die Kommunikation von Forschungsergebnissen eine recht lineare Angelegenheit. Wissenschaftler publizierten in Fachzeitschriften, die vor allem von Kolleginnen und Kollegen gelesen wurden. Heute hat sich diese Dynamik grundlegend verändert. Das primäre Ziel besteht nicht mehr nur im reinen Austausch innerhalb der Fachcommunity, sondern in der aktiven ___1___ mit einer breiten Öffentlichkeit. Dabei spielen soziale Medien eine zentrale Rolle. Sie ermöglichen es Forschenden, ihre Arbeit direkt und ohne redaktionelle Filter zu präsentieren. Ein wesentlicher Vorteil dieser Entwicklung ist die gesteigerte gesellschaftliche ___2___ von wissenschaftlichen Erkenntnissen. Wenn komplexe Sachverhalte verständlich aufbereitet werden, steigt das Vertrauen in evidenzbasierte Forschung. Allerdings bringt diese neue Freiheit auch erhebliche Herausforderungen mit sich. Ein zentrales Problem ist die sogenannte ___3___ von Informationen in Online-Netzwerken. Komplexe Thesen werden oft auf reißerische Schlagzeilen reduziert, um Aufmerksamkeit zu generieren. Dies kann zu massiven Missverständnissen führen. Um dem entgegenzuwirken, müssen Universitäten und Forschungseinrichtungen verstärkt in die professionelle Ausbildung ihrer wissenschaftlichen Mitarbeitenden investieren. Es reicht heute nicht mehr aus, exzellente Forschung zu betreiben; man muss diese auch ___4___ vermitteln können. Ein bewährtes Mittel hierbei sind interaktive Formate wie Podcasts oder Science Slams. Diese erlauben es dem Publikum, auf Augenhöhe mit den Forschenden in den Dialog zu treten. Ein weiterer kritischer Aspekt betrifft die Rolle der klassischen Medien. Trotz der Digitalisierung tragen traditionelle Redaktionen nach wie vor eine große Verantwortung als ___5___ im Informationsdschungel. Sie helfen dabei, verlässliche Quellen von unseriösen Beiträgen zu unterscheiden. Wenn wir also über die Zukunft der Wissenschaftskommunikation sprechen, müssen wir stets die Balance zwischen Reichweite und ___6___ im Auge behalten. Der reine Drang nach Klicks darf niemals die wissenschaftliche Sorgfaltspflicht verdrängen. Zum Abschluss möchte ich Sie bitten, für das nächste Seminar einen kurzen Blogbeitrag zu verfassen, der ein aktuelles Forschungsthema für ___7___ verständlich erklärt. Nutzen Sie dazu die auf der Lernplattform bereitgestellten Leitlinien. Ich bedanke mich für Ihre Aufmerksamkeit und freue mich auf Ihre Beiträge."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Das primäre Ziel der modernen Kommunikation ist die aktive ___1___ mit der Öffentlichkeit.",
+          "answer": "Auseinandersetzung"
+        },
+        {
+          "prompt": "Ein Vorteil ist die gesteigerte gesellschaftliche ___2___ von Forschung.",
+          "answer": "Relevanz"
+        },
+        {
+          "prompt": "Ein zentrales Problem in Online-Netzwerken ist die ___3___ von Informationen.",
+          "answer": "Verzerrung"
+        },
+        {
+          "prompt": "Forschende müssen ihre Arbeit auch ___4___ vermitteln können.",
+          "answer": "verständlich"
+        },
+        {
+          "prompt": "Traditionelle Redaktionen dienen als ___5___ im Informationsdschungel.",
+          "answer": "Filter"
+        },
+        {
+          "prompt": "Es gilt, die Balance zwischen Reichweite und ___6___ zu wahren.",
+          "answer": "Genauigkeit"
+        },
+        {
+          "prompt": "Der Blogbeitrag soll ein Thema für ___7___ verständlich erklären.",
+          "answer": "Laien"
+        },
+        {
+          "prompt": "Welches Format wird neben Podcasts als bewährtes Mittel genannt? ___8___",
+          "answer": "Science Slams"
+        }
+      ]
+    },
+    "H2": {
+      "title": "Digitale Lehre an Universitäten",
+      "instruction": "Hören Sie das Gespräch. Sie hören das Gespräch einmal. Dazu lösen Sie acht Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung a, b oder c.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "Tanja": "Herzlich willkommen zu unserem Podcast 'Wissenschaft im Dialog'. Heute diskutieren wir über die Zukunft der Hochschullehre, insbesondere über die Rolle digitaler Formate nach der Pandemie. Bei mir im Studio sind Professor Dr. Jens Weber, Dekan der Fakultät für Soziologie, und Lisa Bergmann, studentische Vertreterin im Senat. Herr Professor Weber, wie bewerten Sie die aktuelle Situation an den Universitäten?",
+            "Jensen": "Es geht nicht um Verweigerung, Frau Bergmann, sondern um Qualitätssicherung. Eine Universität ist mehr als eine bloße Zertifizierungsmaschine. Sie ist ein Ort der akademischen Sozialisation. Wenn wir diesen Kern aufgeben, verlieren wir das Alleinstellungsmerkmal akademischer Bildung.",
+            "Lisa": "Das stößt bei der Studentenschaft allerdings auf wenig Verständnis, vor allem, wenn die Hörsäle überfüllt sind und die Bedingungen vor Ort mangelhaft sind. Viele fordern zu Recht, dass digital erorbene Kompetenzen auch digital abgeprüft werden sollten, anstatt einfach zum Status quo ante zurückzukehren. Die Universität muss sich modernisieren, statt sich zu verweigern.",
+            "Moderatorin": "Ein spannender Punkt. Lassen Sie uns im nächsten Abschnitt genauer auf konkrete Lehrkonzepte eingehen..."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie beurteilt Professor Weber die aktuelle Entwicklung an den Universitäten?",
+          "options": [
+            "Er beobachtet eine ausschließliche Rückkehr zum reinen Präsenzstudium.",
+            "Er sieht eine Flexiblerung durch Hybridelemente, warnt aber vor dem Verlust sozialer Interaktion.",
+            "Er fordert die vollständige Digitalisierung aller Lehrveranstaltungen."
+          ],
+          "answer": 1,
+          "why": "Professor Weber erklärt, dass Hybridelemente das Studium flexibler machen, aber die rein digitale Vermittlung oft zu Lasten der sozialen Interaktion geht."
+        },
+        {
+          "prompt": "Welchen Hauptvorteil sieht Lisa Bergmann in digitalen Formaten?",
+          "options": [
+            "Sie ermöglichen Studierenden mit Nebenjobs oder Pflegeaufgaben überhaupt erst das Studium.",
+            "Sie senken die Verwaltungskosten der Hochschule drastisch.",
+            "Sie garantieren automatisch bessere Noten für alle Studierenden."
+          ],
+          "answer": 0,
+          "why": "Lisa Bergmann betont, dass digitale Vorlesungen für Personen mit Nebenjobs oder Pflegeverpflichtungen die Voraussetzung zum Studieren sind."
+        },
+        {
+          "prompt": "Was kritisiert Professor Weber an der Nutzung aufgezeichneter Vorlesungen?",
+          "options": [
+            "Die technische Qualität der Aufzeichnungen sei oft unzureichend.",
+            "Studierende würden dadurch den direkten Besuch von Lehrveranstaltungen komplett vernachlässigen.",
+            "Die Erstellung der Videos sei für die Dozenten zu zeitaufwendig."
+          ],
+          "answer": 1,
+          "why": "Er kritisiert, dass Vorlesungen oft gar nicht mehr besucht werden, weil Studierende glauben, alles im Nachhinein nachholen zu können."
+        },
+        {
+          "prompt": "Welche Art von Prüfungen sieht Professor Weber kritisch bei Online-Formaten?",
+          "options": [
+            "Einfache Multiple-Choice-Tests",
+            "Komplexe schriftliche Arbeiten und mündliche Prüfungen",
+            "Sämtliche universitären Leistungsnachweise ohne Ausnahme"
+          ],
+          "answer": 1,
+          "why": "Er sagt, dass man bei komplexen schriftlichen Arbeiten und mündlichen Prüfungen an Grenzen stößt und die Authentizität schwerer zu garantieren ist."
+        },
+        {
+          "prompt": "Wie reagieren Studierende laut Lisa Bergmann auf die Rückkehr zu Präsenzklausuren?",
+          "options": [
+            "Sie begrüßen die Maßnahme als Schritt zu mehr Fairness.",
+            "Sie zeigen kein Verständnis dafür, besonders bei mangelhaften Bedingungen vor Ort.",
+            "Sie fordern stattdessen die Abschaffung jeglicher Prüfungen."
+          ],
+          "answer": 1,
+          "why": "Lisa Bergmann erklärt, dass dies bei der Studentenschaft auf wenig Verständnis stößt, vor allem bei überfüllten Hörsälen und mangelhaften Bedingungen."
+        },
+        {
+          "prompt": "Was fordern Studierende laut Lisa Bergmann bezüglich der Prüfungen?",
+          "options": [
+            "Dass digital erworbene Kompetenzen auch digital abgeprüft werden.",
+            "Dass alle Prüfungen grundsätzlich durch Hausarbeiten ersetzt werden.",
+            "Dass Noten komplett abgeschafft werden."
+          ],
+          "answer": 0,
+          "why": "Sie erwähnt, dass viele zu Recht fordern, dass digital erworbene Kompetenzen auch digital abgeprüft werden sollten."
+        },
+        {
+          "prompt": "Welche Funktion schreibt Professor Weber der Universität neben der Wissensvermittlung zu?",
+          "options": [
+            "Sie soll vor allem als schnelle Zertifizierungsmaschine dienen.",
+            "Sie ist ein Ort der akademischen Sozialisation.",
+            "Sie fungiert in erster Linie als Arbeitgeber für junge Wissenschaftler."
+          ],
+          "answer": 1,
+          "why": "Er betont, dass eine Universität mehr als eine Zertifizierungsmaschine ist und ein Ort der akademischen Sozialisation darstellt."
+        },
+        {
+          "prompt": "Worin sind sich die Gesprächsteilnehmer im Wesentlichen uneinig?",
+          "options": [
+            "Ob Universitäten überhaupt noch existieren sollten",
+            "Ob Präsenzlehre durch digitale Formate gänzlich ersetzt werden kann",
+            "Wie stark die Gewichtung von Präsenz- und Online-Elementen im Studienalltag sein sollte"
+          ],
+          "answer": 2,
+          "why": "Die Diskussion dreht sich um das richtige Maß und die Wertigkeit von Präsenz versus Digitalisierung im akademischen Alltag."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Wissenschaftskommunikation in den Geisteswissenschaften",
+      "instruction": "Lesen Sie die Aufgaben 1 bis 8. Hören Sie nun ein Interview. Entscheiden Sie beim Hören, ob die Aussagen 1 bis 8 richtig (Richtig) oder falsch (Falsch) sind.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem Podcast 'Fokus Forschung'. Heute sprechen wir über die Vermittlung geisteswissenschaftlicher Forschung an eine breite Öffentlichkeit. Zu Gast ist Professorin Dr. Elena Weber, die an der Universität Freiburg Medienkulturwissenschaft lehrt und ein großes Projekt zur digitalen Wissenschaftskommunikation leitet. Frau Professorin Weber, oft wird beklagt, dass geisteswissenschaftliche Forschung im Elfenbeinturm stattfindet. Teilen Sie diesen Eindruck?"
+          },
+          {
+            "speaker": "Prof. Dr. Elena Weber",
+            "text": "Guten Tag. Dieser Vorwurf wird oft geäußert, aber ich halte ihn in dieser Pauschalität für überholt. Natürlich gab es lange Zeit eine gewisse Abschottung der Universität, weil akademische Fachsprache sehr komplex ist. Aber in den letzten zehn Jahren hat sich enorm viel getan. Kolleginnen und Kollegen suchen aktiv den Dialog mit der Gesellschaft, sei es durch Podcasts, öffentliche Ringvorlesungen oder Citizen-Science-Projekte."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Sie selbst leiten ein Projekt, bei dem historische Alltagstexte für Jugendliche aufbereitet werden. Wie kam es zu dieser Initiative?"
+          },
+          {
+            "speaker": "Prof. Dr. Elena Weber",
+            "text": "Ausgangspunkt war die Beobachtung, dass historische Quellen für junge Menschen oft leblos wirken. Wir wollten zeigen, dass die Sorgen und Träume von Jugendlichen vor Jahrhunderten gar nicht so verschieden von unseren heutigen sind. Um das zu vermitteln, arbeiten wir eng mit Schulen zusammen. Die Schülerinnen und Schüler analysieren nicht nur alte Briefe, sondern entwickeln gemeinsam mit uns kurze Graphic Novels daraus. Das schafft einen ganz anderen Zugang als das traditionelle Geschichtsbuch."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Gibt es dabei auch Widerstände seitens der traditionellen Wissenschaft? Schließlich opfert man ja oft akademische Präzision zugunsten der Verständlichkeit."
+          },
+          {
+            "speaker": "Prof. Dr. Elena Weber",
+            "text": "Das ist tatsächlich die größte Herausforderung. Man muss lernen, Differenzierungen wegzulassen, ohne dass die Darstellung fachlich falsch wird. Das bedeutet aber nicht, dass die Qualität leidet; im Gegenteil: Wer komplizierte Sachverhalte einfach erklären kann, hat sie meistens erst richtig durchdrungen. Kritik von Kolleginnen und Kollegen gab es früher häufiger, mittlerweile wird diese Art der Öffentlichkeitsarbeit aber als wichtiger Teil der universitären Leistung anerkannt."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Welche Rolle spielen denn Universitätsleitungen bei dieser Entwicklung? Werden solche Projekte finanziell und strukturell adäquat unterstützt?"
+          },
+          {
+            "speaker": "Prof. Dr. Elena Weber",
+            "text": "Hier sehen wir ein zweigeteiltes Bild. Einerseits betonen alle Hochschulen in ihren Leitbildern, wie wichtig der Wissenstransfer in die Gesellschaft ist. Andererseits basieren akademische Karrieren nach wie vor primär auf klassischen Publikationen in Fachzeitschriften. Wer viel Zeit in Podcasts oder Schulprojekte investiert, riskiert oft, bei Berufungen oder Beförderungen Nachteile zu haben. Solange sich die Evaluierungskriterien der Universitäten nicht grundlegend ändern, bleibt Wissenschaftskommunikation für viele Forschende ein ehrenamtliches Engagement neben der eigentlichen Arbeit."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "Ein sehr wichtiger Punkt. Frau Professorin Weber, ich danke Ihnen herzlich für diese spannenden Einblicke."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Frau Professorin Weber ist der Ansicht, dass geisteswissenschaftliche Forschung heutzutage immer noch überwiegend isoliert stattfindet.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Weber hält den Vorwurf der Abschottung für überholt und betont, dass sich in den letzten zehn Jahren enorm viel getan hat."
+        },
+        {
+          "prompt": "Das Projekt von Frau Weber zielt unter anderem darauf ab, historische Quellen durch kreative Formate für Jugendliche greifbarer zu machen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Sie erklärt, dass Schülerinnen und Schüler gemeinsam mit ihnen Graphic Novels aus alten Briefen entwickeln, um einen besseren Zugang zu schaffen."
+        },
+        {
+          "prompt": "Laut Weber führt die vereinfachte Darstellung komplexer Sachverhalte zwangsläufig zu fachlichen Fehlern.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Weber stellt klar, dass man Differenzierungen weglassen kann, 'ohne dass die Darstellung fachlich falsch wird'."
+        },
+        {
+          "prompt": "Traditionelle Forschende kritisieren die moderne Öffentlichkeitsarbeit inzwischen überhaupt nicht mehr.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Sie erwähnt, dass Kritik früher häufiger war, was impliziert, dass es weiterhin Vorbehalte gibt, auch wenn die Arbeit heute besser anerkannt wird."
+        },
+        {
+          "prompt": "Hochschulen betonen in ihren Leitbildern die Bedeutung des Wissenstransfers in die Gesellschaft.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Weber bestätigt, dass alle Hochschulen in ihren Leitbildern betonen, wie wichtig der Wissenstransfer ist."
+        },
+        {
+          "prompt": "Für akademische Karrieren spielen klassische Publikationen in Fachzeitschriften nach wie vor eine wichtigere Rolle als Projekte zur Wissenschaftskommunikation.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Sie sagt ausdrücklich, dass akademische Karrieren nach wie vor primär auf klassischen Publikationen basieren."
+        },
+        {
+          "prompt": "Forschende, die sich intensiv in der Wissenschaftskommunikation engagieren, müssen laut Weber mit karrieretechnischen Nachteilen rechnen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Weber erklärt, dass man bei Berufungen oder Beförderungen Nachteile riskiert, wenn man viel Zeit in solche Projekte investiert."
+        },
+        {
+          "prompt": "Die Evaluierungskriterien der Universitäten haben sich im Hinblick auf die Wissenschaftskommunikation bereits grundlegend verändert.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Sie merkt an: 'Solange sich die Evaluierungskriterien der Universitäten nicht grundlegend ändern...', was zeigt, dass diese Änderung noch aussteht."
+        }
+      ]
+    }
+  }
+}

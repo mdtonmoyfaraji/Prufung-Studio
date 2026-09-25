@@ -1,0 +1,297 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:42:30.612Z",
+  "exam": "telc",
+  "level": "C1",
+  "module": "lesen",
+  "name": "telc C1 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Akademische Schreibkompetenz im Masterstudium",
+      "instruction": "Lesen Sie den folgenden Text und die Aussagen 1 bis 6. Entscheiden Sie, welcher Buchstabe (a bis j) aus der Liste zu welcher Aussage passt. Jeder Buchstabe kann nur einmal verwendet werden.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Die Notwendigkeit einer präzisen Definition des Forschungsgegenstands im ersten Studienjahr."
+        },
+        {
+          "key": "b",
+          "text": "Der Einfluss digitaler Tools auf die Strukturierung von Literaturverzeichnissen."
+        },
+        {
+          "key": "c",
+          "text": "Die Herausforderung, komplexe theoretische Konzepte in eine verständliche akademische Sprache zu übersetzen."
+        },
+        {
+          "key": "d",
+          "text": "Die Bedeutung des Peer-Feedbacks für die kritische Reflexion des eigenen Schreibprozesses."
+        },
+        {
+          "key": "e",
+          "text": "Die Integration empirischer Methoden in geisteswissenschaftliche Abschlussarbeiten."
+        },
+        {
+          "key": "f",
+          "text": "Die zeitliche Belastung durch administrative Vorgaben bei der Einreichung von Forschungsanträgen."
+        },
+        {
+          "key": "g",
+          "text": "Die Rolle von Mentorinnen und Mentoren bei der Überwindung von Schreibblockaden."
+        },
+        {
+          "key": "h",
+          "text": "Die Unterscheidung zwischen deskriptiven und analytischen Passagen im wissenschaftlichen Diskurs."
+        },
+        {
+          "key": "i",
+          "text": "Der Nutzen interdisziplinärer Seminare für die Erweiterung des methodischen Repertoires."
+        },
+        {
+          "key": "j",
+          "text": "Die ethischen Richtlinien bei der Erhebung von Primärdaten im universitären Rahmen."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Studierende neigen häufig dazu, in ihren Hausarbeiten reine Wiedergaben von Sachverhalten zu verfassen, statt diese kritisch zu durchdringen.",
+          "answer": "h",
+          "key": "h",
+          "why": "Der Text erwähnt explizit, dass der Übergang von der reinen Beschreibung zur eigenständigen Analyse im akademischen Diskurs eine zentrale Hürde darstellt."
+        },
+        {
+          "prompt": "Durch den Austausch in studentischen Arbeitsgruppen lernen Forschende, ihre eigenen Annahmen aus einer Außensicht zu betrachten.",
+          "answer": "d",
+          "key": "d",
+          "why": "Im Text wird hervorgehoben, dass gemeinsames Feedback von Kommilitonen dazu beiträgt, den Schreibprozess kritisch zu hinterfragen."
+        },
+        {
+          "prompt": "Besonders bei der Verknüpfung verschiedener Fachbereiche zeigt sich, dass neue methodische Zugänge für die Analyse von großem Vorteil sind.",
+          "answer": "i",
+          "key": "i",
+          "why": "Der Text beschreibt, wie interdisziplinäre Formate dazu dienen, das methodische Repertoire der Studierenden zu erweitern."
+        },
+        {
+          "prompt": "Es fällt vielen Anfängern schwer, hochkomplexe wissenschaftliche Theorien in einem klaren und präzisen Stil zu formulieren.",
+          "answer": "c",
+          "key": "c",
+          "why": "Laut Text ist die adäquate sprachliche Vermittlung abstrakter theoretischer Inhalte eine der größten Hürden für Schreibende."
+        },
+        {
+          "prompt": "Moderne Softwareanwendungen unterstützen die akademische Arbeit vor allem bei der fehlerfreien Verwaltung von Quellen und Zitaten.",
+          "answer": "b",
+          "key": "b",
+          "why": "Der Text verweist auf die technische Unterstützung durch digitale Werkzeuge, insbesondere im Hinblick auf das Literaturmanagement."
+        },
+        {
+          "prompt": "Bevor mit der eigentlichen Datenerhebung begonnen werden kann, müssen strenge moralische und institutionelle Standards eingehalten werden.",
+          "answer": "j",
+          "key": "j",
+          "why": "Im Schlussteil des Textes wird auf die verbindlichen ethischen Richtlinien bei der Arbeit mit Primärdaten hingewiesen."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Die Transformation der universitären Lehre im digitalen Zeitalter",
+      "instruction": "Lesen Sie den Text und lösen Sie die Aufgaben 1 bis 8, indem Sie für jede Frage die zutreffende Option (a, b, c oder d) wählen.",
+      "passage": "Die moderne Hochschule befindet sich in einem tiefgreifenden Wandlungsprozess, der primär durch die rasant voranschreitende Digitalisierung ausgelöst wurde. Während traditionell die Präsenzlehre im Hörsaal das Fundament akademischer Bildung bildete, hat sich das Spektrum der Vermittlungsmethoden in den letzten Jahren drastisch erweitert. Blended-Learning-Konzepte, die synchrone Präsenzphasen mit asynchronen Online-Modulen verknüpfen, gelten mittlerweile vielerorts als Standard. Diese Entwicklung wirft jedoch grundlegende Fragen nach der Chancengleichheit, der didaktischen Qualität und der sozialen Funktion von Universitäten auf.\n\nEin zentraler Aspekt dieser Transformation ist die Flexibilisierung des Studiums. Virtuelle Lernumgebungen ermöglichen es Studierenden, ortsunabhängig und zeitlich flexibel auf Lehrmaterialien zuzugreifen. Befürworter argumentieren, dass dies insbesondere Berufstätigen oder Studierenden mit familiären Verpflichtungen den Zugang zu akademischen Abschlüssen erleichtern kann. Kritiker hingegen merken an, dass die digitale Autonomie ein hohes Maß an Selbstdisziplin erfordert. Ohne adäquate Begleitung drohe eine Zunahme von Studienabbrüchen, da der soziale Druck und die Einbindung in eine studentische Peer-Group in rein digitalen Formaten oft verloren gehen.\n\nDarüber hinaus verändert sich die Rolle der Lehrenden fundamental. Anstatt primär als Wissensvermittler im Frontalunterricht aufzutreten, wandeln sich Professorinnen und Professoren zunehmend zu Lernbegleitern oder Moderatoren komplexer Diskursprozesse. Diese Verlagerung erfordert neue didaktische Kompetenzen. Hochschuldidaktische Zentren bieten vermehrt Fortbildungen an, um das akademische Personal auf die Gestaltung interaktiver und mediengestützter Seminare vorzubereiten. Dennoch verläuft dieser Anpassungsprozess nicht frei von Reibungen, da traditionelle Lehrverständnisse und universitäre Karrierestrukturen, die oft einseitig auf Forschungsleistungen fokussiert sind, reformiert werden müssen.\n\nEin weiterer kritischer Punkt betrifft die technologische Infrastruktur und den Datenschutz. Die Nutzung kommerzieller Lernplattformen wirft datenschutzrechtliche Bedenken auf, insbesondere wenn sensible Studierendendaten auf externen Servern gespeichert werden. Universitäten stehen daher vor der Herausforderung, entweder eigene, datenschutzkonforme Open-Source-Lösungen zu entwickeln oder kostenintensive Lizenzen großer Technologiekonzerne zu erwerben. Letzteres birgt die Gefahr einer wirtschaftlichen Abhängigkeit, die den autonomen Bildungsauftrag der Hochschule gefährden könnte.\n\nSchließlich bleibt festzuhalten, dass die Digitalisierung kein Selbstzweck sein darf. Sie muss vielmehr gezielt dort eingesetzt werden, wo sie einen didaktischen Mehrwert generiert und zur Vertiefung des wissenschaftlichen Denkens beiträgt. Die Zukunft der Hochschule wird folglich nicht in einem vollständigen Übergang zum Virtual Campus liegen, sondern in einer austarierten Synthese aus analoger Begegnungskultur und digitaler Innovationskraft.",
+      "items": [
+        {
+          "prompt": "Was wird im ersten Absatz über die moderne Hochschule ausgesagt?",
+          "options": [
+            "Sie hat die traditionelle Präsenzlehre vollständig abgeschafft.",
+            "Sie erlebt einen umfassenden Wandel durch die Digitalisierung.",
+            "Sie konzentriert sich ausschließlich auf asynchrone Online-Module.",
+            "Sie leidet unter einem akuten Mangel an Hörsälen."
+          ],
+          "answer": 1,
+          "why": "Der Text besagt im ersten Absatz, dass sich die Hochschule in einem 'tiefgreifenden Wandlungsprozess' befindet, 'der primär durch die rasant voranschreitende Digitalisierung ausgelöst wurde'."
+        },
+        {
+          "prompt": "Welchen Vorteil digitaler Lernumgebungen hebt der zweite Absatz hervor?",
+          "options": [
+            "Sie garantieren einen erfolgreichen Studienabschluss ohne Anwesenheit.",
+            "Sie ermöglichen ein orts- und zeitflexibles Studieren.",
+            "Sie lösen das Problem der sozialen Isolation vollständig.",
+            "Sie machen die Unterstützung durch Lehrende überflüssig."
+          ],
+          "answer": 1,
+          "why": "Im zweiten Absatz steht, dass virtuelle Lernumgebungen es Studierenden ermöglichen, 'ortsunabhängig und zeitlich flexibel auf Lehrmaterialien zuzugreifen'."
+        },
+        {
+          "prompt": "Welche Gefahr sehen Kritiker in der digitalen Autonomie der Studierenden?",
+          "options": [
+            "Eine geringere Bereitschaft zur Nutzung von Open-Source-Software",
+            "Einen Mangel an technischer Infrastruktur an den Hochschulen",
+            "Ein höheres Risiko für Studienabbrüche durch fehlende soziale Einbindung",
+            "Eine Überlastung durch zu viele synchrone Präsenzveranstaltungen"
+          ],
+          "answer": 2,
+          "why": "Der Text warnt davor, dass ohne Begleitung 'eine Zunahme von Studienabbrüchen' drohe, da die Einbindung in eine Peer-Group verloren gehe."
+        },
+        {
+          "prompt": "Wie verändert sich die Rolle der Lehrenden laut dem dritten Absatz?",
+          "options": [
+            "Sie werden zu Moderatoren und Lernbegleitern.",
+            "Sie konzentrieren sich ausschließlich auf ihre eigene Forschung.",
+            "Sie übernehmen Aufgaben der IT-Infrastruktur.",
+            "Sie halten vermehrt traditionelle Frontalvorlesungen."
+          ],
+          "answer": 0,
+          "why": "Es wird beschrieben, dass sich Professorinnen und Professoren 'zunehmend zu Lernbegleitern oder Moderatoren komplexer Diskursprozesse' wandeln."
+        },
+        {
+          "prompt": "Warum verläuft der Anpassungsprozess der Lehrenden laut Text nicht reibungslos?",
+          "options": [
+            "Weil es an hochschuldidaktischen Zentren mangelt",
+            "Weil traditionelle Lehrverständnisse und Forschungsschwerpunkte im Weg stehen",
+            "Weil Studierende digitale Formate strikt ablehnen",
+            "Weil externe Technologiekonzerne den Zugang verweigern"
+          ],
+          "answer": 1,
+          "why": "Der Text nennt als Grund, dass 'traditionelle Lehrverständnisse und universitäre Karrierestrukturen, die oft einseitig auf Forschungsleistungen fokussiert sind, reformiert werden müssen'."
+        },
+        {
+          "prompt": "Welches Problem ist mit der Nutzung kommerzieller Lernplattformen verbunden?",
+          "options": [
+            "Sie sind technisch veraltet und kaum nutzbar.",
+            "Sie führen zu datenschutzrechtlichen Bedenken und möglicher Abhängigkeit.",
+            "Sie verringern die Flexibilität der Studierenden drastisch.",
+            "Sie verhindern die Entwicklung von Open-Source-Software gänzlich."
+          ],
+          "answer": 1,
+          "why": "Der vierte Absatz erwähnt 'datenschutzrechtliche Bedenken' sowie die Gefahr 'einer wirtschaftlichen Abhängigkeit'."
+        },
+        {
+          "prompt": "Welche Forderung wird im Hinblick auf den Einsatz digitaler Medien im letzten Absatz erhoben?",
+          "options": [
+            "Sie sollen ausschließlich der Kosteneinsparung dienen.",
+            "Sie müssen einen echten didaktischen Mehrwert bieten.",
+            "Sie sollen die analoge Begegnungskultur komplett ersetzen.",
+            "Sie müssen von den Studierenden selbst finanziert werden."
+          ],
+          "answer": 1,
+          "why": "Im letzten Absatz steht, dass die Digitalisierung 'gezielt dort eingesetzt werden' muss, 'wo sie einen didaktischen Mehrwert generiert'."
+        },
+        {
+          "prompt": "Wie beschreibt der Text die Zukunft der Hochschule im Fazit?",
+          "options": [
+            "Als reinen Virtual Campus ohne physische Präsenz",
+            "Als traditionelle Institution ohne digitale Einflüsse",
+            "Als ausgewogene Verbindung aus analoger Begegnung und digitaler Innovation",
+            "Als rein wirtschaftlich orientiertes Technologieunternehmen"
+          ],
+          "answer": 2,
+          "why": "Das Fazit besagt, dass die Zukunft in 'einer austarierten Synthese aus analoger Begegnungskultur und digitaler Innovationskraft' liegen wird."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Die Rolle der akademischen Lehre im digitalen Zeitalter",
+      "instruction": "Lesen Sie den Text und entscheiden Sie, welcher Satz (A–L) aus der Bank in welche Lücke (1–10) passt. Zwei Sätze bleiben übrig.",
+      "passage": "Die Digitalisierung verändert die Hochschullehre rasant und stellt Universitäten weltweit vor neue Herausforderungen. ___1___ Dennoch zeigt sich, dass traditionelle Formate wie die klassische Vorlesung nicht einfach verschwinden, sondern sich transformieren. ___2___ Ein zentraler Aspekt dieser Entwicklung ist die Flexibilisierung des Lernens, die es Studierenden ermöglicht, zeit- und ortsunabhängig auf Lehrmaterialien zuzugreifen. ___3___ Diese neuen Möglichkeiten erfordern jedoch auch ein hohes Maß an Selbstorganisation und Medienkompetenz aufseiten der Studierenden. ___4___ Kritiker weisen oft darauf hin, dass rein digitale Angebote die soziale Interaktion auf dem Campus reduzieren könnten. ___5___ Demgegenüber stehen Befürworter, die betonen, dass virtuelle Seminarräume oft sogar intensivere Diskussionen ermöglichen. ___6___ Um diesen Wandel erfolgreich zu gestalten, müssen Hochschulen auch ihre didaktischen Konzepte grundlegend überarbeiten. ___7___ Lehrende fungieren in diesem Prozess zunehmend als Lernbegleiter anstelle von reinen Wissensvermittlern. ___8___ Gleichzeitig steigen die Anforderungen an die technische Infrastruktur der Universitäten erheblich an. ___9___ Wenn diese Voraussetzungen erfüllt sind, kann die digitale Transformation zu einer nachhaltigen Verbesserung der Bildungsqualität führen. ___10___",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Dabei stehen insbesondere blended-learning-Szenarien im Fokus aktueller hochschuldidaktischer Debatten."
+        },
+        {
+          "key": "b",
+          "text": "Viele Institutionen investieren deshalb massiv in die Fortbildung ihres wissenschaftlichen Personals."
+        },
+        {
+          "key": "c",
+          "text": "Dieser Paradigmenwechsel betrifft sowohl die Geistes- als auch die Naturwissenschaften gleichermaßen."
+        },
+        {
+          "key": "d",
+          "text": "Das bedeutet, dass multimediale Inhalte nahtlos in den herkömmlichen Präsenzunterricht integriert werden."
+        },
+        {
+          "key": "e",
+          "text": "Besonders Studienanfänger sind mit dieser Eigenverantwortung bisweilen überfordert."
+        },
+        {
+          "key": "f",
+          "text": "Aus diesem Grund entwickeln viele Fachbereiche begleitende Beratungs- und Unterstützungsangebote."
+        },
+        {
+          "key": "g",
+          "text": "Aus diesem Grund müssen bestehende Curricula kontinuierlich evaluiert und angepasst werden."
+        },
+        {
+          "key": "h",
+          "text": "Schließlich hängen der langfristige Erfolg und die Akzeptanz dieser Reformen maßgeblich von den Rahmenbedingungen ab."
+        },
+        {
+          "key": "i",
+          "text": "Man befürchtet den Verlust des akademischen Diskurses und des persönlichen Austauschs."
+        },
+        {
+          "key": "j",
+          "text": "Interaktive Tools und kollaborative Plattformen brechen die Einbahnstraßen-Kommunikation auf."
+        },
+        {
+          "key": "k",
+          "text": "Hierbei handelt es sich um eine Entwicklung, die bereits vor der Pandemie an Dynamik gewann."
+        },
+        {
+          "key": "l",
+          "text": "Stabile Netzwerke und moderne Serverkapazitäten bilden das Fundament für diesen technologischen Fortschritt."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "c",
+          "why": "Der Satz greift die universelle Dimension der Veränderung auf ('betrifft sowohl die Geistes- als auch die Naturwissenschaften gleichermaßen')."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "d",
+          "why": "Er erklärt direkt, wie sich traditionelle Formate durch die Integration multimedialer Inhalte verändern."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "a",
+          "why": "Er benennt konkret das im Kontext genannte 'blended-learning-Szenario' als Fokus aktueller Debatten."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "e",
+          "why": "Er baut auf die im vorherigen Satz erwähnte geforderte Selbstorganisation auf und beschreibt die Überforderung von Studienanfängern."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "i",
+          "why": "Er vertieft die im Text genannte Reduktion der sozialen Interaktion durch den konkreten Verlust des akademischen Diskurses."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "j",
+          "why": "Er beschreibt die Befürworter-Position durch konkrete Werkzeuge wie interaktive Tools und kollaborative Plattformen."
+        },
+        {
+          "prompt": "Lücke 7",
+          "answer": "g",
+          "why": "Er knüpft logisch an die Notwendigkeit an, didaktische Konzepte zu überarbeiten, indem Curricula evaluiert werden."
+        },
+        {
+          "prompt": "Lücke 8",
+          "answer": "b",
+          "why": "Er reagiert auf die veränderte Rolle der Lehrenden mit der Konsequenz, dass Institutionen in Fortbildungen investieren."
+        },
+        {
+          "prompt": "Lücke 9",
+          "answer": "l",
+          "why": "Er verbindet die im Text erwähnten gestiegenen Anforderungen an die Infrastruktur mit stabilen Netzwerken und Serverkapazitäten."
+        },
+        {
+          "prompt": "Lücke 10",
+          "answer": "h",
+          "why": "Er fungiert als schließendes Fazit, das den Erfolg der Reformen von den genannten Rahmenbedingungen abhängig macht."
+        }
+      ]
+    }
+  }
+}
