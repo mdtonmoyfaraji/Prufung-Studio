@@ -1,0 +1,47 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:26:15.371Z",
+  "exam": "telc",
+  "level": "B2",
+  "module": "sprechen",
+  "name": "telc B2 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Präsentation: Künstliche Intelligenz im Arbeitsalltag",
+      "instruction": "Präsentieren Sie ein Thema. Sie haben dazu ca. 3 Minuten Zeit. Strukturieren Sie Ihre Präsentation anhand der folgenden Punkte.",
+      "prompt": "Stellen Sie die Vor- und Nachteile des Einsatzes von Künstlicher Intelligenz im modernen Büroarbeitsplatz dar und berichten Sie von eigenen Erfahrungen oder Beispielen aus Ihrem Bekanntenkreis.",
+      "bullets": [
+        "Persönliche Erfahrungen oder Beobachtungen zum Thema",
+        "Vor- und Nachteile von KI-gestützten Programmen bei der Arbeit",
+        "Eigene Meinung zur Zukunft menschlicher Arbeitskraft im Vergleich zu KI"
+      ],
+      "seconds": 180,
+      "tips": "Achten Sie auf eine klare Struktur mit Einleitung, Hauptteil und Schluss sowie auf freie Rede statt Ablesen."
+    },
+    "P2": {
+      "title": "Diskussion: Künstliche Intelligenz im Kundenservice",
+      "instruction": "Sprechen Sie mit Ihrer Gesprächspartnerin / Ihrem Gesprächspartner über das Thema. Diskutieren Sie über die Vor- und Nachteile und begründen Sie Ihre Meinung.",
+      "prompt": "Sie haben einen Artikel darüber gelesen, dass immer mehr Unternehmen im Kundenservice auf Künstliche Intelligenz und Chatbots setzen. Diskutieren Sie darüber, welche Auswirkungen diese Entwicklung auf die Kundenzufriedenheit hat und ob persönliche Beratung in Zukunft überflüssig wird.",
+      "bullets": [
+        "Vorteile und Nachteile von Chatbots im Kundenservice",
+        "Persönliche Beratung versus automatisierte Hilfe",
+        "Ihre eigenen Erfahrungen mit KI-gestütztem Support"
+      ],
+      "seconds": 300,
+      "tips": "Achten Sie darauf, auf die Argumente Ihres Gesprächspartners einzugehen und eigene Beispiele zu nennen."
+    },
+    "P3": {
+      "title": "Gemeinsam eine Aufgabe lösen: Firmenjubiläum planen",
+      "instruction": "Sie planen gemeinsam mit Ihrem Gesprächspartner oder Ihrer Gesprächspartnerin eine Feier zum zehnjährigen Firmenjubiläum. Überlegen Sie sich, was alles organisiert werden muss, und einigen Sie sich auf gemeinsame Vorschläge.",
+      "prompt": "Diskutieren Sie die verschiedenen Möglichkeiten für die Feier. Gehen Sie auf die folgenden Punkte ein und treffen Sie am Ende eine Entscheidung.",
+      "bullets": [
+        "Wo soll die Feier stattfinden (Ort und Räumlichkeiten)?",
+        "Welches Rahmenprogramm oder welche Aktivitäten planen Sie?",
+        "Wie informieren wir die Kundschaft und die Mitarbeitenden?"
+      ],
+      "seconds": 300,
+      "tips": "Hören Sie Ihrem Gesprächspartner gut zu, gehen Sie auf dessen Ideen ein und finden Sie gemeinsam einen Kompromiss."
+    }
+  }
+}

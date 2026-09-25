@@ -1,0 +1,237 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:26:14.309Z",
+  "exam": "telc",
+  "level": "B2",
+  "module": "bausteine",
+  "name": "telc B2 — Modelltest 1 — Sprachbausteine",
+  "content": {
+    "B1": {
+      "title": "Sprachbausteine Teil 1: Künstliche Intelligenz im Büro",
+      "instruction": "Lesen Sie den folgenden Text und entscheiden Sie, welches Wort (a, b oder c) in die jeweilige Lücke passt.",
+      "passage": "In den letzten Jahren ___1___ sich die Arbeitswelt durch die Einführung digitaler Tools grundlegend verändert. Besonders im Bereich der Verwaltung ___2___ viele Routineaufgaben mittlerweile automatisiert. Wenn Unternehmen effizienter arbeiten wollen, ___3___ es ratsam, in moderne Software zu investieren. Es wird oft diskutiert, ob durch diese Entwicklung Arbeitsplätze ___4___ würden. Experten betonen jedoch, dass vor allem neue Kompetenzen ___5___ müssen. Wer bereit ist, sich weiterzubilden, ___6___ bessere Chancen auf dem Arbeitsmarkt. Außerdem ___7___ durch den Einsatz von Algorithmen die Fehlerquote bei der Dateneingabe erheblich reduziert. Es ___8___ außerdem wichtig, dass datenschutzrechtliche Richtlinien strikt eingehalten werden. Hätten die Betriebe früher reagiert, ___9___ sie jetzt weniger Probleme mit der Umstellung. Letztendlich ___10___ festgehalten werden, dass die Digitalisierung eine Chance für alle darstellt.",
+      "items": [
+        {
+          "prompt": "1",
+          "options": [
+            "hat",
+            "ist",
+            "wird"
+          ],
+          "answer": 0,
+          "why": "Das Perfekt von 'verändern' wird mit dem Hilfsverb 'haben' gebildet ('hat... verändert')."
+        },
+        {
+          "prompt": "2",
+          "options": [
+            "werden",
+            "wird",
+            "wurde"
+          ],
+          "answer": 0,
+          "why": "Das Subjekt 'viele Routineaufgaben' ist Plural, daher muss das Passiv im Präsens 'werden' lauten."
+        },
+        {
+          "prompt": "3",
+          "options": [
+            "ist",
+            "sei",
+            "wäre"
+          ],
+          "answer": 0,
+          "why": "Im Hauptsatz steht das Verb im Indikativ Präsens ('ist ratsam')."
+        },
+        {
+          "prompt": "4",
+          "options": [
+            "gefährden",
+            "gefährdet",
+            "gefährdet werden"
+          ],
+          "answer": 2,
+          "why": "Der Kontext erfordert das Passiv im Konjunktiv II ('würden gefährdet werden')."
+        },
+        {
+          "prompt": "5",
+          "options": [
+            "erworben",
+            "erwerben",
+            "erworben haben"
+          ],
+          "answer": 0,
+          "why": "Das Modalverb 'müssen' steht zusammen mit dem Partizip II im Passiv ('erworben werden müssen')."
+        },
+        {
+          "prompt": "6",
+          "options": [
+            "hat",
+            "hätte",
+            "habe"
+          ],
+          "answer": 0,
+          "why": "Ein realer Bedingungssatz im Präsens verlangt den Indikativ ('hat bessere Chancen')."
+        },
+        {
+          "prompt": "7",
+          "options": [
+            "wird",
+            "werden",
+            "wurde"
+          ],
+          "answer": 0,
+          "why": "Das Passiv Präsens Singular für 'die Fehlerquote' lautet 'wird'."
+        },
+        {
+          "prompt": "8",
+          "options": [
+            "ist",
+            "sei",
+            "war"
+          ],
+          "answer": 0,
+          "why": "Es handelt sich um eine allgemeine Feststellung im Präsens ('Es ist außerdem wichtig')."
+        },
+        {
+          "prompt": "9",
+          "options": [
+            "hätten",
+            "haben",
+            "hatten"
+          ],
+          "answer": 0,
+          "why": "Der irreale Bedingungssatz in der Vergangenheit erfordert 'hätten' im Konjunktiv II."
+        },
+        {
+          "prompt": "10",
+          "options": [
+            "kann",
+            "könnte",
+            "muss"
+          ],
+          "answer": 0,
+          "why": "Das Passiv mit Modalverb drückt eine Möglichkeit aus ('kann festgehalten werden')."
+        }
+      ]
+    },
+    "B2": {
+      "title": "Sprachbausteine Teil 2: Die Bedeutung des lebenslangen Lernens",
+      "instruction": "Lesen Sie den folgenden Text und entscheiden Sie, welches Wort (a–o) in die Lücken 1–10 passt. Jedes Wort aus der Wortbank kann nur einmal verwendet werden.",
+      "passage": "In der heutigen Berufswelt ist es unerlässlich, sich kontinuierlich weiterzubilden. Wer ___1___ auf der Karriereleiter vorankommen möchte, muss bereit sein, neue Fähigkeiten zu erwerben. Besonders im Bereich der Digitalisierung verändern sich die Anforderungen rasant. Viele Unternehmen bieten ihren Angestellten daher regelmäßig Schulungen an, um deren Fachwissen auf dem neuesten Stand zu ___2___. \n\nEin wichtiger Aspekt dabei ist die Eigeninitiative. Es reicht oft nicht aus, nur auf Anweisungen von Vorgesetzten zu warten. Arbeitnehmende sollten selbst ___3___ ergreifen und nach geeigneten Kursen suchen. Dabei spielt auch das E-Learning eine immer größere Rolle, da es zeitliche und räumliche Flexibilität ___4___. Man kann bequem von zu Hause aus lernen und das Tempo ___5___ an das eigene Leben anpassen. \n\nExperten sind sich einig, dass lebenslanges Lernen nicht nur für den Beruf von Vorteil ist. Es fördert ___6___ die persönliche Entwicklung und hält den Geist beweglich. Wer sich neuen Themen widmet, erweitert seinen Horizont und bleibt neugierig auf die Welt. Natürlich kann es manchmal eine Herausforderung sein, Beruf und Weiterbildung unter einen Hut zu ___7___. Eine gute Zeitplanung ist deshalb das A und O.\n\nZusammenfassend lässt sich sagen, dass Investitionen in Bildung sich langfristig immer ___8___. Bildung ist der Schlüssel zu gesellschaftlicher Teilhabe und wirtschaftlicher Stabilität. Wer in diesem Prozess am Ball bleibt, wird die Früchte seiner Anstrengungen ___9___ können. Letztendlich liegt es an jedem Einzelnen, diese Chancen zu ___10___ und die eigene Zukunft aktiv mitzugestalten.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "bezahlen"
+        },
+        {
+          "key": "b",
+          "text": "ernten"
+        },
+        {
+          "key": "c",
+          "text": "gleichzeitig"
+        },
+        {
+          "key": "d",
+          "text": "ergreifen"
+        },
+        {
+          "key": "e",
+          "text": "nutzen"
+        },
+        {
+          "key": "f",
+          "text": "halten"
+        },
+        {
+          "key": "g",
+          "text": "bieten"
+        },
+        {
+          "key": "h",
+          "text": "bezüglich"
+        },
+        {
+          "key": "i",
+          "text": "aktiv"
+        },
+        {
+          "key": "j",
+          "text": "bringen"
+        },
+        {
+          "key": "k",
+          "text": "Initiative"
+        },
+        {
+          "key": "l",
+          "text": "bezweifeln"
+        },
+        {
+          "key": "m",
+          "text": "Lösung"
+        },
+        {
+          "key": "n",
+          "text": "zahlen"
+        },
+        {
+          "key": "o",
+          "text": "individuell"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "i",
+          "why": "Das Adjektiv 'aktiv' passt inhaltlich und grammatikalisch vor das Verb (aktiv vorankommen)."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "f",
+          "why": "Der feste Ausdruck 'auf dem neuesten Stand halten' verlangt hier das Verb 'halten'."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "k",
+          "why": "Die feste Redewendung lautet 'die Initiative ergreifen'."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "g",
+          "why": "Flexibilität wird angeboten oder gewährt; hier passt das Verb 'bieten'."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "o",
+          "why": "Das Adverb 'individuell' beschreibt passend, wie man das Lerntempo anpassen kann."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "c",
+          "why": "Das Wort 'gleichzeitig' drückt aus, dass Bildung neben dem Beruf auch die persönliche Entwicklung fördert."
+        },
+        {
+          "prompt": "Lücke 7",
+          "answer": "j",
+          "why": "Die feste Redewendung lautet 'etwas unter einen Hut bringen'."
+        },
+        {
+          "prompt": "Lücke 8",
+          "answer": "n",
+          "why": "Die feste Redewendung lautet 'sich auszahlen' oder hier im Text 'sich ... zahlen' (Investitionen zahlen sich aus)."
+        },
+        {
+          "prompt": "Lücke 9",
+          "answer": "b",
+          "why": "Im übertragenen Sinn kann man die Früchte von Anstrengungen 'ernten'."
+        },
+        {
+          "prompt": "Lücke 10",
+          "answer": "e",
+          "why": "Man kann Chancen ergreifen oder 'nutzen'; hier passt das Verb 'nutzen'."
+        }
+      ]
+    }
+  }
+}

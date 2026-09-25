@@ -1,0 +1,243 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:26:13.961Z",
+  "exam": "telc",
+  "level": "B2",
+  "module": "lesen",
+  "name": "telc B2 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Überschriften zuordnen",
+      "instruction": "Lesen Sie die fünf Texte und die zehn Überschriften (a–j). Finden Sie für jeden Text die passende Überschrift. Jede Überschrift passt nur einmal.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Flexible Arbeitszeiten und neue Bürokonzepte im Wandel"
+        },
+        {
+          "key": "b",
+          "text": "Künstliche Intelligenz revolutioniert die medizinische Diagnostik"
+        },
+        {
+          "key": "c",
+          "text": "Die Bedeutung regionaler Netzwerke für den Klimaschutz"
+        },
+        {
+          "key": "d",
+          "text": "Warum lebenslanges Lernen im Berufsleben unerlässlich ist"
+        },
+        {
+          "key": "e",
+          "text": "Herausforderungen der urbanen Mobilität von morgen"
+        },
+        {
+          "key": "f",
+          "text": "Digitale Verwaltung: Chancen und Hürden für Bürger"
+        },
+        {
+          "key": "g",
+          "text": "Der Einfluss von Social Media auf das Konsumverhalten"
+        },
+        {
+          "key": "h",
+          "text": "Erneuerbare Energien als Fundament der Energiewende"
+        },
+        {
+          "key": "j",
+          "text": "Kulturelle Vielfalt als Motor für Innovationen"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Immer mehr Unternehmen erkennen, dass feste Anwesenheitspflichten nicht mehr zeitgemäß sind. Durch moderne Technologien können Angestellte vermehrt im Homeoffice arbeiten, während die Büroflächen zu offenen Begegnungszonen umgestaltet werden, die den kreativen Austausch fördern.",
+          "answer": "a",
+          "why": "Der Text beschreibt den Wandel von Arbeitszeiten und Bürokonzepten, was perfekt zur Überschrift 'a' passt."
+        },
+        {
+          "prompt": "Moderne Algorithmen sind mittlerweile in der Lage, Röntgenbilder und MRT-Aufnahmen mit einer enormen Präzision auszuwerten. Dies entlastet das medizinische Personal spürbar und ermöglicht es, Krankheiten wie Tumore in einem sehr frühen Stadium zu erkennen.",
+          "answer": "b",
+          "why": "Die Verwendung von Algorithmen zur Bildauswertung in der Medizin entspricht der Aussage 'Künstliche Intelligenz revolutioniert die medizinische Diagnostik'."
+        },
+        {
+          "prompt": "Um den CO2-Ausstoß nachhaltig zu senken, reicht globale Politik allein nicht aus. Vor allem lokale Initiativen, die kurze Transportwege fördern und den Austausch zwischen regionalen Erzeugern und Verbrauchern stärken, leisten einen entscheidenden Beitrag zum Umweltschutz.",
+          "answer": "c",
+          "why": "Der Fokus auf lokale Initiativen und regionale Erzeuger belegt die Überschrift über regionale Netzwerke für den Klimaschutz."
+        },
+        {
+          "prompt": "Aufgrund des rasanten technischen Fortschritts verändern sich die Anforderungen in fast allen Branchen kontinuierlich. Wer heute im Beruf erfolgreich sein möchte, muss bereit sein, sich kontinuierlich weiterzubilden und neue Qualifikationen zu erwerben.",
+          "answer": "d",
+          "why": "Die Notwendigkeit der kontinuierlichen Weiterbildung stützt direkt die Aussage zum lebenslangen Lernen im Berufsleben."
+        },
+        {
+          "prompt": "In den Städten wächst der Druck auf die Verkehrsinfrastruktur stetig. Um Staus und Smog zu reduzieren, setzen Stadtplaner verstärkt auf vernetzte Mobilitätskonzepte, die den öffentlichen Nahverkehr, Leihräder und Fußgängerzonen intelligent miteinander verknüpfen.",
+          "answer": "e",
+          "why": "Der Text behandelt die Bewältigung des städtischen Verkehrsaufdrucks, was sich in der Überschrift zu urbanen Mobilitätskonzepten widerspiegelt."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Künstliche Intelligenz im Kundenservice: Zwischen Effizienz und menschlicher Empathie",
+      "instruction": "Lesen Sie den Text und die Aufgaben dazu. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+      "passage": "Die Integration von Künstlicher Intelligenz in den Kundenservice schreitet branchenübergreifend rasant voran. Moderne Unternehmen setzen zunehmend auf automatisierte Dialogsysteme, um Anfragen rund um die Uhr zu bearbeiten und die Reaktionszeiten für Kundinnen und Kunden drastisch zu verkürzen. Dabei hat sich die Technologie in den letzten Jahren stark gewandelt: Während frühere Chatbots starr auf bestimmte Schlüsselwörter reagierten und oft zu Frustration führten, nutzen aktuelle Systeme hochentwickelte Sprachmodelle. Diese sind in der Lage, den Kontext einer Nachricht zu erfassen und überraschend nuancierte Antworten zu formulieren.\n\nTrotz dieser technischen Fortschritte zeigt die Praxis, dass rein algorithmische Lösungen an ihre Grenzen stoßen, sobald emotionale oder hochkomplexe Anliegen im Spiel sind. Kundinnen und Kunden, die sich in einer schwierigen Situation befinden oder ein individuelles Problem schildern, erwarten spürbare Empathie und kreative Lösungsansätze, die über standardisierte Textbausteine hinausgehen. Hier geraten selbst modernste Algorithmen an den Rand ihrer Leistungsfähigkeit, da ihnen das echte menschliche Einfühlungsvermögen fehlt.\n\nUm diesem Dilemma zu begegnen, etablieren vorausschauende Unternehmen vermehrt hybride Servicemodelle. In diesen Systemen übernimmt die künstliche Intelligenz standardisierte Routinen wie die Statusabfrage von Bestellungen oder die einfache Terminvergabe. Sobald das System jedoch merkt, dass ein Anliegen komplexer wird oder der Tonfall der Kundschaft Frustration erkennen lässt, erfolgt eine nahtlose Übergabe an menschliche Fachkräfte. Auf diese Weise lässt sich die Effizienz des Kundendienstes steigern, ohne dass die Kundenzufriedenheit leidet.\n\nEin weiterer zentraler Aspekt bei der Implementierung von KI im Servicebereich betrifft den Datenschutz und die Datensicherheit. Da über die Dialogsysteme oft sensible persönliche Informationen ausgetauscht werden, müssen Unternehmen strengste Richtlinien einhalten. Die Verarbeitung dieser Daten erfordert transparente Prozesse und robuste Sicherheitsarchitekturen, um das Vertrauen der Kundschaft nicht zu gefährden. Experten betonen daher, dass technologische Innovation und Datenschutz stets Hand in Hand gehen müssen.\n\nZusammenfassend lässt sich sagen, dass Künstliche Intelligenz den Kundenservice zwar grundlegend revolutioniert, den Menschen jedoch keineswegs vollständig ersetzen wird. Vielmehr verschiebt sich das Aufgabeprofil der Beschäftigten hin zu anspruchsvolleren Tätigkeiten, die strategisches Denken und soziale Kompetenz erfordern. Die Zukunft des Kundenservice liegt somit in einer klugen Arbeitsteilung zwischen Mensch und Maschine.",
+      "items": [
+        {
+          "prompt": "Wie unterscheiden sich moderne Chatbots von älteren Systemen laut dem ersten Absatz?",
+          "options": [
+            "Sie reagieren nur noch auf sehr wenige, exakt definierte Schlüsselwörter.",
+            "Sie können den Kontext von Nachrichten erfassen und differenzierter antworten.",
+            "Sie sind ausschließlich für die Bearbeitung von technischen Notfällen gedacht."
+          ],
+          "answer": 1,
+          "why": "Im Text steht, dass aktuelle Systeme im Gegensatz zu früher 'hochentwickelte Sprachmodelle' nutzen, die 'den Kontext einer Nachricht zu erfassen und überraschend nuancierte Antworten zu formulieren' im Stande sind."
+        },
+        {
+          "prompt": "Warum stoßen rein automatisierte Systeme nach Ansicht des Autors an ihre Grenzen?",
+          "options": [
+            "Weil ihnen echtes Einfühlungsvermögen bei emotionalen Problemen fehlt.",
+            "Weil die Kundschaft grundsätzlich keine digitalen Kommunikationskanäle nutzt.",
+            "Weil die technischen Serververbindungen zu oft unterbrochen werden."
+          ],
+          "answer": 0,
+          "why": "Der Text erklärt, dass Algorithmen an ihre Leistungsgrenzen geraten, 'da ihnen das echte menschliche Einfühlungsvermögen fehlt'."
+        },
+        {
+          "prompt": "Wie funktionieren die modernen hybriden Servicemodelle?",
+          "options": [
+            "Menschliche Mitarbeiter bearbeiten nur noch einfache Standardanfragen.",
+            "Die künstliche Intelligenz löst alle Probleme eigenständig ohne menschliche Hilfe.",
+            "Die KI übernimmt Routinen und übergibt komplexe Fälle an Menschen."
+          ],
+          "answer": 2,
+          "why": "Im Text heißt es, dass die KI 'standardisierte Routinen' übernimmt und bei komplexeren Anliegen 'eine nahtlose Übergabe an menschliche Fachkräfte' erfolgt."
+        },
+        {
+          "prompt": "Welche Herausforderung wird im Zusammenhang mit dem Datenschutz genannt?",
+          "options": [
+            "Kundinnen und Kunden fordern die Abschaffung aller digitalen Dialogsysteme.",
+            "Über die Systeme werden oft sensible Daten ausgetauscht, die geschützt werden müssen.",
+            "Datenschutzrichtlinien verhindern jegliche Nutzung von Künstlicher Intelligenz."
+          ],
+          "answer": 1,
+          "why": "Der Text besagt, dass 'über die Dialogsysteme oft sensible persönliche Informationen ausgetauscht werden' und deshalb strengste Richtlinien gelten."
+        },
+        {
+          "prompt": "Welche Entwicklung prognostiziert der Text für die Zukunft des Kundenservice?",
+          "options": [
+            "Menschliche Arbeitskräfte werden im Kundenservice vollständig überflüssig.",
+            "Die Beschäftigten werden sich vor allem auf simple Routinearbeiten konzentrieren.",
+            "Das Aufgabeprofil verschiebt sich hin zu Tätigkeiten mit sozialer Kompetenz."
+          ],
+          "answer": 2,
+          "why": "Laut dem letzten Absatz 'verschiebt sich das Aufgabeprofil der Beschäftigten hin zu anspruchsvolleren Tätigkeiten, die strategisches Denken und soziale Kompetenz erfordern'."
+        }
+      ]
+    },
+    "L3": {
+      "title": "Lesen, Teil 3: Anzeigen und Situationen",
+      "instruction": "Lesen Sie die Situationen 1 bis 10 und die Anzeigen A bis L. Finden Sie für jede Situation die passende Anzeige. Jede Anzeige passt nur einmal. Manche Situationen haben keine passende Anzeige, dann schreiben Sie x.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Digitalisierungsagentur sucht erfahrene IT-Berater m/w/d für die Begleitung von Verwaltungsprozessen im Bereich E-Government."
+        },
+        {
+          "key": "b",
+          "text": "Umweltinstitut vergibt Stipendien für Masterstudierende im Fachbereich Nachhaltige Energietechnik und Klimaforschung."
+        },
+        {
+          "key": "c",
+          "text": "Weiterbildung 'Green Controlling': Kompaktseminar für Fach- und Führungskräfte zur öökologischen Unternehmenssteuerung."
+        },
+        {
+          "key": "d",
+          "text": "Wissenschaftsverlag sucht studentische Hilfskräfte m/w/d für die digitale Erfassung und Lektorat historischer Handschriften."
+        },
+        {
+          "key": "e",
+          "text": "Bürgerinitiative 'Grüne Stadt' lädt ein zum offenen Workshop über urbane Begrünung und klimaresiliente Stadtentwicklung."
+        },
+        {
+          "key": "f",
+          "text": "Forschungszentrum für Künstliche Intelligenz bietet kostenlose Abendvorträge zur ethischen Verantwortung von Algorithmen."
+        },
+        {
+          "key": "g",
+          "text": "Gewerkschaft fordert stärkere Mitbestimmung bei der Einführung neuer Software am Arbeitsplatz im Zuge der Digitalisierung."
+        },
+        {
+          "key": "h",
+          "text": "Sprachschule bietet Intensivkurse 'Deutsch im Beruf' mit Schwerpunkt auf digitaler Korrespondenz und Videokonferenzen."
+        },
+        {
+          "key": "i",
+          "text": "Online-Plattform für Handwerker vermittelt Aufträge für energieeffiziente Sanierungen und Solaranlagen-Montage."
+        },
+        {
+          "key": "j",
+          "text": "Technologiepark organisiert Jobbörse für Start-ups und Absolventen technischer Studiengänge an diesem Wochenende."
+        },
+        {
+          "key": "k",
+          "text": "Bibliothek der Universität bleibt während der Semesterferien wegen umfassender Modernisierung der Mediathek geschlossen."
+        },
+        {
+          "key": "l",
+          "text": "Unternehmensberatung bietet Workshops zur papierlosen Bürokratie und sicheren Cloud-Lösungen für kleine Betriebe an."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Jemand möchte sich beruflich im Bereich umweltfreundliche Unternehmensführung weiterbilden und sucht ein passendes Seminar.",
+          "answer": "c",
+          "why": "Die Anzeige c bewirbt ein Kompaktseminar für Fachkräfte zur ökologischen Unternehmenssteuerung unter dem Titel 'Green Controlling'."
+        },
+        {
+          "prompt": "Eine Person sucht nach finanzieller Unterstützung für ihr fortgeschrittenes naturwissenschaftliches Studium mit Fokus auf Klimafragen.",
+          "answer": "b",
+          "why": "Anzeige b bietet Stipendien für Masterstudierende im Fachbereich Nachhaltige Energietechnik und Klimaforschung an."
+        },
+        {
+          "prompt": "Ein IT-Experte mit fundierter Berufserfahrung möchte Behörden bei der Umsetzung von E-Government-Projekten unterstützen.",
+          "answer": "a",
+          "why": "In Anzeige a sucht eine Digitalisierungsagentur IT-Berater m/w/d zur Begleitung von Verwaltungsprozessen im E-Government."
+        },
+        {
+          "prompt": "Ein Student sucht dringend eine bezahlte Teilzeittätigkeit bei einem Verlag, um historische Texte zu bearbeiten.",
+          "answer": "d",
+          "why": "Anzeige d sucht studentische Hilfskräfte für die Erfassung und das Lektorat historischer Handschriften bei einem Wissenschaftsverlag."
+        },
+        {
+          "prompt": "Jemand interessiert sich für die gesellschaftlichen und moralischen Fragen rund um den Einsatz von moderner Künstlicher Intelligenz.",
+          "answer": "f",
+          "why": "Das Forschungszentrum für Künstliche Intelligenz lädt laut Anzeige f zu Abendvorträgen über die ethische Verantwortung von Algorithmen ein."
+        },
+        {
+          "prompt": "Eine kleine Handwerksfirma sucht nach Möglichkeiten, neue Kunden für die Installation von Solaranlagen zu gewinnen.",
+          "answer": "i",
+          "why": "Anzeige i beschreibt eine Online-Plattform, die Aufträge für energieeffiziente Sanierungen und Solaranlagen-Montage vermittelt."
+        },
+        {
+          "prompt": "Ein Arbeitnehmer möchte sich informieren, welche Rechte Beschäftigte bei der Umstellung auf neue Arbeitsplatzsoftware haben.",
+          "answer": "g",
+          "why": "Anzeige g thematisiert die Forderung der Gewerkschaft nach Mitbestimmung bei der Einführung neuer Software."
+        },
+        {
+          "prompt": "Jemand möchte in seiner Nachbarschaft aktiv werden und an einer Veranstaltung über klimafreundliche Stadtplanung teilnehmen.",
+          "answer": "e",
+          "why": "Die Bürgerinitiative lädt gemäß Anzeige e zu einem Workshop über urbane Begrünung und klimaresiliente Stadtentwicklung ein."
+        },
+        {
+          "prompt": "Ein Handwerksbetrieb sucht Beratung, wie das Büro komplett auf digitale Prozesse und Cloud-Dienste umgestellt werden kann.",
+          "answer": "l",
+          "why": "Anzeige l bietet Workshops zur papierlosen Bürokratie und sicheren Cloud-Lösungen für kleine Betriebe an."
+        },
+        {
+          "prompt": "Eine Studentin möchte während ihres Urlaubs Fachliteratur in der Universitätsbibliothek ausleihen und dort lernen.",
+          "answer": "x",
+          "why": "Es gibt keine Anzeige, die geänderte Öffnungszeiten oder die Ausleihe in der Universitätsbibliothek während der Semesterferien thematisiert."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:26:15.009Z",
+  "exam": "telc",
+  "level": "B2",
+  "module": "schreiben",
+  "name": "telc B2 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Teil 1: Halbformelle Nachricht",
+      "instruction": "Schreiben Sie eine halbformelle Nachricht zu einem beruflichen Anlass. Bearbeiten Sie alle vier Leitpunkte und achten Sie auf eine angemessene Anrede und einen passenden Schluss. Die Länge der Nachricht sollte etwa 180 Wörter betragen.",
+      "prompt": "Sie arbeiten seit kurzem in der Abteilung für Öffentlichkeitsarbeit der Firma TechnoCon. Ihr Vorgesetzter, Herr Dr. Berger, hat Sie gebeten, die kommende Teambesprechung vorzubereiten. Da Sie letzte Woche krankheitsbedingt gefehlt haben, schreiben Sie ihm eine Nachricht, um Details zu klären.",
+      "bullets": [
+        "Grund für das Schreiben nennen (Nachbereitung der Teambesprechung trotz vorheriger Abwesenheit)",
+        "Sich nach dem aktuellen Stand der Tagesordnung erkundigen",
+        "Eigene Ideen für die Präsentation des neuen Digitalisierungsprojekts vorschlagen",
+        "Um ein kurzes Abstimmungsgespräch am Telefon bitten"
+      ],
+      "words": 180,
+      "tips": "Achten Sie darauf, alle vier Leitpunkte in logischer Reihenfolge zu bearbeiten und einen höflichen, halbformellen Ton zu wählen."
+    }
+  }
+}

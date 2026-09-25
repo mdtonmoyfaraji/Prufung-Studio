@@ -1,0 +1,298 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:26:14.670Z",
+  "exam": "telc",
+  "level": "B2",
+  "module": "hoeren",
+  "name": "telc B2 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1: Neue Arbeitsmodelle",
+      "instruction": "Hören Sie den Beitrag. Sie hören den Text nur einmal. Lösen Sie die Aufgaben 1 bis 5, indem Sie die richtige Option wählen.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderator",
+            "text": "Herzlich willkommen zu unserem Podcast 'Zukunft der Arbeit'. Heute sprechen wir über das Konzept der Vier-Tage-Woche und wie moderne Unternehmen mit der Digitalisierung und veränderten gesellschaftlichen Ansprüchen umgehen. Unser Gast ist Frau Dr. Weber, Arbeitssoziologin an der Universität Freiburg. Frau Dr. Weber, immer mehr Firmen experimentieren mit verkürzten Arbeitszeiten bei vollem Lohnausgleich. Ist das nur ein kurzfristiger Trend oder eine echte Revolution auf dem Arbeitsmarkt? Lassen Sie uns zunächst auf die Produktivität schauen. Kritiker befürchten oft einen wirtschaftlichen Einbruch, wenn plötzlich an einem Tag in der Woche gar nicht mehr gearbeitet wird. Unsere aktuellen Studien zeigen jedoch ein überraschendes Bild: Die Effizienz der Angestellten steigt in vielen Betrieben sogar an, weil die Arbeitszeit durch den Wegfall unnötiger Besprechungen viel fokussierter genutzt wird. Die Mitarbeiterinnen und Mitarbeiter berichten von einer spürbaren Entlastung und einem deutlich geringeren Stresslevel im Alltag. Ein wesentlicher Treiber dieser Entwicklung ist zweifellos die fortschreitende Digitalisierung. Dank moderner Kollaborationstools und künstlicher Intelligenz lassen sich viele Routineaufgaben in Bruchteilen der bisherigen Zeit erledigen. Das schafft Freiräume für komplexe Projekte und kreative Problemlösungen. Natürlich läuft die Umstellung nicht überall reibungslos. Besonders kleinere Handwerksbetriebe stehen vor großen Herausforderungen, wenn sie qualifiziertes Personal suchen und gleichzeitig die Öffnungszeiten halten müssen. Hier stößt das Modell der verkürzten Arbeitswoche organisatorisch oft an seine Grenzen, da der Fachkräftemangel in bestimmten Branchen nach wie vor akut ist. Dennoch zeigt sich, dass Unternehmen, die flexibel auf die Wünsche der Belegschaft eingehen, langfristig im Wettbewerb um die besten Köpfe die Nase vorn haben. Zum Schluss stellt sich die Frage nach den ökologischen Effekten. Weniger Pendelverkehr und geschlossene Bürogebäude an Freitagen senken den CO2-Ausstoß messbar. Die Vier-Tage-Woche verbindet somit ökonomische Effizienz, soziale Zufriedenheit und Umweltschutz auf eine Weise, die wir vor zehn Jahren so noch nicht für möglich gehalten hätten."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Wie bewertet Frau Dr. Weber die Auswirkung einer verkürzten Arbeitszeit auf die Wirtschaftlichkeit?",
+          "options": [
+            "Die Produktivität kann durch gezielteres Arbeiten sogar steigen.",
+            "Ein wirtschaftlicher Einbruch ist in jedem Fall unvermeidlich.",
+            "Die wirtschaftlichen Folgen lassen sich zum aktuellen Zeitpunkt noch nicht abschätzen."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass die Effizienz in vielen Betrieben ansteigt, da die Arbeitszeit durch den Wegfall unnötiger Besprechungen fokussierter genutzt wird."
+        },
+        {
+          "prompt": "Welche Rolle spielt die Digitalisierung bei der Umsetzung neuer Arbeitsmodelle?",
+          "options": [
+            "Sie führt zu einer deutlichen Verlängerung der täglichen Arbeitszeit.",
+            "Sie erschwert die Kommunikation zwischen den Angestellten erheblich.",
+            "Sie hilft dabei, Routineaufgaben schneller zu erledigen und schafft neue Freiräume."
+          ],
+          "answer": 2,
+          "why": "Laut Hörtext lassen sich dank moderner Tools Routineaufgaben in Bruchteilen der Zeit erledigen, was Freiräume schafft."
+        },
+        {
+          "prompt": "Vor welchen Problemen stehen besonders kleinere Handwerksbetriebe bei der Einführung?",
+          "options": [
+            "Sie finden keine digitalen Werkzeuge für ihre Verwaltung.",
+            "Der Fachkräftemangel erschwert die Organisation bei gleichbleibenden Öffnungszeiten.",
+            "Ihre Kundschaft lehnt verkürzte Öffnungszeiten grundsätzlich ab."
+          ],
+          "answer": 1,
+          "why": "Der Text besagt, dass kleinere Handwerksbetriebe vor Herausforderungen stehen, wenn sie Personal suchen und gleichzeitig die Öffnungszeiten halten müssen, da der Fachkräftemangel akut ist."
+        },
+        {
+          "prompt": "Welcher Vorteil zeigt sich im Wettbewerb um qualifiziertes Personal?",
+          "options": [
+            "Firmen mit flexiblen Arbeitszeitmodellen sind im Vorteil.",
+            "Traditionelle Arbeitszeiten ziehen die meisten Fachkräfte an.",
+            "Das Gehalt ist das einzig ausschlaggebende Kriterium für Bewerber."
+          ],
+          "answer": 0,
+          "why": "Der Beitrag erwähnt, dass Unternehmen, die flexibel auf die Wünsche der Belegschaft eingehen, langfristig im Wettbewerb die Nase vorn haben."
+        },
+        {
+          "prompt": "Welchen positiven Nebeneffekt hat die Vier-Tage-Woche laut dem Beitrag noch?",
+          "options": [
+            "Einen spürbaren Rückgang der staatlichen Steuereinnahmen.",
+            "Einen messbaren Beitrag zum Umweltschutz durch weniger Pendelverkehr.",
+            "Eine starke Zunahme des privaten Konsums an den zusätzlichen freien Tagen."
+          ],
+          "answer": 1,
+          "why": "Im Text wird genannt, dass weniger Pendelverkehr und geschlossene Bürogebäude den CO2-Ausstoß messbar senken und somit Umweltschutz bieten."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Vortrag über Künstliche Intelligenz im Kundenservice",
+      "instruction": "Hören Sie den Beitrag. Entscheiden Sie beim Hören, ob die Aussagen 1–10 richtig oder falsch sind. Sie hören den Text einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "text": "Guten Abend und herzlich willkommen zu unserer Reihe 'Wirtschaft und Innovation'. Heute sprechen wir über den Einsatz von Künstlicher Intelligenz im modernen Kundenservice. Dazu begrüße ich Herrn Dr. Stefan Berger, der zu diesem Thema an der Technischen Universität forscht. Herr Dr. Berger, wie verändert sich die Kundenbetreuung aktuell durch smarte Technologien?"
+          },
+          {
+            "speaker": "Dr. Stefan Berger",
+            "text": "Guten Abend. Vielen Dank für die Einladung. Um Ihre Frage direkt zu beantworten: Der Kundenservice befindet sich in einem massiven Wandel. Früher mussten Kunden oft lange in Warteschleifen hängen, bis ein Mitarbeiter frei wurde. Heute übernehmen sogenannte Chatbots oder sprachgesteuerte Assistenten die erste Kontaktaufnahme. Diese Systeme sind rund um die Uhr erreichbar, was für viele Unternehmen ein entscheidender Wettbewerbsvorteil ist. Und die Technologie wird immer besser. Dank maschinellem Lernen verstehen moderne Bots nicht nur einfache Schlüsselwörter, sondern erkennen auch den Kontext und die Stimmung des Kunden."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Heißt das, dass menschliche Mitarbeiter im Service bald komplett überflüssig werden?"
+          },
+          {
+            "speaker": "Dr. Stefan Berger",
+            "text": "Keineswegs. Das ist ein weit verbreiteter Irrglaube. KI kann zwar standardisierte Routineanfragen wie die Frage nach Öffnungszeiten oder Lieferstatus hervorragend und in Sekundenschnelle beantworten. Sobald es jedoch komplizierter wird, stoßen die Algorithmen an ihre Grenzen. Wenn ein Kunde beispielsweise ein individuelles Problem hat oder emotional aufgewühlt ist, weil ein Produkt beschädigt ankam, ist Empathie gefragt. Und die kann eine Maschine nun einmal nicht bieten. In solchen Fällen leitet das System das Gespräch nahtlos an einen menschlichen Kollegen weiter. Wir sprechen hier also von einer sinnvollen Arbeitsteilung und nicht von einem vollständigen Ersatz."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Gibt es denn auch Vorbehalte seitens der Kundschaft? Viele Menschen telefonieren ja nach wie vor lieber mit einer echten Person."
+          },
+          {
+            "speaker": "Dr. Stefan Berger",
+            "text": "Absolut. Unsere jüngsten Umfragen zeigen, dass besonders ältere Verbraucher oft skeptisch gegenüber automatisierten Systemen sind. Sie bemängeln fehlende Flexibilität, wenn das Anliegen nicht genau in das vorgegebene Schema des Bots passt. Deshalb fordern Verbraucherschützer zu Recht, dass Unternehmen immer einen einfachen und schnellen Weg zu einem menschlichen Ansprechpartner garantieren müssen. Ein rein digitaler Service ohne Ausweg führt oft zu Frustration und verärgerten Kunden."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Ein sehr wichtiger Punkt. Wie sieht es denn mit dem Datenschutz aus? Kundengespräche beinhalten ja oft sensible Informationen."
+          },
+          {
+            "speaker": "Dr. Stefan Berger",
+            "text": "Das ist ein zentrales Thema. Unternehmen sind gesetzlich verpflichtet, die europäischen Datenschutzrichtlinien strikt einzuhalten. Das bedeutet, dass Gespräche verschlüsselt übertragen und Daten nur so lange gespeichert werden, wie es für die Bearbeitung unbedingt erforderlich ist. Dennoch sollten Kunden vorsichtig sein und bei Chatbots keine vertraulichen Bankdaten oder Passwörter preisgeben, es sei denn, es handelt sich um eine hochsichere, verifizierte Plattform."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Herr Dr. Berger ist als Forscher an einer Technischen Universität tätig.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text bestätigt die Moderatorin, dass Dr. Berger 'an der Technischen Universität forscht'."
+        },
+        {
+          "prompt": "Smarte Technologien im Kundenservice sind nur zu bestimmten Geschäftszeiten erreichbar.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Dr. Berger betont im Text, dass diese Systeme 'rund um die Uhr erreichbar' sind."
+        },
+        {
+          "prompt": "Moderne Chatbots sind inzwischen in der Lage, die Stimmung von Kunden zu erkennen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Laut Dr. Berger erkennen moderne Bots 'auch den Kontext und die Stimmung des Kunden'."
+        },
+        {
+          "prompt": "Der Experte geht davon aus, dass menschliche Servicemitarbeiter bald vollständig durch Künstliche Intelligenz ersetzt werden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Dr. Berger bezeichnet diese Annahme als 'weit verbreiteten Irrglaube' und spricht von einer 'Arbeitsteilung'."
+        },
+        {
+          "prompt": "Standardisierte Anfragen wie Lieferstatus oder Öffnungszeiten werden von Maschinen schnell bearbeitet.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Dr. Berger erklärt, dass KI 'Routineanfragen wie die Frage nach Öffnungszeiten oder Lieferstatus hervorragend' beantwortet."
+        },
+        {
+          "prompt": "Bei komplexen oder emotionalen Problemen leitet das System das Gespräch an einen menschlichen Kollegen weiter.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es, dass das System das Gespräch bei individuellen oder emotionalen Problemen 'nahtlos an einen menschlichen Kollegen weiterleitet'."
+        },
+        {
+          "prompt": "Vor allem jüngere Verbraucher stehen automatisierten Systemen im Kundenservice skeptisch gegenüber.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Laut den Umfragen sind es 'besonders ältere Verbraucher', die oft skeptisch gegenüber automatisierten Systemen sind."
+        },
+        {
+          "prompt": "Verbraucherschützer fordern, dass Kunden immer einen unkomplizierten Zugang zu echten Ansprechpartnern haben müssen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Dr. Berger bestätigt, dass Verbraucherschützer fordern, 'dass Unternehmen immer einen einfachen und schnellen Weg zu einem menschlichen Ansprechpartner garantieren müssen'."
+        },
+        {
+          "prompt": "Unternehmen in Europa müssen sich bei der Datennutzung an strenge gesetzliche Richtlinien halten.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Der Experte sagt, Unternehmen seien 'gesetzlich verpflichtet, die europäischen Datenschutzrichtlinien strikt einzuhalten'."
+        },
+        {
+          "prompt": "Dr. Berger rät dazu, grundsätzlich alle sensiblen Bankdaten unbedenklich in jeden Chatbot einzugeben.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Er warnt im Gegenteil, dass Kunden 'keine vertraulichen Bankdaten oder Passwörter preisgeben' sollten, außer bei einer hochsicheren Plattform."
+        }
+      ]
+    },
+    "H3": {
+      "title": "Hören Teil 3: Künstliche Intelligenz am Arbeitsplatz",
+      "instruction": "Hören Sie das Gespräch einmal. Dazu lösen Sie fünf Aufgaben. Wählen Sie bei jeder Aufgabe die richtige Lösung.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Moderatorin",
+            "text": "Herzlich willkommen zu unserem Podcast 'Zukunft der Arbeit'. Heute sprechen wir über den Einsatz von Künstlicher Intelligenz, kurz KI, in deutschen Unternehmen. Bei mir im Studio ist Dr. Martina Weber, Expertin für Arbeitsmarktfragen am Institut für Zukunftstechnologien. Frau Weber, viele Beschäftigte machen sich Sorgen um ihren Arbeitsplatz. Ist diese Angst berechtigt?"
+          },
+          {
+            "speaker": "Dr. Martina Weber",
+            "text": "Guten Tag. Die Sorge ist verständlich, aber in den allermeisten Fällen unbegründet. KI wird Arbeitsplätze nicht einfach vernichten, sondern sie grundlegend verändern. Routinen werden automatisiert, sodass Mitarbeiter mehr Zeit für kreative und strategische Aufgaben haben. Eine aktuelle Umfrage unseres Instituts zeigt, dass rund siebzig Prozent der befragten Firmen neue Stellen schaffen, die direkt mit der Betreuung und Steuerung dieser neuen Technologien zu tun haben."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Das klingt erst einmal positiv. Aber gilt das denn für alle Branchen gleichermaßen? Was ist zum Beispiel mit dem Handwerk oder dem Dienstleistungssektor?"
+          },
+          {
+            "speaker": "Dr. Martina Weber",
+            "text": "Da gibt es tatsächlich große Unterschiede. Während in der Verwaltung und im IT-Bereich bereits sehr viele Prozesse automatisiert ablaufen, ist das Handwerk weitgehend stabil. Ein Installateur oder eine Elektrikerin müssen nicht befürchten, dass ein Roboter ihre handwerkliche Arbeit übernimmt. Im Dienstleistungssektor hingegen, vor allem im Kundenservice, sehen wir durch intelligente Chatbots eine starke Verschiebung hin zu digitaler Kommunikation. Dennoch bleiben menschliche Empathie und komplexe Beratung unersetzlich."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Ein oft genannter Punkt ist auch die Weiterbildung. Was raten Sie Arbeitnehmerinnen und Arbeitnehmern, die sich fit machen wollen?"
+          },
+          {
+            "speaker": "Dr. Martina Weber",
+            "text": "Das Wichtigste ist Neugierde und die Bereitschaft zum lebenslangen Lernen. Man muss kein Programmierer werden, aber ein grundlegendes Verständnis dafür, wie digitale Tools funktionieren, wird in fast jedem Beruf zur Grundvoraussetzung. Die Unternehmen sind hier in der Pflicht, entsprechende Schulungen anzubieten. Wer sich jetzt weiterbildet, sichert sich langfristig die besten Chancen auf dem Arbeitsmarkt."
+          },
+          {
+            "speaker": "Moderatorin",
+            "text": "Vielen Dank für diese spannenden Einblicke, Frau Weber."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was sagt Dr. Weber über die Angst vor Arbeitsplatzverlust durch KI?",
+          "options": [
+            "Die Angst ist völlig unbegründet, weil niemand seinen Job verliert.",
+            "Die Sorge ist verständlich, aber meistens unbegründet, da sich Berufe eher verändern.",
+            "Arbeitnehmer sollten große Angst haben, da die meisten Jobs wegrationalisiert werden."
+          ],
+          "answer": 1,
+          "why": "Frau Weber erklärt: 'Die Sorge ist verständlich, aber in den allermeisten Fällen unbegründet. KI wird Arbeitsplätze nicht einfach vernichten, sondern sie grundlegend verändern.'"
+        },
+        {
+          "prompt": "Wie wirken sich neue Technologien laut einer Umfrage des Instituts auf die Beschäftigung aus?",
+          "options": [
+            "Viele Firmen schaffen neue Stellen, die sich mit der Betreuung der Technik befassen.",
+            "Die Zahl der Arbeitsplätze sinkt in fast allen großen Unternehmen drastisch.",
+            "Es entstehen ausschließlich Jobs für hochqualifizierte Programmierer."
+          ],
+          "answer": 0,
+          "why": "Laut Umfrage schaffen 'rund siebzig Prozent der befragten Firmen neue Stellen, die direkt mit der Betreuung und Steuerung dieser neuen Technologien zu tun haben'."
+        },
+        {
+          "prompt": "Welche Branche ist laut dem Interview am wenigsten von Automatisierung bedroht?",
+          "options": [
+            "Der IT-Bereich",
+            "Die Verwaltung",
+            "Das Handwerk"
+          ],
+          "answer": 2,
+          "why": "Dr. Weber sagt: '...ist das Handwerk weitgehend stabil. Ein Installateur oder eine Elektrikerin müssen nicht befürchten, dass ein Roboter ihre handwerkliche Arbeit übernimmt.'"
+        },
+        {
+          "prompt": "Was passiert im Dienstleistungssektor durch intelligente Chatbots?",
+          "options": [
+            "Komplexe Beratungen werden komplett abgeschafft.",
+            "Es gibt eine starke Verschiebung hin zu digitaler Kommunikation.",
+            "Menschliche Empathie wird durch die Technik vollständig ersetzt."
+          ],
+          "answer": 1,
+          "why": "Im Dienstleistungssektor sieht die Expertin 'vor allem im Kundenservice... eine starke Verschiebung hin zu digitaler Kommunikation'."
+        },
+        {
+          "prompt": "Was hält Dr. Weber für die wichtigste Voraussetzung für Arbeitnehmer?",
+          "options": [
+            "Dass sie sofort programmieren lernen",
+            "Dass sie die Verantwortung komplett den Unternehmen überlassen",
+            "Dass sie neugierig sind und bereit sind, lebenslang zu lernen"
+          ],
+          "answer": 2,
+          "why": "Die Expertin betont: 'Das Wichtigste ist Neugierde und die Bereitschaft zum lebenslangen Lernen.'"
+        }
+      ]
+    }
+  }
+}
