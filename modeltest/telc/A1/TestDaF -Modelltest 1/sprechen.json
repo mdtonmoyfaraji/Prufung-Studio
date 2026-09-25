@@ -1,0 +1,102 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-22T12:18:52.321Z",
+  "exam": "testdaf",
+  "level": "TestDaF",
+  "module": "sprechen",
+  "name": "TestDaF — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Rat geben in der Mensa",
+      "instruction": "Sie hören und lesen eine Situation aus dem Hochschulalltag. Geben Sie der Person einen Rat. Sie haben 30 Sekunden Vorbereitungszeit und 45 Sekunden Sprechzeit.",
+      "prompt": "Ihre Kommilitonin Sarah beklagt sich in der Cafeteria darüber, dass sie wegen der langen Schlangen in der Mensa fast nie genug Zeit zum Essen hat und deshalb hungrig in die Seminare gehen muss. Sie möchten ihr einen guten Rat geben.",
+      "bullets": [
+        "Reagieren Sie auf Sarahs Problem mit der langen Wartezeit.",
+        "Schlagen Sie mindestens zwei konkrete Alternativen vor.",
+        "Begründen Sie, warum diese Alternativen helfen könnten."
+      ],
+      "seconds": 45,
+      "prepSec": 30,
+      "tips": "Sprechen Sie zusammenhängend und achten Sie auf eine klare Struktur Ihres Ratschlags."
+    },
+    "P2": {
+      "title": "Optionen abwägen: Digitale Lehrveranstaltungen im Semester",
+      "instruction": "Sie sollen in einer mündlichen Prüfung zwei Optionen abwägen. Lesen Sie die Situation und die Aufgabe. Sie haben 60 Sekunden Vorbereitungszeit und 90 Sekunden Sprechzeit.",
+      "prompt": "An Ihrer Hochschule wird diskutiert, ob im nächsten Semester alle Vorlesungen ausschließlich digital per Livestream stattfinden oder ob die Präsenzpflicht beibehalten werden soll. Wägen Sie die Vor- und Nachteile beider Optionen ab und begründen Sie, welche Variante Sie für die Studierenden bevorzugen.",
+      "bullets": [
+        "Vorteile und Nachteile von rein digitalen Vorlesungen",
+        "Vorteile und Nachteile der traditionellen Präsenzveranstaltungen",
+        "Ihre persönliche Empfehlung mit Begründung"
+      ],
+      "seconds": 90,
+      "prepSec": 60,
+      "tips": "Strukturieren Sie Ihren Beitrag klar mit einer Einleitung, der Abwägung beider Seiten und einem begründeten Fazit."
+    },
+    "P3": {
+      "title": "Zusammenfassung: Studentische Arbeitsgruppen",
+      "instruction": "Fassen Sie den Inhalt des folgenden Textes über die Organisation studentischer Arbeitsgruppen zusammen und gehen Sie dabei auf die drei Leitpunkte ein.",
+      "prompt": "Sie haben den Text über die Herausforderungen und Vorteile von studentischen Arbeitsgruppen gelesen. Fassen Sie die zentralen Aspekte in Ihrem eigenen Vortrag zusammen.",
+      "bullets": [
+        "Nennen Sie die Hauptvorteile von studentischen Arbeitsgruppen für den Studienerfolg.",
+        "Beschreiben Sie mögliche Schwierigkeiten bei der Zusammenarbeit im Team.",
+        "Erklären Sie, wie man organisatorische Probleme erfolgreich lösen kann."
+      ],
+      "seconds": 120,
+      "prepSec": 90,
+      "tips": "Strukturieren Sie Ihren Vortrag klar mit einer Einleitung, den drei Hauptpunkten und einem kurzen Fazit."
+    },
+    "P4": {
+      "title": "Fachgespräch im Seminar: Digitale Lehrmethoden",
+      "instruction": "Sie nehmen an einem studentischen Fachgespräch über neue Lehr- und Lernformate an der Universität teil. Nehmen Sie zu den vorliegenden Argumenten Stellung und begründen Sie Ihre eigene Position.",
+      "prompt": "Äußern Sie sich im Rahmen des Fachgesprächs ausführlich zu den unterschiedlichen Ansichten über digitale Lehrmethoden. Vergleichen Sie die verschiedenen Standpunkte und begründen Sie, welche Form der Wissensvermittlung Sie für das zukünftige Studium bevorzugen.",
+      "bullets": [
+        "Ffassen Sie kurz die Vor- und Nachteile von rein digitalen Vorlesungen zusammen.",
+        "Nehmen Sie Stellung zu der Forderung, dass Präsenzveranstaltungen verpflichtend bleiben sollten.",
+        "Begründen Sie Ihre persönliche Empfehlung für die zukünftige Gestaltung von Seminaren an Ihrer Fakultät."
+      ],
+      "seconds": 90,
+      "prepSec": 60,
+      "tips": "Strukturieren Sie Ihren Beitrag durch klare Überleitungen und begründen Sie Ihre Meinung mit nachvollziehbaren Beispielen aus dem Hochschulalltag."
+    },
+    "P5": {
+      "title": "Aufgabe 5: Ein Thema präsentieren — Tutorium oder Propädeutikum",
+      "instruction": "Sie sollen in dieser Aufgabe eine Präsentation zu einem akademischen Thema halten. Gehen Sie dabei auf die drei vorgegebenen Punkte ein und begründen Sie Ihre Meinung.",
+      "prompt": "An Ihrer Hochschule wird diskutiert, ob für Studienanfänger im Fachbereich Sozialwissenschaften vor Beginn des Semesters verpflichtende Propädeutika oder studienbegleitende Tutorien angeboten werden sollten. Präsentieren Sie Ihre Argumente zu diesem Thema und begründen Sie Ihre Position.",
+      "bullets": [
+        "Bewerten Sie die Vor- und Nachteile von verpflichtenden Propädeutika vor Semesterbeginn.",
+        "Beschreiben Sie den Nutzen studienbegleitender Tutorien für den Studienerfolg.",
+        "Sprechen Sie eine begründete Empfehlung aus, welche der beiden Maßnahmen an Ihrer Hochschule eingeführt werden sollte."
+      ],
+      "seconds": 150,
+      "prepSec": 120,
+      "tips": "Strukturieren Sie Ihren Vortrag klar mit einer Einleitung, der Beantwortung aller drei Leitpunkte und einem runden Schlusswort."
+    },
+    "P6": {
+      "title": "Aufgabe 6: Stellungnahme zur anonymisierten Bewerbung",
+      "instruction": "Sie hören einen Ausschnitt aus einer Universitätsdiskussion zum Thema Einführung anonymisierter Bewerbungen bei studentischen Hilfskraftstellen. Wiedergeben Sie die wichtigsten Argumente und nehmen Sie anschließend begründet Stellung dazu.",
+      "prompt": "In der Hochschuldiskussion wurden verschiedene Meinungen zur anonymisierten Bewerbung geäußert. Fassen Sie die Kernargumente zusammen und erläutern Sie Ihre eigene Haltung zu diesem Verfahren.",
+      "bullets": [
+        "Geben Sie die Argumente für die Einführung anonymisierter Bewerbungen wieder.",
+        "Geben Sie die Gegenargumente aus der Diskussion zusammenfassend wieder.",
+        "Nehmen Sie begründet Stellung dazu, ob anonymisierte Bewerbungen an Universitäten Standard werden sollten."
+      ],
+      "seconds": 120,
+      "prepSec": 90,
+      "tips": "Strukturieren Sie Ihren Redebeitrag klar mit Einleitung, Wiedergabe, eigener Meinung und Schluss."
+    },
+    "P7": {
+      "title": "Kritik an der geplanten Kürzung der Bibliotheksöffnungszeiten",
+      "instruction": "Sie hören eine Ankündigung der Hochschulverwaltung zur Änderung der Öffnungszeiten der Zentralbibliothek. Äußern Sie sich dazu in einer Sprachnachricht.",
+      "prompt": "Die Hochschulverwaltung plant, die Öffnungszeiten der Zentralbibliothek an Wochenenden und den späten Abendstunden drastisch zu kürzen. Kritisieren Sie diese Maßnahme und begründen Sie Ihre Haltung ausführlich.",
+      "bullets": [
+        "Gehen Sie auf die Bedeutung der aktuellen Öffnungszeiten für Ihr Studium ein.",
+        "Kritisieren Sie die Begründung der Hochschulverwaltung (Personalmangel und Energiekosten).",
+        "Schlagen Sie mindestens zwei realistische Alternativen vor, um das Problem zu lösen."
+      ],
+      "seconds": 90,
+      "prepSec": 60,
+      "tips": "Strukturieren Sie Ihren Redebeitrag klar mit einer Einleitung, begründeter Kritik und konstruktiven Vorschlägen zum Schluss."
+    }
+  }
+}
