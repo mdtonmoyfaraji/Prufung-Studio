@@ -1,0 +1,24 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:17:41.015Z",
+  "exam": "telc",
+  "level": "A2",
+  "module": "schreiben",
+  "name": "telc A2 — Modelltest 1 — Schreiben",
+  "content": {
+    "S1": {
+      "title": "Einladung zum Geburtstag",
+      "instruction": "Schreiben Sie eine E-Mail (ca. 50 Wörter). Beantworten Sie in Ihrer E-Mail alle vier Leitpunkte.",
+      "prompt": "Sie haben am Wochenende Geburtstag und möchten Ihren Freund / Ihre Freundin Lukas oder Anna zu einer Party einladen. Schreiben Sie eine E-Mail an ihn oder sie.",
+      "bullets": [
+        "Grund für die E-Mail (Einladung zum Geburtstag)",
+        "Wann und wo ist die Party?",
+        "Bitte um Hilfe beim Einkaufen",
+        "Bitte um eine kurze Antwort"
+      ],
+      "words": 50,
+      "tips": "Schreiben Sie zu jedem der vier Leitpunkte mindestens einen Satz und achten Sie auf die passende Anrede und den Gruß."
+    }
+  }
+}

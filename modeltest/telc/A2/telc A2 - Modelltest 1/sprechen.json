@@ -1,0 +1,47 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:17:41.360Z",
+  "exam": "telc",
+  "level": "A2",
+  "module": "sprechen",
+  "name": "telc A2 — Modelltest 1 — Sprechen",
+  "content": {
+    "P1": {
+      "title": "Neues Hobby finden",
+      "instruction": "Sprechen Sie mit Ihrem Gesprächspartner / Ihrer Gesprächspartnerin. Erzählen Sie etwas über sich und stellen Sie Fragen zu dem Thema.",
+      "prompt": "Sie möchten gerne einen neuen Sportkurs besuchen und sprechen mit einer Person im Sprachkurs darüber. Erzählen Sie von Ihren Plänen und stellen Sie Fragen.",
+      "bullets": [
+        "Welchen Sport machen Sie gern?",
+        "Angebot am Wochenende",
+        "Preis fragen"
+      ],
+      "seconds": 120,
+      "tips": "Reagieren Sie auf die Fragen Ihres Partners und stellen Sie mindestens eine Gegenfrage."
+    },
+    "P2": {
+      "title": "Gespräch über ein Thema: Sport und Freizeit",
+      "instruction": "Sprechen Sie mit Ihrem Gesprächspartner oder Ihrer Gesprächspartnerin über das Thema Sport. Nutzen Sie die folgenden Punkte als Hilfestellung.",
+      "prompt": "Machen Sie Vorschläge für gemeinsame sportliche Aktivitäten in der Freizeit und reagieren Sie auf die Vorschläge Ihres Partners oder Ihrer Partnerin.",
+      "bullets": [
+        "Welchen Sport machen Sie gern?",
+        "Wie oft machen Sie Sport in der Woche?",
+        "Machen Sie lieber Sport allein oder mit Freunden?"
+      ],
+      "seconds": 180,
+      "tips": "Hören Sie gut zu und stellen Sie Fragen an Ihren Partner oder Ihre Partnerin."
+    },
+    "P3": {
+      "title": "Gemeinsam eine Aufgabe lösen",
+      "instruction": "Sie planen gemeinsam mit Ihrer Gesprächspartnerin oder Ihrem Gesprächspartner eine Aktivität. Sprechen Sie über die Punkte unten. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge und einigen Sie sich.",
+      "prompt": "Ein guter Freund hat bald Geburtstag und Sie möchten zusammen mit ihm ein großes Fest organisieren. Sprechen Sie darüber, wie Sie das Fest planen können.",
+      "bullets": [
+        "Wo wollen Sie das Fest feiern?",
+        "Was wollen Sie essen und trinken?",
+        "Welche Musik oder Spiele soll es geben?"
+      ],
+      "seconds": 180,
+      "tips": "Hören Sie gut zu und vergessen Sie nicht, auf die Ideen Ihrer Partnerin oder Ihres Partners zu reagieren."
+    }
+  }
+}

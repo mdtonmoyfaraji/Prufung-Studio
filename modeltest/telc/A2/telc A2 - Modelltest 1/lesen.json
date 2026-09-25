@@ -1,0 +1,198 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:17:39.952Z",
+  "exam": "telc",
+  "level": "A2",
+  "module": "lesen",
+  "name": "telc A2 — Modelltest 1 — Lesen",
+  "content": {
+    "L1": {
+      "title": "Überschriften zuordnen",
+      "instruction": "Lesen Sie die fünf kurzen Texte und die Überschriften a–h. Welcher Text passt zu welcher Überschrift? Schreiben Sie den richtigen Buchstaben (a–h) hinter die Nummer (1–5). Drei Überschriften bleiben übrig.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Wichtige Tipps für das Bewerbungsgespräch"
+        },
+        {
+          "key": "b",
+          "text": "Gesund kochen nach einem langen Arbeitstag"
+        },
+        {
+          "key": "c",
+          "text": "Der perfekte Start in den Urlaub mit dem Zug"
+        },
+        {
+          "key": "d",
+          "text": "Terminabsage beim Arzt ohne Probleme"
+        },
+        {
+          "key": "e",
+          "text": "Gemeinsam Sport machen in der Freizeit"
+        },
+        {
+          "key": "f",
+          "text": "Neue Möbel für das Wohnzimmer kaufen"
+        },
+        {
+          "key": "g",
+          "text": "Ein Ausflug in die Berge bei schlechtem Wetter"
+        },
+        {
+          "key": "h",
+          "text": "Öffnungszeiten vom Supermarkt am Wochenende"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Wenn Sie heute oder morgen nicht zu Ihrem Arzttermin kommen können, rufen Sie bitte mindestens 24 Stunden vorher in der Praxis an. So kann der Termin an andere Patientinnen und Patienten vergeben werden.",
+          "answer": "d",
+          "why": "Im Text wird erklärt, wie man einen Arzttermin absagen kann, was genau zu der Überschrift d passt."
+        },
+        {
+          "prompt": "Sie möchten nach der Arbeit nicht lange in der Küche stehen? Mit frischem Gemüse und schnellen Rezepten zaubern Sie in nur zwanzig Minuten ein leckeres und gesundes Abendessen für die ganze Familie.",
+          "answer": "b",
+          "why": "Der Text beschreibt das Kochen nach der Arbeit, was direkt mit der Überschrift b übereinstimmt."
+        },
+        {
+          "prompt": "Bereiten Sie sich gut auf Ihr Gespräch mit dem neuen Arbeitgeber vor: Pünktlichkeit ist sehr wichtig, und passende Kleidung zeigt, dass Sie die Arbeitsstelle wirklich ernst nehmen.",
+          "answer": "a",
+          "why": "Es werden Ratschläge für das Vorstellungsgespräch gegeben, passend zur Überschrift a."
+        },
+        {
+          "prompt": "Reisen Sie stressfrei und ohne Stau! Buchen Sie Ihre Fahrkarten am besten früh online. Unsere Züge bringen Sie direkt ins Zentrum, und Sie können während der Fahrt entspannt lesen oder Musik hören.",
+          "answer": "c",
+          "why": "Der Text wirbt für eine entspannte Zugreise in den Urlaub, was exakt zu Überschrift c passt."
+        },
+        {
+          "prompt": "Warum allein trainieren? Kommen Sie in unseren Laufclub im Stadtpark. Wir treffen uns jeden Dienstag um 18 Uhr und laufen gemeinsam in einer netten Gruppe durch die Natur.",
+          "answer": "e",
+          "why": "Das gemeinsame sportliche Training in der Gruppe wird beschrieben, passend zu Überschrift e."
+        }
+      ]
+    },
+    "L2": {
+      "title": "Neues im Stadtteilzentrum",
+      "instruction": "Lesen Sie den Text und die Aufgaben 1 bis 5. Kreuzen Sie die richtige Lösung an.",
+      "passage": "Liebe Nachbarinnen und Nachbarn,\n\nim Stadtteilzentrum „Mitte“ gibt es in den kommenden Wochen wieder viele spannende Angebote für Jung und Alt. Wir möchten Ihnen hier einen kurzen Überblick über die wichtigsten Neuigkeiten geben.\n\nAb dem nächsten Monat bieten wir jeden Dienstagvormittag einen neuen Kochkurs an. Unter dem Motto „Gesund und günstig kochen“ zeigt Ihnen unsere Kursleiterin Frau Wagner, wie man mit einfachen Zutaten leckere und gesunde Mahlzeiten zubereitet. Der Kurs richtet sich an alle, die ihre Kochkünste verbessern möchten. Eine Anmeldung ist bis zum Ende dieser Woche im Büro des Zentrums erforderlich, da die Plätze begrenzt sind.\n\nFür alle, die sich mehr bewegen möchten, startet am Mittwochabend eine neue Yoga-Gruppe. Yoga ist perfekt, um nach einem langen Arbeitstag zu entspannen und den Rücken zu stärken. Bitte bringen Sie zu diesem Kurs eine eigene Yoga-Matte und bequeme Kleidung mit. Vorkenntnisse sind nicht nötig, alle Interessierten sind herzlich willkommen.\n\nEin wichtiger Hinweis betrifft unsere Bibliothek: Wegen Umbauarbeiten bleibt sie vom 15. bis zum 22. des Monats komplett geschlossen. Ab dem 23. können Sie wie gewohnt wieder Bücher und Zeitschriften ausleihen. In dieser Woche ist auch die Rückgabe von ausgeliehenen Medien nicht möglich. Wir bitten hierfür um Ihr Verständnis.\n\nZum Schluss noch ein Aufruf: Unser Stadtteilfest findet im nächsten Monat statt. Dafür suchen wir noch fleißige Helferinnen und Helfer für den Kuchenverkauf und den Auf- und Abbau. Wer uns unterstützen möchte, kann sich einfach per E-Mail bei unserem Team melden. Als Dankeschön sind alle Helferinnen und Helfer am Abend zu einem gemeinsamen Essen eingeladen.",
+      "items": [
+        {
+          "prompt": "Wann findet der neue Kochkurs statt?",
+          "options": [
+            "jeden Dienstagvormittag",
+            "jeden Mittwochabend",
+            "am Wochenende"
+          ],
+          "answer": 0,
+          "why": "Im Text steht: „...ab dem nächsten Monat bieten wir jeden Dienstagvormittag einen neuen Kochkurs an.“"
+        },
+        {
+          "prompt": "Was muss man für den Kochkurs tun?",
+          "options": [
+            "man muss eigene Lebensmittel mitbringen",
+            "man muss sich bis zum Ende der Woche anmelden",
+            "man muss bereits gut kochen können"
+          ],
+          "answer": 1,
+          "why": "Im Text steht: „Eine Anmeldung ist bis zum Ende dieser Woche im Büro des Zentrums erforderlich...“"
+        },
+        {
+          "prompt": "Was soll man zum Yoga-Kurs mitbringen?",
+          "options": [
+            "ein eigenes Buch",
+            "eine eigene Yoga-Matte",
+            "etwas zu essen"
+          ],
+          "answer": 1,
+          "why": "Im Text steht: „Bitte bringen Sie zu diesem Kurs eine eigene Yoga-Matte und bequeme Kleidung mit.“"
+        },
+        {
+          "prompt": "Warum bleibt die Bibliothek geschlossen?",
+          "options": [
+            "wegen Umbauarbeiten",
+            "weil es Sommerferien gibt",
+            "wegen einer Krankheit"
+          ],
+          "answer": 0,
+          "why": "Im Text steht: „Wegen Umbauarbeiten bleibt sie vom 15. bis zum 22. des Monats komplett geschlossen.“"
+        },
+        {
+          "prompt": "Was bekommen die Helferinnen und Helfer für das Stadtteilfest?",
+          "options": [
+            "ein neues Buch",
+            "Geld für ihre Arbeit",
+            "eine Einladung zu einem gemeinsamen Essen"
+          ],
+          "answer": 2,
+          "why": "Im Text steht: „Als Dankeschön sind alle Helferinnen und Helfer am Abend zu einem gemeinsamen Essen eingeladen.“"
+        }
+      ]
+    },
+    "L3": {
+      "title": "Anzeigen und Situationen",
+      "instruction": "Lesen Sie die Situationen 1 bis 5 und die Anzeigen a bis h. Welche Anzeige passt zu welcher Situation? Für jede Situation gibt es nur eine richtige Lösung. Sie können jede Anzeige nur einmal verwenden. Zwei Anzeigen bleiben übrig.",
+      "bank": [
+        {
+          "key": "a",
+          "text": "Fahrradwerkstatt Müller: Wir reparieren Ihr Rad schnell und günstig. Auch E-Bikes. Hauptstraße 12."
+        },
+        {
+          "key": "b",
+          "text": "Praxis Dr. Weber: Wegen Urlaub ist unsere Praxis vom 10. bis zum 21. August geschlossen. Vertretung übernimmt Dr. Schmidt, Bahnhofstr. 4."
+        },
+        {
+          "key": "c",
+          "text": "Suche zuverlässige Putzhilfe für 3 Stunden pro Woche für eine 3-Zimmer-Wohnung in Mitte. Tel: 0155-987654."
+        },
+        {
+          "key": "d",
+          "text": "Italienisches Restaurant 'Da Marco' sucht ab sofort freundliche Servicekraft auf Minijob-Basis. Arbeitszeiten nach Absprache."
+        },
+        {
+          "key": "e",
+          "text": "VHS-Kurs: 'Deutsch im Beruf' für Anfänger. Start am nächsten Montag, jeweils von 18 bis 20 Uhr."
+        },
+        {
+          "key": "f",
+          "text": "Gartenpflege Schmidt: Wir schneiden Ihre Hecken und pflegen Ihren Rasen. Rufen Sie uns an!"
+        },
+        {
+          "key": "g",
+          "text": "1. FC Hansa sucht neue Spieler für die Tischtennis-Hobbygruppe. Training immer mittwochs um 19 Uhr in der Turnhalle Süd."
+        },
+        {
+          "key": "h",
+          "text": "Gebrauchte Möbel zu verschenken: Ein großes Sofa und ein Holztisch an Selbstabholer abzugeben."
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Sie möchten nach der Arbeit noch etwas Deutsch lernen, um besser im Büro kommunizieren zu können.",
+          "answer": "e",
+          "why": "In Anzeige e wird der Kurs 'Deutsch im Beruf' angeboten."
+        },
+        {
+          "prompt": "Ihr Fahrrad hat einen platten Reifen und Sie brauchen schnell Hilfe.",
+          "answer": "a",
+          "why": "Anzeige a bietet schnelle Reparaturen für Räder in der Fahrradwerkstatt Müller an."
+        },
+        {
+          "prompt": "Sie suchen nach einer Möglichkeit, am Abend Sport in einer Gruppe zu machen.",
+          "answer": "g",
+          "why": "Anzeige g sucht Spieler für die Tischtennis-Hobbygruppe mit Training am Mittwochabend."
+        },
+        {
+          "prompt": "Ihr Hausarzt hat geschlossen und Sie brauchen eine Vertretung in der Nähe.",
+          "answer": "b",
+          "why": "In Anzeige b wird für die Urlaubszeit eine Praxis als Vertretung genannt."
+        },
+        {
+          "prompt": "Sie möchten am Wochenende nebenbei etwas Geld verdienen und suchen einen Job in der Gastronomie.",
+          "answer": "d",
+          "why": "Anzeige d sucht eine freundliche Servicekraft für ein italienisches Restaurant."
+        }
+      ]
+    }
+  }
+}

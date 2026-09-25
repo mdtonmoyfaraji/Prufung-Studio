@@ -1,0 +1,237 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:17:40.300Z",
+  "exam": "telc",
+  "level": "A2",
+  "module": "bausteine",
+  "name": "telc A2 — Modelltest 1 — Sprachbausteine",
+  "content": {
+    "B1": {
+      "title": "Sprachbausteine Teil 1: Ein neuer Job",
+      "instruction": "Lesen Sie den folgenden Text und wählen Sie für jede Lücke das richtige Wort aus den Antwortmöglichkeiten (a, b oder c).",
+      "passage": "Liebe Maria,\n\nich muss dir unbedingt erzählen, dass ich endlich einen neuen Job gefunden habe! Seit letztem Monat arbeite ich ___1___ einer großen Buchhandlung im Stadtzentrum.\n\nAm Anfang war alles ein bisschen schwierig, weil ich den Computer ___2___ und mich an die neuen Aufgaben gewöhnen musste. Aber zum Glück sind meine Kolleginnen sehr nett und haben mir alles ___3___ erklärt. \n\nMein Arbeitstag beginnt meistens um acht ___4___. Zuerst sortiere ich die Bücher, die am Vortag geliefert ___5___. Danach helfe ich den Kundinnen und Kunden an der Kasse oder suche bestimmte Romane im Lager. Die Arbeit macht mir viel Spaß, ___6___ sie manchmal auch ziemlich anstrengend ist. \n\nNächste Woche habe ich ___7___ Geburtstag. Ich möchte gerne ein kleines Fest ___8___ und hoffe, du hast Zeit zu kommen. Wir könnten zusammen kochen oder einen Ausflug in ___9___ Park machen. \n\nSchreib mir bald, ob du Zeit hast. Ich würde mich ___10___ freuen!\n\nLiebe Grüße\nAnna",
+      "items": [
+        {
+          "prompt": "1",
+          "options": [
+            "in",
+            "an",
+            "auf"
+          ],
+          "answer": 0,
+          "why": "Bei Gebäuden und Institutionen wie einer Buchhandlung verwendet man die Präposition 'in' mit dem Dativ."
+        },
+        {
+          "prompt": "2",
+          "options": [
+            "kennenlernen",
+            "verstehen",
+            "bedienen"
+          ],
+          "answer": 2,
+          "why": "Man muss technische Geräte wie einen Computer 'bedienen' lernen."
+        },
+        {
+          "prompt": "3",
+          "options": [
+            "geduldig",
+            "geduldige",
+            "geduldiger"
+          ],
+          "answer": 0,
+          "why": "Hier wird das Verb 'erklärt' durch das Adverb bzw. die Art und Weise 'geduldig' näher beschrieben."
+        },
+        {
+          "prompt": "4",
+          "options": [
+            "Stunde",
+            "Uhr",
+            "Zeit"
+          ],
+          "answer": 1,
+          "why": "Bei konkreten Tageszeiten verwendet man das Wort 'Uhr' (um acht Uhr)."
+        },
+        {
+          "prompt": "5",
+          "options": [
+            "wurden",
+            "worden",
+            "sind"
+          ],
+          "answer": 0,
+          "why": "Der Satz steht im Präteritum Passiv (wurden geliefert)."
+        },
+        {
+          "prompt": "6",
+          "options": [
+            "weil",
+            "obwohl",
+            "denn"
+          ],
+          "answer": 1,
+          "why": "Konzessiver Nebensatz mit 'obwohl' (Trotz Anstrengung macht die Arbeit Spaß)."
+        },
+        {
+          "prompt": "7",
+          "options": [
+            "mein",
+            "meinen",
+            "meinem"
+          ],
+          "answer": 1,
+          "why": "'Geburtstag' ist maskulin und steht hier im Akkusativ als direktes Objekt (haben + Akkusativ)."
+        },
+        {
+          "prompt": "8",
+          "options": [
+            "feiern",
+            "machen",
+            "spielen"
+          ],
+          "answer": 0,
+          "why": "Mit einem Fest verbindet man fest das Verb 'feiern'."
+        },
+        {
+          "prompt": "9",
+          "options": [
+            "einen",
+            "einem",
+            "einer"
+          ],
+          "answer": 0,
+          "why": "'Park' ist maskulin und steht nach 'in' (wohin? Akkusativ) als 'einen Park'."
+        },
+        {
+          "prompt": "10",
+          "options": [
+            "sehr",
+            "viel",
+            "guten"
+          ],
+          "answer": 0,
+          "why": "Die feste Wendung lautet 'ich würde mich sehr freuen'."
+        }
+      ]
+    },
+    "B2": {
+      "title": "Sprachbausteine Teil 2: Ein neuer Job",
+      "instruction": "Lesen Sie den Text und setzen Sie die Wörter (a–o) aus der Wortbank in die Lücken (1–10) ein. Jedes Wort passt nur einmal.",
+      "passage": "Liebe Kollegen,\n\nich möchte mich kurz bei Ihnen vorstellen. Mein Name ist Anna Schmidt und ich beginne am Montag ___1___ neue Arbeit in der Buchhaltung.\n\nIch freue mich schon sehr ___2___ diese Aufgabe und auf die Zusammenarbeit mit Ihnen. In den letzten drei Jahren habe ich in einer großen Firma in München ___3___. Dort war ich für die Rechnungen ___4___.\n\nDa ich vor Kurzem nach Frankfurt umgezogen bin, suche ich noch nach einer guten Möglichkeit, ___5___ Arbeit zu kommen. Mit der S-Bahn brauche ich nur zwanzig Minuten. Das ist sehr ___6___.\n\nIn meiner Freizeit koche ich gerne und treffe ___7___ mit Freunden. Am Wochenende gehe ich oft im Park ___8___. \n\nIch hoffe, dass wir uns nächste Woche ___9___ kennenlernen. Wenn Sie Fragen haben, können Sie mir ___10___ eine E-Mail schreiben.\n\nViele Grüße\nAnna Schmidt",
+      "bank": [
+        {
+          "key": "a",
+          "text": "auf"
+        },
+        {
+          "key": "b",
+          "text": "gerne"
+        },
+        {
+          "key": "c",
+          "text": "praktisch"
+        },
+        {
+          "key": "d",
+          "text": "meine"
+        },
+        {
+          "key": "e",
+          "text": "nach"
+        },
+        {
+          "key": "f",
+          "text": "verantwortlich"
+        },
+        {
+          "key": "g",
+          "text": "jederzeit"
+        },
+        {
+          "key": "h",
+          "text": "gearbeitet"
+        },
+        {
+          "key": "i",
+          "text": "spazieren"
+        },
+        {
+          "key": "j",
+          "text": "persönlich"
+        },
+        {
+          "key": "k",
+          "text": "zu"
+        },
+        {
+          "key": "l",
+          "text": "uns"
+        },
+        {
+          "key": "m",
+          "text": "einfach"
+        },
+        {
+          "key": "n",
+          "text": "dieser"
+        },
+        {
+          "key": "o",
+          "text": "wichtig"
+        }
+      ],
+      "items": [
+        {
+          "prompt": "Lücke 1",
+          "answer": "d",
+          "why": "Vor dem femininen Nomen 'Arbeit' im Akkusativ steht der Possessivartikel 'meine'."
+        },
+        {
+          "prompt": "Lücke 2",
+          "answer": "a",
+          "why": "Das Verb 'sich freuen' wird in diesem Kontext mit der Präposition 'auf' verbunden ('ich freue mich schon sehr auf...')."
+        },
+        {
+          "prompt": "Lücke 3",
+          "answer": "h",
+          "why": "Das Perfekt verlangt hier das Partizip II 'gearbeitet' ('in einer großen Firma ... gearbeitet')."
+        },
+        {
+          "prompt": "Lücke 4",
+          "answer": "f",
+          "why": "Die feste Redewendung lautet 'für etwas verantwortlich sein' ('für die Rechnungen verantwortlich')."
+        },
+        {
+          "prompt": "Lücke 5",
+          "answer": "k",
+          "why": "Die Ortsangabe mit Bewegung nutzt die Präposition 'zu' ('zu Arbeit kommen' bzw. zur Arbeit kommen)."
+        },
+        {
+          "prompt": "Lücke 6",
+          "answer": "c",
+          "why": "Der kurze Weg mit der S-Bahn wird im Text als vorteilhaft beschrieben ('Das ist sehr praktisch')."
+        },
+        {
+          "prompt": "Lücke 7",
+          "answer": "l",
+          "why": "Das reflexive Verb 'sich treffen' verlangt das Pronomen 'uns' im Akkusativ ('treffe uns mit Freunden')."
+        },
+        {
+          "prompt": "Lücke 8",
+          "answer": "i",
+          "why": "Die Aktivität im Park wird mit dem Infinitiv mit 'zu' bzw. festen Ausdrücken gebildet ('spazieren gehen')."
+        },
+        {
+          "prompt": "Lücke 9",
+          "answer": "j",
+          "why": "Das Adverb 'persönlich' ergänzt das Kennenlernen passend ('uns nächste Woche persönlich kennenlernen')."
+        },
+        {
+          "prompt": "Lücke 10",
+          "answer": "g",
+          "why": "Das Wort 'jederzeit' drückt aus, dass man immer eine E-Mail schreiben kann ('können Sie mir jederzeit eine E-Mail schreiben')."
+        }
+      ]
+    }
+  }
+}

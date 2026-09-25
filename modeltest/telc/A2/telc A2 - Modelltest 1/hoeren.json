@@ -1,0 +1,273 @@
+{
+  "kind": "prepstudio.module",
+  "version": 1,
+  "exported": "2026-09-25T06:17:40.658Z",
+  "exam": "telc",
+  "level": "A2",
+  "module": "hoeren",
+  "name": "telc A2 — Modelltest 1 — Hören",
+  "content": {
+    "H1": {
+      "title": "Hören Teil 1: Alltag und Freizeit",
+      "instruction": "Hören Sie gut zu! Sie hören fünf kurze Gespräche oder Durchsagen. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Lösung an. Sie hören jeden Text einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Ansage",
+            "text": "Text Nummer 1. Sie hören eine Nachricht auf dem Anrufbeantworter. Hallo Maria, hier ist Stefan. Du, ich wollte dich kurz anrufen wegen Samstag. Wir wollten doch zusammen auf den Wochenmarkt gehen, um Gemüse für die Geburtstagsparty zu kaufen. Leider hat mein Chef mich angerufen, ich muss am Samstagvormittag dringend im Büro arbeiten. Tut mir echt leid! Können wir vielleicht stattdessen am Freitagnachmittag zusammen einkaufen gehen? Ruf mich doch bitte zurück, wenn du Zeit hast. Tschüss!"
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text Nummer 2. Sie hören eine Durchsage im Supermarkt. Liebe Kundinnen und Kunden, wir haben eine wichtige Information für Sie. An unserer Information im Eingangsbereich wurde ein schwarzes Portemonnaie abgegeben. Die Besitzerin oder der Besitzer kann es dort gegen einen kleinen Nachweis abholen. Außerdem möchten wir Sie daran erinnern, dass heute unsere Frische-Abteilung im Erdgeschoss bis 20 Uhr frischen Fisch im Angebot hat. Wir wünschen Ihnen noch einen schönen Einkauf bei unserem Markt."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text Nummer 3. Sie hören ein Gespräch in einer Arztpraxis. Sprechstundenhilfe: Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun? Patient: Guten Tag, mein Name ist Thomas Weber. Ich habe starke Kopfschmerzen und Fieber. Kann ich heute noch vorbeikommen? Sprechstundenhilfe: Herr Weber, der Vormittag ist leider schon komplett voll. Aber wenn Sie um 15 Uhr in die Praxis kommen, können Sie dazwischengeschoben werden. Sie müssen dann eventuell ein bisschen im Wartezimmer warten. Patient: Gut, das mache ich. Vielen Dank."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text Nummer 4. Sie hören Informationen im Radio. Und nun zum Wetter für morgen, Donnerstag. Im ganzen Land erwartet uns ein sehr freundlicher Tag. Die Sonne scheint von einem blauen Himmel, und es bleibt den ganzen Tag über trocken. Die Temperaturen steigen am Nachmittag auf angenehme 24 Grad. Perfekt also für einen Ausflug in den Park oder an den See. Am Freitag ziehen dann allerdings im Laufe des Tages Wolken auf, und es kann vereinzelt regnen."
+          },
+          {
+            "speaker": "Ansage",
+            "text": "Text Nummer 5. Sie hören eine Ansage am Bahnhof. Achtung am Gleis 3! Wegen einer kurzfristigen technischen Störung am Zug hat der Intercity nach Hamburg heute leider voraussichtlich 20 Minuten Verspätung. Wir bitten alle Reisenden um Entschuldigung. Die Einfahrt des Zuges erfolgt nun gegen 14 Uhr 15 auf Gleis 3. Bitte beachten Sie auch die Durchsagen an den Anzeigen auf dem Bahnsteig. Vielen Dank für Ihr Verständnis."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Was möchte Stefan von Maria?",
+          "options": [
+            "Er möchte den Einkaufs-Termin auf Freitag verschieben.",
+            "Er möchte am Samstag zusammen Geburtstag feiern.",
+            "Er möchte am Samstagvormittag im Büro arbeiten."
+          ],
+          "answer": 0,
+          "why": "Stefan schlägt im Text vor: 'Können wir vielleicht stattdessen am Freitagnachmittag zusammen einkaufen gehen?'."
+        },
+        {
+          "prompt": "Was wurde im Supermarkt gefunden?",
+          "options": [
+            "Frischer Fisch für das Abendessen",
+            "Ein schwarzes Portemonnaie",
+            "Eine Tasche mit Dokumenten"
+          ],
+          "answer": 1,
+          "why": "In der Durchsage heißt es: 'An unserer Information im Eingangsbereich wurde ein schwarzes Portemonnaie abgegeben'."
+        },
+        {
+          "prompt": "Wann soll Herr Weber in die Praxis kommen?",
+          "options": [
+            "Am Vormittag sofort",
+            "Um 12 Uhr mittags",
+            "Um 15 Uhr am Nachmittag"
+          ],
+          "answer": 2,
+          "why": "Die Sprechstundenhilfe sagt: 'Aber wenn Sie um 15 Uhr in die Praxis kommen, können Sie dazwischengeschoben werden'."
+        },
+        {
+          "prompt": "Wie wird das Wetter am Donnerstag?",
+          "options": [
+            "Es gibt den ganzen Tag Regen.",
+            "Die Sonne scheint und es bleibt trocken.",
+            "Es ziehen dichte Wolken auf."
+          ],
+          "answer": 1,
+          "why": "Im Wetterbericht wird gesagt: 'Die Sonne scheint von einem blauen Himmel, und es bleibt den ganzen Tag über trocken'."
+        },
+        {
+          "prompt": "Warum hat der Zug nach Hamburg Verspätung?",
+          "options": [
+            "Wegen einer technischen Störung am Zug",
+            "Wegen einer Verspätung der Fahrgäste",
+            "Wegen schlechten Wetters auf der Strecke"
+          ],
+          "answer": 0,
+          "why": "In der Bahnhofsdurchsage wird erklärt: 'Wegen einer kurzfristigen technischen Störung am Zug hat der Intercity nach Hamburg heute leider voraussichtlich 20 Minuten Verspätung'."
+        }
+      ]
+    },
+    "H2": {
+      "title": "Besuch im Fitnessstudio",
+      "instruction": "Lesen Sie die Aufgaben 1 bis 5 und hören Sie den Text dazu. Entscheiden Sie bei jeder Aufgabe: Ist die Aussage richtig oder falsch?",
+      "audio": {
+        "plays": 2,
+        "script": [
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Guten Tag, willkommen im Fitnessstudio Aktiv Fit. Kann ich Ihnen helfen?"
+          },
+          {
+            "speaker": "Kundin",
+            "text": "Guten Tag. Ich überlege, mich hier anzumelden. Eine Bekannte hat mir das Studio empfohlen. Sie hat gesagt, dass man hier auch gut schwimmen kann. Stimmt das?"
+          },
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Ja, das stimmt teilweise. Wir haben ein großes Hallenbad, aber das ist im Moment wegen Renovierungsarbeiten bis Ende nächsten Monat geschlossen. Dafür können Sie aber alle Geräte im Kraftraum und die Kurse nutzen."
+          },
+          {
+            "speaker": "Kundin",
+            "text": "Ah, okay. Schade wegen des Schwimmbads, aber die Geräte sind mir eigentlich wichtiger. Wie sieht es denn mit den Öffnungszeiten aus? Ich arbeite oft bis 18 Uhr."
+          },
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Das ist gar kein Problem. Unter der Woche, also von Montag bis Freitag, haben wir von 6 Uhr morgens bis 22 Uhr abends geöffnet. Am Wochenende schliessen wir etwas früher, da ist von 8 bis 18 Uhr geöffnet."
+          },
+          {
+            "speaker": "Kundin",
+            "text": "Das passt perfekt für mich. Und gibt es feste Verträge, oder kann man auch monatlich kündigen?"
+          },
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Unser Standardvertrag läuft über zwölf Monate. Es gibt aber auch einen flexiblen Tarif, den man monatlich kündigen kann. Der kostet allerdings fünf Euro mehr pro Monat."
+          },
+          {
+            "speaker": "Kundin",
+            "text": "Verstehe. Noch eine letzte Frage: Muss man für die Kurse extra bezahlen oder ist das im Preis enthalten?"
+          },
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Alle Kurse wie Yoga, Zumba oder Rückentraining sind komplett im monatlichen Beitrag enthalten. Sie müssen sich nur vorher über unsere App für den jeweiligen Kurs eintragen."
+          },
+          {
+            "speaker": "Kundin",
+            "text": "Das klingt sehr gut. Dann würde ich mir heute gerne das Anmeldeformular mitnehmen und alles in Ruhe zu Hause ausfüllen."
+          },
+          {
+            "speaker": "Mitarbeiter",
+            "text": "Sehr gerne, hier ist das Formular. Wenn Sie noch Fragen haben, melden Sie sich einfach wieder bei uns."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Das Schwimmbad im Fitnessstudio kann im Moment genutzt werden.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Im Text sagt der Mitarbeiter, dass das Hallenbad wegen Renovierungsarbeiten bis Ende nächsten Monat geschlossen ist."
+        },
+        {
+          "prompt": "Die Kundin findet es besonders wichtig, dass es im Studio Geräte gibt.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Die Kundin sagt im Gespräch: „Aber die Geräte sind mir eigentlich wichtiger.“"
+        },
+        {
+          "prompt": "Das Fitnessstudio öffnet am Wochenende um 6 Uhr morgens.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Der Mitarbeiter erklärt, dass das Studio am Wochenende von 8 bis 18 Uhr geöffnet ist."
+        },
+        {
+          "prompt": "Man kann einen Vertrag wählen, den man jeden Monat kündigen kann.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 0,
+          "why": "Der Mitarbeiter bestätigt: „Es gibt aber auch einen flexiblen Tarif, den man monatlich kündigen kann.“"
+        },
+        {
+          "prompt": "Für die Teilnahme an den Kursen muss man extra bezahlen.",
+          "options": [
+            "Richtig",
+            "Falsch"
+          ],
+          "answer": 1,
+          "why": "Der Mitarbeiter sagt klar: „Alle Kurse wie Yoga, Zumba oder Rückentraining sind komplett im monatlichen Beitrag enthalten.“"
+        }
+      ]
+    },
+    "H3": {
+      "title": "Informationen am Bahnhof",
+      "instruction": "Hören Sie die Durchsagen am Bahnhof. Kreuzen Sie für die Aufgaben die richtige Lösung an. Sie hören die Texte einmal.",
+      "audio": {
+        "plays": 1,
+        "script": [
+          {
+            "speaker": "Ansage 1",
+            "text": "Guten Tag liebe Fahrgäste am Gleis 3. Der Intercity 2145 von München nach Hamburg hat heute leider etwa 20 Minuten Verspätung. Grund dafür ist eine technische Störung am Zug. Wir bitten Sie um etwas Geduld."
+          },
+          {
+            "speaker": "Ansage 2",
+            "text": "Achtung eine wichtige Durchsage für Reisende nach Frankfurt. Der Regionalexpress um 14:15 Uhr fährt heute ausnahmsweise von Gleis 5 ab, nicht von Gleis 2. Bitte beachten Sie die Änderung auf den Anzeigetafeln."
+          },
+          {
+            "speaker": "Ansage 3",
+            "text": "Liebe Fahrgäste, wir informieren Sie über Fundsachen: Im ICE nach Stuttgart wurde heute Morgen ein blauer Koffer vergessen. Der Besitzer oder die Besitzerin wird gebeten, sich am Informationsschalter in der Bahnhofshalle zu melden."
+          },
+          {
+            "speaker": "Ansage 4",
+            "text": "Achtung am Gleis 1. Bitte treten Sie zurück von der Kante! Hier fährt jetzt der Güterzug durch. Nutzen Sie die Unterführung, wenn Sie auf die andere Seite möchten."
+          },
+          {
+            "speaker": "Ansage 5",
+            "text": "Sehr geehrte Damen und Herren, das Reisezentrum im Hauptbahnhof schließt heute wegen einer internen Schulung bereits um 16 Uhr. Morgen sind wir wieder ab 8 Uhr für Sie da. Vielen Dank für Ihr Verständnis."
+          }
+        ]
+      },
+      "items": [
+        {
+          "prompt": "Warum hat der Zug nach Hamburg Verspätung?",
+          "options": [
+            "Wegen einer technischen Störung.",
+            "Wegen starkem Schneefall.",
+            "Wegen Bauarbeiten am Gleis."
+          ],
+          "answer": 0,
+          "why": "Im Text heißt es: 'Grund dafür ist eine technische Störung am Zug.'"
+        },
+        {
+          "prompt": "Von welchem Gleis fährt der Zug nach Frankfurt ab?",
+          "options": [
+            "Von Gleis 2.",
+            "Von Gleis 3.",
+            "Von Gleis 5."
+          ],
+          "answer": 2,
+          "why": "Im Text wird gesagt: '...fährt heute ausnahmsweise von Gleis 5 ab, nicht von Gleis 2.'"
+        },
+        {
+          "prompt": "Was wurde im ICE nach Stuttgart vergessen?",
+          "options": [
+            "Eine schwarze Tasche.",
+            "Ein blauer Koffer.",
+            "Ein kleiner Rucksack."
+          ],
+          "answer": 1,
+          "why": "Im Text steht klar: '...wurde heute Morgen ein blauer Koffer vergessen.'"
+        },
+        {
+          "prompt": "Was soll man tun, wenn man auf die andere Seite möchte?",
+          "options": [
+            "Die Unterführung nutzen.",
+            "Über die Gleise gehen.",
+            "Auf den nächsten Zug warten."
+          ],
+          "answer": 0,
+          "why": "Der Sprecher sagt: 'Nutzen Sie die Unterführung, wenn Sie auf die andere Seite möchten.'"
+        },
+        {
+          "prompt": "Wann schließt das Reisezentrum heute?",
+          "options": [
+            "Um 14 Uhr.",
+            "Um 16 Uhr.",
+            "Um 18 Uhr."
+          ],
+          "answer": 1,
+          "why": "Im Text heißt es: '...schließt heute wegen einer internen Schulung bereits um 16 Uhr.'"
+        }
+      ]
+    }
+  }
+}
